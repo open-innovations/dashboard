@@ -93,15 +93,12 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .box {
 	height: 100%;
 	position: relative;
+	display: table;
+	width: 100%;
 }
 .panel {
-	position: absolute;
-	left: 0px;
-	top:0px;
-	padding: 4em 0;
-	display: block;
-	right: 0px;
-	bottom: 0px;
+	display: table-cell;
+	vertical-align: middle;
 	color: white;
 	text-align: center;
 }
