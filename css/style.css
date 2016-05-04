@@ -50,7 +50,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.8em; height: 0.8em; display: inline-block; color: black; background-color: black; position: relative; line-height: inherit; text-align: center; }
 .odimark .O { border-radius: 100%; }
 .odimark .D { border-radius: 0% 100% 100% 0%; }
-.odimark .I { width: 0.4em; }
+.odimark .I { width: 0.4em; margin-right: 0.1em; }
 .c1-bg { background-color: #2254F4; }
 .c2-bg { background-color: #178CFF; }
 .c3-bg { background-color: #00B6FF; }
@@ -127,7 +127,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	opacity: 0.3;
 	line-height: 1.5em;
 }
-.panel:hover .updated {
+.panel:hover .updated,.panel:hover .title {
 	opacity: 1;
 }
 .panel .updated a {
@@ -154,6 +154,9 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	}
 }
 @media only screen and (max-width: 700px) {
+	.header {
+		padding: 0.5em 0.4em 0.4em 0.4em;
+	}
 	.main {
 		width: 100%;
 		overflow: hidden;
