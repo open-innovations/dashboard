@@ -119,15 +119,23 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 }
 .panel .updated {
 	position: absolute;
-	bottom: 0.5em;
+	bottom: 0.25em;
 	font-size: 0.8em;
 	width: 100%;
 	text-align: center;
 	color: white;
 	opacity: 0.3;
+	line-height: 1.5em;
 }
 .panel:hover .updated {
 	opacity: 1;
+}
+.panel .updated a {
+	text-decoration: none;
+	color: inherit;
+}
+.panel:hover .updated a {
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 1500px) {
