@@ -12,7 +12,7 @@ S().ready(function(){
 	function Dashboard(){
 
 		var panels = S('.panel');
-		var els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
+		var els = [{'el':".number",'animate':true},{'el':".lastupdated",'link':true}];
 		function animateNumber(el,val){
 			if(!val){
 				val = el.html();
@@ -40,7 +40,6 @@ S().ready(function(){
 				data = data.replace(/\r/,'');
 				data = data.split(/[\n]/);
 			}
-
 			for(var i = 0 ; i < els.length; i++){
 				var n = attr.el.find(els[i].el);
 				var col = parseInt(n.attr('data-col'));
@@ -51,7 +50,10 @@ S().ready(function(){
 					cols = data[row-1].split(/\,/);
 					val = cols[col-1];
 					if(els[i].animate) animateNumber(n,val);
-					else n.html(val);
+					else{
+						if(els[i].link) val = '<a href="https://github.com/odileeds/dashboard/tree/master/'+attr.url+'" class="repo">'+val+'</a>';
+						n.html(val);
+					}
 				}else{
 					var op = n.attr('data-op');
 					if(op && col){
