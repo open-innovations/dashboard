@@ -12,8 +12,12 @@ S().ready(function(){
 	function Dashboard(){
 
 		var panels = S('.panel');
-		var els = [".number",".lastupdated"];
+		var els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
 		function animateNumber(el,val){
+			if(!val){
+				val = el.html();
+				el.html('');
+			}
 			var duration = 1000;
 			var start = new Date();
 			function frame(){
@@ -28,7 +32,7 @@ S().ready(function(){
 				}
 			}
 
-			frame();			
+			if(val) frame();			
 		}
 
 		function loadData(data,attr){
@@ -38,7 +42,7 @@ S().ready(function(){
 			}
 
 			for(var i = 0 ; i < els.length; i++){
-				var n = attr.el.find(els[i]);
+				var n = attr.el.find(els[i].el);
 				var col = parseInt(n.attr('data-col'));
 				var row = n.attr('data-row');
 				if(row){
@@ -46,7 +50,8 @@ S().ready(function(){
 					else row = parseInt(row)
 					cols = data[row-1].split(/\,/);
 					val = cols[col-1];
-					animateNumber(n,val);
+					if(els[i].animate) animateNumber(n,val);
+					else n.html(val);
 				}else{
 					var op = n.attr('data-op');
 					if(op && col){
@@ -56,7 +61,8 @@ S().ready(function(){
 								cols = data[r].split(/\,/);
 								total += parseInt(cols[col-1]);
 							}
-							animateNumber(n,total);
+							if(els[i].animate) animateNumber(n,total);
+							else n.html(total);
 						}
 					}
 				}
@@ -69,6 +75,7 @@ S().ready(function(){
 			//data-col="2" data-row="last"
 			var el = S(panels.e[i]);
 			if(el.attr('data-src')) S().ajax(el.attr('data-src'),{'complete':loadData,'this':this,'error':failData,'el':el});
+			else animateNumber(el.find('.number'))
 		}
 	
 		return this;
