@@ -45,7 +45,8 @@ table {
 
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
 h1 { line-height: 0.8em; font-size: 1.6em; }
-.odimark { color: black; font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
+.odimark { font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
+.odimark { color: black; }
 .odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.8em; height: 0.8em; display: inline-block; color: black; background-color: black; position: relative; line-height: inherit; text-align: center; }
 .odimark .O { border-radius: 100%; }
 .odimark .D { border-radius: 0% 100% 100% 0%; }
@@ -114,7 +115,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .panel .updated {
 	position: absolute;
 	bottom: 0.5em;
-	font-size: 0.5em;
+	font-size: 0.8em;
 	width: 100%;
 	text-align: center;
 	color: white;
