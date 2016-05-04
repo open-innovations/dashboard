@@ -1,0 +1,124 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1em; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* End of reset */
+
+
+body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
+h1 { line-height: 0.8em; font-size: 1.6em; }
+.odimark { color: black; font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
+.odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.8em; height: 0.8em; display: inline-block; color: black; background-color: black; position: relative; line-height: inherit; text-align: center; }
+.odimark .O { border-radius: 100%; }
+.odimark .D { border-radius: 0% 100% 100% 0%; }
+.odimark .I { width: 0.4em; margin-right: 0.1em; }
+.c1-bg { background-color: #2254F4; }
+.c2-bg { background-color: #178CFF; }
+.c3-bg { background-color: #00B6FF; }
+.c4-bg { background-color: #08DEF9; }
+.c5-bg { background-color: #1DD3A7; }
+.c6-bg { background-color: #0DBC37; }
+.c7-bg { background-color: #67E767; }
+.c8-bg { background-color: #722EA5; }
+.c9-bg { background-color: #E6007C; }
+.c10-bg { background-color: #EF3AAB; }
+.c11-bg { background-color: #D73058; }
+.c12-bg { background-color: #D60303; }
+.c13-bg { background-color: #FF6700; }
+.c14-bg { background-color: #F9BC26; }
+.b1-bg { background-color: #000000; }
+.b2-bg { background-color: #333333; }
+.b3-bg { background-color: #999999; }
+
+.header {
+	line-height: 2em;
+	padding: 1em 1em 0.8em 1em;
+}
+.main {
+}
+.box {
+	display: inline-block;
+	width: 33%;
+	padding-top: 18em;
+	margin-top: 0.5%;
+	margin-right: 0.5%;
+	position: relative;
+}
+.box:nth-child(3n){
+	margin-right: 0;
+}
+.panel {
+	position: absolute;
+	left: 0px;
+	top:0px;
+	padding: 5em 0;
+	display: block;
+	right: 0px;
+	bottom: 0px;
+	color: white;
+	text-align: center;
+}
+.panel .number {
+	position: relative;
+	line-height: 1em;
+	margin: auto;
+	text-align: center;
+	display: block;
+	font-size: 8em;
+}
+.panel .title {
+	display: block;
+	opacity: 0.6;
+	font-size: 1.8em;
+	margin-bottom: 0.5em;
+}
+.panel .updated {
+	position: absolute;
+	bottom: 0.5em;
+	font-size: 0.5em;
+	width: 100%;
+	text-align: center;
+	color: white;
+	opacity: 0.3;
+}
+.panel:hover .updated {
+	opacity: 1;
+}
