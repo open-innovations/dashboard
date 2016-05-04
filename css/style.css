@@ -50,7 +50,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.8em; height: 0.8em; display: inline-block; color: black; background-color: black; position: relative; line-height: inherit; text-align: center; }
 .odimark .O { border-radius: 100%; }
 .odimark .D { border-radius: 0% 100% 100% 0%; }
-.odimark .I { width: 0.4em; margin-right: 0.1em; }
+.odimark .I { width: 0.4em; }
 .c1-bg { background-color: #2254F4; }
 .c2-bg { background-color: #178CFF; }
 .c3-bg { background-color: #00B6FF; }
@@ -74,17 +74,25 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	padding: 1em 1em 0.8em 1em;
 }
 .main {
+	overflow: hidden;
+	padding-top: 6px;
+}
+.dashboard {
+	position: relative;
+	margin-left: -3px;
+	margin-right: -3px;
+}
+.boxholder {
+	display: inline-block;
+	width: 20%;	/* 5 columns for wide screens */
+	margin: 0px;
+	height: 280px;
+	padding: 3px;
+	margin-top: -3px;
 }
 .box {
-	display: inline-block;
-	width: 33%;
-	padding-top: 18em;
-	margin-top: 0.5%;
-	margin-right: 0.5%;
+	height: 100%;
 	position: relative;
-}
-.box:nth-child(3n){
-	margin-right: 0;
 }
 .panel {
 	position: absolute;
@@ -125,29 +133,27 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	opacity: 1;
 }
 
-@media only screen and (max-width: 1000px) {
-	.box {
-		width: 49.75%;
-	}
-	.box:nth-child(3n){
-		margin-right: 0.5%;
-	}
-	.box:nth-child(2n){
-		margin-right: 0%;
+@media only screen and (max-width: 1500px) {
+	.boxholder {
+		width: 25%;
 	}
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1280px) {
+	.boxholder {
+		width: 33.333333333%;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.boxholder {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 700px) {
 	.main {
 		width: 100%;
 		overflow: hidden;
 	}
-	.box {
+	.boxholder {
 		width: 100%;
-	}
-	.box{
-		margin-right: 0%;
-	}
-	.box:nth-child(2n){
-		margin-right: 0%;
 	}
 }
