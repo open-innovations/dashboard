@@ -89,7 +89,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	position: absolute;
 	left: 0px;
 	top:0px;
-	padding: 5em 0;
+	padding: 4em 0;
 	display: block;
 	right: 0px;
 	bottom: 0px;
@@ -107,6 +107,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .panel .title {
 	display: block;
 	opacity: 0.6;
+	line-height: 1em;
 	font-size: 1.8em;
 	margin-bottom: 0.5em;
 }
@@ -121,4 +122,31 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 }
 .panel:hover .updated {
 	opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+	.box {
+		width: 49.75%;
+	}
+	.box:nth-child(3n){
+		margin-right: 0.5%;
+	}
+	.box:nth-child(2n){
+		margin-right: 0%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.main {
+		width: 100%;
+		overflow: hidden;
+	}
+	.box {
+		width: 100%;
+	}
+	.box{
+		margin-right: 0%;
+	}
+	.box:nth-child(2n){
+		margin-right: 0%;
+	}
 }
