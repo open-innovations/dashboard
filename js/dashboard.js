@@ -12,7 +12,7 @@ S().ready(function(){
 	function Dashboard(){
 
 		var panels = S('.panel');
-		var els = [{'el':".number",'animate':true},{'el':".lastupdated",'link':true}];
+		var els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
 		function animateNumber(el,val){
 			if(!val){
 				val = el.html();
@@ -50,10 +50,7 @@ S().ready(function(){
 					cols = data[row-1].split(/\,/);
 					val = cols[col-1];
 					if(els[i].animate) animateNumber(n,val);
-					else{
-						if(els[i].link) val = '<a href="https://github.com/odileeds/dashboard/tree/master/'+attr.url+'" class="repo">'+val+'</a>';
-						n.html(val);
-					}
+					else n.html(val);
 				}else{
 					var op = n.attr('data-op');
 					if(op && col){
