@@ -44,13 +44,15 @@ table {
 
 
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
-h1 { line-height: 0.8em; font-size: 1.6em; }
+h1 { line-height: 0.8em; font-size: 2.6em; }
 .odimark { font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
-.odimark { color: black; }
-.odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.8em; height: 0.8em; display: inline-block; color: black; background-color: black; position: relative; line-height: inherit; text-align: center; }
-.odimark .O { border-radius: 100%; }
+.odimark { color: black; margin-right: 0.2em; }
+.odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.75em; height: 0.75em; overflow: hidden; border: 4px solid black; display: inline-block; color: transparent; background-color: black; position: relative; line-height: inherit; text-align: center; }
+.odimark .O { border-radius: 100%; background-color: transparent; }
+.odimark .O.node:before { content: "NODE"; font-size: 0.2em; top: -0.5em; width: 100%; color: black; position: absolute; }
 .odimark .D { border-radius: 0% 100% 100% 0%; }
-.odimark .I { width: 0.4em; }
+.odimark .I { width: 0.4em; margin-right: 0.1em; }
+.odimark .nodename { font-size: 0.2em; color: white; position: relative; margin-left: -4.4em; top: -1.2em; letter-spacing: 1px; }
 .c1-bg { background-color: #2254F4; }
 .c2-bg { background-color: #178CFF; }
 .c3-bg { background-color: #00B6FF; }
@@ -71,7 +73,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 
 .header {
 	line-height: 2em;
-	padding: 1em 1em 0.8em 1em;
+	padding: 0.8em 0.8em 0em 0.8em;
 }
 .main {
 	overflow: hidden;
@@ -81,12 +83,13 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	position: relative;
 	margin-left: -3px;
 	margin-right: -3px;
+	margin-bottom: -6px;
 }
 .boxholder {
 	display: inline-block;
-	width: 20%;	/* 5 columns for wide screens */
+	width: 12.5%;	/* 8 columns for wide screens */
 	margin: 0px;
-	height: 280px;
+	height: 246px;
 	padding: 3px;
 	margin-top: -3px;
 }
@@ -109,6 +112,11 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	text-align: center;
 	display: block;
 	font-size: 8em;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 .panel .title {
 	display: block;
@@ -127,7 +135,7 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	opacity: 0.3;
 	line-height: 1.5em;
 }
-.panel:hover .updated {
+.panel:hover .updated,.panel:hover .title {
 	opacity: 1;
 }
 .panel .updated a {
@@ -137,7 +145,20 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 .panel:hover .updated a {
 	text-decoration: underline;
 }
+.panel:hover .number {
+	font-size: 9em;
+}
 
+@media only screen and (max-width: 2600px) {
+	.boxholder {
+		width: 16.66666666%;
+	}
+}
+@media only screen and (max-width: 2000px) {
+	.boxholder {
+		width: 20%;
+	}
+}
 @media only screen and (max-width: 1500px) {
 	.boxholder {
 		width: 25%;
@@ -154,6 +175,9 @@ h1 { line-height: 0.8em; font-size: 1.6em; }
 	}
 }
 @media only screen and (max-width: 700px) {
+	.header {
+		padding: 0.5em 0.4em 0em 0.4em;
+	}
 	.main {
 		width: 100%;
 		overflow: hidden;
