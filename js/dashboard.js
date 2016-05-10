@@ -11,8 +11,11 @@ S().ready(function(){
 
 	function Dashboard(){
 
-		var panels = S('.panel');
-		var els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
+		this.panels = S('.panel');
+		this.els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
+		this.data;
+		this.el;
+
 		function animateNumber(el,val){
 			if(!val){
 				val = el.html();
@@ -36,46 +39,24 @@ S().ready(function(){
 
 			if(val) frame();			
 		}
-
+		
 		function loadData(data,attr){
 			if(typeof data==="string"){
 				data = data.replace(/\r/,'');
 				data = data.split(/[\n]/);
 			}
-			for(var i = 0 ; i < els.length; i++){
-				var n = attr.el.find(els[i].el);
-				var col = parseInt(n.attr('data-col'));
-				var row = n.attr('data-row');
-				if(row){
-					if(row == "last") row = data.length;
-					else row = parseInt(row)
-					cols = data[row-1].split(/\,/);
-					val = cols[col-1];
-					if(els[i].animate) animateNumber(n,val);
-					else n.html(val);
-				}else{
-					var op = n.attr('data-op');
-					if(op && col){
-						if(op=="sum"){
-							var total = 0;
-							for(var r = 1; r < data.length; r++){
-								cols = data[r].split(/\,/);
-								total += parseInt(cols[col-1]);
-							}
-							if(els[i].animate) animateNumber(n,total);
-							else n.html(formatNumber(total));
-						}
-					}
-				}
-			}
+			attr.me.data = data;
+			attr.me.el = attr.el;
+			attr.me.update();
 		}
+
 		function failData(data){
 			console.log('fail',data);
 		}
-		for(var i = 0; i < panels.length; i++){
+		for(var i = 0; i < this.panels.length; i++){
 			//data-col="2" data-row="last"
-			var el = S(panels.e[i]);
-			if(el.attr('data-src')) S().ajax(el.attr('data-src'),{'complete':loadData,'this':this,'error':failData,'el':el});
+			var el = S(this.panels.e[i]);
+			if(el.attr('data-src')) S().ajax(el.attr('data-src'),{'complete':loadData,'this':this,'error':failData,'el':el,'me':this});
 			else animateNumber(el.find('.number'))
 		}
 		function formatNumber(v){
@@ -86,8 +67,37 @@ S().ready(function(){
 			return v;
 		}
 	
+		this.update = function(){			
+			for(var i = 0 ; i < this.els.length; i++){
+				var n = this.el.find(this.els[i].el);
+				var col = parseInt(n.attr('data-col'));
+				var row = n.attr('data-row');
+				if(row){
+					if(row == "last") row = this.data.length;
+					else row = parseInt(row)
+					cols = this.data[row-1].split(/\,/);
+					val = cols[col-1];
+					if(this.els[i].animate) animateNumber(n,val);
+					else n.html(val);
+				}else{
+					var op = n.attr('data-op');
+					if(op && col){
+						if(op=="sum"){
+							var total = 0;
+							for(var r = 1; r < this.data.length; r++){
+								cols = this.data[r].split(/\,/);
+								total += parseInt(cols[col-1]);
+							}
+							if(this.els[i].animate) animateNumber(n,total);
+							else n.html(formatNumber(total));
+						}
+					}
+				}
+			}
+		}
 		return this;
 	}
+
 
 	new Dashboard();
 });
