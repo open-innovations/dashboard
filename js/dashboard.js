@@ -6,15 +6,31 @@ window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
 })();
 
+var db;
+
 // ODI Leeds Dashboard
 S().ready(function(){
 
 	function Dashboard(){
 
-		this.panels = S('.panel');
+		this.panels = new Array();
 		this.els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
 		this.data;
 		this.el;
+		this.year;
+		var files = {};
+
+		var panels = S('.panel');
+		// Loop over panels finding the data sources to load
+		for(var i = 0; i < panels.length; i++){
+			var el = S(panels.e[i]);
+			this.panels[i] = {'el':el};
+			if(el.attr('data-src')){
+				filename = el.attr('data-src');
+				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this});
+				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
+			}else animateNumber(el.find('.number'))
+		}
 
 		function animateNumber(el,val){
 			if(!val){
@@ -45,51 +61,64 @@ S().ready(function(){
 				data = data.replace(/\r/,'');
 				data = data.split(/[\n]/);
 			}
-			attr.me.data = data;
-			attr.me.el = attr.el;
-			attr.me.update();
+			attr.me.panels[attr.i].data = data;
+			attr.me.updatePanel(attr.i);
+			files[attr.url] = attr.i;
+			return;
 		}
 
 		function failData(data){
 			console.log('fail',data);
-		}
-		for(var i = 0; i < this.panels.length; i++){
-			//data-col="2" data-row="last"
-			var el = S(this.panels.e[i]);
-			if(el.attr('data-src')) S().ajax(el.attr('data-src'),{'complete':loadData,'this':this,'error':failData,'el':el,'me':this});
-			else animateNumber(el.find('.number'))
 		}
 		function formatNumber(v){
 			if(typeof v !== "number") return v;
 			if(v > 1e7) return Math.round(v/1e6)+"M";
 			if(v > 1e6) return (v/1e6).toFixed(1)+"M";
 			if(v > 1e5) return Math.round(v/1e3)+"k";
+			if(v > 1e4) return Math.round(v/1e3)+"k";
 			return v;
 		}
 	
-		this.update = function(){			
-			for(var i = 0 ; i < this.els.length; i++){
-				var n = this.el.find(this.els[i].el);
-				var col = parseInt(n.attr('data-col'));
-				var row = n.attr('data-row');
-				if(row){
-					if(row == "last") row = this.data.length;
-					else row = parseInt(row)
-					cols = this.data[row-1].split(/\,/);
-					val = cols[col-1];
-					if(this.els[i].animate) animateNumber(n,val);
-					else n.html(val);
-				}else{
-					var op = n.attr('data-op');
-					if(op && col){
-						if(op=="sum"){
-							var total = 0;
-							for(var r = 1; r < this.data.length; r++){
-								cols = this.data[r].split(/\,/);
-								total += parseInt(cols[col-1]);
+		this.update = function(){
+			for(var i = 0; i < this.panels.length; i++){
+				if(this.panels[i] && this.panels[i].data) this.updatePanel(i)
+			}
+		}
+		// Update a specific panel
+		this.updatePanel = function(p){
+			
+			var year,add;
+			if(this.panels[p]){
+				for(var i = 0 ; i < this.els.length; i++){
+					var n = this.panels[p].el.find(this.els[i].el);
+					var coldate = this.panels[p].el.attr('data-date') || "";
+					var col = parseInt(n.attr('data-col'));
+					var row = n.attr('data-row');
+					if(row){
+						if(row == "last") row = this.panels[p].data.length;
+						else row = parseInt(row)
+						cols = this.panels[p].data[row-1].split(/\,/);
+						val = cols[col-1];
+						if(this.els[i].animate) animateNumber(n,val);
+						else n.html(val);
+					}else{
+						var op = n.attr('data-op');
+						var year = "";
+						if(op && col){
+							if(op=="sum"){
+								var total = 0;
+								for(var r = 1; r < this.panels[p].data.length; r++){
+									cols = this.panels[p].data[r].split(/\,/);
+									// Get the year from the ISO8601 formatted string
+									// if a data-date column has been specified
+									if(coldate) year = cols[coldate-1].substr(0,4);
+									add = true;
+									if(this.year && year!=this.year) add = false;
+									if(add) total += parseInt(cols[col-1]);
+								}
+								if(this.els[i].animate) animateNumber(n,total);
+								else n.html(formatNumber(total));
 							}
-							if(this.els[i].animate) animateNumber(n,total);
-							else n.html(formatNumber(total));
 						}
 					}
 				}
@@ -97,7 +126,11 @@ S().ready(function(){
 		}
 		return this;
 	}
+	
+	S('#range').on('change',function(e){
+		db.year = e.currentTarget.value;
+		db.update();
+	});
 
-
-	new Dashboard();
+	db = new Dashboard();
 });

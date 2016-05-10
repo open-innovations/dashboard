@@ -149,6 +149,26 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 	font-size: 9em;
 }
 
+select#range {
+	font: inherit;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid transparent !important;
+	border-radius: 4px;
+	background-color: inherit;
+	line-height: inherit;
+	cursor: pointer;
+	background: url('dropdown.png') no-repeat right center;
+	background-size: 1em 100%;
+	padding-right: 1em;
+}
+select#range:hover, select#range:focus {
+	border: 1px solid rgba(0,0,0,0.4)!important;
+	background: url('dropdown.png') no-repeat right center;
+	background-size: 1em 100%;
+}
+
 @media only screen and (max-width: 2600px) {
 	.boxholder {
 		width: 16.66666666%;
