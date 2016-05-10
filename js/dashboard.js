@@ -20,15 +20,17 @@ S().ready(function(){
 			}
 			var duration = 1000;
 			var start = new Date();
+			var v;
 			function frame(){
 				var now = new Date();
 				// Set the current time in seconds
 				var f = (now - start)/duration;
 				if(f < 1){
-					el.html(Math.round(val*f));
+					v = formatNumber(Math.round(val*f));
+					el.html(v);
 					requestAnimFrame(frame);
 				}else{
-					el.html(val);
+					el.html(formatNumber(val));
 				}
 			}
 
@@ -61,7 +63,7 @@ S().ready(function(){
 								total += parseInt(cols[col-1]);
 							}
 							if(els[i].animate) animateNumber(n,total);
-							else n.html(total);
+							else n.html(formatNumber(total));
 						}
 					}
 				}
@@ -75,6 +77,13 @@ S().ready(function(){
 			var el = S(panels.e[i]);
 			if(el.attr('data-src')) S().ajax(el.attr('data-src'),{'complete':loadData,'this':this,'error':failData,'el':el});
 			else animateNumber(el.find('.number'))
+		}
+		function formatNumber(v){
+			if(typeof v !== "number") return v;
+			if(v > 1e7) return Math.round(v/1e6)+"M";
+			if(v > 1e6) return (v/1e6).toFixed(1)+"M";
+			if(v > 1e5) return Math.round(v/1e3)+"k";
+			return v;
 		}
 	
 		return this;
