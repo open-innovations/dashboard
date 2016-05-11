@@ -149,6 +149,18 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 	font-size: 9em;
 }
 
+.sponsors .number {
+	font-size: 2em;
+}
+.sponsors .icons {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+.sponsors img {
+	display: inline-block;
+	width: 25%;
+}
 select#range {
 	font: inherit;
 	-webkit-appearance: none;
