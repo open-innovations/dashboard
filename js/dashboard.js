@@ -81,7 +81,7 @@ S().ready(function(){
 				}
 			}
 
-			if(val) frame();
+			frame();
 			return;			
 		}
 		
