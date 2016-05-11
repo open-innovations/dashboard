@@ -152,14 +152,20 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 .sponsors .number {
 	font-size: 2em;
 }
-.sponsors .icons {
+.panel .icons {
 	width: 95%;
 	margin: auto;
 	text-align: center;
 }
+.panel .icons img { opacity: 0.8; }
+.panel .icons img:hover { opacity: 1; }
 .sponsors img {
 	display: inline-block;
 	width: 25%;
+}
+.partners img {
+	display: inline-block;
+	width: 45%;
 }
 select#range {
 	font: inherit;
