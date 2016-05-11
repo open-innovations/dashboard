@@ -14,10 +14,11 @@ S().ready(function(){
 	function Dashboard(yyyy){
 
 		this.panels = new Array();
-		this.els = [{'el':".number",'animate':true},{'el':".lastupdated"}];
+		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':true},{'el':".lastupdated"}];
 		this.data;
 		this.el;
 		this.year = yyyy || "";
+		this.duration = 1000;
 		var files = {};
 
 		var panels = S('.panel');
@@ -27,18 +28,19 @@ S().ready(function(){
 			this.panels[i] = {'el':el};
 			if(el.attr('data-src')){
 				filename = el.attr('data-src');
+				this.panels[i].type = el.attr('data-type');
 				this.panels[i].filename = filename;
 				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this});
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
-			}else animateNumber(el.find('.number'))
+			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
 		}
 
-		function animateNumber(el,val){
-			if(!val){
+		function animateNumber(el,val,duration){
+			if(typeof val!=="number"){
 				val = el.html();
+				if(val) val = parseFloat(val);
 				el.html('');
 			}
-			var duration = 1000;
 			var start = new Date();
 			var v;
 			function frame(){
@@ -54,7 +56,34 @@ S().ready(function(){
 				}
 			}
 
-			if(val) frame();			
+			if(typeof val==="number") frame();
+			return;			
+		}
+		function animateArray(el,vals,duration){
+			if(!vals) return;
+			var start = new Date();
+			var done = -1;
+			function frame(){
+				var now = new Date();
+				// Set the current time in seconds
+				var f = (now - start)/duration;
+				var n = Math.floor(vals.length*f);
+				if(n > done){
+					var output = "";
+					for(var i = 0; i < n; i++) output += vals[i];
+					el.html(output);
+				}
+				if(f < 1){
+					requestAnimFrame(frame);
+				}else{
+					var output = "";
+					for(var i = 0; i < vals.length; i++) output += vals[i];
+					el.html(output);				
+				}
+			}
+
+			frame();
+			return;			
 		}
 		
 		function loadData(data,attr){
@@ -97,10 +126,20 @@ S().ready(function(){
 		}
 		// Update a specific panel
 		this.updatePanel = function(p){
-			var year,add;
+			var year,add,cols;
 			if(this.panels[p]){
+				var data = new Array();
+				if(!this.panels[p].data) return;
+				for(var r = 1; r < this.panels[p].data.length; r++){
+					cols = this.panels[p].data[r].split(/\,/);
+					data.push(cols);
+				}
 				for(var i = 0 ; i < this.els.length; i++){
 					var n = this.panels[p].el.find(this.els[i].el);
+
+					// If the element doesn't exist in the DOM we skip this
+					if(n.length == 0) continue;
+
 					// Are we processing the last updated field?
 					if(this.els[i].el.indexOf('.lastupdated') == 0 && this.panels[p].head['Last-Modified']){
 						var d = new Date(this.panels[p].head['Last-Modified']);
@@ -113,45 +152,62 @@ S().ready(function(){
 						continue;
 					}
 					var coldate = this.panels[p].el.attr('data-date') || "";
+					var end = n.attr('data-end') || "";
 					var col = parseInt(n.attr('data-col'));
 					var row = n.attr('data-row');
 					if(row){
+						if(row == "all"){
+							var icons = new Array();
+							var colurl = parseInt(n.attr('data-col-url'));
+							for(var r = 0; r < data.length; r++){
+								var s = data[r][coldate-1];
+								var e = (new Date()).toISOString();
+								if(end && data[r][end-1]) e = data[r][end-1];
+								if(this.inDateRange(s,e)) icons.push((colurl ? '<a href="'+data[r][colurl]+'">':'')+'<img src="data/'+data[r][col]+'" alt="logo" />'+(colurl ? '</a>':''));
+							}
+							animateArray(n,icons,this.duration)
+							continue;
+						}
 						if(row == "last"){
-							row = this.panels[p].data.length;
+							row = data.length;
 							if(coldate){
-								for(var r = 1; r < this.panels[p].data.length; r++){
-									cols = this.panels[p].data[r].split(/\,/);
-									year = cols[coldate-1].substr(0,4);
-									if(year <= this.year) row = r+1;
+								for(var r = 0; r < data.length; r++){
+									if(this.inDateRange(data[r][coldate-1])) row = r+1;
 								}
 							}
 						}else row = parseInt(row)
-						cols = this.panels[p].data[row-1].split(/\,/);
-						val = cols[col-1];
-						if(this.els[i].animate) animateNumber(n,val);
+						val = data[row-1][col-1];
+						if(this.els[i].animate) animateNumber(n,val,this.duration);
 						else n.html(val);
 					}else{
 						var op = n.attr('data-op');
 						var year = "";
 						if(op && col){
-							if(op=="sum"){
-								var total = 0;
-								for(var r = 1; r < this.panels[p].data.length; r++){
-									cols = this.panels[p].data[r].split(/\,/);
-									// Get the year from the ISO8601 formatted string
-									// if a data-date column has been specified
-									if(coldate) year = cols[coldate-1].substr(0,4);
-									add = true;
-									if(this.year && year!=this.year) add = false;
-									if(add) total += parseInt(cols[col-1]);
+							var total = 0;
+							for(var r = 0; r < data.length; r++){
+								// Get the year from the ISO8601 formatted string
+								// if a data-date column has been specified
+								var s = data[r][coldate-1];
+								var e = (new Date()).toISOString();
+								if(end && data[r][end-1]) e = data[r][end-1];
+								if(this.inDateRange(s,e)){
+									if(op=="sum") total += parseInt(data[r][col-1]);
+									else if(op=="count") total++;
 								}
-								if(this.els[i].animate) animateNumber(n,total);
-								else n.html(formatNumber(total));
 							}
+							if(this.els[i].animate) animateNumber(n,total,this.duration);
+							else n.html(formatNumber(total));
 						}
 					}
 				}
 			}
+		}
+		this.inDateRange = function(start,end){
+			var s = parseInt(start.substr(0,4));
+			var e = (end ? parseInt(end.substr(0,4)) : s);
+			if(!this.year) return true;
+			if(s <= this.year && e >= this.year) return true;
+			else return false; 
 		}
 		return this;
 	}
