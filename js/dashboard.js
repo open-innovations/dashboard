@@ -55,7 +55,8 @@ S().ready(function(){
 				}
 			}
 
-			if(val) frame();			
+			if(val) frame();
+			return;			
 		}
 		function animateArray(el,vals,duration){
 			if(!vals) return;
@@ -80,7 +81,8 @@ S().ready(function(){
 				}
 			}
 
-			if(val) frame();			
+			if(val) frame();
+			return;			
 		}
 		
 		function loadData(data,attr){
