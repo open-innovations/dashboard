@@ -163,14 +163,15 @@ S().ready(function(){
 								var s = data[r][coldate-1];
 								var e = (new Date()).toISOString();
 								if(end && data[r][end-1]) e = data[r][end-1];
+								// If the row is within the date range we add the image
 								if(this.inDateRange(s,e)) icons.push((colurl ? '<a href="'+data[r][colurl]+'">':'')+'<img src="data/'+data[r][col]+'" alt="logo" />'+(colurl ? '</a>':''));
 							}
 							animateArray(n,icons,this.duration)
 							continue;
-						}
-						if(row == "last"){
+						}else if(row == "last"){
 							row = data.length;
 							if(coldate){
+								// Find the last row in the valid date range
 								for(var r = 0; r < data.length; r++){
 									if(this.inDateRange(data[r][coldate-1])) row = r+1;
 								}

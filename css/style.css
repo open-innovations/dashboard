@@ -44,7 +44,7 @@ table {
 
 
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
-h1 { line-height: 0.8em; font-size: 2.6em; }
+h1 { line-height: 0.8em; font-size: 2.5em; }
 .odimark { font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
 .odimark { color: black; margin-right: 0.2em; }
 .odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.75em; height: 0.75em; overflow: hidden; border: 4px solid black; display: inline-block; color: transparent; background-color: black; position: relative; line-height: inherit; text-align: center; }
@@ -157,6 +157,7 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 	margin: auto;
 	text-align: center;
 }
+.panel .icons a { color: inherit; }
 .panel .icons img { opacity: 0.8; }
 .panel .icons img:hover { opacity: 1; }
 .sponsors img {
@@ -165,7 +166,7 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 }
 .partners img {
 	display: inline-block;
-	width: 45%;
+	width: 50%;
 }
 select#range {
 	font: inherit;
