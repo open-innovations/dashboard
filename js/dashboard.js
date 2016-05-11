@@ -32,7 +32,7 @@ S().ready(function(){
 				this.panels[i].filename = filename;
 				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this});
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
-			}else animateNumber(el.find('.number'),this.duration)
+			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
 		}
 
 		function animateNumber(el,val,duration){
@@ -128,6 +128,7 @@ S().ready(function(){
 			var year,add,cols;
 			if(this.panels[p]){
 				var data = new Array();
+				if(!this.panels[p].data) return;
 				for(var r = 1; r < this.panels[p].data.length; r++){
 					cols = this.panels[p].data[r].split(/\,/);
 					data.push(cols);
