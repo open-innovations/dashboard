@@ -14,7 +14,7 @@ S().ready(function(){
 	function Dashboard(yyyy){
 
 		this.panels = new Array();
-		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':true},{'el':".lastupdated"}];
+		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"}];
 		this.data;
 		this.el;
 		this.year = yyyy || "";
@@ -34,6 +34,7 @@ S().ready(function(){
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
 			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
 		}
+
 
 		function animateNumber(el,val,duration){
 			if(typeof val!=="number"){
@@ -59,6 +60,15 @@ S().ready(function(){
 			if(typeof val==="number") frame();
 			return;			
 		}
+		function showArray(el,vals,duration){
+			if(duration > 0) animateArray(el,vals,duration)
+			else {
+				var output = "<ol>";
+				for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
+				output += "</ol>";
+				el.html(output);
+			}
+		}
 		function animateArray(el,vals,duration){
 			if(!vals) return;
 			var start = new Date();
@@ -68,24 +78,34 @@ S().ready(function(){
 				// Set the current time in seconds
 				var f = (now - start)/duration;
 				var n = Math.floor(vals.length*f);
+				var arr = new Array();
 				if(n > done){
-					var output = "";
-					for(var i = 0; i < n; i++) output += vals[i];
-					el.html(output);
+					for(var i = 0; i < n; i++) arr.push(vals[i]);
 				}
 				if(f < 1){
+					showArray(el,arr);
 					requestAnimFrame(frame);
 				}else{
-					var output = "";
-					for(var i = 0; i < vals.length; i++) output += vals[i];
-					el.html(output);				
+					showArray(el,vals);
 				}
 			}
 
 			frame();
 			return;			
 		}
-		
+
+		function offset(el){
+			var rect = el.getBoundingClientRect();
+			var t = window.pageYOffset ? window.pageYOffset : (document.documentElement ? document.documentElement.scrollTop : (document.body ? document.body.scrollTop : 0));
+			var l = window.pageXOffset ? window.pageXOffset : (document.documentElement ? document.documentElement.scrollLeft : (document.body ? document.body.scrollLeft : 0));
+			return {
+				top: (rect.top + t),
+				left: (rect.left + l),
+				width: (rect.width),
+				height: (rect.height)
+			}
+		}
+
 		function loadData(data,attr){
 			if(typeof data==="string"){
 				data = data.replace(/\r/,'');
@@ -104,6 +124,23 @@ S().ready(function(){
 			attr.me.panels[attr.i].head = header;
 			attr.me.updatePanel(attr.i);
 			files[attr.url] = attr.i;
+			attr.me.panels[attr.i].el.on('click',{'me':attr.me,'i':i},function(e){
+				var o = offset(this.e[0]);
+				// Extract the background colour class from the parent
+				var cls = this.parent().attr('class').replace(/^.*?\s?([^\s]+-bg)/,function(e,a){ return a; });
+				var html = this.html();
+				S('.moreinfo').remove();
+				S('.main').after('<div class="moreinfo '+cls+'"><div class="'+this.attr('class')+'"></div></div>');
+				S('body').css({'overflow-y': 'hidden'});
+				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
+				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
+				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+				S('.moreinfo .close').on('click',function(e){
+					this.parent().parent().remove();
+					S('body').css({'overflow-y': ''});
+				});
+			});
 			return;
 		}
 
@@ -157,16 +194,71 @@ S().ready(function(){
 					var row = n.attr('data-row');
 					if(row){
 						if(row == "all"){
-							var icons = new Array();
-							var colurl = parseInt(n.attr('data-col-url'));
-							for(var r = 0; r < data.length; r++){
-								var s = data[r][coldate-1];
-								var e = (new Date()).toISOString();
-								if(end && data[r][end-1]) e = data[r][end-1];
-								// If the row is within the date range we add the image
-								if(this.inDateRange(s,e)) icons.push((colurl ? '<a href="'+data[r][colurl]+'">':'')+'<img src="data/'+data[r][col]+'" alt="logo" />'+(colurl ? '</a>':''));
+							if(this.els[i].el==".icons" || this.els[i].el==".list"){
+								var list = new Array();
+								var colurl = parseInt(n.attr('data-col-url'));
+								for(var r = 0; r < data.length; r++){
+									var s = data[r][coldate-1];
+									var e = (new Date()).toISOString();
+									if(end && data[r][end-1]) e = data[r][end-1];
+									// If the row is within the date range we add the image
+									if(this.inDateRange(s,e)){
+										if(this.els[i].el==".icons") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+'<img src="data/'+data[r][col-1]+'" alt="logo" />'+(colurl ? '</a>':''));
+										else if(this.els[i].el==".list") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+data[r][col-1]+(colurl ? '</a>':''));
+									}
+								}
+								showArray(n,list,(this.els[i].animate ? this.duration : 0));
+							}else if(this.els[i].el==".graph"){
+								var prev;
+								var mx = 0;
+								var bins = {};
+								var sd,ed,s;
+								function splitDate(d){
+									return {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
+								}
+
+								// Calculate date range to show for graph
+								for(var r = 0; r < data.length; r++){
+									s = data[r][coldate-1];
+									if(this.inDateRange(s)){
+										// We are in the date range and have no start date set
+										if(!sd) sd = s;
+									}else{
+										// We have left the date range (as the start date is set)
+										if(sd && !ed) ed = data[r-1][coldate-1];
+									}
+								}
+								// If no end date is set, do that now
+								if(!ed) ed = data[data.length-1][coldate-1];
+								sd = splitDate(sd);
+								ed = splitDate(ed);
+
+								for(var y = sd.y;y <= ed.y; y++){
+									for(var m = 1; m <= 12; m++){
+										bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+									}
+								}
+								var nbins = 0;
+								for(var key in bins) nbins++;
+
+								// Set the height of the graph
+								var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
+								for(var r = 0; r < data.length; r++){
+									sd = splitDate(data[r][coldate-1]);
+									key = sd.y+'-'+(sd.m < 10 ? "0":"")+sd.m;
+									if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col-1]);
+								}
+
+								// Find the peak value
+								for(var key in bins){
+									if(bins[key] > mx) mx = bins[key];
+								}
+
+								output = '<table style="'+h+'px"><tr style="vertical-align:bottom;">';
+								for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+bins[key]+'" style="height:'+(h*bins[key]/mx)+'px;"></div>'+(key.indexOf('-01') > 0 ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+								output += '</tr></table>';
+								n.html(output)
 							}
-							animateArray(n,icons,this.duration)
 							continue;
 						}else if(row == "last"){
 							row = data.length;
@@ -210,6 +302,19 @@ S().ready(function(){
 			if(s <= this.year && e >= this.year) return true;
 			else return false; 
 		}
+		this.resize = function(){
+			var i = S('.moreinfo');
+			if(i.length ==1){
+				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+			}
+			return this;
+		}
+
+		// We'll need to change the sizes when the window changes size
+		var _obj = this;
+		window.addEventListener('resize',function(e){ _obj.resize(); });
+
 		return this;
 	}
 	
