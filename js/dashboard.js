@@ -125,21 +125,7 @@ S().ready(function(){
 			attr.me.updatePanel(attr.i);
 			files[attr.url] = attr.i;
 			attr.me.panels[attr.i].el.on('click',{'me':attr.me,'i':i},function(e){
-				var o = offset(this.e[0]);
-				// Extract the background colour class from the parent
-				var cls = this.parent().attr('class').replace(/^.*?\s?([^\s]+-bg)/,function(e,a){ return a; });
-				var html = this.html();
-				S('.moreinfo').remove();
-				S('.main').after('<div class="moreinfo '+cls+'"><div class="'+this.attr('class')+'"></div></div>');
-				S('body').css({'overflow-y': 'hidden'});
-				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
-				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
-				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
-				S('.moreinfo .close').on('click',function(e){
-					this.parent().parent().remove();
-					S('body').css({'overflow-y': ''});
-				});
+				location.href = "#"+this.parent().parent().attr('data-id');
 			});
 			return;
 		}
@@ -155,7 +141,7 @@ S().ready(function(){
 			if(v > 1e4) return Math.round(v/1e3)+"k";
 			return v;
 		}
-	
+
 		this.update = function(){
 			for(var i = 0; i < this.panels.length; i++){
 				if(this.panels[i] && this.panels[i].data) this.updatePanel(i)
@@ -310,11 +296,51 @@ S().ready(function(){
 			}
 			return this;
 		}
+		this.navigate = function(e,a){
+			if(!a) a = location.href.split("#")[1];
+			var i = -1;
+			for(var j = 0; j < this.panels.length ; j++){
+				if(this.panels[j].el.parent().parent().attr('data-id')==a){
+					i = j;
+					continue;
+				}
+			}
+			if(i >= 0){
+				var p = this.panels[i].el;
+				var o = offset(p.e[0]);
+				// Add to history
+				if(this.pushstate && !e) history.pushState({},"Guide","#"+a);
+
+				// Extract the background colour class from the parent
+				var cls = p.parent().attr('class').replace(/^.*?\s?([^\s]+-bg)/,function(e,a){ return a; });
+				var html = p.html();
+				S('.moreinfo').remove();
+				S('.main').after('<div class="moreinfo '+cls+'"><div class="'+p.attr('class')+'"></div></div>');
+				S('body').css({'overflow-y': 'hidden'});
+				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
+				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
+				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+				S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href; });
+			}else{
+				S('.moreinfo').remove();
+				S('body').css({'overflow-y': ''});
+			}
+			return this;
+		}
+
+		// Do we update the address bar?
+		this.pushstate = !!(window.history && history.pushState);
+		this.href = location.href.split("#")[0];
 
 		// We'll need to change the sizes when the window changes size
 		var _obj = this;
 		window.addEventListener('resize',function(e){ _obj.resize(); });
+		// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
+		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
 
+		this.navigate({});
+		
 		return this;
 	}
 	
