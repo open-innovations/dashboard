@@ -325,7 +325,7 @@ S().ready(function(){
 				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
 				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
 				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
-				S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href; });
+				S('.moreinfo .close').on('click',{me:this},function(e){ window.history.back(); });
 			}else{
 				S('.moreinfo').remove();
 				S('body').css({'overflow-y': ''});
