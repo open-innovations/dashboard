@@ -25,7 +25,7 @@ S().ready(function(){
 		// Loop over panels finding the data sources to load
 		for(var i = 0; i < panels.length; i++){
 			var el = S(panels.e[i]);
-			this.panels[i] = {'el':el};
+			this.panels[i] = {'el':el,'updateable':new Array()};
 			if(el.attr('data-src')){
 				filename = el.attr('data-src');
 				this.panels[i].type = el.attr('data-type');
@@ -34,7 +34,6 @@ S().ready(function(){
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
 			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
 		}
-
 
 		function animateNumber(el,val,duration){
 			if(typeof val!=="number"){
@@ -127,6 +126,7 @@ S().ready(function(){
 			attr.me.panels[attr.i].el.on('click',{'me':attr.me,'i':i},function(e){
 				location.href = "#"+this.parent().parent().attr('data-id');
 			});
+
 			return;
 		}
 
@@ -193,7 +193,8 @@ S().ready(function(){
 										else if(this.els[i].el==".list") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+data[r][col-1]+(colurl ? '</a>':''));
 									}
 								}
-								showArray(n,list,(this.els[i].animate ? this.duration : 0));
+								this.panels[p].updateable.push({'el':this.els[i].el,'n':n,'list':list,'duration':(this.els[i].animate ? this.duration : 0)});
+								//showArray(n,list,(this.els[i].animate ? this.duration : 0));
 							}else if(this.els[i].el==".graph"){
 								var prev;
 								var mx = 0;
@@ -306,6 +307,9 @@ S().ready(function(){
 				}
 			}
 			if(i >= 0){
+				for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
+
+
 				var p = this.panels[i].el;
 				var o = offset(p.e[0]);
 				// Add to history
@@ -339,8 +343,6 @@ S().ready(function(){
 		// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
 		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
 
-		this.navigate({});
-		
 		return this;
 	}
 	
