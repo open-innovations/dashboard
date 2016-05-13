@@ -14,7 +14,7 @@ S().ready(function(){
 	function Dashboard(yyyy){
 
 		this.panels = new Array();
-		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':true},{'el':".list","animate":true},{'el':".graph"},{'el':".lastupdated"}];
+		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"}];
 		this.data;
 		this.el;
 		this.year = yyyy || "";
@@ -60,6 +60,15 @@ S().ready(function(){
 			if(typeof val==="number") frame();
 			return;			
 		}
+		function showArray(el,vals,duration){
+			if(duration > 0) animateArray(el,vals,duration)
+			else {
+				var output = "<ol>";
+				for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
+				output += "</ol>";
+				el.html(output);
+			}
+		}
 		function animateArray(el,vals,duration){
 			if(!vals) return;
 			var start = new Date();
@@ -69,18 +78,15 @@ S().ready(function(){
 				// Set the current time in seconds
 				var f = (now - start)/duration;
 				var n = Math.floor(vals.length*f);
+				var arr = new Array();
 				if(n > done){
-					var output = "";
-					for(var i = 0; i < n; i++) output += vals[i];
-					el.html(output);
+					for(var i = 0; i < n; i++) arr.push(vals[i]);
 				}
 				if(f < 1){
+					showArray(el,arr);
 					requestAnimFrame(frame);
 				}else{
-					var output = "<ol>";
-					for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
-					output += "</ol>";
-					el.html(output);				
+					showArray(el,vals);
 				}
 			}
 
@@ -197,11 +203,11 @@ S().ready(function(){
 									if(end && data[r][end-1]) e = data[r][end-1];
 									// If the row is within the date range we add the image
 									if(this.inDateRange(s,e)){
-										if(this.els[i].el==".icons") list.push((colurl ? '<a href="'+data[r][colurl]+'">':'')+'<img src="data/'+data[r][col]+'" alt="logo" />'+(colurl ? '</a>':''));
+										if(this.els[i].el==".icons") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+'<img src="data/'+data[r][col-1]+'" alt="logo" />'+(colurl ? '</a>':''));
 										else if(this.els[i].el==".list") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+data[r][col-1]+(colurl ? '</a>':''));
 									}
 								}
-								animateArray(n,list,this.duration)
+								showArray(n,list,(this.els[i].animate ? this.duration : 0));
 							}else if(this.els[i].el==".graph"){
 								var prev;
 								var mx = 0;
@@ -296,6 +302,19 @@ S().ready(function(){
 			if(s <= this.year && e >= this.year) return true;
 			else return false; 
 		}
+		this.resize = function(){
+			var i = S('.moreinfo');
+			if(i.length ==1){
+				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+			}
+			return this;
+		}
+
+		// We'll need to change the sizes when the window changes size
+		var _obj = this;
+		window.addEventListener('resize',function(e){ _obj.resize(); });
+
 		return this;
 	}
 	

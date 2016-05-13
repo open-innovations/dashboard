@@ -97,7 +97,7 @@ a { color: inherit; }
 
 .header {
 	line-height: 2em;
-	padding: 0.4em 0.8em 0em 0.8em;
+	padding: 0.3em 0.8em 0em 0.8em;
 }
 .main {
 	overflow: hidden;
@@ -255,29 +255,23 @@ select#range:hover, select#range:focus {
 }
 
 @media only screen and (max-width: 2600px) {
-	.boxholder {
-		width: 16.66666666%;
-	}
+	.boxholder { width: 16.66666666%; }
 }
 @media only screen and (max-width: 2000px) {
-	.boxholder {
-		width: 20%;
-	}
+	.boxholder { width: 20%; }
+	.moreinfo .panel li { width: 16.666666%; }
 }
 @media only screen and (max-width: 1500px) {
-	.boxholder {
-		width: 25%;
-	}
+	.boxholder { width: 25%; }
+	.moreinfo .panel li { width: 20%; }
 }
 @media only screen and (max-width: 1280px) {
-	.boxholder {
-		width: 33.333333333%;
-	}
+	.boxholder { width: 33.333333333%; }
+	.moreinfo .panel li { width: 25%; }
 }
 @media only screen and (max-width: 1000px) {
-	.boxholder {
-		width: 50%;
-	}
+	.boxholder { width: 50%; }
+	.moreinfo .panel li { width: 33.333333%; }
 }
 @media only screen and (max-width: 700px) {
 	.header {
@@ -287,7 +281,6 @@ select#range:hover, select#range:focus {
 		width: 100%;
 		overflow: hidden;
 	}
-	.boxholder {
-		width: 100%;
-	}
+	.boxholder { width: 100%; }
+	.moreinfo .panel li { width: 50%; }
 }
