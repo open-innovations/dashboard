@@ -106,7 +106,6 @@ S().ready(function(){
 		}
 
 		function loadData(data,attr){
-			console.log(attr)//BLAH
 			if(typeof data==="string"){
 				data = data.replace(/\r/,'');
 				data = data.split(/[\n]/);
