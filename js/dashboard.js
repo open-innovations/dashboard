@@ -25,13 +25,16 @@ S().ready(function(){
 		// Loop over panels finding the data sources to load
 		for(var i = 0; i < panels.length; i++){
 			var el = S(panels.e[i]);
-			this.panels[i] = {'el':el,'updateable':new Array()};
+			this.panels[i] = {'el':el,'updateable':new Array(),'id':el.parent().parent().attr('data-id')};
 			if(el.attr('data-src')){
 				filename = el.attr('data-src');
 				this.panels[i].type = el.attr('data-type');
 				this.panels[i].filename = filename;
 				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
+				this.panels[i].el.on('click',{'me':this,'i':i},function(e){
+					location.href = "#"+e.data.me.panels[e.data.i].id;
+				});
 			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
 		}
 
@@ -123,10 +126,7 @@ S().ready(function(){
 			attr.me.panels[attr.i].head = header;
 			attr.me.updatePanel(attr.i);
 			files[attr.url] = attr.i;
-			attr.me.panels[attr.i].el.on('click',{'me':attr.me,'i':i},function(e){
-				location.href = "#"+this.parent().parent().attr('data-id');
-			});
-
+			if(attr.me.panels[attr.i].id == attr.me.anchor) this.navigate({},attr.me.anchor);
 			return;
 		}
 
@@ -177,21 +177,19 @@ S().ready(function(){
 					var coldate = this.panels[p].el.attr('data-date') || "";
 					var end = n.attr('data-end') || "";
 					var col = parseInt(n.attr('data-col'));
+					var img = parseInt(n.attr('data-img'));
 					var row = n.attr('data-row');
 					if(row){
 						if(row == "all"){
 							if(this.els[i].el==".icons" || this.els[i].el==".list"){
 								var list = new Array();
-								var colurl = parseInt(n.attr('data-col-url'));
+								var colurl = parseInt(n.attr('data-url'));
 								for(var r = 0; r < data.length; r++){
 									var s = data[r][coldate-1];
 									var e = (new Date()).toISOString();
 									if(end && data[r][end-1]) e = data[r][end-1];
 									// If the row is within the date range we add the image
-									if(this.inDateRange(s,e)){
-										if(this.els[i].el==".icons") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+'<img src="data/'+data[r][col-1]+'" alt="logo" />'+(colurl ? '</a>':''));
-										else if(this.els[i].el==".list") list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+data[r][col-1]+(colurl ? '</a>':''));
-									}
+									if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img src="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
 								}
 								this.panels[p].updateable.push({'el':this.els[i].el,'n':n,'list':list,'duration':(this.els[i].animate ? this.duration : 0)});
 								//showArray(n,list,(this.els[i].animate ? this.duration : 0));
@@ -301,7 +299,7 @@ S().ready(function(){
 			if(!a) a = location.href.split("#")[1];
 			var i = -1;
 			for(var j = 0; j < this.panels.length ; j++){
-				if(this.panels[j].el.parent().parent().attr('data-id')==a){
+				if(this.panels[j].id==a){
 					i = j;
 					continue;
 				}
@@ -325,7 +323,7 @@ S().ready(function(){
 				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
 				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
 				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
-				S('.moreinfo .close').on('click',{me:this},function(e){ window.history.back(); });
+				S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
 			}else{
 				S('.moreinfo').remove();
 				S('body').css({'overflow-y': ''});
@@ -336,12 +334,14 @@ S().ready(function(){
 		// Do we update the address bar?
 		this.pushstate = !!(window.history && history.pushState);
 		this.href = location.href.split("#")[0];
+		this.anchor = location.href.split("#")[1];
 
 		// We'll need to change the sizes when the window changes size
 		var _obj = this;
 		window.addEventListener('resize',function(e){ _obj.resize(); });
 		// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
 		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
+		
 
 		return this;
 	}
