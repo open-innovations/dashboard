@@ -14,7 +14,8 @@ S().ready(function(){
 	function Dashboard(yyyy){
 
 		this.panels = new Array();
-		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"}];
+		// The DOM elements within a panel that will be processed
+		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"},{'el':'.updatelabel','txt':'Last updated: '}];
 		this.data;
 		this.el;
 		this.year = yyyy || "";
@@ -26,9 +27,9 @@ S().ready(function(){
 		for(var i = 0; i < panels.length; i++){
 			var el = S(panels.e[i]);
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':el.parent().parent().attr('data-id')};
-			if(el.attr('data-src')){
-				filename = el.attr('data-src');
-				this.panels[i].type = el.attr('data-type');
+			if(el.find('.data').attr('href')){
+				href = el.find('.data').length == 1 ? el.find('.data').attr('href') : "";
+				filename = href.substr(href.indexOf("tree/master") >= 0 ? href.indexOf("tree/master")+12 : 0);
 				this.panels[i].filename = filename;
 				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
@@ -174,8 +175,13 @@ S().ready(function(){
 						n.html(y+'-'+m+'-'+d)
 						continue;
 					}
-					var coldate = this.panels[p].el.attr('data-date') || "";
-					var end = n.attr('data-end') || "";
+					// Are we replacing the text content of the DOM element?
+					if(this.els[i].txt){
+						n.html(this.els[i].txt)
+						continue;
+					}
+					var coldate = this.panels[p].el.attr('data-start') || "";
+					var end = this.panels[p].el.attr('data-end') || n.attr('data-end');
 					var col = parseInt(n.attr('data-col'));
 					var img = parseInt(n.attr('data-img'));
 					var row = n.attr('data-row');
@@ -264,7 +270,7 @@ S().ready(function(){
 							var total = 0;
 							for(var r = 0; r < data.length; r++){
 								// Get the year from the ISO8601 formatted string
-								// if a data-date column has been specified
+								// if a data-start column has been specified
 								var s = data[r][coldate-1];
 								var e = (new Date()).toISOString();
 								if(end && data[r][end-1]) e = data[r][end-1];
