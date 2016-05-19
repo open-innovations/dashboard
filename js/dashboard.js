@@ -10,10 +10,6 @@ window.requestAnimFrame = (function(){
 function Dashboard(inp){
 	if(!inp) inp = {};
 	this.panels = new Array();
-	// The DOM elements within a panel that will be processed
-	this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"},{'el':'.updatelabel','txt':'Last updated: '}];
-	this.data;
-	this.el;
 	this.year = inp.year || "";
 	this.duration = 1000;
 	this.config = {};
@@ -29,21 +25,27 @@ function Dashboard(inp){
 			var el = S('#'+p);
 			this.panellookup[p] = i;
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
-			filename = (this.config[p].data) ? this.config[p].data : "";
-			if(filename){
-				this.panels[i].filename = filename;
-				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
-				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
+			if(this.config[p].data){
+				var fn = this.config[p].data;
+				if(!files[fn]) S().ajax(fn,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
+				else loadData(this.panels[files[fn]].data,{'i':i,'me':this});
 				this.panels[i].el.on('click',{'me':this,'i':i},function(e){
 					location.href = "#"+e.data.me.panels[e.data.i].id;
 				});
-			}//else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
+			}
 			i++;
 		}
 		S('#range').on('change',{me:this},function(e){
 			e.data.me.year = e.currentTarget.value;
 			e.data.me.update();
 		});
+	}
+
+	function pad(n, w) {
+		z = '0';
+		n = n + '';
+		l = n.length;
+		return l >= w ? n : new Array(w-l+1).join(z) + n;
 	}
 
 	function animateNumber(el,val,duration){
@@ -174,12 +176,7 @@ function Dashboard(inp){
 				
 				if(e == ".lastupdated" && this.panels[p].head['Last-Modified']){
 					var d = new Date(this.panels[p].head['Last-Modified']);
-					var y = d.getUTCFullYear();
-					var m = d.getUTCMonth()+1;
-					var d = d.getUTCDate();
-					if(m < 10) m = "0"+m;
-					if(d < 10) d = "0"+d;
-					n.html(y+'-'+m+'-'+d)
+					n.html(d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1,2)+'-'+pad(d.getUTCDate(),2))
 					continue;
 				}
 				// Are we replacing the text content of the DOM element?
@@ -187,11 +184,11 @@ function Dashboard(inp){
 					n.html(el.text)
 					continue;
 				}
-				var coldate = this.panels[p].config.start || this.panels[p].el.find('.panel').attr('data-start');
-				var end = this.panels[p].config.end || this.panels[p].el.find('.panel').attr('data-end') || n.attr('data-end');
-				var col = el.col || parseInt(n.attr('data-col')) || "";
-				var img = el.img || parseInt(n.attr('data-img')) || "";
-				var row = el.row || n.attr('data-row') || "";
+				var coldate = this.panels[p].config.start || "";
+				var colend = this.panels[p].config.end || "";
+				var col = el.col || "";
+				var img = el.img || "";
+				var row = el.row || "";
 				if(row){
 					if(row == "all"){
 						if(el.type=="list"){
@@ -200,7 +197,7 @@ function Dashboard(inp){
 							for(var r = 0; r < data.length; r++){
 								var s = data[r][coldate-1];
 								var e = (new Date()).toISOString();
-								if(end && data[r][end-1]) e = data[r][end-1];
+								if(colend && data[r][colend-1]) e = data[r][colend-1];
 								// If the row is within the date range we add the image
 								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img src="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
 							}
@@ -277,7 +274,7 @@ function Dashboard(inp){
 							// if a data-start column has been specified
 							var s = data[r][coldate-1];
 							var e = (new Date()).toISOString();
-							if(end && data[r][end-1]) e = data[r][end-1];
+							if(colend && data[r][colend-1]) e = data[r][colend-1];
 							if(this.inDateRange(s,e)){
 								if(op=="sum") total += parseInt(data[r][col-1]);
 								else if(op=="count") total++;
@@ -308,23 +305,21 @@ function Dashboard(inp){
 	this.navigate = function(e,a){
 		if(!a) a = location.href.split("#")[1];
 		var i = this.panellookup[a];
+
+		// Remove any existing moreinfo box
+		S('.moreinfo').remove();
+
 		if(typeof i==="number"){
 			for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
 
 			var o = offset(this.panels[i].el.e[0]);
 
-			// Remove any existing moreinfo box
-			S('.moreinfo').remove();
 			// Add the moreinfo box
 			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
 			S('body').css({'overflow-y': 'hidden'});
-			var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-			S('.moreinfo').html('<div class="close">&times;</div>'+this.panels[i].el.html());
-			S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
-			S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+			S('.moreinfo').html('<div class="close">&times;</div>'+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
 			S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
 		}else{
-			S('.moreinfo').remove();
 			S('body').css({'overflow-y': ''});
 		}
 		return this;
