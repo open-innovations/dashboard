@@ -10,7 +10,7 @@ window.requestAnimFrame = (function(){
 function Dashboard(inp){
 	if(!inp) inp = {};
 	this.panels = new Array();
-	this.year = inp.year || "";
+	this.year = "";
 	this.duration = 1000;
 	this.config = {};
 	this.panellookup = {};
@@ -18,7 +18,7 @@ function Dashboard(inp){
 
 	this.setup = function(inp){
 		if(!inp) inp = {};
-		if(inp.year) this.year = parseInt(inp.year);
+		if(typeof inp.year==="string") this.year = S(inp.year).e[0].value;
 		if(inp.config) this.config = inp.config;
 		var i = 0;
 		for(var p in this.config){
