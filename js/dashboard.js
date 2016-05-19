@@ -171,6 +171,7 @@ function Dashboard(inp){
 				cols = this.panels[p].data[r].split(/\,/);
 				data.push(cols);
 			}
+			this.panels[p].el = S('#'+p);
 			for(var e in this.panels[p].config.els){
 				var n = this.panels[p].el.find(e);
 				var el = this.panels[p].config.els[e];
@@ -316,12 +317,13 @@ function Dashboard(inp){
 		if(typeof i==="number"){
 			for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
 
-			var o = offset(this.panels[i].el.e[0]);
+			el = S('#'+this.panels[i].id);
+			var o = offset(el.e[0]);
 
 			// Add the moreinfo box
 			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
 			S('body').css({'overflow-y': 'hidden'});
-			S('.moreinfo').html('<div class="close">&times;</div>'+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
+			S('.moreinfo').html('<div class="close">&times;</div>'+el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
 			S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
 		}else{
 			S('body').css({'overflow-y': ''});
