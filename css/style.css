@@ -75,6 +75,7 @@ a { color: inherit; }
 	top: 0;
 	padding: 0.2em 0.25em;
 	cursor: pointer;
+	z-index: 10;
 }
 
 .c1-bg { background-color: #2254F4; }
@@ -101,21 +102,24 @@ a { color: inherit; }
 }
 .main {
 	overflow: hidden;
-	padding-top: 6px;
+	position: relative;
 }
 .dashboard {
 	position: relative;
+	padding-top: 3px;
 	margin-left: -3px;
 	margin-right: -3px;
-	margin-bottom: -6px;
+	bottom: 0px;
+	vertical-align: top;
 }
 .boxholder {
 	display: inline-block;
 	width: 12.5%;	/* 8 columns for wide screens */
 	margin: 0px;
-	height: 246px;
+	height: 245px;
 	padding: 3px;
-	margin-top: -3px;
+	vertical-align: top;
+	/*margin-top: -3px;*/
 }
 .box {
 	height: 100%;

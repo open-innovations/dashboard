@@ -6,356 +6,340 @@ window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
 })();
 
-var db;
-
 // ODI Leeds Dashboard
-S().ready(function(){
+function Dashboard(inp){
+	if(!inp) inp = {};
+	this.panels = new Array();
+	// The DOM elements within a panel that will be processed
+	this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"},{'el':'.updatelabel','txt':'Last updated: '}];
+	this.data;
+	this.el;
+	this.year = inp.year || "";
+	this.duration = 1000;
+	this.config = {};
+	this.panellookup = {};
+	var files = {};
 
-	function Dashboard(yyyy){
-
-		this.panels = new Array();
-		// The DOM elements within a panel that will be processed
-		this.els = [{'el':".number",'animate':true},{'el':".icons",'animate':false},{'el':".list","animate":false},{'el':".graph"},{'el':".lastupdated"},{'el':'.updatelabel','txt':'Last updated: '}];
-		this.data;
-		this.el;
-		this.year = yyyy || "";
-		this.duration = 1000;
-		var files = {};
-
-		var panels = S('.panel');
-		// Loop over panels finding the data sources to load
-		for(var i = 0; i < panels.length; i++){
-			var el = S(panels.e[i]);
-			this.panels[i] = {'el':el,'updateable':new Array(),'id':el.parent().parent().attr('data-id')};
-			if(el.find('.data').attr('href')){
-				href = el.find('.data').length == 1 ? el.find('.data').attr('href') : "";
-				filename = href.substr(href.indexOf("tree/master") >= 0 ? href.indexOf("tree/master")+12 : 0);
+	this.setup = function(inp){
+		if(!inp) inp = {};
+		if(inp.year) this.year = parseInt(inp.year);
+		if(inp.config) this.config = inp.config;
+		var i = 0;
+		for(var p in this.config){
+			var el = S('#'+p);
+			this.panellookup[p] = i;
+			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
+			filename = (this.config[p].data) ? this.config[p].data : "";
+			if(filename){
 				this.panels[i].filename = filename;
 				if(!files[filename]) S().ajax(filename,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[filename]].data,{'i':i,'me':this});
 				this.panels[i].el.on('click',{'me':this,'i':i},function(e){
 					location.href = "#"+e.data.me.panels[e.data.i].id;
 				});
-			}else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
+			}//else animateNumber(el.find('.number'),el.find('.number').html(),this.duration)
+			i++;
+		}
+		S('#range').on('change',{me:this},function(e){
+			e.data.me.year = e.currentTarget.value;
+			e.data.me.update();
+		});
+	}
+
+	function animateNumber(el,val,duration){
+		if(typeof val!=="number"){
+			val = el.html();
+			if(val) val = parseFloat(val);
+			el.html('');
+		}
+		var start = new Date();
+		var v;
+		function frame(){
+			var now = new Date();
+			// Set the current time in seconds
+			var f = (now - start)/duration;
+			if(f < 1){
+				v = formatNumber(Math.round(val*f));
+				el.html(v);
+				requestAnimFrame(frame);
+			}else{
+				el.html(formatNumber(val));
+			}
 		}
 
-		function animateNumber(el,val,duration){
-			if(typeof val!=="number"){
-				val = el.html();
-				if(val) val = parseFloat(val);
-				el.html('');
+		if(typeof val==="number") frame();
+		return;			
+	}
+	function showArray(el,vals,duration){
+		if(duration > 0) animateArray(el,vals,duration)
+		else {
+			var output = "<ol>";
+			for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
+			output += "</ol>";
+			el.html(output);
+		}
+	}
+	function animateArray(el,vals,duration){
+		if(!vals) return;
+		var start = new Date();
+		var done = -1;
+		function frame(){
+			var now = new Date();
+			// Set the current time in seconds
+			var f = (now - start)/duration;
+			var n = Math.floor(vals.length*f);
+			var arr = new Array();
+			if(n > done){
+				for(var i = 0; i < n; i++) arr.push(vals[i]);
 			}
-			var start = new Date();
-			var v;
-			function frame(){
-				var now = new Date();
-				// Set the current time in seconds
-				var f = (now - start)/duration;
-				if(f < 1){
-					v = formatNumber(Math.round(val*f));
-					el.html(v);
-					requestAnimFrame(frame);
-				}else{
-					el.html(formatNumber(val));
+			if(f < 1){
+				showArray(el,arr);
+				requestAnimFrame(frame);
+			}else{
+				showArray(el,vals);
+			}
+		}
+
+		frame();
+		return;			
+	}
+
+	function offset(el){
+		var rect = el.getBoundingClientRect();
+		var t = window.pageYOffset ? window.pageYOffset : (document.documentElement ? document.documentElement.scrollTop : (document.body ? document.body.scrollTop : 0));
+		var l = window.pageXOffset ? window.pageXOffset : (document.documentElement ? document.documentElement.scrollLeft : (document.body ? document.body.scrollLeft : 0));
+		return {
+			top: (rect.top + t),
+			left: (rect.left + l),
+			width: (rect.width),
+			height: (rect.height)
+		}
+	}
+
+	function loadData(data,attr){
+		if(typeof data==="string"){
+			data = data.replace(/\r/,'');
+			data = data.split(/[\n]/);
+		}
+		attr.me.panels[attr.i].data = data;
+		// Parse the header
+		var head = attr.header.split(/[\n\r]/);
+		var header = {};
+		for(var i = 0; i < head.length; i++){
+			if(head[i]){
+				j = head[i].indexOf(":");
+				header[head[i].substr(0,j)] = head[i].substr(j+1).replace(/^ */,"");
+			}
+		}
+		attr.me.panels[attr.i].head = header;
+		attr.me.updatePanel(attr.i);
+		files[attr.url] = attr.i;
+		if(attr.me.panels[attr.i].id == attr.me.anchor) this.navigate({},attr.me.anchor);
+		return;
+	}
+
+	function failData(data){
+		console.log('fail',data);
+	}
+	function formatNumber(v){
+		if(typeof v !== "number") return v;
+		if(v > 1e7) return Math.round(v/1e6)+"M";
+		if(v > 1e6) return (v/1e6).toFixed(1)+"M";
+		if(v > 1e5) return Math.round(v/1e3)+"k";
+		if(v > 1e4) return Math.round(v/1e3)+"k";
+		return v;
+	}
+
+	this.update = function(){
+		for(var i = 0; i < this.panels.length; i++){
+			if(this.panels[i] && this.panels[i].data) this.updatePanel(i)
+		}
+	}
+	// Update a specific panel
+	this.updatePanel = function(p){
+		var year,add,cols;
+		if(this.panels[p]){
+			var data = new Array();
+			if(!this.panels[p].data) return;
+			for(var r = 1; r < this.panels[p].data.length; r++){
+				cols = this.panels[p].data[r].split(/\,/);
+				data.push(cols);
+			}
+			for(var e in this.panels[p].config.els){
+				var n = this.panels[p].el.find(e);
+				var el = this.panels[p].config.els[e];
+				
+				// If the element doesn't exist in the DOM we skip this
+				if(n.length == 0) continue;
+				
+				if(e == ".lastupdated" && this.panels[p].head['Last-Modified']){
+					var d = new Date(this.panels[p].head['Last-Modified']);
+					var y = d.getUTCFullYear();
+					var m = d.getUTCMonth()+1;
+					var d = d.getUTCDate();
+					if(m < 10) m = "0"+m;
+					if(d < 10) d = "0"+d;
+					n.html(y+'-'+m+'-'+d)
+					continue;
 				}
-			}
-
-			if(typeof val==="number") frame();
-			return;			
-		}
-		function showArray(el,vals,duration){
-			if(duration > 0) animateArray(el,vals,duration)
-			else {
-				var output = "<ol>";
-				for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
-				output += "</ol>";
-				el.html(output);
-			}
-		}
-		function animateArray(el,vals,duration){
-			if(!vals) return;
-			var start = new Date();
-			var done = -1;
-			function frame(){
-				var now = new Date();
-				// Set the current time in seconds
-				var f = (now - start)/duration;
-				var n = Math.floor(vals.length*f);
-				var arr = new Array();
-				if(n > done){
-					for(var i = 0; i < n; i++) arr.push(vals[i]);
+				// Are we replacing the text content of the DOM element?
+				if(el.text){
+					n.html(el.text)
+					continue;
 				}
-				if(f < 1){
-					showArray(el,arr);
-					requestAnimFrame(frame);
-				}else{
-					showArray(el,vals);
-				}
-			}
-
-			frame();
-			return;			
-		}
-
-		function offset(el){
-			var rect = el.getBoundingClientRect();
-			var t = window.pageYOffset ? window.pageYOffset : (document.documentElement ? document.documentElement.scrollTop : (document.body ? document.body.scrollTop : 0));
-			var l = window.pageXOffset ? window.pageXOffset : (document.documentElement ? document.documentElement.scrollLeft : (document.body ? document.body.scrollLeft : 0));
-			return {
-				top: (rect.top + t),
-				left: (rect.left + l),
-				width: (rect.width),
-				height: (rect.height)
-			}
-		}
-
-		function loadData(data,attr){
-			if(typeof data==="string"){
-				data = data.replace(/\r/,'');
-				data = data.split(/[\n]/);
-			}
-			attr.me.panels[attr.i].data = data;
-			// Parse the header
-			var head = attr.header.split(/[\n\r]/);
-			var header = {};
-			for(var i = 0; i < head.length; i++){
-				if(head[i]){
-					j = head[i].indexOf(":");
-					header[head[i].substr(0,j)] = head[i].substr(j+1).replace(/^ */,"");
-				}
-			}
-			attr.me.panels[attr.i].head = header;
-			attr.me.updatePanel(attr.i);
-			files[attr.url] = attr.i;
-			if(attr.me.panels[attr.i].id == attr.me.anchor) this.navigate({},attr.me.anchor);
-			return;
-		}
-
-		function failData(data){
-			console.log('fail',data);
-		}
-		function formatNumber(v){
-			if(typeof v !== "number") return v;
-			if(v > 1e7) return Math.round(v/1e6)+"M";
-			if(v > 1e6) return (v/1e6).toFixed(1)+"M";
-			if(v > 1e5) return Math.round(v/1e3)+"k";
-			if(v > 1e4) return Math.round(v/1e3)+"k";
-			return v;
-		}
-
-		this.update = function(){
-			for(var i = 0; i < this.panels.length; i++){
-				if(this.panels[i] && this.panels[i].data) this.updatePanel(i)
-			}
-		}
-		// Update a specific panel
-		this.updatePanel = function(p){
-			var year,add,cols;
-			if(this.panels[p]){
-				var data = new Array();
-				if(!this.panels[p].data) return;
-				for(var r = 1; r < this.panels[p].data.length; r++){
-					cols = this.panels[p].data[r].split(/\,/);
-					data.push(cols);
-				}
-				for(var i = 0 ; i < this.els.length; i++){
-					var n = this.panels[p].el.find(this.els[i].el);
-
-					// If the element doesn't exist in the DOM we skip this
-					if(n.length == 0) continue;
-
-					// Are we processing the last updated field?
-					if(this.els[i].el.indexOf('.lastupdated') == 0 && this.panels[p].head['Last-Modified']){
-						var d = new Date(this.panels[p].head['Last-Modified']);
-						var y = d.getUTCFullYear();
-						var m = d.getUTCMonth()+1;
-						var d = d.getUTCDate();
-						if(m < 10) m = "0"+m;
-						if(d < 10) d = "0"+d;
-						n.html(y+'-'+m+'-'+d)
-						continue;
-					}
-					// Are we replacing the text content of the DOM element?
-					if(this.els[i].txt){
-						n.html(this.els[i].txt)
-						continue;
-					}
-					var coldate = this.panels[p].el.attr('data-start') || "";
-					var end = this.panels[p].el.attr('data-end') || n.attr('data-end');
-					var col = parseInt(n.attr('data-col'));
-					var img = parseInt(n.attr('data-img'));
-					var row = n.attr('data-row');
-					if(row){
-						if(row == "all"){
-							if(this.els[i].el==".icons" || this.els[i].el==".list"){
-								var list = new Array();
-								var colurl = parseInt(n.attr('data-url'));
-								for(var r = 0; r < data.length; r++){
-									var s = data[r][coldate-1];
-									var e = (new Date()).toISOString();
-									if(end && data[r][end-1]) e = data[r][end-1];
-									// If the row is within the date range we add the image
-									if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img src="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
-								}
-								this.panels[p].updateable.push({'el':this.els[i].el,'n':n,'list':list,'duration':(this.els[i].animate ? this.duration : 0)});
-								//showArray(n,list,(this.els[i].animate ? this.duration : 0));
-							}else if(this.els[i].el==".graph"){
-								var prev;
-								var mx = 0;
-								var bins = {};
-								var sd,ed,s;
-								function splitDate(d){
-									return {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
-								}
-
-								// Calculate date range to show for graph
-								for(var r = 0; r < data.length; r++){
-									s = data[r][coldate-1];
-									if(this.inDateRange(s)){
-										// We are in the date range and have no start date set
-										if(!sd) sd = s;
-									}else{
-										// We have left the date range (as the start date is set)
-										if(sd && !ed) ed = data[r-1][coldate-1];
-									}
-								}
-								// If no end date is set, do that now
-								if(!ed) ed = data[data.length-1][coldate-1];
-								sd = splitDate(sd);
-								ed = splitDate(ed);
-
-								for(var y = sd.y;y <= ed.y; y++){
-									for(var m = 1; m <= 12; m++){
-										bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
-									}
-								}
-								var nbins = 0;
-								for(var key in bins) nbins++;
-
-								// Set the height of the graph
-								var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
-								for(var r = 0; r < data.length; r++){
-									sd = splitDate(data[r][coldate-1]);
-									key = sd.y+'-'+(sd.m < 10 ? "0":"")+sd.m;
-									if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col-1]);
-								}
-
-								// Find the peak value
-								for(var key in bins){
-									if(bins[key] > mx) mx = bins[key];
-								}
-
-								output = '<table style="'+h+'px"><tr style="vertical-align:bottom;">';
-								for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+bins[key]+'" style="height:'+(h*bins[key]/mx)+'px;"></div>'+(key.indexOf('-01') > 0 ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
-								output += '</tr></table>';
-								n.html(output)
-							}
-							continue;
-						}else if(row == "last"){
-							row = data.length;
-							if(coldate){
-								// Find the last row in the valid date range
-								for(var r = 0; r < data.length; r++){
-									if(this.inDateRange(data[r][coldate-1])) row = r+1;
-								}
-							}
-						}else row = parseInt(row)
-						val = data[row-1][col-1];
-						if(this.els[i].animate) animateNumber(n,val,this.duration);
-						else n.html(val);
-					}else{
-						var op = n.attr('data-op');
-						var year = "";
-						if(op && col){
-							var total = 0;
+				var coldate = this.panels[p].config.start || this.panels[p].el.find('.panel').attr('data-start');
+				var end = this.panels[p].config.end || this.panels[p].el.find('.panel').attr('data-end') || n.attr('data-end');
+				var col = el.col || parseInt(n.attr('data-col')) || "";
+				var img = el.img || parseInt(n.attr('data-img')) || "";
+				var row = el.row || n.attr('data-row') || "";
+				if(row){
+					if(row == "all"){
+						if(el.type=="list"){
+							var list = new Array();
+							var colurl = parseInt(el.url);
 							for(var r = 0; r < data.length; r++){
-								// Get the year from the ISO8601 formatted string
-								// if a data-start column has been specified
 								var s = data[r][coldate-1];
 								var e = (new Date()).toISOString();
 								if(end && data[r][end-1]) e = data[r][end-1];
-								if(this.inDateRange(s,e)){
-									if(op=="sum") total += parseInt(data[r][col-1]);
-									else if(op=="count") total++;
+								// If the row is within the date range we add the image
+								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img src="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
+							}
+							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'duration':(el.animate ? this.duration : 0)});
+						}else if(el.type=="graph"){
+							var prev;
+							var mx = 0;
+							var bins = {};
+							var sd,ed,s;
+							function splitDate(d){
+								return {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
+							}
+
+							// Calculate date range to show for graph
+							for(var r = 0; r < data.length; r++){
+								s = data[r][coldate-1];
+								if(this.inDateRange(s)){
+									// We are in the date range and have no start date set
+									if(!sd) sd = s;
+								}else{
+									// We have left the date range (as the start date is set)
+									if(sd && !ed) ed = data[r-1][coldate-1];
 								}
 							}
-							if(this.els[i].animate) animateNumber(n,total,this.duration);
-							else n.html(formatNumber(total));
+							// If no end date is set, do that now
+							if(!ed) ed = data[data.length-1][coldate-1];
+							sd = splitDate(sd);
+							ed = splitDate(ed);
+
+							for(var y = sd.y;y <= ed.y; y++){
+								for(var m = 1; m <= 12; m++) bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+							}
+							var nbins = 0;
+							for(var key in bins) nbins++;
+
+							// Set the height of the graph
+							var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
+							for(var r = 0; r < data.length; r++){
+								sd = splitDate(data[r][coldate-1]);
+								key = sd.y+'-'+(sd.m < 10 ? "0":"")+sd.m;
+								if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col-1]);
+							}
+
+							// Find the peak value
+							for(var key in bins){
+								if(bins[key] > mx) mx = bins[key];
+							}
+
+							output = '<table style="'+h+'px"><tr style="vertical-align:bottom;">';
+							for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+bins[key]+'" style="height:'+(h*bins[key]/mx)+'px;"></div>'+(key.indexOf('-01') > 0 ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+							output += '</tr></table>';
+							n.html(output)
 						}
+						continue;
+					}else if(row == "last"){
+						row = data.length;
+						if(coldate){
+							// Find the last row in the valid date range
+							for(var r = 0; r < data.length; r++){
+								if(this.inDateRange(data[r][coldate-1])) row = r+1;
+							}
+						}
+					}else row = parseInt(row)
+					val = data[row-1][col-1];
+					if(el.animate) animateNumber(n,val,this.duration);
+					else n.html(val);
+				}else{
+					var op = el.op;
+					var year = "";
+					if(op && col){
+						var total = 0;
+						for(var r = 0; r < data.length; r++){
+							// Get the year from the ISO8601 formatted string
+							// if a data-start column has been specified
+							var s = data[r][coldate-1];
+							var e = (new Date()).toISOString();
+							if(end && data[r][end-1]) e = data[r][end-1];
+							if(this.inDateRange(s,e)){
+								if(op=="sum") total += parseInt(data[r][col-1]);
+								else if(op=="count") total++;
+							}
+						}
+						if(el.animate) animateNumber(n,total,this.duration);
+						else n.html(formatNumber(total));
 					}
 				}
 			}
 		}
-		this.inDateRange = function(start,end){
-			var s = parseInt(start.substr(0,4));
-			var e = (end ? parseInt(end.substr(0,4)) : s);
-			if(!this.year) return true;
-			if(s <= this.year && e >= this.year) return true;
-			else return false; 
+	}
+	this.inDateRange = function(start,end){
+		var s = parseInt(start.substr(0,4));
+		var e = (end ? parseInt(end.substr(0,4)) : s);
+		if(!this.year) return true;
+		if(s <= this.year && e >= this.year) return true;
+		else return false; 
+	}
+	this.resize = function(){
+		var i = S('.moreinfo');
+		if(i.length ==1){
+			var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+			S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
 		}
-		this.resize = function(){
-			var i = S('.moreinfo');
-			if(i.length ==1){
-				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
-			}
-			return this;
-		}
-		this.navigate = function(e,a){
-			if(!a) a = location.href.split("#")[1];
-			var i = -1;
-			for(var j = 0; j < this.panels.length ; j++){
-				if(this.panels[j].id==a){
-					i = j;
-					continue;
-				}
-			}
-			if(i >= 0){
-				for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
-
-
-				var p = this.panels[i].el;
-				var o = offset(p.e[0]);
-				// Add to history
-				if(this.pushstate && !e) history.pushState({},"Guide","#"+a);
-
-				// Extract the background colour class from the parent
-				var cls = p.parent().attr('class').replace(/^.*?\s?([^\s]+-bg)/,function(e,a){ return a; });
-				var html = p.html();
-				S('.moreinfo').remove();
-				S('.main').after('<div class="moreinfo '+cls+'"><div class="'+p.attr('class')+'"></div></div>');
-				S('body').css({'overflow-y': 'hidden'});
-				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-				S('.moreinfo .panel').html('<div class="close">&times;</div>'+html);
-				S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
-				S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
-				S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
-			}else{
-				S('.moreinfo').remove();
-				S('body').css({'overflow-y': ''});
-			}
-			return this;
-		}
-
-		// Do we update the address bar?
-		this.pushstate = !!(window.history && history.pushState);
-		this.href = location.href.split("#")[0];
-		this.anchor = location.href.split("#")[1];
-
-		// We'll need to change the sizes when the window changes size
-		var _obj = this;
-		window.addEventListener('resize',function(e){ _obj.resize(); });
-		// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
-		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
-		
-
 		return this;
 	}
-	
-	S('#range').on('change',function(e){
-		db.year = e.currentTarget.value;
-		db.update();
-	});
+	this.navigate = function(e,a){
+		if(!a) a = location.href.split("#")[1];
+		var i = this.panellookup[a];
+		if(typeof i==="number"){
+			for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
 
-	db = new Dashboard(S('#range').e[0].value);
-});
+			var o = offset(this.panels[i].el.e[0]);
+
+			// Remove any existing moreinfo box
+			S('.moreinfo').remove();
+			// Add the moreinfo box
+			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
+			S('body').css({'overflow-y': 'hidden'});
+			var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+			S('.moreinfo').html('<div class="close">&times;</div>'+this.panels[i].el.html());
+			S('.moreinfo').css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'});
+			S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+			S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
+		}else{
+			S('.moreinfo').remove();
+			S('body').css({'overflow-y': ''});
+		}
+		return this;
+	}
+
+	// Do we update the address bar?
+	this.pushstate = !!(window.history && history.pushState);
+	this.href = location.href.split("#")[0];
+	this.anchor = location.href.split("#")[1];
+
+	// We'll need to change the sizes when the window changes size
+	var _obj = this;
+	window.addEventListener('resize',function(e){ _obj.resize(); });
+	// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
+	window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
+
+	return this;
+}
