@@ -44,7 +44,8 @@ table {
 
 
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
-h1 { line-height: 0.8em; font-size: 2.6em; }
+h1 { line-height: 0.8em; font-size: 2.5em; }
+a { color: inherit; }
 .odimark { font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; font-stretch:condensed; }
 .odimark { color: black; margin-right: 0.2em; }
 .odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.75em; height: 0.75em; overflow: hidden; border: 4px solid black; display: inline-block; color: transparent; background-color: black; position: relative; line-height: inherit; text-align: center; }
@@ -53,6 +54,30 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 .odimark .D { border-radius: 0% 100% 100% 0%; }
 .odimark .I { width: 0.4em; margin-right: 0.1em; }
 .odimark .nodename { font-size: 0.2em; color: white; position: relative; margin-left: -4.4em; top: -1.2em; letter-spacing: 1px; }
+
+.moreinfo {
+	position: fixed;
+	background-color: black;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	display: table;
+	transition: left 0.15s ease, top 0.15s ease, width 0.15s ease, height 0.15s ease, font-size 0.15s ease;
+}
+.moreinfo .close {
+	font-size:1.5em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.2em 0.25em;
+	cursor: pointer;
+	z-index: 10;
+}
+
 .c1-bg { background-color: #2254F4; }
 .c2-bg { background-color: #178CFF; }
 .c3-bg { background-color: #00B6FF; }
@@ -73,25 +98,28 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 
 .header {
 	line-height: 2em;
-	padding: 0.8em 0.8em 0em 0.8em;
+	padding: 0.3em 0.8em 0em 0.8em;
 }
 .main {
 	overflow: hidden;
-	padding-top: 6px;
+	position: relative;
 }
 .dashboard {
 	position: relative;
+	padding-top: 3px;
 	margin-left: -3px;
 	margin-right: -3px;
-	margin-bottom: -6px;
+	bottom: 0px;
+	vertical-align: top;
 }
 .boxholder {
 	display: inline-block;
 	width: 12.5%;	/* 8 columns for wide screens */
 	margin: 0px;
-	height: 246px;
+	height: 245px;
 	padding: 3px;
-	margin-top: -3px;
+	vertical-align: top;
+	/*margin-top: -3px;*/
 }
 .box {
 	height: 100%;
@@ -99,33 +127,42 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 	display: table;
 	width: 100%;
 }
+.dashboard .panel {
+	cursor: pointer;
+}
+.dashboard .panel .more {
+	display: none;
+}
+.moreinfo .panel .less {
+	display: none;
+}
 .panel {
 	display: table-cell;
 	vertical-align: middle;
 	color: white;
 	text-align: center;
 }
-.panel .number {
+.panel .number, .moreinfo .number {
 	position: relative;
 	line-height: 1em;
 	margin: auto;
 	text-align: center;
 	display: block;
-	font-size: 8em;
+	font-size: 7em;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
-.panel .title {
+.panel .title, .moreinfo .title {
 	display: block;
 	opacity: 0.6;
 	line-height: 1em;
 	font-size: 1.8em;
 	margin-bottom: 0.5em;
 }
-.panel .updated {
+.panel .updated, .moreinfo .updated {
 	position: absolute;
 	bottom: 0.25em;
 	font-size: 0.8em;
@@ -146,26 +183,73 @@ h1 { line-height: 0.8em; font-size: 2.6em; }
 	text-decoration: underline;
 }
 .panel:hover .number {
-	font-size: 9em;
+	font-size: 8em;
 }
-
-.sponsors .number {
-	font-size: 2em;
-}
-.panel .icons {
-	width: 95%;
+.panel .icons, .panel .list {
+	width: 90%;
 	margin: auto;
 	text-align: center;
 }
-.panel .icons img { opacity: 0.8; }
-.panel .icons img:hover { opacity: 1; }
-.sponsors img {
+.panel .list li { padding: 0.5em; }
+.panel .icons a { display: block; width: 100%; padding: 0 0.25em; }
+.panel .icons img { width: 100%; }
+.panel .icons img:hover { background-color: rgba(255,255,255,0.3); }
+.panel li {
 	display: inline-block;
 	width: 25%;
 }
-.partners img {
+.partners li {
 	display: inline-block;
-	width: 45%;
+	width: 50%;
+}
+.projects li {
+	width: 25%;
+	height: 3em;
+}
+.graph {
+	width: 90%;
+	display: block;
+	margin: auto;
+	text-align: center;
+	position: relative;
+}
+.graph table {
+	margin: auto;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+.graph table td {
+	border-right: 1px solid transparent;
+	position: relative;
+	padding-bottom: 1.5em;
+}
+.graph table .bar {
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid white;
+}
+.graph table .date {
+	position: absolute;
+	left: 0px;
+	border-left: 1px solid white;
+	padding-left: 0.25em;
+	padding-top: 0.25em;
+}
+.graph .grid {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.graph .grid .line {
+	width: 100%;
+	border-bottom: 1px solid white;
+	opacity: 0.5;
+	position: absolute;
+	text-align: right;
+}
+.graph .grid .line span {
 }
 select#range {
 	font: inherit;
@@ -181,6 +265,9 @@ select#range {
 	background-size: 1em 100%;
 	padding-right: 1em;
 }
+select#range option {
+	padding-top: 0.25em;
+}
 select#range:hover, select#range:focus {
 	border: 1px solid rgba(0,0,0,0.4)!important;
 	background: url('dropdown.png') no-repeat right center;
@@ -188,29 +275,23 @@ select#range:hover, select#range:focus {
 }
 
 @media only screen and (max-width: 2600px) {
-	.boxholder {
-		width: 16.66666666%;
-	}
+	.boxholder { width: 16.66666666%; }
 }
 @media only screen and (max-width: 2000px) {
-	.boxholder {
-		width: 20%;
-	}
+	.boxholder { width: 20%; }
+	.moreinfo .panel li { width: 16.666666%; }
 }
 @media only screen and (max-width: 1500px) {
-	.boxholder {
-		width: 25%;
-	}
+	.boxholder { width: 25%; }
+	.moreinfo .panel li { width: 20%; }
 }
 @media only screen and (max-width: 1280px) {
-	.boxholder {
-		width: 33.333333333%;
-	}
+	.boxholder { width: 33.333333333%; }
+	.moreinfo .panel li { width: 25%; }
 }
 @media only screen and (max-width: 1000px) {
-	.boxholder {
-		width: 50%;
-	}
+	.boxholder { width: 50%; }
+	.moreinfo .panel li { width: 33.333333%; }
 }
 @media only screen and (max-width: 700px) {
 	.header {
@@ -220,7 +301,6 @@ select#range:hover, select#range:focus {
 		width: 100%;
 		overflow: hidden;
 	}
-	.boxholder {
-		width: 100%;
-	}
+	.boxholder { width: 100%; }
+	.moreinfo .panel li { width: 50%; }
 }

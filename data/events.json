@@ -1,0 +1,43 @@
+{
+	"title": "ODI Leeds Events",
+	"description": "Schema for the ODI Leeds events data",
+	"dc:modified": {"@value": "2016-05-17", "@type": "xsd:date"},
+	"fields": [{
+		"name": "Date",
+		"description": "Start date of the event",
+		"constraints": {
+			"required": true,
+			"type": "http://www.w3.org/2001/XMLSchema#dateTime",
+			"datePattern": "%Y-%m-%dT%H:%MZ"
+		}
+	},{
+		"name": "Title",
+		"description": "Name of the event",
+		"constraints": {
+			"required": true,
+			"type": "http://www.w3.org/2001/XMLSchema#string"
+		}
+	},{
+		"name": "Status",
+		"description": "The event status",
+		"constraints": {
+			"required": false,
+			"type": "http://www.w3.org/2001/XMLSchema#string",
+			"datePattern": "(Past|CONFIRMED)"
+		}
+	},{
+		"name": "Attendance",
+		"description": "Number of people who attended the event",
+		"constraints": {
+			"type": "http://www.w3.org/2001/XMLSchema#int",
+			"pattern": "[0-9]+"
+		}
+	},{
+		"name": "Attendance source",
+		"description": "Where the attendance figure originated",
+		"constraints": {
+			"type": "http://www.w3.org/2001/XMLSchema#string",
+			"required": false
+		}
+	}]
+}

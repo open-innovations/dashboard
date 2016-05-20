@@ -8,7 +8,7 @@ Date,Title,Status,Attendance,Attendance source
 2014-05-09T00:00Z,"Cycling Starts Here Data-Design-Development",CONFIRMED,0,
 2014-05-14T17:00Z,"mHealth Habitat Show & Tell",CONFIRMED,0,
 2014-05-20T17:30Z,"Leeds dev ops",CONFIRMED,31,https://www.flickr.com/photos/125166571@N05/14527494966/
-2014-05-21T00:00Z,"Open Data in a Day - Training",CONFIRMED,0,
+2014-05-21T00:00Z,"Open Data in A Day - Training",CONFIRMED,0,Calendar
 2014-05-21T09:00Z,"Open Data in a Day by The ODI, @ODI-Leeds",Past,11,EventBright
 2014-06-03T00:00Z,"Leeds Gov Jam",CONFIRMED,29,https://www.flickr.com/photos/125166571@N05/14527491476/
 2014-06-05T15:30Z,"Nhs healthcare event 4-6",CONFIRMED,23,https://www.flickr.com/photos/125166571@N05/14363974428/
@@ -265,7 +265,7 @@ Date,Title,Status,Attendance,Attendance source
 2016-02-24T09:30Z,"SmartKlub Leeds TowerBlocks & District Energy",CONFIRMED,65,Calendar
 2016-02-24T17:30Z,"Iema flood management event",CONFIRMED,25,Calendar
 2016-02-25T08:15Z,"Leaders in Leeds - The next generation.",CONFIRMED,0,
-2016-02-25T12:30Z,"MSc Energy Database project",CONFIRMED,0,
+2016-02-25T12:30Z,"MSc Energy Database project",CONFIRMED,10,Calendar
 2016-02-26T12:30Z,"John Farenden (EY)\, Rob Parker (NHS England)\, Paul Connoll (ODI) ",CONFIRMED,0,Calendar
 2016-02-26T16:00Z,"Leeds gov jam",CONFIRMED,0,
 2016-02-27T09:00Z,"Leeds gov jam",CONFIRMED,0,
@@ -298,6 +298,8 @@ Date,Title,Status,Attendance,Attendance source
 2016-04-29T18:00Z,"Algorave",CONFIRMED,150,Calendar
 2016-04-30T08:00Z,"Playful Leeds: Gnome Street Gnome",CONFIRMED,20,Calendar
 2016-05-04T09:00Z,"Stew and oyster team meeting",CONFIRMED,23,
-2016-05-06T12:00Z,"ODILeeds Friday lunchtime lectures editing out the gender gap",CONFIRMED,0,Calendar
+2016-05-06T12:00Z,"ODILeeds Friday lunchtime lectures editing out the gender gap",CONFIRMED,5,Calendar
 2016-05-09T18:00Z,"Drupal Yorkshire",CONFIRMED,10,Calendar
 2016-05-10T08:00Z,"Leeds City Council Recruitment Hack",CONFIRMED,69,Calendar
+2016-05-13T12:00Z,"ODIHQ@ODILeeds Free Friday Lunchtime Lectures: A data revolution fo",CONFIRMED,5,Calendar
+2016-05-17T17:00Z,"Leeds devops",CONFIRMED,50,Calendar
