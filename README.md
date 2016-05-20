@@ -17,8 +17,8 @@ The Javascript requires a JSON object to be defined that describes what each pan
 We've referenced the data and defined the date columns, so now we need to output the values somewhere. Each panel is provided with a set of DOM elements (`els`) that will be updated. The key used for each of these is the relative CSS selector to get to that DOM element e.g. if our panel contains a `<div class="number"></div>` we would use `".number"` to reference it. Each of these DOM elements is provided with its own configuration options:
 
 * `col` is the number for the main value they are concerned;
-* `row` (`"all"` or `"last"`) can be `"all"` (we process each row to calculate some statistic) or `"last"` which uses the value of the final row (useful for showing the date of the most recent data);
-* `op` (`"sum"` or `"count"`) is the operation to perform and can either be `sum` (sum the values from each of the rows) or `count` (count the number of rows of data);
+* `row` (`"all"` or `"last"`) will either process all rows or just use the value from the final row (useful for showing the date of the most recent data);
+* `op` (`"sum"` or `"count"`) is the operation to perform and can either sum the values from each of the rows or count the number of rows of data;
 * `animate` (`true` or `false`) lets you turn off the animation of the number increasing;
 * `type` (`"graph"` or `"list"`), if set, will either display a simple bar-chart binned monthly or yearly depending on the date resolution in the CSV file or create a list of items.
 
