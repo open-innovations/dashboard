@@ -128,3 +128,24 @@ S().ready(function(){
 });
 </script>
 ```
+
+With the following HTML:
+
+```html
+		<ul class="dashboard">
+			<li class="boxholder" id="events"><div class="box c12-bg"><div class="panel"><div class="title">Events</div><div class="number less"></div><p class="more">Number of events hosted at ODI Leeds</p><div class="graph more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/events_monthly.csv" class="lastupdated">events data</a></div></div></div></li
+			><li class="boxholder" id="reach"><div class="box c5-bg"><div class="panel"><div class="title">Event reach</div><div class="number less"></div><p class="more">Number of people at ODI Leeds events</p><div class="graph more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/events_monthly.csv" class="lastupdated">events data by month</a></div></div></div></li
+			><li class="boxholder" id="sponsors"><div class="box c8-bg"><div class="panel sponsors"><div class="title">Sponsors</div><div class="number less"></div><div class="icons more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/sponsors.csv" class="lastupdated">table of sponsors</a></div></div></div></li
+			><li class="boxholder" id="revenue"><div class="box c1-bg"><div class="panel"><div class="title">Revenue</div><div class="more">ODI Leeds Node revenue</div><div class="number less"></div><div class="graph more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/revenue.csv" class="lastupdated data">revenue table</a></div></div></div></li
+			><li class="boxholder" id="network"><div class="box c11-bg"><div class="panel"><div class="title">Network</div><div class="number less"></div><div class="icons more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/network.csv" class="lastupdated data">data about our network</a></div></div></div></li
+			><li class="boxholder" id="projects"><div class="box c14-bg"><div class="panel projects"><div class="title">Open innovation <br class="less" />&amp; data projects</div><div class="number less"></div><div class="list more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/projects.csv" class="lastupdated">a list of our projects</a></div></div></div></li
+			><li class="boxholder" id="partners"><div class="box c13-bg"><div class="panel partners"><div class="title">Partners</div><div class="number less"></div><div class="icons more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/partners.csv" class="lastupdated">data abour our partners</a></div></div></div></li
+			><li class="boxholder" id="tweets"><div class="box c3-bg"><div class="panel"><div class="title">Tweet impressions</div><p class="more">Interaction with the <a href="https://twitter.com/ODILeeds">@ODILeeds</a> Twitter account. Source: Twitter Analytics</p><div class="number less"></div><div class="graph more"></div><div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/socialmedia.csv" class="lastupdated">twitter stats</a></div></div></div></li
+			><li class="boxholder"><div class="box c7-bg"><div class="panel" style="background: url('http://i2.wp.com/leeds.odinodes.wpengine.com/wp-content/uploads/sites/7/2015/07/Yorkshire-Water-Data-Dive-event-at-Munro-House-Leeds..-001.jpg?resize=420%2C240') center center;background: url('bg.jpg') center center;background-size: cover;"><div class="image"></div></div></div></li>
+		</ul>
+```
+
+Notes:
+
+1. Each panel contains links to the CSV files so that the data are still accessible if Javascript fails.
+1. There are no line breaks between the `</li>` and `<li>` tags as the whitespace causes gaps in the CSS layout.
