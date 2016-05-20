@@ -149,5 +149,5 @@ Notes:
 
 1. Each panel contains links to the CSV files so that the data are still accessible if Javascript fails.
 1. There are no line breaks between the `</li>` and `<li>` tags as the whitespace causes gaps in the CSS layout.
-1. The `less` and `more` classes are used to show/hide elements in the main dashboard view  (`less`) and the more information full-screen box (`more`).
+1. The `less` and `more` classes are used to show/hide elements in the main dashboard view  (`less`) and the full-screen information box (`more`).
 1. The `id`s on the `<li>` elements must match the keys used in the JSON set-up above. They also act as nice anchor tags.
