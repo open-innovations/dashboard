@@ -148,7 +148,7 @@ a { color: inherit; }
 	margin: auto;
 	text-align: center;
 	display: block;
-	font-size: 8em;
+	font-size: 7em;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
@@ -183,7 +183,7 @@ a { color: inherit; }
 	text-decoration: underline;
 }
 .panel:hover .number {
-	font-size: 9em;
+	font-size: 8em;
 }
 .panel .icons, .panel .list {
 	width: 90%;
@@ -211,6 +211,7 @@ a { color: inherit; }
 	display: block;
 	margin: auto;
 	text-align: center;
+	position: relative;
 }
 .graph table {
 	margin: auto;
@@ -233,6 +234,22 @@ a { color: inherit; }
 	border-left: 1px solid white;
 	padding-left: 0.25em;
 	padding-top: 0.25em;
+}
+.graph .grid {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.graph .grid .line {
+	width: 100%;
+	border-bottom: 1px solid white;
+	opacity: 0.5;
+	position: absolute;
+	text-align: right;
+}
+.graph .grid .line span {
 }
 select#range {
 	font: inherit;

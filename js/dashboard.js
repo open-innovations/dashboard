@@ -9,7 +9,7 @@ window.requestAnimFrame = (function(){
 })();
 
 /*!
- * ODI Leeds Dashboard (version 1)
+ * ODI Leeds Dashboard (version 1.0.1)
  */
 function Dashboard(inp){
 	if(!inp) inp = {};
@@ -52,12 +52,13 @@ function Dashboard(inp){
 		return l >= w ? n : new Array(w-l+1).join(z) + n;
 	}
 
-	function animateNumber(el,val,duration){
+	function animateNumber(el,val,duration,units){
 		if(typeof val!=="number"){
 			val = el.html();
 			if(val) val = parseFloat(val);
 			el.html('');
 		}
+		if(!units) units = "";
 		var start = new Date();
 		var v;
 		function frame(){
@@ -66,10 +67,10 @@ function Dashboard(inp){
 			var f = (now - start)/duration;
 			if(f < 1){
 				v = formatNumber(Math.round(val*f));
-				el.html(v);
+				el.html(units+v);
 				requestAnimFrame(frame);
 			}else{
-				el.html(formatNumber(val));
+				el.html(units+formatNumber(val));
 			}
 		}
 
@@ -213,7 +214,7 @@ function Dashboard(inp){
 							var bins = {};
 							var sd,ed,s;
 							function splitDate(d){
-								return {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
+								return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
 							}
 
 							// Calculate date range to show for graph
@@ -231,9 +232,11 @@ function Dashboard(inp){
 							if(!ed) ed = data[data.length-1][coldate-1];
 							sd = splitDate(sd);
 							ed = splitDate(ed);
+							monthly = (sd.m > 0);
 
 							for(var y = sd.y;y <= ed.y; y++){
-								for(var m = 1; m <= 12; m++) bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+								if(monthly) for(var m = 1; m <= 12; m++) bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+								else bins[y] = 0;
 							}
 							var nbins = 0;
 							for(var key in bins) nbins++;
@@ -242,7 +245,7 @@ function Dashboard(inp){
 							var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
 							for(var r = 0; r < data.length; r++){
 								sd = splitDate(data[r][coldate-1]);
-								key = sd.y+'-'+(sd.m < 10 ? "0":"")+sd.m;
+								key = sd.y+(monthly ? '-'+(sd.m < 10 ? "0":"")+sd.m : '');
 								if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col-1]);
 							}
 
@@ -251,8 +254,14 @@ function Dashboard(inp){
 								if(bins[key] > mx) mx = bins[key];
 							}
 
-							output = '<table style="'+h+'px"><tr style="vertical-align:bottom;">';
-							for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+bins[key]+'" style="height:'+(h*bins[key]/mx)+'px;"></div>'+(key.indexOf('-01') > 0 ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+							var output = '<div class="grid" style="height:'+h+'px;">';
+							var grid = getGrid(0,mx);
+							for(var g = 0; g < grid.max; g+= grid.inc){
+								output += '<div class="line" style="bottom:'+(h*g/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
+							} 
+							output += '</div>'
+							output += '<table><tr style="vertical-align:bottom;">';
+							for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(h*bins[key]/mx)+'px;"></div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
 							output += '</tr></table>';
 							n.html(output)
 						}
@@ -285,8 +294,8 @@ function Dashboard(inp){
 								else if(op=="count") total++;
 							}
 						}
-						if(el.animate) animateNumber(n,total,this.duration);
-						else n.html(formatNumber(total));
+						if(el.animate) animateNumber(n,total,this.duration,this.panels[p].config.units);
+						else n.html((this.panels[p].config.units || "")+formatNumber(total));
 					}
 				}
 			}
@@ -341,6 +350,33 @@ function Dashboard(inp){
 	window.addEventListener('resize',function(e){ _obj.resize(); });
 	// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
 	window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
+
+	function getGrid(mn,mx){
+		var rg = mx-mn;
+		var base = 10;
+		var t_inc = Math.pow(base,Math.floor(Math.log(rg)/Math.log(base)));
+		t_inc *= 2;
+		var t_max = (Math.floor(mx/t_inc))*t_inc;
+		if(t_max < mx) t_max += t_inc;
+		var t_min = t_max;
+		var i = 0;
+		do {
+			i++;
+			t_min -= t_inc;
+		}while(t_min > mn);
+
+		// Test for really tiny values that might mess up the calculation
+		if(Math.abs(t_min) < 1E-15) t_min = 0.0;
+
+		// Add more tick marks if we only have a few
+		while(i < 3) {
+			t_inc /= 2.0;
+			if((t_min + t_inc) <= mn) t_min += t_inc;
+			if((t_max - t_inc) >= mx) t_max -= t_inc ;
+			i = i*2;
+		}
+		return {'min':t_min,'max':t_max,'inc':t_inc,'range':t_max-t_min};
+	}
 
 	return this;
 }
