@@ -19,6 +19,7 @@ We've referenced the data and defined the date columns, so now we need to output
 * `col` is the number for the main value they are concerned;
 * `row` (`"all"` or `"last"`) will either process all rows or just use the value from the final row (useful for showing the date of the most recent data);
 * `op` (`"sum"` or `"count"`) is the operation to perform and can either sum the values from each of the rows or count the number of rows of data;
+* `units` is an optional prefix for the calculated number (e.g. `&pound;`);
 * `animate` (`true` or `false`) lets you turn off the animation of the number increasing;
 * `type` (`"graph"` or `"list"`), if set, will either display a simple bar-chart binned monthly or yearly depending on the date resolution in the CSV file or create a list of items.
 
