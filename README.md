@@ -2,6 +2,13 @@
 
 A simple dashboard created for ODI Leeds. The dashboard has no external dependencies and reads data from CSV files located on the same server. It uses HTML, CSS and Javascript.
 
+## Aims
+
+* Make a dashboard that shows summary numbers based on stats from (or calculated from) data in CSV files.
+* Keep the initial page-load small (less than 50kB).
+* The dashboard should be responsive.
+* Without Javascript it is at least still possible to access the data.
+
 ## Setting up
 
 The styling can be found in the `css/style.css` file. 
