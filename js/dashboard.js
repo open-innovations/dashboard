@@ -20,7 +20,31 @@ function Dashboard(inp){
 	this.panellookup = {};
 	var files = {};
 
+	function parseQueryString(){
+		var r = {};
+		var q = location.search;
+		if(q && q != '#'){
+			// remove the leading ? and trailing &
+			q = q.replace(/^\?/,'').replace(/\&$/,'');
+			var qs = q.split('&');
+			for(var i = 0; i < qs.length; i++){
+				var key = qs[i].split('=')[0];
+				var val = qs[i].split('=')[1];
+				if(/^[0-9\.]+$/.test(val)) val = parseFloat(val);	// convert floats
+				r[key] = val;
+			}
+		}
+		this.testmode = (r['debug']) ? true : false;
+		for(u in this.defaults){
+			if(r[u]) this.defaults[u] = r[u];
+		}
+		return r;
+	}
+	this.query = parseQueryString();
+	this.log = (this.query.debug && this.query.debug=="log") ? this.query.debug : false;
+
 	this.setup = function(inp){
+		log('setup');
 		if(!inp) inp = {};
 		if(typeof inp.year==="string") this.year = S(inp.year).e[0].value;
 		if(inp.config) this.config = inp.config;
@@ -53,6 +77,7 @@ function Dashboard(inp){
 	}
 
 	function animateNumber(el,val,duration,units){
+		log('animateNumber');
 		if(typeof val!=="number"){
 			val = el.html();
 			if(val) val = parseFloat(val);
@@ -124,6 +149,7 @@ function Dashboard(inp){
 	}
 
 	function loadData(data,attr){
+		log('loadData',data,attr);
 		if(typeof data==="string"){
 			data = data.replace(/\r/,'');
 			data = data.split(/[\n]/);
@@ -145,8 +171,15 @@ function Dashboard(inp){
 		return;
 	}
 
+	function log(){
+		if(!_obj.log) return this;
+		var args = Array.prototype.slice.call(arguments, 0);
+		if(console && typeof console.log==="function") console.log('LOG',args);
+		return this;
+	}
+
 	function failData(data){
-		console.log('fail',data);
+		log('fail',data);
 	}
 	function formatNumber(v){
 		if(typeof v !== "number") return v;
@@ -158,12 +191,14 @@ function Dashboard(inp){
 	}
 
 	this.update = function(){
+		log('update');
 		for(var i = 0; i < this.panels.length; i++){
 			if(this.panels[i] && this.panels[i].data) this.updatePanel(i)
 		}
 	}
 	// Update a specific panel
 	this.updatePanel = function(p){
+		log('updatePanel',p);
 		var year,add,cols;
 		if(this.panels[p]){
 			var data = new Array();
@@ -317,6 +352,7 @@ function Dashboard(inp){
 		return this;
 	}
 	this.navigate = function(e,a){
+		log('navigate');
 		if(!a) a = location.href.split("#")[1];
 		var i = this.panellookup[a];
 
