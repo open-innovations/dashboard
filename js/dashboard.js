@@ -335,7 +335,8 @@ function Dashboard(inp){
 
 			// Add CSS cursor and add click event
 			this.panels[p].el.css({'cursor':'pointer'}).off('click').on('click',{'me':this,'i':p},function(e){
-				location.href = "#"+e.data.me.panels[e.data.i].id;
+				log('Set hash')
+				location.hash = e.data.me.panels[e.data.i].id;
 			});
 
 		}
