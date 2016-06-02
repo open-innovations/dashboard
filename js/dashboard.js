@@ -338,8 +338,8 @@ function Dashboard(inp){
 				log('Set hash')
 				location.hash = e.data.me.panels[e.data.i].id;
 			});
-
 		}
+		return this;
 	}
 	this.inDateRange = function(start,end){
 		var s = parseInt(start.substr(0,4));
