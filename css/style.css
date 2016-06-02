@@ -137,9 +137,6 @@ a { color: inherit; }
 	display: table;
 	width: 100%;
 }
-.dashboard .panel {
-	cursor: pointer;
-}
 .dashboard .panel .more {
 	display: none;
 }

@@ -57,9 +57,6 @@ function Dashboard(inp){
 				var fn = this.config[p].data;
 				if(!files[fn]) S().ajax(fn,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[fn]].data,{'i':i,'me':this});
-				this.panels[i].el.on('click',{'me':this,'i':i},function(e){
-					location.href = "#"+e.data.me.panels[e.data.i].id;
-				});
 			}
 			i++;
 		}
@@ -201,6 +198,7 @@ function Dashboard(inp){
 		log('updatePanel',p);
 		var year,add,cols;
 		if(this.panels[p]){
+
 			var data = new Array();
 			if(!this.panels[p].data) return;
 			for(var r = 1; r < this.panels[p].data.length; r++){
@@ -334,6 +332,12 @@ function Dashboard(inp){
 					}
 				}
 			}
+
+			// Add CSS cursor and add click event
+			this.panels[p].el.css({'cursor':'pointer'}).off('click').on('click',{'me':this,'i':p},function(e){
+				location.href = "#"+e.data.me.panels[e.data.i].id;
+			});
+
 		}
 	}
 	this.inDateRange = function(start,end){
