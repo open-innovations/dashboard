@@ -374,7 +374,7 @@ function Dashboard(inp){
 			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
 			S('body').css({'overflow-y': 'hidden'});
 			S('.moreinfo').html('<div class="close">&times;</div>'+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
-			S('.moreinfo .close').on('click',{me:this},function(e){ location.href = e.data.me.href+'#top' });
+			S('.moreinfo .close').on('click',{me:this},function(e){ location.hash = 'top' });
 		}else{
 			S('body').css({'overflow-y': ''});
 		}
