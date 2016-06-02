@@ -390,7 +390,7 @@ function Dashboard(inp){
 	var _obj = this;
 	window.addEventListener('resize',function(e){ _obj.resize(); });
 	// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
-	if('onhashchange' in window]){ function(e){ _obj.navigate(e); }; }
+	if('onhashchange' in window]) window.onhashchange = function(e){ _obj.navigate(e); };
 
 	function getGrid(mn,mx){
 		var rg = mx-mn;
