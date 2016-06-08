@@ -148,7 +148,7 @@ function Dashboard(inp){
 	function loadData(data,attr){
 		log('loadData',data,attr);
 		if(typeof data==="string"){
-			data = data.replace(/\r/,'');
+			data = data.replace(/\r/,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
 			data = data.split(/[\n]/);
 		}
 		attr.me.panels[attr.i].data = data;
