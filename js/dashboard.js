@@ -54,7 +54,8 @@ function Dashboard(inp){
 			this.panellookup[p] = i;
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
 			if(this.config[p].data){
-				var fn = this.config[p].data;
+				var d = new Date();
+				var fn = this.config[p].data+'?'+d;
 				if(!files[fn]) S().ajax(fn,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[fn]].data,{'i':i,'me':this});
 			}
