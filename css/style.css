@@ -190,7 +190,7 @@ a { color: inherit; }
 	text-decoration: underline;
 }
 .panel:hover .number {
-	font-size: 8em;
+	font-size: 7.6em;
 }
 .panel .icons, .panel .list {
 	width: 90%;
@@ -281,6 +281,7 @@ select#range:hover, select#range:focus {
 	background: url('dropdown.png') no-repeat right center;
 	background-size: 1em 100%;
 }
+p.more { font-size: 0.8em; margin-bottom: 1em; }
 
 @media only screen and (max-width: 2600px) {
 	.boxholder { width: 16.66666666%; }
