@@ -46,24 +46,8 @@ table {
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
 h1 { line-height: 0.8em; font-size: 3em; }
 a { color: inherit; }
-.odimark { font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosCnBold', "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif; font-weight:600; letter-spacing: 0; }
-.odimark { color: black; margin-right: 0.2em; }
-.odimark .O, .odimark .D, .odimark .I { content: ""; width: 0.75em; height: 0.75em; overflow: hidden; border: 0.06em solid black; display: inline-block; color: transparent; background-color: black; position: relative; line-height: inherit; text-align: center; }
-.odimark .O { border-radius: 100%; background-color: transparent; }
-.odimark .O.node:before {
-	content: "NODE";
-	top:50%;
-	left: 50%;
-	transform: translate3d(-50%,-50%, 0);
-	position: absolute;
-	color: black; 
-	font-size: 0.2em;
-	padding-left: 0.2em;
-}
-.odimark .D { border-radius: 0% 100% 100% 0%; }
-.odimark .I { width: 0.4em; margin-right: 0.1em; }
-.odimark .nodename { color: white; position: relative; margin-left: -5.1em; top: -1.5em; }
-.odimark .O.node:before, .odimark .nodename { font-size: 0.2em; letter-spacing: 0.2em; font-stretch:condensed; }
+h1 { position:relative; padding-left: 2em; color: white; }
+h1 img { position: absolute; top: -33%; left: -1.8em; height: 150%; }
 
 .moreinfo {
 	position: fixed;
@@ -108,7 +92,7 @@ a { color: inherit; }
 
 .header {
 	line-height: 2em;
-	padding: 0.3em 0.8em 0em 0.8em;
+	padding: 16px 16px 0em 16px;
 }
 .main {
 	overflow: hidden;
@@ -269,16 +253,17 @@ select#range {
 	background-color: inherit;
 	line-height: inherit;
 	cursor: pointer;
-	background: url('dropdown.png') no-repeat right center;
+	background: url('dropdown-white.png') no-repeat right center;
 	background-size: 1em 100%;
 	padding-right: 1em;
+	color: inherit;
 }
 select#range option {
 	padding-top: 0.25em;
 }
 select#range:hover, select#range:focus {
 	border: 1px solid rgba(0,0,0,0.4)!important;
-	background: url('dropdown.png') no-repeat right center;
+	background: url('dropdown-white.png') no-repeat right center;
 	background-size: 1em 100%;
 }
 p.more { font-size: 0.8em; margin-bottom: 1em; }
