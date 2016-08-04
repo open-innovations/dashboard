@@ -96,6 +96,17 @@
 				".lastupdated": { "col": 1, "row": "last" }
 			},
 			'class':'c3-bg'
+		},
+		"web": {
+			"start": 1,
+			"end": 1,
+			"data": "data/web.csv",
+			"els": {
+				".number": { "col": 2, "op": "sum", "animate": true },
+				".graph": { "col": 2, "row": "all", "type": "graph" },
+				".lastupdated": { "col": 1, "row": "last" }
+			},
+			'class':'c7-bg'
 		}
 	}
 	S().ready(function(){
@@ -108,7 +119,7 @@
 <body class="b1-bg">
 	<a name="top"></a>
 	<div class="header b1-bg">
-		<h1><img src="https://odileeds.org/resources/images/odileeds.svg" /> <select id="range" name="range"><option value="">Lifetime impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
+		<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds.svg" /></a> <select id="range" name="range"><option value="">Lifetime impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
 	</div>
 	<div class="main">
 		<ul class="dashboard">
@@ -202,11 +213,22 @@
 			</li
 			><li class="boxholder">
 				<div class="box c7-bg">
+					<div class="panel">
+						<div class="title">Website visits</div>
+						<p class="more">Visits to <a href="https://odileeds.org">odileeds.org</a>. Source: Analog/odileeds.org</p>
+						<div class="number less"></div>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/web.csv" class="lastupdated">web log stats</a></div>
+					</div>
+				</div>
+			</li
+			><!--<li class="boxholder">
+				<div class="box c7-bg">
 					<div class="panel" style="background: url('http://i2.wp.com/leeds.odinodes.wpengine.com/wp-content/uploads/sites/7/2015/07/Yorkshire-Water-Data-Dive-event-at-Munro-House-Leeds..-001.jpg?resize=420%2C240') center center;background: url('bg.jpg') center center;background-size: cover;">
 						<div class="image"></div>
 					</div>
 				</div>
-			</li>
+			</li>-->
 		</ul>
 	</div>
 </body>
