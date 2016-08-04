@@ -251,13 +251,13 @@ select#range {
 	appearance: none;
 	border: 1px solid transparent !important;
 	border-radius: 4px;
-	background-color: inherit;
+	background-color: black;
 	line-height: inherit;
 	cursor: pointer;
 	background: url('dropdown-white.png') no-repeat right center;
 	background-size: 1em 100%;
 	padding-right: 1em;
-	color: inherit;
+	color: white!important;
 }
 select#range option {
 	padding-top: 0.25em;
