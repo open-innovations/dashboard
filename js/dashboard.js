@@ -203,7 +203,8 @@ function Dashboard(inp){
 			var data = new Array();
 			if(!this.panels[p].data) return;
 			for(var r = 1; r < this.panels[p].data.length; r++){
-				cols = this.panels[p].data[r].split(/\,/);
+				// Split the line by commas (but not commas within quotation marks
+				cols = this.panels[p].data[r].split(/,(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))/);
 				data.push(cols);
 			}
 			this.panels[p].el = S('#'+this.panels[p].id);
@@ -234,7 +235,9 @@ function Dashboard(inp){
 						if(el.type=="list"){
 							var list = new Array();
 							var colurl = parseInt(el.url);
-							for(var r = 0; r < data.length; r++){
+							var mn = data.length - (this.panels[p].config.max || data.length);
+							if(mn < 0) mn = 0;
+							for(var r = data.length-1; r >= mn; r--){
 								var s = data[r][coldate-1];
 								var e = (new Date()).toISOString();
 								if(colend && data[r][colend-1]) e = data[r][colend-1];
