@@ -44,7 +44,7 @@ table {
 
 
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
-h1 { line-height: 0.8em; font-size: 3em; position:relative; padding-left: 2em; color: white; }
+h1 { line-height: 0.8em; font-size: 3em; position:relative; padding-left: 3.5em; color: white; }
 a { color: inherit; }
 
 .moreinfo {
@@ -242,7 +242,7 @@ a { color: inherit; }
 .graph .grid .line span {
 }
 .header { padding: 16px 16px 10px 16px; }
-.header h1 img { position: absolute; top: -53%; left: -1.8em; height: 2em; }
+.header h1 img { position: absolute; top: -53%; left: -1em; height: 2em; }
 select#range {
 	height: 1em;
 	font: inherit;
