@@ -261,6 +261,8 @@ select#range {
 }
 select#range option {
 	padding-top: 0.25em;
+	background-color: black;
+	color: white!important;
 }
 select#range:hover, select#range:focus {
 	border: 1px solid rgba(0,0,0,0.4)!important;
@@ -292,9 +294,23 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	.header {
 		padding: 0.5em 0.4em 0em 0.4em;
 	}
+	.header h1 {
+		padding-left: 0px;
+	}
+	.header h1 img {
+		display: block;
+		position: relative;
+		left: 0px;
+		top: 0px;
+		height: 1.5em;
+		margin: auto;
+	}
 	.main {
 		width: 100%;
 		overflow: hidden;
+	}
+	select#range {
+		width: 100%;
 	}
 	.boxholder { width: 100%; }
 	.moreinfo .panel li { width: 50%; }
