@@ -172,7 +172,7 @@ a { color: inherit; }
 	text-decoration: underline;
 }
 .panel:hover .number {
-	font-size: 7.6em;
+	font-size: 7.2em;
 }
 .panel .icons, .panel .list {
 	width: 90%;
