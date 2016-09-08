@@ -275,8 +275,8 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	.boxholder { width: 16.66666666%; }
 }
 @media only screen and (max-width: 2000px) {
-	.boxholder { width: 20%; }
-	.moreinfo .panel li { width: 16.666666%; }
+	.boxholder { width: 25%; }
+	.moreinfo .panel li { width: 20%; }
 }
 @media only screen and (max-width: 1500px) {
 	.boxholder { width: 25%; }
