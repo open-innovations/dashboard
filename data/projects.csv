@@ -21,3 +21,4 @@ Date start,Date end,Projects,url,Short description,Image
 2016,,Population Change,http://tomforth.co.uk/wardexplorer/,"Using data from the ONS we examined population changes in individual wards between 2002 and 2013 for five UK cities and metropolitan areas.",img/project_populationchange.png
 2016,,BestChoice,http://tomforth.co.uk/socialhousing/,"Our tool  displays waiting times for social housing and shows that waiting times can be significantly less if you apply for properties in certain wards.",img/project_bestchoice.png
 2015,,Leeds Bins,http://imactivate.com/leedsbins/,"Our app on iOS and Android uses open data from Leeds Data Mill to give reminders of bin days, and advice on recyling, to residents in Leeds.",img/project_leedsbins.png
+2016-06,,West Yorkshire Allotments,http://odileeds.org/data/allotments/map/,"An experiment to improve West Yorkshire open data sets around allotments using Open Street Map.",img/project_allotments.png
