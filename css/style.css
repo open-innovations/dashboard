@@ -58,7 +58,7 @@ a { color: inherit; }
 	left: 0px;
 	top: 0px;
 	display: table;
-	transition: left 0.15s ease, top 0.15s ease, width 0.15s ease, height 0.15s ease, font-size 0.15s ease;
+	/*transition: left 0.15s ease, top 0.15s ease, width 0.15s ease, height 0.15s ease, font-size 0.15s ease;*/
 }
 .moreinfo .close {
 	font-size:1.5em;
