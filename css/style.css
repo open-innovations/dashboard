@@ -43,10 +43,27 @@ table {
 /* End of reset */
 
 
+html, body {
+	width: 100%;
+	height: 100%;
+}
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: black; }
 h1 { line-height: 0.8em; font-size: 3em; position:relative; padding-left: 3.5em; color: white; }
 a { color: inherit; }
 
+#cover {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+	-webkit-transition: opacity 0.5s ease-in;
+	z-index: 1000;
+}
 .moreinfo {
 	position: fixed;
 	background-color: black;

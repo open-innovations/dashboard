@@ -49,10 +49,19 @@ function Dashboard(inp){
 		if(typeof inp.year==="string") this.year = S(inp.year).e[0].value;
 		if(inp.config) this.config = inp.config;
 		var i = 0;
+		var inpanel = false;
 		for(var p in this.config){
 			var el = S('#'+p);
 			this.panellookup[p] = i;
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
+
+			// Quick navigation to this panel. It'll be empty at the moment as we haven't 
+			// loaded the data but it stops things looking so jumpy
+			if(p == this.anchor){
+				this.navigate({},this.anchor);
+				inpanel = true;
+			}
+
 			if(this.config[p].data){
 				var d = new Date();
 				var fn = this.config[p].data+'?'+d;
@@ -61,6 +70,15 @@ function Dashboard(inp){
 			}
 			i++;
 		}
+		if(inpanel){
+			// If we are in a panel we have a smooth transition into it
+			S('#cover').css({'opacity':'0'});
+			setTimeout(function(){ S('#cover').css({'display':'none'}); },500);
+		}else{
+			// If we are on the main screen we remove the cover instantly
+			S('#cover').css({'display':'none'});
+		}
+
 		S('#range').on('change',{me:this},function(e){
 			e.data.me.year = e.currentTarget.value;
 			e.data.me.update();
