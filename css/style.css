@@ -164,10 +164,10 @@ a { color: inherit; }
 }
 .panel .title, .moreinfo .title {
 	display: block;
-	opacity: 0.6;
 	line-height: 1em;
 	font-size: 1.8em;
 	margin-bottom: 0.5em;
+	font-weight: 700;
 }
 .panel .updated, .moreinfo .updated {
 	position: absolute;
@@ -176,7 +176,6 @@ a { color: inherit; }
 	width: 100%;
 	text-align: center;
 	color: white;
-	opacity: 0.3;
 	line-height: 1.5em;
 }
 .panel:hover .updated,.panel:hover .title {
@@ -343,4 +342,8 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 		width: 100%;
 	}
 	.boxholder { width: 100%; }
+	.panel { text-align: left; padding: 24px; vertical-align: top; }
+	.panel .title, .moreinfo .title { font-size: 27px; }
+	p.more { font-size: 16px; }
+	.panel .icons, .panel .list { width: 100%; }
 }
