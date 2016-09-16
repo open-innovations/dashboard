@@ -127,7 +127,7 @@ a { color: inherit; }
 .panel {
 	display: table-cell;
 	vertical-align: middle;
-	color: inherit;
+	color: white;
 	text-align: center;
 	transition: font-size 0.3s ease-in;
 }
