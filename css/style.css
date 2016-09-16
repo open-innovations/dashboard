@@ -87,24 +87,6 @@ a { color: inherit; }
 	z-index: 10;
 }
 
-.c1-bg { background-color: #2254F4; }
-.c2-bg { background-color: #178CFF; }
-.c3-bg { background-color: #00B6FF; }
-.c4-bg { background-color: #08DEF9; }
-.c5-bg { background-color: #1DD3A7; }
-.c6-bg { background-color: #0DBC37; }
-.c7-bg { background-color: #67E767; }
-.c8-bg { background-color: #722EA5; }
-.c9-bg { background-color: #E6007C; }
-.c10-bg { background-color: #EF3AAB; }
-.c11-bg { background-color: #D73058; }
-.c12-bg { background-color: #D60303; }
-.c13-bg { background-color: #FF6700; }
-.c14-bg { background-color: #F9BC26; }
-.b1-bg { background-color: #000000; }
-.b2-bg { background-color: #333333; }
-.b3-bg { background-color: #999999; }
-
 .header {
 	line-height: 2em;
 	position: relative;
@@ -145,7 +127,7 @@ a { color: inherit; }
 .panel {
 	display: table-cell;
 	vertical-align: middle;
-	color: white;
+	color: inherit;
 	text-align: center;
 	transition: font-size 0.3s ease-in;
 }
@@ -175,7 +157,7 @@ a { color: inherit; }
 	font-size: 0.8em;
 	width: 100%;
 	text-align: center;
-	color: white;
+	color: inherit;
 	line-height: 1.5em;
 }
 .panel:hover .updated,.panel:hover .title {
@@ -287,6 +269,26 @@ select#range:hover, select#range:focus {
 	background-size: 1em 100%;
 }
 p.more { font-size: 0.8em; margin-bottom: 1em; }
+
+
+.c1-bg { background-color: #2254F4; color: white; }
+.c2-bg { background-color: #178CFF; color: white; }
+.c3-bg { background-color: #00B6FF; color: black; }
+.c4-bg { background-color: #08DEF9; color: black; }
+.c5-bg { background-color: #1DD3A7; color: black; }
+.c6-bg { background-color: #0DBC37; color: black; }
+.c7-bg { background-color: #67E767; color: black; }
+.c8-bg { background-color: #722EA5; color: white; }
+.c9-bg { background-color: #E6007C; color: white; }
+.c10-bg { background-color: #EF3AAB; color: white; }
+.c11-bg { background-color: #D73058; color: white; }
+.c12-bg { background-color: #D60303; color: white; }
+.c13-bg { background-color: #FF6700; color: black; }
+.c14-bg { background-color: #F9BC26; color: black; }
+.b1-bg { background-color: #000000; color: white; }
+.b2-bg { background-color: #333333; color: white; }
+.b3-bg { background-color: #999999; color: white; }
+
 
 @media only screen and (max-width: 3000px) {
 	.boxholder { width: 16.66666666%; }
