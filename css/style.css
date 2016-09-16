@@ -347,3 +347,6 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	p.more { font-size: 16px; }
 	.panel .icons, .panel .list { width: 100%; }
 }
+@media only screen and (max-width: 350px) {
+	p.more { display: none; }
+}
