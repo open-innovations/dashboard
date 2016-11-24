@@ -127,7 +127,7 @@ a { color: inherit; }
 .panel {
 	display: table-cell;
 	vertical-align: middle;
-	color: white;
+	color: inherit;
 	text-align: center;
 	transition: font-size 0.3s ease-in;
 }
@@ -288,6 +288,28 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 .b1-bg { background-color: #000000; color: white; }
 .b2-bg { background-color: #333333; color: white; }
 .b3-bg { background-color: #999999; color: white; }
+
+.c3-bg .graph table .bar,
+.c5-bg .graph table .bar,
+.c6-bg .graph table .bar,
+.c7-bg .graph table .bar,
+.c13-bg .graph table .bar,
+.c14-bg .graph table .bar { background-color: black; border-bottom: black; }
+
+.c3-bg .graph .grid .line,
+.c5-bg .graph .grid .line,
+.c6-bg .graph .grid .line,
+.c7-bg .graph .grid .line,
+.c13-bg .graph .grid .line,
+.c14-bg .graph .grid .line { border-color: black; }
+
+.c3-bg .graph table .date,
+.c5-bg .graph table .date,
+.c6-bg .graph table .date,
+.c7-bg .graph table .date,
+.c13-bg .graph table .date,
+.c14-bg .graph table .date { border-color: black; }
+
 
 
 @media only screen and (max-width: 3000px) {
