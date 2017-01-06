@@ -281,6 +281,9 @@ function Dashboard(inp){
 								if(this.inDateRange(s)){
 									// We are in the date range and have no start date set
 									if(!sd) sd = s;
+									if(!ed) ed = s;
+									if(s < sd) sd = s;
+									if(s > ed) ed = s;
 								}else{
 									// We have left the date range (as the start date is set)
 									if(sd && !ed) ed = data[r-1][coldate-1];
@@ -293,8 +296,13 @@ function Dashboard(inp){
 							monthly = (sd.m > 0);
 
 							for(var y = sd.y;y <= ed.y; y++){
-								if(monthly) for(var m = 1; m <= 12; m++) bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
-								else bins[y] = 0;
+								if(monthly){
+									for(var m = 1; m <= 12; m++){ 
+										if(y < ed.y || (y == ed.y && m <= ed.m+1)){
+											bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+										}
+									}
+								}else bins[y] = 0;
 							}
 							var nbins = 0;
 							for(var key in bins) nbins++;
