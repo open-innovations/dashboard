@@ -437,14 +437,15 @@ Date,Title,Status,Attendance,Attendance source
 2017-02-02T09:00Z,"My Society workshop",CONFIRMED,26,Calendar
 2017-02-03T12:00Z,"#AirHack Drop In Session",CONFIRMED,15,Calendar
 2017-02-03T13:00Z,"ODI HQ Lunchtime Lecture - The ups and downs of data journalism",CONFIRMED,0,Calendar
-2017-02-06T17:30Z,"Stick People Energy Workshop",CONFIRMED,0,Calendar
+2017-02-06T17:30Z,"Stick People Energy Workshop",CONFIRMED,15,Calendar
 2017-02-10T13:00Z,"ODI HQ Lunchtime Lecture - How much faith should we have in data?",CONFIRMED,0,Calendar
-2017-02-13T17:30Z,"Stick People Energy Workshop",CONFIRMED,0,Calendar
-2017-02-18T09:00Z,"ServiceJam",CONFIRMED,0,Calendar
+2017-02-13T17:30Z,"Stick People Energy Workshop",CONFIRMED,15,Calendar
+2017-02-18T09:00Z,"ServiceJam",CONFIRMED,10,Calendar
 2017-02-19T09:00Z,"Service Jam",CONFIRMED,0,Calendar
-2017-02-21T09:00Z,"NIHR workshop event",CONFIRMED,0,Calendar
-2017-02-24T09:30Z,"#AirHack",CONFIRMED,0,Calendar
+2017-02-21T09:00Z,"NIHR workshop event",CONFIRMED,30,Calendar
+2017-02-24T09:30Z,"#AirHack",CONFIRMED,65,Calendar
 2017-02-28T18:00Z,"Leeds Devops meetup",CONFIRMED,0,Calendar
-2017-03-01T12:00Z,"Leeds City Council Team meeting",CONFIRMED,0,Calendar
-2017-03-03T13:00Z,"ODI HQ Lunchtime Lecture - Private art to open culture",CONFIRMED,0,Calendar
-2017-03-09T09:00Z,"IBM bluemix workshop",CONFIRMED,0,Calendar
+2017-03-01T12:00Z,"Leeds City Council Team meeting",CONFIRMED,30,Calendar
+2017-03-03T10:00Z,"Urban Commons Mapping: report presentation to stakeholders (to be invited by ODI and LISSI)",CONFIRMED,12,Calendar
+2017-03-03T13:00Z,"ODI HQ Lunchtime Lecture - Private art to open culture",CONFIRMED,1,Calendar
+2017-03-09T09:00Z,"IBM bluemix workshop",CONFIRMED,15,Calendar
