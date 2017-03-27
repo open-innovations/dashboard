@@ -26,6 +26,6 @@ Date start,Date end,Projects,url,Short description,Image
 2016-10-21,2016-10-22,#HighwaysHack,http://odileeds.org/highwayshack/,"On 21st and 22nd October 2016 we hosted a two day hackathon with Highways England looking at highways data.",img/project_highwayshack.png
 2016-11,,Things Leeds and Bradford,https://odileeds.org/projects/things/,"Providing open LoRaWAN-based Things Network access across Leeds and Bradford.",img/project_things.png
 2017-01,,LoRaWAN Mote,https://odileeds.org/projects/mote/,"A demonstration of an end-to-end IoT sensor built using a mote, a gateway, the Things Network and a NodeRed server.",img/project_mote.png
+2017-02-23,,Bradford Flood Network,https://odileeds.org/projects/floodnetwork/,"We're installing flood sensors around Bradford and making the data open.",img/project_floodnetwork.jpg
 2017-02-24,2017-02-25,#AirHack,http://odileeds.org/airhack/,"On 24th/25th Feb 2017 we hosted a two day hackathon around air quality with Defra, Leeds Council, Bradford Council, and Highways England.",img/project_airhack.jpg
-2017-02,,Bradford Flood Network,https://odileeds.org/projects/floodnetwork/,"We're installing flood sensors around Bradford and making the data open.",img/project_floodnetwork.jpg
 2017-03-27,,IoTUK Nation Database,https://odileeds.org/projects/iot/,"A project with Bloom Agency and IoTUK/Digital Catapult to map the Internet of Things (IoT) sector across the UK.",img/project_iotnation.png
