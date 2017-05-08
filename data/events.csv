@@ -403,7 +403,7 @@ Date,Title,Status,Attendance,Attendance source
 2016-10-27T17:00Z,"Leeds digital revolution by berwins digital ",CONFIRMED,0,Calendar
 2016-10-28T08:00Z,"Climathon",CONFIRMED,31,Calendar
 2016-10-28T12:00Z,"ODIHQ@DHEZ Friday Lunchtime Lecture - Responsible data tactics for positive social change",CONFIRMED,0,Calendar
-2016-10-28T13:00Z,"Data Drop-in",CONFIRMED,0,Calendar
+2016-10-28T13:00Z,"Data Drop-in",CONFIRMED,12,Calendar
 2016-11-04T13:00Z,"ODIHQ Lunchtime Lecture - Mapping Greater Manchester",CONFIRMED,0,Calendar
 2016-11-09T09:00Z,"Digital DWP",CONFIRMED,70,Calendar
 2016-11-10T13:00Z,"LCC strategy and improvement workshop",CONFIRMED,28,Calendar
@@ -423,7 +423,8 @@ Date,Title,Status,Attendance,Attendance source
 2016-12-09T13:00Z,"ODI HQ Lunchtime Lecture - Stuff our Labs team have built",CONFIRMED,4,Calendar
 2016-12-09T19:00Z,"Busy",CONFIRMED,0,Calendar
 2016-12-12T09:00Z,"Data visualisation training",CONFIRMED,0,Calendar
-2016-12-16T10:00Z,"Urban Commons technical session",CONFIRMED,0,Calendar
+2016-12-16T10:00Z,"Urban Commons technical session",CONFIRMED,6,Calendar
+2016-12-16T14:00Z,"Data Drop-in (Dec)",CONFIRMED,6,Calendar
 2016-12-25T00:00Z,"MERRY CHRISTMAS!",CONFIRMED,0,Calendar
 2017-01-06T13:00Z,"ODI HQ Lunchtime Lecture - Who'll run the law, wo(man) or machine?",CONFIRMED,13,Calendar
 2017-01-11T12:30Z,"#AirHack - Drop In Session",CONFIRMED,9,Calendar
@@ -441,7 +442,7 @@ Date,Title,Status,Attendance,Attendance source
 2017-02-10T13:00Z,"ODI HQ Lunchtime Lecture - How much faith should we have in data?",CONFIRMED,0,Calendar
 2017-02-13T17:30Z,"Stick People Energy Workshop",CONFIRMED,15,Calendar
 2017-02-18T09:00Z,"ServiceJam",CONFIRMED,10,Calendar
-2017-02-19T09:00Z,"Service Jam",CONFIRMED,0,Calendar
+2017-02-19T09:00Z,"Service Jam",CONFIRMED,15,Calendar
 2017-02-21T09:00Z,"NIHR workshop event",CONFIRMED,30,Calendar
 2017-02-24T09:30Z,"#AirHack",CONFIRMED,65,Calendar
 2017-02-28T18:00Z,"Leeds Devops meetup",CONFIRMED,0,Calendar
@@ -457,16 +458,17 @@ Date,Title,Status,Attendance,Attendance source
 2017-03-28T07:00Z,"Innovation lab Lcc",CONFIRMED,17,Calendar
 2017-03-30T08:00Z,"Open Innovation with Defra Data",CONFIRMED,28,Calendar
 2017-03-30T17:00Z,"Amsource Technology tech/Connect Real Time Digital Analysis Event",CONFIRMED,33,Calendar
-2017-03-31T08:00Z,"TRUE project workshop",CONFIRMED,0,Calendar
+2017-03-31T08:00Z,"TRUE project workshop",CONFIRMED,19,Calendar
 2017-04-12T16:00Z,"ODI Leeds Closed for Easter",CONFIRMED,0,Calendar
 2017-04-24T08:30Z,"ODI Leeds and Friends Showcase 2017",CONFIRMED,44,Calendar
 2017-04-25T08:00Z,"DWP workshop",CONFIRMED,50,Calendar
 2017-04-25T17:45Z,"Leeds Devops",CONFIRMED,89,Calendar
 2017-04-26T08:30Z,"ODI Training Workshops",CONFIRMED,6,Calendar
-2017-04-27T08:00Z,"Leeds City Council Innovation Lab",CONFIRMED,0,Calendar
+2017-04-26T17:00Z,"Innovation, Innovation, Innovation at ODI Leeds",CONFIRMED,28,Calendar
+2017-04-27T08:00Z,"Leeds City Council Innovation Lab",CONFIRMED,34,Calendar
 2017-04-28T08:00Z,"ODILeeds Open Day",CONFIRMED,0,Calendar
 2017-04-28T12:00Z,"ODI lunchtime lecture: Using, improving, and creating new open data",CONFIRMED,13,Calendar
-2017-04-28T18:30Z,"Algorave",CONFIRMED,0,Calendar
-2017-04-29T13:00Z,"Live coding workshop",CONFIRMED,0,Calendar
+2017-04-28T18:30Z,"Algorave",CONFIRMED,110,Calendar
+2017-04-29T13:00Z,"Live coding workshop",CONFIRMED,15,Calendar
 2017-05-02T08:00Z,"LCC workshop",CONFIRMED,0,Calendar
 2017-05-05T12:00Z,"ODI Lunchtime Lecture - Mapping the open source landscape",CONFIRMED,0,Calendar
