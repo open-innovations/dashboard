@@ -30,4 +30,4 @@ Date start,Date end,Projects,url,Short description,Image
 2017-02-24,2017-02-25,#AirHack,http://odileeds.org/airhack/,"On 24th/25th Feb 2017 we hosted a two day hackathon around air quality with Defra, Leeds Council, Bradford Council, and Highways England.",img/project_airhack.jpg
 2017-03-27,,IoTUK Nation Database,https://odileeds.org/projects/iot/,"A project with Bloom Agency and IoTUK/Digital Catapult to map the Internet of Things (IoT) sector across the UK.",img/project_iotnation.png
 2017-04-12,,Roads named Garth,https://odileeds.org/projects/partyon/,"We looked at the geographic spread of streets containing 'garth' in the UK and Ireland. The Viking origins of the word can be seen.",img/project_garth.jpg
-2017-05-06,,UK hex maps,https://odileeds.org/projects/hexmaps/,"For the 2017 General Election we created an interactive hex map of UK parliamentary constituencies.",img/project_hexmap.jpg
+2017-05-06,,UK hex maps,https://odileeds.org/projects/hexmaps/constituencies,"For the 2017 General Election we created an interactive hex map of UK parliamentary constituencies.",img/project_hexmap.jpg
