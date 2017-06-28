@@ -482,13 +482,13 @@ Date,Title,Status,Attendance,Attendance source
 2017-05-24T12:00Z,"Busy",CONFIRMED,0,Calendar
 2017-05-24T16:00Z,"#TravelHack - open meeting with ODI Leeds and Transport for the North",CONFIRMED,20,Calendar
 2017-06-01T18:00Z,"Leeds Cycling Question Time 2017",CONFIRMED,0,Calendar
-2017-06-02T12:00Z,"ODI Lunchtime Lecture - Live code as open data ",CONFIRMED,0,Calendar
-2017-06-06T08:00Z,"Leeds city council workshop",CONFIRMED,0,Calendar
-2017-06-07T08:00Z,"DWP workshop",CONFIRMED,0,Calendar
+2017-06-02T12:00Z,"ODI Lunchtime Lecture - Live code as open data ",CONFIRMED,1,Calendar
+2017-06-06T08:00Z,"Leeds city council workshop",CONFIRMED,65,Calendar
+2017-06-07T08:00Z,"DWP workshop",CONFIRMED,53,Calendar
 2017-06-09T12:00Z,"ODI Lunchtime Lecture - Building a business from FOI and open data",CONFIRMED,0,Calendar
 2017-06-14T12:00Z,"ODI Lunchtime Lecture - Opening up White House data",CONFIRMED,0,Calendar
-2017-06-20T08:00Z,"Transport for the North innovation day",CONFIRMED,0,Calendar
-2017-06-23T12:00Z,"ODI Lunchtime Lecture - How you (yes, you!) can contribute to open data",CONFIRMED,0,Calendar
-2017-06-26T08:00Z,"Geovation deep dive",CONFIRMED,0,Calendar
+2017-06-20T08:00Z,"Transport for the North innovation day",CONFIRMED,76,Calendar
+2017-06-23T12:00Z,"ODI Lunchtime Lecture - How you (yes, you!) can contribute to open data",CONFIRMED,2,Calendar
+2017-06-26T08:00Z,"Geovation deep dive",CONFIRMED,9,Calendar
 2017-06-27T17:30Z,"Leeds Devops",CONFIRMED,89,Calendar
 2017-06-28T08:00Z,"Nhs workshop ",CONFIRMED,0,Calendar
