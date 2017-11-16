@@ -152,6 +152,7 @@ a { color: inherit; }
 	font-weight: 700;
 }
 .panel .updated, .moreinfo .updated {
+	left: 0px;
 	position: absolute;
 	bottom: 0.25em;
 	font-size: 0.8em;
