@@ -502,40 +502,45 @@ Date,Title,Status,Attendance,Attendance source
 2017-07-24T12:00Z,"ODI Lunchtime Lecture SPECIAL - Sir Tim Berners-Lee on Personal Data",CONFIRMED,27,Calendar
 2017-07-26T12:00Z,"SmartKlub  Solar Solutuons for Leeds",CONFIRMED,25,Calendar
 2017-09-05T09:00Z,"Climathon",CONFIRMED,9,Calendar
+2017-09-05T10:00Z,"TRUE Project",CONFIRMED,3,Calendar
+2017-09-05T11:00Z,"Kirkstall council meet",CONFIRMED,5,Calendar
 2017-09-14T08:00Z,"Esri",CONFIRMED,50,Calendar
 2017-09-14T17:30Z,"CodeMill Launch Night",CONFIRMED,26,Calendar
 2017-09-18T08:00Z,"Nhs digital academy",CONFIRMED,29,Calendar
-2017-09-19T08:00Z,"Nhs digital academy",CONFIRMED,0,Calendar
-2017-09-20T08:00Z,"Nhs digital academy",CONFIRMED,0,Calendar
+2017-09-19T08:00Z,"Nhs digital academy",CONFIRMED,30,Calendar
+2017-09-20T08:00Z,"Nhs digital academy",CONFIRMED,32,Calendar
+2017-09-26T10:00Z,"TRUE Project",CONFIRMED,7,Calendar
 2017-09-26T17:45Z,"Leeds Devops",CONFIRMED,0,Calendar
-2017-09-27T09:00Z,"Nhs designers workshop",CONFIRMED,0,Calendar
-2017-09-28T12:00Z,"Leeds city council meet",CONFIRMED,0,Calendar
+2017-09-27T09:00Z,"Nhs designers workshop",CONFIRMED,37,Calendar
+2017-09-28T12:00Z,"Leeds city council meet",CONFIRMED,19,Calendar
 2017-10-03T08:00Z,"Climathon meet",CONFIRMED,0,Calendar
-2017-10-05T08:45Z,"Clusters Workshop ",CONFIRMED,0,Calendar
-2017-10-05T14:00Z,"NHS England - Innovation with Data",CONFIRMED,0,Calendar
-2017-10-06T12:00Z,"ODI Lunchtime Lecture stream - Rob's comedy bots",CONFIRMED,0,Calendar
-2017-10-10T09:00Z,"#Travelhack 2 - Fares ",CONFIRMED,0,Calendar
-2017-10-11T08:30Z,"TRUE- Tool Development workshop",CONFIRMED,0,Calendar
-2017-10-12T17:30Z,"Code mill Meetup",CONFIRMED,0,Calendar
-2017-10-13T12:00Z,"ODI Lunchtime Lecture stream - Data protection in developing countries",CONFIRMED,0,Calendar
+2017-10-05T08:45Z,"Clusters Workshop ",CONFIRMED,19,Calendar
+2017-10-05T14:00Z,"NHS England - Innovation with Data",CONFIRMED,6,Calendar
+2017-10-06T12:00Z,"ODI Lunchtime Lecture stream - Rob's comedy bots",CONFIRMED,4,Calendar
+2017-10-10T09:00Z,"#Travelhack 2 - Fares ",CONFIRMED,85,Calendar
+2017-10-11T08:30Z,"TRUE- Tool Development workshop",CONFIRMED,22,Calendar
+2017-10-12T17:30Z,"Code mill Meetup",CONFIRMED,24,Calendar
+2017-10-13T12:00Z,"ODI Lunchtime Lecture stream - Data protection in developing countries",CONFIRMED,4,Calendar
 2017-10-17T08:00Z,"Climathon meet",CONFIRMED,0,Calendar
-2017-10-17T10:00Z,"Dwp meeting",CONFIRMED,0,Calendar
-2017-10-19T08:00Z,"Open Data Publishing R&D workshop",CONFIRMED,0,Calendar
-2017-10-19T11:00Z,"Data Mill North and OpenDataSoft Open Dat publishing workshop ",CONFIRMED,0,Calendar
-2017-10-26T07:00Z,"Climathon",CONFIRMED,0,Calendar
-2017-10-27T07:00Z,"Climathon",CONFIRMED,0,Calendar
-2017-10-31T18:45Z,"Leeds Devops",CONFIRMED,0,Calendar
-2017-11-02T09:00Z,"ODI HQ Persona user requirement workshop",CONFIRMED,0,Calendar
-2017-11-07T11:00Z,"Dwp meeting",CONFIRMED,0,Calendar
+2017-10-17T10:00Z,"Dwp meeting",CONFIRMED,27,Calendar
+2017-10-19T08:00Z,"Open Data Publishing R&D workshop",CONFIRMED,21,Calendar
+2017-10-19T11:00Z,"Data Mill North and OpenDataSoft Open Dat publishing workshop ",CONFIRMED,25,Calendar
+2017-10-26T07:00Z,"Climathon",CONFIRMED,34,Calendar
+2017-10-27T07:00Z,"Climathon",CONFIRMED,37,Calendar
+2017-10-31T18:45Z,"Leeds Devops",CONFIRMED,85,Calendar
+2017-11-02T09:00Z,"ODI HQ Persona user requirement workshop",CONFIRMED,12,Calendar
+2017-11-07T11:00Z,"Dwp meeting",CONFIRMED,12,Calendar
 2017-11-15T08:00Z,"Unilever innovation workshop",CONFIRMED,0,Calendar
 2017-11-21T08:30Z,"Unilever innovation workshop",CONFIRMED,0,Calendar
 2017-11-23T18:30Z,"Code mill Meetup",CONFIRMED,0,Calendar
-2017-11-28T18:45Z,"Leeds Devops",CONFIRMED,0,Calendar
+2017-11-24T09:00Z,"Nhs Digital coworking group",CONFIRMED,4,Calendar
+2017-11-28T11:00Z,"Project Meeting - Urban Commons Mapping",CONFIRMED,10,Calendar
+2017-11-28T18:45Z,"Leeds Devops",CONFIRMED,49,Calendar
 2017-11-30T10:00Z,"NHS Analytics Intro Workshop",CONFIRMED,0,Calendar
-2017-12-01T13:00Z,"ODI Lunchtime Lecture stream - Can't find the right code? Explain yourself!",CONFIRMED,0,Calendar
-2017-12-04T12:30Z,"Leeds city council meet",CONFIRMED,0,Calendar
-2017-12-05T09:00Z,"Socitm workshop",CONFIRMED,0,Calendar
-2017-12-06T09:30Z,"DfT Innovating with Bus Data",CONFIRMED,0,Calendar
-2017-12-06T19:00Z,"Parliament, Data, and Democracy Meetup",CONFIRMED,0,Calendar
-2017-12-07T13:30Z,"TRUE Project testing",CONFIRMED,0,Calendar
-2017-12-07T18:30Z,"Code mill Meetup",CONFIRMED,0,Calendar
+2017-12-01T13:00Z,"ODI Lunchtime Lecture stream - Can't find the right code? Explain yourself!",CONFIRMED,4,Calendar
+2017-12-04T12:30Z,"Leeds city council meet",CONFIRMED,30,Calendar
+2017-12-05T09:00Z,"Socitm workshop",CONFIRMED,65,Calendar
+2017-12-06T09:30Z,"DfT Innovating with Bus Data",CONFIRMED,51,Calendar
+2017-12-06T19:00Z,"Parliament, Data, and Democracy Meetup",CONFIRMED,14,Calendar
+2017-12-07T13:30Z,"TRUE Project testing",CONFIRMED,8,Calendar
+2017-12-07T18:30Z,"Code mill Meetup",CONFIRMED,8,Calendar
