@@ -204,8 +204,7 @@ a { color: inherit; }
 	position: relative;
 }
 .graph table {
-	margin: auto;
-	width: 85%;
+	width: 90%;
 	margin-bottom: 0.5em;
 }
 .graph table td {
