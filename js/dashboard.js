@@ -272,6 +272,7 @@ function Dashboard(inp){
 							var bins = {};
 							var sd,ed,s;
 							function splitDate(d){
+								if(!d) return {};
 								return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
 							}
 
