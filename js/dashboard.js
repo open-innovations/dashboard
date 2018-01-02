@@ -13,6 +13,7 @@ function Dashboard(inp){
 	this.duration = 1000;
 	this.config = {};
 	this.panellookup = {};
+	this.replace = {};
 	var files = {};
 
 	function parseQueryString(){
@@ -52,6 +53,8 @@ function Dashboard(inp){
 			var el = S('#'+p);
 			this.panellookup[p] = i;
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
+			// Update panel class
+			for(var c = 1; c <= 14; c++) this.panels[i].el.find('.c'+c+'-bg').removeClass('c'+c+'-bg').addClass(this.panels[i].config['class']);
 
 			// Quick navigation to this panel. It'll be empty at the moment as we haven't 
 			// loaded the data but it stops things looking so jumpy
@@ -63,7 +66,7 @@ function Dashboard(inp){
 			if(this.config[p].data){
 				var d = new Date();
 				var fn = this.config[p].data+'?'+d;
-				if(!files[fn]) S().ajax(fn,{'complete':loadData,'this':this,'error':failData,'i':i,'me':this,'cache':false});
+				if(!files[fn]) S().ajax(fn,{'complete':loadData,'dataType':'csv','this':this,'error':failData,'i':i,'me':this,'cache':false});
 				else loadData(this.panels[files[fn]].data,{'i':i,'me':this});
 			}
 			i++;
@@ -119,11 +122,40 @@ function Dashboard(inp){
 	function showArray(el,vals,duration){
 		if(duration > 0) animateArray(el,vals,duration)
 		else {
-			var output = "<ol>";
+			var ol = el;
+			if(el.find('ol').length < 1){
+				el.append('<ol></ol>');
+				ol = el.find('ol');
+			}
+			output = "";
 			for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
-			output += "</ol>";
-			el.html(output);
+			ol.html(output);
 		}
+	}
+	function updateImages(){
+		var more = S('.moreinfo');
+		var img = more.find('img');
+		function replaceImage(svg,attr){
+			img = S('#'+attr.id);
+			_obj.replace[attr.id] = false;
+			svg = svg.replace(/[\n\r]/g,'').replace(/^.*<svg /,"<svg ").replace(/<\/svg>.*$/,"<\/svg>").replace(/fill:#FFFFFF/gi,'fill:'+attr.color).replace(/stroke:#FFFFFF/gi,'stroke:'+attr.color);
+			img.replaceWith(svg);
+			
+		}
+		var id = 0;
+		for(var i = 0; i < img.length; i++){
+			while(_obj.replace[id]){ id++; }
+			var im = S(img[i]);
+			var src = im.attr('src');
+			if(!im.hasClass('replaceWithSVG')){
+				if(src.indexOf(".svg") > 0){
+					im.attr('data',id).attr('id','replaceWithSVG-'+id).addClass('replaceWithSVG');
+					_obj.replace[id] = true;
+					S(document).ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more[0])['color'],'cache':'true','complete': replaceImage, 'error': function(a){ console.log('Failed to load file',a); } });
+				}
+			}
+		}
+
 	}
 	function animateArray(el,vals,duration){
 		if(!vals) return;
@@ -404,6 +436,7 @@ function Dashboard(inp){
 			S('body').css({'overflow-y': 'hidden'});
 			S('.moreinfo').html((this.interactive ? '<div class="close">&times;</div>':'')+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
 			if(this.interactive) S('.moreinfo .close').on('click',{me:this},function(e){ location.hash = 'top' });
+			if(this.panels[i].el.find('img').length > 0) updateImages();
 		}else{
 			S('body').css({'overflow-y': ''});
 		}
