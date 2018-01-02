@@ -122,14 +122,10 @@ function Dashboard(inp){
 	function showArray(el,vals,duration){
 		if(duration > 0) animateArray(el,vals,duration)
 		else {
-			var ol = el;
-			if(el.find('ol').length < 1){
-				el.append('<ol></ol>');
-				ol = el.find('ol');
-			}
-			output = "";
+			output = "<ol>";
 			for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
-			ol.html(output);
+			output += "</ol>";
+			el.html(output);
 		}
 	}
 	function updateImages(){
@@ -137,22 +133,19 @@ function Dashboard(inp){
 		var img = more.find('img');
 		function replaceImage(svg,attr){
 			img = S('#'+attr.id);
-			_obj.replace[attr.id] = false;
+			delete _obj.replace[attr.id];
 			svg = svg.replace(/[\n\r]/g,'').replace(/^.*<svg /,"<svg ").replace(/<\/svg>.*$/,"<\/svg>").replace(/fill:#FFFFFF/gi,'fill:'+attr.color).replace(/stroke:#FFFFFF/gi,'stroke:'+attr.color);
 			img.replaceWith(svg);
-			
 		}
 		var id = 0;
 		for(var i = 0; i < img.length; i++){
 			while(_obj.replace[id]){ id++; }
 			var im = S(img[i]);
-			var src = im.attr('src');
-			if(!im.hasClass('replaceWithSVG')){
-				if(src.indexOf(".svg") > 0){
-					im.attr('data',id).attr('id','replaceWithSVG-'+id).addClass('replaceWithSVG');
-					_obj.replace[id] = true;
-					S(document).ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more[0])['color'],'cache':'true','complete': replaceImage, 'error': function(a){ console.log('Failed to load file',a); } });
-				}
+			var src = im.attr('svg');
+			if(src){
+				im.attr('data',id).attr('id','replaceWithSVG-'+id).addClass('replaceWithSVG');
+				_obj.replace[id] = true;
+				S(document).ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more[0])['color'],'cache':'true','complete': replaceImage, 'error': function(a){ console.log('Failed to load file',a); } });
 			}
 		}
 
@@ -290,7 +283,7 @@ function Dashboard(inp){
 								var e = (new Date()).toISOString();
 								if(colend && data[r][colend-1]) e = data[r][colend-1];
 								// If the row is within the date range we add the image
-								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img src="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
+								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img '+(data[r][img-1].indexOf(".svg") > 0 ? 'svg':'src')+'="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
 							}
 							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'duration':(el.animate ? this.duration : 0)});
 						}else if(el.type=="graph"){
@@ -435,8 +428,9 @@ function Dashboard(inp){
 			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
 			S('body').css({'overflow-y': 'hidden'});
 			S('.moreinfo').html((this.interactive ? '<div class="close">&times;</div>':'')+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
+			// Add click event to close button
 			if(this.interactive) S('.moreinfo .close').on('click',{me:this},function(e){ location.hash = 'top' });
-			if(this.panels[i].el.find('img').length > 0) updateImages();
+			if(S('.moreinfo').find('img').length > 0) updateImages();
 		}else{
 			S('body').css({'overflow-y': ''});
 		}
