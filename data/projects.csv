@@ -37,3 +37,4 @@ Date start,Date end,Projects,url,Short description,Image
 2017-12-14,,Housing in Leeds Wards - Capacity for Improvement,https://odileeds.org/projects/energyusage/EPC/,"Using data from EPC certificates to establish the capacity for improvement of domestic properties by ward.",img/project_epc.png
 2017-12-14,,Supermarket CO2 emissions,https://odileeds.org/projects/stores/,"Estimated CO2 emissions from major supermarket brands across the UK. Calculated from known store locations and average annual CO2 emissions.",img/project_stores.png
 2018-01,,Employment Explorer,https://odileeds.org/projects/employment-explorer/,"An interactive visualisation, created for GMB, of regional variations in self-employment and zero-hours contracts using ONS data",
+2018-02-03,Leeds Council Spending,https://odileeds.org/projects/leeds-council-spending/,"Quickly explore hundreds of MB and several years of open data published by Leeds City Council.",
