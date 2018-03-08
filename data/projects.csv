@@ -23,6 +23,7 @@ Date start,Date end,Projects,url,Short description,Image
 2015,,Leeds Bins,http://imactivate.com/leedsbins/,"Our app on iOS and Android uses open data from Leeds Data Mill to give reminders of bin days, and advice on recyling, to residents in Leeds.",img/project_leedsbins.png
 2016-06,2017-03,Leeds Urban Commons,https://odileeds.org/projects/leeds-urban-commons/,"A co-creation project by ODI Leeds, Leeds Love It Share It and Leeds City Lab.",img/project_urbancommons.png
 2016-06,,West Yorkshire Allotments,https://odileeds.org/data/allotments/map/,"An experiment to improve West Yorkshire open data sets around allotments using Open Street Map.",img/project_allotments.png
+2016-10,,Leeds Energy Usage,https://odileeds.org/projects/energyusage/,"Explore half-hourly electricity usage data for a range of council properties.",
 2016-10-21,2016-10-22,#HighwaysHack,http://odileeds.org/highwayshack/,"On 21st and 22nd October 2016 we hosted a two day hackathon with Highways England looking at highways data.",img/project_highwayshack.jpg
 2016-11,,Things Leeds and Bradford,https://odileeds.org/projects/things/,"Providing open LoRaWAN-based Things Network access across Leeds and Bradford.",img/project_things.png
 2017-01,,LoRaWAN Mote,https://odileeds.org/projects/mote/,"A demonstration of an end-to-end IoT sensor built using a mote, a gateway, the Things Network and a NodeRed server.",img/project_mote.png
@@ -38,3 +39,4 @@ Date start,Date end,Projects,url,Short description,Image
 2017-12-14,,Supermarket CO2 emissions,https://odileeds.org/projects/stores/,"Estimated CO2 emissions from major supermarket brands across the UK. Calculated from known store locations and average annual CO2 emissions.",img/project_stores.png
 2018-01,,Employment Explorer,https://odileeds.org/projects/employment-explorer/,"An interactive visualisation, created for GMB, of regional variations in self-employment and zero-hours contracts using ONS data",
 2018-02-03,,Council Spending,https://odileeds.org/projects/council-spending/,"Quickly explore hundreds of MB and several years of open data published by Leeds, Bradford, and Calderdale Councils.",
+2018-03-07,,Tea Totaller,https://odileeds.org/projects/teatotal/,"We press a button on our Things Network Node each time we make a hot drink at ODI Leeds. The button sends a tiny radio message over The Things Network to our live visualisation.",
