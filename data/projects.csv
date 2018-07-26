@@ -46,3 +46,4 @@ Date start,Date end,Projects,url,Short description,Image
 2018-04-05,,Leeds gender pay gap,https://odileeds.org/projects/gender-pay-gap/,"Graphing the reported gender pay gap for organisations based in Leeds.",
 2018-06-08,,Common Ground,https://odileeds.org/projects/commonground/,"Participatory mapping and citizen engagement to promote neighbourhood social action",
 2018-06,,Data mapper,https://odileeds.org/projects/mapper/,"Layering datasets from Data Mill North, Calderdale Data Works, data.gov.uk, Open Street Map and more.",
+2018-07-25,,CSV to GeoJSON,https://odileeds.github.io/CSV2GeoJSON/,"A web-based tool to easily convert a CSV file (containing geography columns) into a GeoJSON file.",
