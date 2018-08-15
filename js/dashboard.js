@@ -119,10 +119,10 @@ function Dashboard(inp){
 		if(typeof val==="number") frame();
 		return;			
 	}
-	function showArray(el,vals,duration){
+	function showArray(el,vals,duration,cls){
 		if(duration > 0) animateArray(el,vals,duration)
 		else {
-			output = "<ol>";
+			output = '<ol class="'+cls+'">';
 			for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
 			output += "</ol>";
 			el.html(output);
@@ -271,9 +271,20 @@ function Dashboard(inp){
 				var col = el.col || "";
 				var img = el.img || "";
 				var row = el.row || "";
+				function getColourFromTitle(t){
+					var n = 0;
+					var c;
+					t = t.toLowerCase();
+					c = t.charCodeAt(0) - 97;
+					if(c > 0) n += c;
+					c = t.charCodeAt(t.length - 1) - 97;
+					if(c > 0) n += c;
+					n = 1 + Math.floor(13*n/(26 * 2));
+					return "c"+n+"-bg";
+				}
 				if(row){
 					if(row == "all"){
-						if(el.type=="list"){
+						if(el.type=="images"){
 							var list = new Array();
 							var colurl = parseInt(el.url);
 							var mn = data.length - (this.panels[p].config.max || data.length);
@@ -286,6 +297,21 @@ function Dashboard(inp){
 								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img '+(data[r][img-1].indexOf(".svg") > 0 ? 'svg':'src')+'="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
 							}
 							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'duration':(el.animate ? this.duration : 0)});
+						}else if(el.type=="list"){
+							var list = new Array();
+							var colurl = parseInt(el.url);
+							var mn = data.length - (this.panels[p].config.max || data.length);
+							if(mn < 0) mn = 0;
+							for(var r = data.length-1; r >= mn; r--){
+								var s = data[r][coldate-1];
+								var e = (new Date()).toISOString();
+								if(colend && data[r][colend-1]) e = data[r][colend-1];
+								// If the row is within the date range we add the list item
+								var colour = getColourFromTitle(data[r][col-1]);
+								if(colour == this.panels[p].config['class']) colour += " bordered";
+								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'" class="box">':'<div class="box">')+'<div class="panel '+colour+'">'+data[r][col-1]+'</div>'+(colurl ? '</a>':'</div>'));
+							}
+							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'cls':'grid','duration':(el.animate ? this.duration : 0)});
 						}else if(el.type=="graph"){
 							var prev;
 							var mx = 0;
@@ -419,7 +445,7 @@ function Dashboard(inp){
 		S('.moreinfo').remove();
 
 		if(typeof i==="number"){
-			for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration);
+			for(var j = 0; j < this.panels[i].updateable.length; j++) showArray(this.panels[i].updateable[j].n,this.panels[i].updateable[j].list,this.panels[i].updateable[j].duration,this.panels[i].updateable[j].cls);
 
 			this.panels[i].el = S('#'+this.panels[i].id);
 			var o = offset(this.panels[i].el.e[0]);
