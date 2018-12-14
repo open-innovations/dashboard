@@ -556,6 +556,7 @@ Date,Title,Status,Attendance,Attendance source
 2017-12-14T12:00Z,"Leidos Workshop",CONFIRMED,0,Calendar
 2017-12-15T13:00Z,"ODI Lunchtime Lecture stream - Switching on Xmas lights in automated home",CONFIRMED,0,Calendar
 2017-12-19T10:00Z,"ODI Leeds : Sponsors Christmas Coffee Morning",CONFIRMED,0,Calendar
+2018-01-01T09:00Z,"Nhs digital workshop",CONFIRMED,26,Calendar
 2018-01-11T18:30Z,"Code mill Meetup",CONFIRMED,23,Calendar
 2018-01-12T08:00Z,"Fintech Breakfast Event",CONFIRMED,104,Calendar
 2018-01-12T10:30Z,"JI Day in Boardroom",CONFIRMED,0,Calendar
@@ -686,23 +687,33 @@ Date,Title,Status,Attendance,Attendance source
 2018-09-25T15:30Z,"Leeds Live Social Media Surgery",CONFIRMED,0,Calendar
 2018-09-27T17:15Z,"Tech Nation on Tour: Leeds ",CONFIRMED,117,Calendar
 2018-10-05T12:00Z,"ODI Fridays Lunchtime Lecture",CONFIRMED,0,Calendar
-2018-10-16T17:00Z,"Tableau User Group Yorkshire",CONFIRMED,0,Calendar
+2018-10-16T17:00Z,"Tableau User Group Yorkshire",CONFIRMED,52,Calendar
 2018-10-18T08:30Z,"Leeds Safeguarding Adults Board",CONFIRMED,23,Calendar
-2018-10-25T08:30Z,"Transport and Economy Data Summit",CONFIRMED,0,Calendar
+2018-10-25T08:30Z,"Transport and Economy Data Summit",CONFIRMED,30,Calendar
 2018-11-08T12:00Z,"NHS Digital ",CONFIRMED,9,Calendar
 2018-11-09T12:00Z,"21st Century Mindset",CONFIRMED,20,Calendar
-2018-11-12T10:00Z,"NHS Digital ",CONFIRMED,0,Calendar
+2018-11-12T10:00Z,"NHS Digital ",CONFIRMED,11,Calendar
 2018-11-13T08:00Z,"Passenger Innovation Day 4",CONFIRMED,0,Calendar
 2018-11-14T10:00Z,"Transport for the North ",CONFIRMED,30,Calendar
-2018-11-14T17:00Z,"The OR Society",CONFIRMED,0,Calendar
+2018-11-14T17:00Z,"The OR Society",CONFIRMED,21,Calendar
 2018-11-15T09:00Z,"Voice 21 Training",CONFIRMED,15,Calendar
 2018-11-16T11:00Z,"Digital DWP Meet",CONFIRMED,54,Calendar
 2018-11-19T08:30Z,"NHS Digital - Data Visualisation Training",CONFIRMED,25,Calendar
 2018-11-20T13:00Z,"Creative England and CDI Gaming Event",CONFIRMED,25,Calendar
-2018-11-21T10:00Z,"Open Data Collaboration meeting",CONFIRMED,0,Calendar
-2018-11-22T09:00Z,"Leeds city council innovation lab",CONFIRMED,0,Calendar
+2018-11-21T10:00Z,"Open Data Collaboration meeting",CONFIRMED,12,Calendar
+2018-11-22T09:00Z,"Leeds city council innovation lab",CONFIRMED,26,Calendar
 2018-11-23T09:00Z,"NHS Leeds Clinical Commissioning ",CONFIRMED,6,Calendar
 2018-11-26T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,40,Calendar
 2018-11-27T09:00Z,"Yorkshire Sport",CONFIRMED,70,Calendar
 2018-11-28T08:30Z,"Waste Management Smart Class 2018",CONFIRMED,30,Calendar
 2018-11-29T09:00Z,"Homes England",CONFIRMED,75,Calendar
+2018-12-04T09:00Z,"Leeds city council digital summit",CONFIRMED,71,Calendar
+2018-12-05T09:00Z,"NHS Digital - QA Digital Degree Apprenticeship sign up ",CONFIRMED,20,Calendar
+2018-12-06T18:30Z,"Devops",CONFIRMED,76,Calendar
+2018-12-10T09:00Z,"NHS Digital Degree Apprentice Hackathon ",CONFIRMED,19,Calendar
+2018-12-11T09:00Z,"NHS Digital - National Integration Workshop",CONFIRMED,6,Calendar
+2018-12-11T10:00Z,"NHS Digital ",CONFIRMED,14,Calendar
+2018-12-11T18:30Z,"Northern Policy Meetup",CONFIRMED,20,Calendar
+2018-12-12T09:00Z,"NHS Digital - National Integration Workshop",CONFIRMED,7,Calendar
+2018-12-12T13:00Z,"Defra Training ",CONFIRMED,10,Calendar
+2018-12-13T12:00Z,"Geolytix",CONFIRMED,23,Calendar
