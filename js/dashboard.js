@@ -252,10 +252,11 @@ function Dashboard(inp){
 			for(var e in this.panels[p].config.els){
 				var n = this.panels[p].el.find(e);
 				var el = this.panels[p].config.els[e];
-				
+
 				// If the element doesn't exist in the DOM we skip this
 				if(n.length == 0) continue;
-				
+				if(this.panels[p].head['last-modified']) this.panels[p].head['Last-Modified'] = this.panels[p].head['last-modified'];
+
 				if(e == ".lastupdated" && this.panels[p].head['Last-Modified']){
 					var d = new Date(this.panels[p].head['Last-Modified']);
 					n.html(d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1,2)+'-'+pad(d.getUTCDate(),2))
