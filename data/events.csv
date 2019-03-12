@@ -730,33 +730,34 @@ Date,Title,Status,Attendance,Attendance source
 2019-01-28T09:00Z,"NHS Digital ",CONFIRMED,0,Calendar
 2019-01-29T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
 2019-01-29T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,25,Calendar
-2019-01-30T09:00Z,"NHS Digital ",CONFIRMED,0,Calendar
-2019-01-31T09:00Z,"NHS Digital ",CONFIRMED,0,Calendar
+2019-01-30T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
+2019-01-31T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
 2019-02-04T13:00Z,"Leeds City Council Cabinet",CONFIRMED,40,Calendar
 2019-02-05T10:00Z,"NHS Digital ",CONFIRMED,6,Calendar
-2019-02-06T09:00Z,"Voice 21 Oracy Pioneers Programme",CONFIRMED,0,Calendar
+2019-02-06T09:00Z,"Voice 21 Oracy Pioneers Programme",CONFIRMED,100,Calendar
 2019-02-07T09:00Z,"Impact Research ",CONFIRMED,16,Calendar
-2019-02-11T09:00Z,"Magpie",CONFIRMED,0,Calendar
-2019-02-13T12:30Z,"NHS Digital - DPS Full Team Meeting",CONFIRMED,0,Calendar
-2019-02-13T18:30Z,"Jet2",CONFIRMED,0,Calendar
-2019-02-14T09:00Z,"DfT Cycling Infrastructure & open data workshop",CONFIRMED,0,Calendar
-2019-02-18T18:30Z,"Leeds Devops ",CONFIRMED,0,Calendar
-2019-02-19T09:00Z,"DFE Open Data Competition - phase 2 winners",CONFIRMED,0,Calendar
-2019-02-25T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,0,Calendar
-2019-02-26T09:15Z,"IReS Away Day - NHS Digital",CONFIRMED,0,Calendar
-2019-02-27T09:00Z,"Transport For The North",CONFIRMED,0,Calendar
-2019-02-27T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,0,Calendar
-2019-02-27T17:00Z,"Usercrunch",CONFIRMED,0,Calendar
-2019-02-28T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,0,Calendar
-2019-03-01T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,0,Calendar
-2019-03-01T10:00Z,"DWP - Northern Product People Meet Up ",CONFIRMED,0,Calendar
-2019-03-04T09:00Z,"NHS Digital ",CONFIRMED,0,Calendar
-2019-03-05T09:00Z,"NHS Digital",CONFIRMED,0,Calendar
-2019-03-06T08:00Z,"NHS Digital private sponsors meet",CONFIRMED,0,Calendar
-2019-03-06T09:00Z,"Unilever SC & R&D Off Site Meeting",CONFIRMED,0,Calendar
-2019-03-07T08:00Z,"NHS Digital private sponsors meeting",CONFIRMED,0,Calendar
-2019-03-07T12:00Z,"Delib - Practical Democracy",CONFIRMED,0,Calendar
-2019-03-08T09:00Z,"Synanetics ",CONFIRMED,0,Calendar
+2019-02-11T09:00Z,"Magpie",CONFIRMED,28,Calendar
+2019-02-13T12:30Z,"NHS Digital - DPS Full Team Meeting",CONFIRMED,42,Calendar
+2019-02-13T18:30Z,"Jet2",CONFIRMED,25,Calendar
+2019-02-14T09:00Z,"DfT Cycling Infrastructure & open data workshop",CONFIRMED,16,Calendar
+2019-02-18T18:30Z,"Leeds Devops ",CONFIRMED,75,Calendar
+2019-02-19T09:00Z,"DFE Open Data Competition - phase 2 winners",CONFIRMED,15,Calendar
+2019-02-25T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,12,Calendar
+2019-02-26T09:15Z,"IReS Away Day - NHS Digital",CONFIRMED,94,Calendar
+2019-02-27T09:00Z,"Transport For The North",CONFIRMED,8,Calendar
+2019-02-27T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,23,Calendar
+2019-02-27T17:00Z,"Usercrunch",CONFIRMED,24,Calendar
+2019-02-28T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,12,Calendar
+2019-03-01T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,14,Calendar
+2019-03-01T10:00Z,"DWP - Northern Product People Meet Up ",CONFIRMED,33,Calendar
+2019-03-04T09:00Z,"NHS Digital ",CONFIRMED,15,Calendar
+2019-03-05T09:00Z,"NHS Digital",CONFIRMED,24,Calendar
+2019-03-06T08:00Z,"NHS Digital private sponsors meet",CONFIRMED,14,Calendar
+2019-03-06T09:00Z,"Unilever SC & R&D Off Site Meeting",CONFIRMED,45,Calendar
+2019-03-07T08:00Z,"NHS Digital private sponsors meeting",CONFIRMED,15,Calendar
+2019-03-07T12:00Z,"Delib - Practical Democracy",CONFIRMED,35,Calendar
+2019-03-08T09:00Z,"Synanetics ",CONFIRMED,9,Calendar
+2019-03-08T10:00Z,"Leeds Live ",CONFIRMED,45,Calendar
 2019-03-11T08:00Z,"NHS Digital ",CONFIRMED,0,Calendar
 2019-03-12T08:00Z,"NHS Digital ",CONFIRMED,0,Calendar
 2019-03-12T09:00Z,"NHS Foundation Trust",CONFIRMED,0,Calendar
