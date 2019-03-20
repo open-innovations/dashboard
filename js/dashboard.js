@@ -4,12 +4,12 @@ window.requestAnimFrame = (function(){
 })();
 
 /*!
- * ODI Leeds Dashboard (version 1.0.1)
+ * ODI Leeds Dashboard
  */
 function Dashboard(inp){
 	if(!inp) inp = {};
+	this.version = "1.1.0";
 	this.panels = new Array();
-	this.year = "";
 	this.duration = 1000;
 	this.config = {};
 	this.panellookup = {};
@@ -36,23 +36,40 @@ function Dashboard(inp){
 		}
 		return r;
 	}
+	
+	this.name = "Dashboard";
+	// Function for logging to the console
+	this.log = function(){
+		if(this.logging || arguments[0]=="ERROR"){
+			var args = Array.prototype.slice.call(arguments, 0);
+			if(console && typeof console.log==="function"){
+				if(arguments[0] == "ERROR") console.log('%cERROR%c %c'+this.name+'%c: '+args[1],'color:white;background-color:#D60303;padding:2px;','','font-weight:bold;','',(args.length > 2 ? (args.length > 3 ? args.splice(2) : args[2]):""));
+				else if(arguments[0] == "WARNING") console.log('%cWARNING%c %c'+this.name+'%c: '+args[1],'color:black;background-color:#F9BC26;padding:2px;','','font-weight:bold;','',(args.length > 2 ? (args.length > 3 ? args.splice(2) : args[2]):""));
+				else console.log('%c'+this.name+'%c','font-weight:bold;','',(args.length==1 ? args[0] : args));
+			}
+		}
+		return this;
+	};
+
+	if(console) console.log('%c'+this.name+' v'+this.version+'%c','font-weight:bold;font-size:1.25em;','');
+	
 	this.query = parseQueryString();
 	// Define if we show the close button or not
 	this.interactive = true;
 	if(this.query.interactive && (this.query.interactive == "false" || this.query.interactive == 0)) this.interactive = false;
-	this.log = (this.query.debug && this.query.debug=="log") ? this.query.debug : false;
+	this.logging = (this.query.debug && this.query.debug=="log") ? this.query.debug : false;
 
 	this.setup = function(inp){
-		log('setup');
+		this.log('setup');
 		if(!inp) inp = {};
-		if(typeof inp.year==="string") this.year = S(inp.year).e[0].value;
 		if(inp.config) this.config = inp.config;
 		var i = 0;
 		var inpanel = false;
 		for(var p in this.config){
 			var el = S('#'+p);
 			this.panellookup[p] = i;
-			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p]};
+			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p],'view':S('#range')[0].value };
+			console.log(i,p,this.panels[i].view)
 			// Update panel class
 			for(var c = 1; c <= 14; c++) this.panels[i].el.find('.c'+c+'-bg').removeClass('c'+c+'-bg').addClass(this.panels[i].config['class']);
 
@@ -65,9 +82,23 @@ function Dashboard(inp){
 
 			if(this.config[p].data){
 				var d = new Date();
-				var fn = this.config[p].data+'?'+d;
-				if(!files[fn]) S().ajax(fn,{'complete':loadData,'dataType':'csv','this':this,'error':failData,'i':i,'me':this,'cache':false});
-				else loadData(this.panels[files[fn]].data,{'i':i,'me':this});
+				for(var u = 0; u < this.config[p].data.length; u++){
+					var fn = this.config[p].data[u]+'?'+d.getTime();
+					if(!files[fn]){
+						S().ajax(fn,{
+							'complete':loadData,
+							'dataType':'csv',
+							'key':p,
+							'this':this,
+							'i':i,
+							'me':this,
+							'cache':false,
+							'error':function(data,attr){
+								_obj.log('ERROR','Unable to load',attr.url,data);
+							}
+						});
+					}else loadData(this.panels[files[fn]].data,{'i':i,'me':this,'key':p});
+				}
 			}
 			i++;
 		}
@@ -81,7 +112,10 @@ function Dashboard(inp){
 		}
 
 		S('#range').on('change',{me:this},function(e){
-			e.data.me.year = e.currentTarget.value;
+			v = e.currentTarget.value;
+			if(!v) v = "lifetime";
+			// Update all panels to view
+			for(var i = 0; i < e.data.me.panels.length; i++) e.data.me.panels[i].view = v;
 			e.data.me.update();
 		});
 	}
@@ -94,7 +128,7 @@ function Dashboard(inp){
 	}
 
 	function animateNumber(el,val,duration,units){
-		log('animateNumber');
+		_obj.log('animateNumber');
 		if(typeof val!=="number"){
 			val = el.html();
 			if(val) val = parseFloat(val);
@@ -145,7 +179,7 @@ function Dashboard(inp){
 			if(src){
 				im.attr('data',id).attr('id','replaceWithSVG-'+id).addClass('replaceWithSVG');
 				_obj.replace[id] = true;
-				S(document).ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more[0])['color'],'cache':'true','complete': replaceImage, 'error': function(a){ console.log('Failed to load file',a); } });
+				S(document).ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more[0])['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
 			}
 		}
 
@@ -188,7 +222,7 @@ function Dashboard(inp){
 	}
 
 	function loadData(data,attr){
-		log('loadData',data,attr);
+		_obj.log('loadData',data,attr);
 		if(typeof data==="string"){
 			data = data.replace(/\r/,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
 			data = data.split(/[\n]/);
@@ -210,16 +244,6 @@ function Dashboard(inp){
 		return;
 	}
 
-	function log(){
-		if(!_obj.log) return this;
-		var args = Array.prototype.slice.call(arguments, 0);
-		if(console && typeof console.log==="function") console.log('LOG',args);
-		return this;
-	}
-
-	function failData(data){
-		log('fail',data);
-	}
 	function formatNumber(v){
 		if(typeof v !== "number") return v;
 		if(v > 1e7) return Math.round(v/1e6)+"M";
@@ -230,14 +254,14 @@ function Dashboard(inp){
 	}
 
 	this.update = function(){
-		log('update');
+		this.log('update');
 		for(var i = 0; i < this.panels.length; i++){
 			if(this.panels[i] && this.panels[i].data) this.updatePanel(i);
 		}
 	}
 	// Update a specific panel
 	this.updatePanel = function(p){
-		log('updatePanel',p);
+		this.log('updatePanel',p);
 		var year,add,cols;
 		if(this.panels[p]){
 
@@ -249,6 +273,14 @@ function Dashboard(inp){
 				data.push(cols);
 			}
 			this.panels[p].el = S('#'+this.panels[p].id);
+			
+			var view = null;
+			if(this.panels[p].view){
+				if(this.panels[p].view == "default") view = this.panels[p].config['default'];
+				else view = parseInt(this.panels[p].view);
+			}
+			console.log(p,view)
+
 			for(var e in this.panels[p].config.els){
 				var n = this.panels[p].el.find(e);
 				var el = this.panels[p].config.els[e];
@@ -283,8 +315,10 @@ function Dashboard(inp){
 					n = 1 + Math.floor(13*n/(26 * 2));
 					return "c"+n+"-bg";
 				}
+
 				if(row){
 					if(row == "all"){
+						
 						if(el.type=="images"){
 							var list = new Array();
 							var colurl = parseInt(el.url);
@@ -295,7 +329,7 @@ function Dashboard(inp){
 								var e = (new Date()).toISOString();
 								if(colend && data[r][colend-1]) e = data[r][colend-1];
 								// If the row is within the date range we add the image
-								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img '+(data[r][img-1].indexOf(".svg") > 0 ? 'svg':'src')+'="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
+								if(this.inDateRange(s,e,view)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'">':'')+(data[r][img-1] ? '<img '+(data[r][img-1].indexOf(".svg") > 0 ? 'svg':'src')+'="data/'+data[r][img-1]+'" alt="'+data[r][col-1]+'" title="'+data[r][col-1]+'" />' : data[r][col-1])+(colurl ? '</a>':''));
 							}
 							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'duration':(el.animate ? this.duration : 0)});
 						}else if(el.type=="list"){
@@ -310,7 +344,7 @@ function Dashboard(inp){
 								// If the row is within the date range we add the list item
 								var colour = getColourFromTitle(data[r][col-1]);
 								if(colour == this.panels[p].config['class']) colour += " bordered";
-								if(this.inDateRange(s,e)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'" class="box">':'<div class="box">')+'<div class="panel '+colour+'">'+data[r][col-1]+'</div>'+(colurl ? '</a>':'</div>'));
+								if(this.inDateRange(s,e,view)) list.push((colurl ? '<a href="'+data[r][colurl-1]+'" class="box">':'<div class="box">')+'<div class="panel '+colour+'">'+data[r][col-1]+'</div>'+(colurl ? '</a>':'</div>'));
 							}
 							this.panels[p].updateable.push({'el':e,'n':n,'list':list,'cls':'grid','duration':(el.animate ? this.duration : 0)});
 						}else if(el.type=="graph"){
@@ -326,7 +360,7 @@ function Dashboard(inp){
 							// Calculate date range to show for graph
 							for(var r = 0; r < data.length; r++){
 								s = data[r][coldate-1];
-								if(this.inDateRange(s)){
+								if(this.inDateRange(s,s,view)){
 									// We are in the date range and have no start date set
 									if(!sd) sd = s;
 									if(!ed) ed = s;
@@ -385,11 +419,13 @@ function Dashboard(inp){
 						if(coldate){
 							// Find the last row in the valid date range
 							for(var r = 0; r < data.length; r++){
-								if(this.inDateRange(data[r][coldate-1])) row = r+1;
+								if(this.inDateRange(data[r][coldate-1],data[r][coldate-1],view)) row = r+1;
 							}
 						}
-					}else row = parseInt(row)
-					val = data[row-1][col-1];
+					}else row = parseInt(row);
+					
+					val = (row < data.length) ? data[row-1][col-1] : 0;
+
 					if(el.animate) animateNumber(n,val,this.duration);
 					else n.html(val);
 				}else{
@@ -403,7 +439,7 @@ function Dashboard(inp){
 							var s = data[r][coldate-1];
 							var e = (new Date()).toISOString();
 							if(colend && data[r][colend-1]) e = data[r][colend-1];
-							if(this.inDateRange(s,e)){
+							if(this.inDateRange(s,e,view)){
 								if(op=="sum") total += parseInt(data[r][col-1]);
 								else if(op=="count") total++;
 							}
@@ -416,29 +452,29 @@ function Dashboard(inp){
 
 			// Add CSS cursor and add click event
 			this.panels[p].el.css({'cursor':'pointer'}).off('click').on('click',{'me':this,'i':p},function(e){
-				log('Set hash')
+				e.data.me.log('Set hash')
 				location.hash = e.data.me.panels[e.data.i].id;
 			});
 		}
 		return this;
 	}
-	this.inDateRange = function(start,end){
+	this.inDateRange = function(start,end,year){
 		var s = parseInt(start.substr(0,4));
 		var e = (end ? parseInt(end.substr(0,4)) : s);
-		if(!this.year) return true;
-		if(s <= this.year && e >= this.year) return true;
+		if(!year) return true;
+		if(s <= year && e >= year) return true;
 		else return false; 
 	}
 	this.resize = function(){
 		var i = S('.moreinfo');
 		if(i.length ==1){
 			var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-			S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
+			//S('.moreinfo').css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':height+'px'});
 		}
 		return this;
 	}
 	this.navigate = function(e,a){
-		log('navigate');
+		this.log('navigate');
 		if(!a) a = location.href.split("#")[1];
 		var i = this.panellookup[a];
 
@@ -453,13 +489,13 @@ function Dashboard(inp){
 
 			// Add the moreinfo box
 			S('.main').after('<div class="moreinfo '+this.panels[i].config['class']+'"></div>');
-			S('body').css({'overflow-y': 'hidden'});
-			S('.moreinfo').html((this.interactive ? '<div class="close">&times;</div>':'')+this.panels[i].el.html()).css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
+			S('.main').css({'display': 'none'});
+			S('.moreinfo').html((this.interactive ? '<div class="close">&times;</div>':'')+this.panels[i].el.html());//.css({'width':o.width+'px','height':o.height+'px','left':o.left+'px','top':o.top+'px'}).css({'left':'0px','top':'0px','width':document.body.offsetWidth+'px','height':("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight)+'px'});
 			// Add click event to close button
 			if(this.interactive) S('.moreinfo .close').on('click',{me:this},function(e){ location.hash = 'top' });
 			if(S('.moreinfo').find('img').length > 0) updateImages();
 		}else{
-			S('body').css({'overflow-y': ''});
+			S('.main').css({'display': ''});
 		}
 		return this;
 	}

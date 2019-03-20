@@ -13,7 +13,7 @@
 		"events": {
 			"start": 1,
 			"end": 1,
-			"data": "data/events_monthly.csv",
+			"data": ["data/events_monthly.csv"],
 			"els": {
 				".number": { "col": 2, "op": "sum", "animate": true },
 				".graph": { "col": 2, "row": "all", "type": "graph" },
@@ -24,7 +24,7 @@
 		"reach": {
 			"start": 1,
 			"end": 1,
-			"data": "data/events_monthly.csv",
+			"data": ["data/events_monthly.csv"],
 			"els": {
 				".number": { "col": 3, "op": "sum", "animate": true },
 				".graph": { "col": 3, "row": "all", "type": "graph" },
@@ -35,7 +35,7 @@
 		"sponsors": {
 			"start": 2,
 			"end": 3,
-			"data": "data/sponsors.csv",
+			"data": ["data/sponsors.csv"],
 			"els": {
 				".number": { "col": 1, "op": "count", "animate": true },
 				".icons": { "col": 4, "img": 5, "url": 6, "row": "all", "type": "images" },
@@ -46,7 +46,7 @@
 		"revenue": {
 			"start": 1,
 			"end": 1,
-			"data": "data/revenue.csv",
+			"data": ["data/revenue.csv"],
 			"units": "&pound;",
 			"els": {
 				".number": { "col": 2, "op": "sum", "animate": true },
@@ -55,12 +55,13 @@
 			},
 			'class':'c1-bg'
 		},
-		"network": {
+		"partners": {
 			"start": 1,
 			"end": 2,
-			"data": "data/network.csv",
+			"data": ["data/partners.csv"],
+			"default": "2019",
 			"els": {
-				".number": { "col": 1, "op": "count", "animate": true },
+				".number": { "col": 4, "op": "count", "animate": true },
 				".icons": { "col": 3, "img": 4, "url": 5, "row": "all", "type": "images" },
 				".lastupdated": { "col": 1, "row": "last" }
 			},
@@ -70,7 +71,7 @@
 			"start": 1,
 			"end": 2,
 			"max": 12,
-			"data": "data/projects.csv",
+			"data": ["data/projects.csv"],
 			"els": {
 				".number": { "col": 1, "op": "count", "animate": true },
 				".list": { "col": 3, "url": 4, "row": "all", "type": "list" },
@@ -78,10 +79,10 @@
 			},
 			'class':'c14-bg'
 		},
-		"partners": {
+		"clients": {
 			"start": 1,
 			"end": 2,
-			"data": "data/partners.csv",
+			"data": ["data/clients.csv"],
 			"els": {
 				".number": { "col": 4, "op": "count", "animate": true },
 				".icons": { "col": 3, "img": 4, "url": 5, "row": "all", "type": "images" },
@@ -92,7 +93,7 @@
 		"tweets": {
 			"start": 1,
 			"end": 1,
-			"data": "data/socialmedia.csv",
+			"data": ["data/socialmedia.csv"],
 			"els": {
 				".number": { "col": 3, "op": "sum", "animate": true },
 				".graph": { "col": 3, "row": "all", "type": "graph" },
@@ -103,7 +104,7 @@
 		"web": {
 			"start": 1,
 			"end": 1,
-			"data": "data/web-odileeds.org.csv",
+			"data": ["data/web-odileeds.org.csv"],
 			"els": {
 				".number": { "col": 2, "op": "sum", "animate": true },
 				".graph": { "col": 2, "row": "all", "type": "graph" },
@@ -120,11 +121,11 @@
 	</script>
 	<link href="icon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
-<body class="b1-bg">
+<body class="b6-bg">
 	<a name="top"></a>
 	<div id="cover"></div>
-	<div class="header b1-bg">
-		<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds.svg" /></a> <select id="range" name="range"><option value="">Lifetime impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
+	<div class="header b6-bg">
+		<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds-black.svg" /></a> <select id="range" name="range"><option value="default">Summary</option><option value="">Lifetime impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
 	</div>
 	<div class="main">
 		<ul class="dashboard">
@@ -172,14 +173,14 @@
 					</div>
 				</div>
 			</li
-			><li class="boxholder" id="network">
+			><li class="boxholder" id="partners">
 				<div class="box c11-bg">
 					<div class="panel">
-						<div class="title">Friends of ODI Leeds</div>
+						<div class="title">Friends and Partners</div>
 						<p class="more">Individuals, start-ups, meet-ups, and SMEs that use our workspace and collaborate with us</p>
 						<div class="number less"></div>
 						<div class="icons more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/network.csv" class="lastupdated data">data about our network</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated data">data about our partners</a></div>
 					</div>
 				</div>
 			</li
@@ -194,15 +195,17 @@
 					</div>
 				</div>
 			</li
-			><li class="boxholder" id="partners">
+			><li class="boxholder" id="clients">
 				<div class="box c13-bg">
-					<div class="panel partners">
-						<div class="title">Partners</div>
+				<!--
+					<div class="panel clients">
+						<div class="title">Clients</div>
 						<p class="more">Organisations we work with to deliver projects</p>
 						<div class="number less"></div>
 						<div class="icons more"></div>
-						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our partners</a></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
 					</div>
+					-->
 				</div>
 			</li
 			><li class="boxholder" id="tweets">
