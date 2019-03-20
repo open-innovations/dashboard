@@ -97,6 +97,7 @@ a { color: inherit; }
 .main {
 	overflow: hidden;
 	position: relative;
+	padding: 6px;
 }
 .dashboard {
 	position: relative;
