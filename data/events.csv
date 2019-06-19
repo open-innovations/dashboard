@@ -369,16 +369,13 @@ Date,Title,Status,Attendance,Attendance source
 2016-07-28T08:00Z,"LCC team meeting",CONFIRMED,6,Calendar
 2016-07-29T12:00Z,"ODIHQ@ODILeeds Free Friday Lunchtime Lecture: How to change the world with some data scrapers and a plan",CONFIRMED,7,Calendar
 2016-07-29T13:00Z,"Data Drop-in",CONFIRMED,10,Calendar
-2016-07-31T23:00Z,"Yorkshire Day",CONFIRMED,0,Calendar
 2016-08-01T08:00Z,"NHS.uk away day",CONFIRMED,0,Calendar
 2016-08-11T15:30Z,"Leeds Data Thing - Open Meeting",CONFIRMED,22,Calendar
-2016-08-18T17:30Z,"Hivemind Networking",CONFIRMED,0,Calendar
 2016-08-26T13:00Z,"Data Drop-in",CONFIRMED,15,Calendar
 2016-09-02T08:00Z,"Urban Commons catch-up",CONFIRMED,0,Calendar
 2016-09-02T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Live Coding & Algoraves",CONFIRMED,0,Calendar
 2016-09-06T08:00Z,"#OpenSmartCitiesPlaces16 @ Wuthering Bytes",CONFIRMED,41,Calendar
 2016-09-08T09:30Z,"Government Digital Service Accessibility meeting",CONFIRMED,72,Calendar
-2016-09-09T08:00Z,"Wuthering Bytes",CONFIRMED,0,Calendar
 2016-09-09T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Sustainable Development Data",CONFIRMED,2,Calendar
 2016-09-12T08:00Z,"LCC Projects, Programmes and Procurement away day",CONFIRMED,11,Calendar
 2016-09-15T08:00Z,"Digital DWP",CONFIRMED,29,Calendar
@@ -387,7 +384,6 @@ Date,Title,Status,Attendance,Attendance source
 2016-09-20T15:45Z,"Blockchain and Internet of Things - Leeds",CONFIRMED,24,Calendar
 2016-09-21T17:00Z,"Leeds Devops",CONFIRMED,63,Calendar
 2016-09-22T08:00Z,"ESRI User group Meeting",CONFIRMED,37,Calendar
-2016-09-22T17:30Z,"Hive Mind Network meetup",CONFIRMED,0,Calendar
 2016-09-23T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Why joined-up data is a political, not technical, challenge",CONFIRMED,8,Calendar
 2016-09-30T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Accessible data on every politician in the world",CONFIRMED,9,Calendar
 2016-09-30T13:00Z,"Data Drop-in",CONFIRMED,12,Calendar
@@ -396,7 +392,6 @@ Date,Title,Status,Attendance,Attendance source
 2016-10-06T08:00Z,"LCC Away Day",CONFIRMED,14,Calendar
 2016-10-07T12:00Z,"ODIHQ@ODILeeds Lunchtime Lecture - Creating a billion-pound dataset",CONFIRMED,6,Calendar
 2016-10-11T17:00Z,"Leeds Devops",CONFIRMED,60,Calendar
-2016-10-12T17:15Z,"Hive Mind Network meetup",CONFIRMED,0,Calendar
 2016-10-14T08:00Z,"LCC leadership conference",CONFIRMED,0,Calendar
 2016-10-17T08:00Z,"ODI Leeds Closed",CONFIRMED,0,Calendar
 2016-10-18T12:00Z,"TRUE project meeting",CONFIRMED,19,Calendar
@@ -409,7 +404,6 @@ Date,Title,Status,Attendance,Attendance source
 2016-10-28T08:00Z,"Climathon",CONFIRMED,31,Calendar
 2016-10-28T12:00Z,"ODIHQ@DHEZ Friday Lunchtime Lecture - Responsible data tactics for positive social change",CONFIRMED,0,Calendar
 2016-10-28T13:00Z,"Data Drop-in",CONFIRMED,12,Calendar
-2016-11-01T09:00Z,"ODI Summit 2016",CONFIRMED,0,Calendar
 2016-11-04T13:00Z,"ODIHQ Lunchtime Lecture - Mapping Greater Manchester",CONFIRMED,0,Calendar
 2016-11-09T09:00Z,"Digital DWP",CONFIRMED,70,Calendar
 2016-11-10T13:00Z,"LCC strategy and improvement workshop",CONFIRMED,28,Calendar
@@ -814,3 +808,7 @@ Date,Title,Status,Attendance,Attendance source
 2019-06-06T08:00Z,"NHS Digital",CONFIRMED,22,Calendar
 2019-06-07T08:00Z,"NHS Digital",CONFIRMED,22,Calendar
 2019-06-10T12:00Z,"Hubbub",CONFIRMED,20,Calendar
+2019-06-12T08:00Z,"User Crunch",CONFIRMED,6,Calendar
+2019-06-13T08:00Z,"Yorkshire Water conference ",CONFIRMED,25,Calendar
+2019-06-18T08:00Z,"NHS Digital",CONFIRMED,15,Calendar
+2019-06-19T08:00Z,"NHS Digital",CONFIRMED,0,Calendar
