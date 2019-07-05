@@ -49,6 +49,7 @@ Date start,Date end,Projects,url,Short description,Image
 2018-07-25,,CSV to GeoJSON,https://odileeds.github.io/CSV2GeoJSON/,"A web-based tool to easily convert a CSV file (containing geography columns) into a GeoJSON file.",
 2019-01,,Business Rates,https://odileeds.org/projects/business-rates/,"As part of the Open Data Collaboration group we started looking at business rate data published by Bradford/Calderdale/Leeds councils. Part of this involves agreeing commong column headings to allow us to combine data.",
 2019-03-07,,Scores on the doors,https://odileeds.org/projects/scoresonthedoors/,A simple webpage that uses your location to tell you the food hygiene ratings for the nearest food premises to you.,
+2019-04-11,,CSVCleaner,https://odileeds.github.io/CSV2Cleaner/,A simple tool to clean up some common issues with CSV files including date formats and values,
 2019-05-01,,Local elections 2019,https://odileeds.org/projects/local-elections-2019/,"Visualising the 2019 local elections in Leeds using data from Democracy Club",
 2019-05-10,,Postcodes to IMD Deciles,https://odileeds.github.io/Postcodes2IMD/,"Batch convert postcodes to Indices of Multiple Deprivation decile",
 2019-06-05,,Postcodes to Latitudes and Longitudes,https://odileeds.github.io/Postcodes2LatLon/,"Add Latitude/Longitude columns to CSV files containing Postcode columns.",
