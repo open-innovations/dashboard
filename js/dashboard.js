@@ -8,7 +8,7 @@ window.requestAnimFrame = (function(){
  */
 function Dashboard(inp){
 	if(!inp) inp = {};
-	this.version = "1.1.0";
+	this.version = "1.2.0";
 	this.panels = new Array();
 	this.duration = 1000;
 	this.config = {};
@@ -65,11 +65,12 @@ function Dashboard(inp){
 		if(inp.config) this.config = inp.config;
 		var i = 0;
 		var inpanel = false;
+		if(this.range) S('#range')[0].value = this.range;
+
 		for(var p in this.config){
 			var el = S('#'+p);
 			this.panellookup[p] = i;
 			this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p],'view':S('#range')[0].value };
-			console.log(i,p,this.panels[i].view)
 			// Update panel class
 			for(var c = 1; c <= 14; c++) this.panels[i].el.find('.c'+c+'-bg').removeClass('c'+c+'-bg').addClass(this.panels[i].config['class']);
 
@@ -87,7 +88,7 @@ function Dashboard(inp){
 					if(!files[fn]){
 						S().ajax(fn,{
 							'complete':loadData,
-							'dataType':'csv',
+							'dataType':'text',
 							'key':p,
 							'this':this,
 							'i':i,
@@ -112,12 +113,19 @@ function Dashboard(inp){
 		}
 
 		S('#range').on('change',{me:this},function(e){
-			v = e.currentTarget.value;
-			if(!v) v = "lifetime";
-			// Update all panels to view
-			for(var i = 0; i < e.data.me.panels.length; i++) e.data.me.panels[i].view = v;
-			e.data.me.update();
+			e.data.me.setRange(e.currentTarget.value).update();
 		});
+	}
+	
+	this.setRange = function(v,updateHistory){
+		if(typeof updateHistory!=="boolean") updateHistory = true;
+		if(!v) v = "lifetime";
+		this.range = v;
+		// Update all panels to view
+		for(var i = 0; i < this.panels.length; i++) this.panels[i].view = this.range;
+		var _obj = this;
+		if(this.pushstate && updateHistory) history.pushState({'impact':this.range,'anchor':this.anchor},"Dashboard","?impact="+this.range+(this.anchor ? "#"+this.anchor : ""));
+		return this;
 	}
 
 	function pad(n, w) {
@@ -238,8 +246,10 @@ function Dashboard(inp){
 			}
 		}
 		attr.me.panels[attr.i].head = header;
+		if(attr.me.range) attr.me.panels[attr.i].view = attr.me.range;
 		attr.me.updatePanel(attr.i);
 		files[attr.url] = attr.i;
+		
 		if(attr.me.panels[attr.i].id == attr.me.anchor) this.navigate({},attr.me.anchor);
 		return;
 	}
@@ -279,7 +289,6 @@ function Dashboard(inp){
 				if(this.panels[p].view == "default") view = this.panels[p].config['default'];
 				else view = parseInt(this.panels[p].view);
 			}
-			console.log(p,view)
 
 			for(var e in this.panels[p].config.els){
 				var n = this.panels[p].el.find(e);
@@ -504,6 +513,16 @@ function Dashboard(inp){
 	this.pushstate = !!(window.history && history.pushState);
 	this.href = location.href.split("#")[0];
 	this.anchor = location.href.split("#")[1];
+	this.range = this.query.impact;
+	
+	var _obj = this;
+	
+	window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){
+		if(e.state && e.state.impact){
+			S('#range')[0].value = e.state.impact;
+			_obj.setRange(e.state.impact,false).update();
+		}
+	};
 
 	// We'll need to change the sizes when the window changes size
 	var _obj = this;
