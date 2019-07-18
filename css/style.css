@@ -365,6 +365,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 }
 @media only screen and (max-width: 1000px) {
 	.boxholder { width: 50%; }
+	.empty { display: none; }
 }
 @media only screen and (max-width: 700px) {
 	body { font-size: 0.8em; }
@@ -392,7 +393,6 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 		width: 100%;
 	}
 	.boxholder { width: 100%; height: auto; }
-	.empty { display: none; }
 	.panel { padding: 24px; vertical-align: top; }
 	.panel .number, .panel:hover .number { font-size: 8em; }
 	.panel .updated { opacity: 1; }
