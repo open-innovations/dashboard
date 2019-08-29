@@ -53,3 +53,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors
 2019-05-01,2019-05-03,Local elections 2019,https://odileeds.org/projects/local-elections-2019/,"Visualising the 2019 local elections in Leeds using data from Democracy Club",,1;6
 2019-05-10,,Postcodes to IMD Deciles,https://odileeds.github.io/Postcodes2IMD/,"Batch convert postcodes to Indices of Multiple Deprivation decile",,
 2019-06-05,,Postcodes to Latitudes and Longitudes,https://odileeds.github.io/Postcodes2LatLon/,"Add Latitude/Longitude columns to CSV files containing Postcode columns.",,
+2019-08-29,,Divisions hex map,http://odileeds.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,
