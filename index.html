@@ -81,13 +81,14 @@
 			},
 			'class':'c14-bg'
 		},
-		"clients": {
+		"themes": {
 			"start": 1,
 			"end": 2,
-			"data": ["data/clients.csv"],
+			"max": 12,
+			"data": ["data/themes.csv"],
 			"els": {
-				".number": { "col": 4, "op": "count", "animate": true },
-				".icons": { "col": 3, "img": 4, "url": 5, "row": "all", "type": "images" },
+				".number": { "col": 1, "op": "count", "animate": true },
+				".list": { "col": 3, "url": 4, "row": "all", "type": "list" },
 				".lastupdated": { "col": 1, "row": "last" }
 			},
 			'class':'c13-bg'
@@ -197,17 +198,15 @@
 					</div>
 				</div>
 			</li
-			><li class="boxholder empty" id="clients">
+			><li class="boxholder empty" id="themes">
 				<div class="box c13-bg">
-				<!--
-					<div class="panel clients">
-						<div class="title">Clients</div>
-						<p class="more">Organisations we work with to deliver projects</p>
+					<div class="panel themes">
+						<div class="title">Themes</div>
+						<p class="more"></p>
 						<div class="number less"></div>
-						<div class="icons more"></div>
+						<div class="list more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
 					</div>
-					-->
 				</div>
 			</li
 			><li class="boxholder" id="tweets">
