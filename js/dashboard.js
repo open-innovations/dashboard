@@ -470,6 +470,8 @@ function Dashboard(inp){
 	this.inDateRange = function(start,end,year){
 		var s = parseInt(start.substr(0,4));
 		var e = (end ? parseInt(end.substr(0,4)) : s);
+		var n = (new Date()).getFullYear();
+		if(s > n) return false;
 		if(!year) return true;
 		if(s <= year && e >= year) return true;
 		else return false; 
