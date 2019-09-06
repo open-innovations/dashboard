@@ -280,6 +280,7 @@ function Dashboard(inp){
 			for(var r = 1; r < this.panels[p].data.length; r++){
 				// Split the line by commas (but not commas within quotation marks
 				cols = this.panels[p].data[r].split(/,(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))/);
+				for(var c = 0; c < cols.length; c++) cols[c] = cols[c].replace(/(^\"|\"$)/g,"");
 				data.push(cols);
 			}
 			this.panels[p].el = S('#'+this.panels[p].id);
