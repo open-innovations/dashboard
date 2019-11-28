@@ -55,4 +55,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors
 2019-06-05,,Postcodes to Latitudes and Longitudes,https://odileeds.github.io/Postcodes2LatLon/,"Add Latitude/Longitude columns to CSV files containing Postcode columns.",,
 2019-08-29,,Divisions hex map,http://odileeds.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,
 2019-10-15,,Flight Emissions,https://patricklake2.github.io/leeds-flight-emissions,"Estimating flight emissions for Leeds Bradford Airport",,
-2019-10,,Future Energy Scenarios,https://odileeds.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios.",,16
+2019-10,,Distributed Future Energy Scenarios,https://odileeds.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios.",,16
