@@ -412,14 +412,14 @@ function Dashboard(inp){
 								if(bins[key] > mx) mx = bins[key];
 							}
 
+							if(typeof this.panels[p].config.max==="number") mx = Math.min(mx,this.panels[p].config.max);
+
 							var output = '<div class="grid" style="height:'+h+'px;">';
 							var grid = getGrid(0,mx);
-							for(var g = 0; g < grid.max; g+= grid.inc){
-								output += '<div class="line" style="bottom:'+(h*g/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
-							} 
+							for(var g = 0; g < grid.max; g+= grid.inc) output += '<div class="line" style="bottom:'+(h*Math.min(g,mx)/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
 							output += '</div>'
 							output += '<table><tr style="vertical-align:bottom;">';
-							for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*bins[key]/mx)+'px;"></div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+							for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
 							output += '</tr></table>';
 							n.html(output);
 						}

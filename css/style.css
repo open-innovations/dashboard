@@ -244,6 +244,13 @@ ol.grid > li > a { display: table!important; text-decoration: none; }
 	background-color: white;
 	border-bottom: 1px solid white;
 }
+.graph table .bar .fade {
+	position: absolute;
+	top: -1em;
+	width: 100%;
+	height: 1em;
+	background: linear-gradient(0deg,black,transparent);
+}
 .graph table .date {
 	position: absolute;
 	left: 0px;
