@@ -56,3 +56,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors
 2019-08-29,,Divisions hex map,http://odileeds.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,
 2019-10,,Distributed Future Energy Scenarios,https://odileeds.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios.",,16
 2019-10-15,,Flight Emissions,https://patricklake2.github.io/leeds-flight-emissions,"Estimating flight emissions for Leeds Bradford Airport",img/project-flights.png,
+2019-12-12,,General Election 2019,https://odileeds.org/projects/hexmaps/ge2019/,"We worked with New Statesman to create a live hex map of election results. We built a back-end system to record results and combined this with data from a variety of open sources.",,
