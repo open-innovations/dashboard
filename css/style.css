@@ -343,6 +343,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 .c13-bg .graph table .date,
 .c14-bg .graph table .date { border-color: black; }
 
+.moreinfo .panel li svg { width: 100%; }
 
 
 @media only screen and (max-width: 3000px) {
@@ -367,11 +368,12 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 }
 @media only screen and (max-width: 1280px) {
 	.boxholder { width: 33.333333333%; }
-	.moreinfo .panel li { width: 25%; }
+	.moreinfo .panel li { width: 20%; }
 	.panel { padding: 24px; }
 }
 @media only screen and (max-width: 1000px) {
 	.boxholder { width: 50%; }
+	.moreinfo .panel li { width: 25%; }
 	.empty { display: none; }
 }
 @media only screen and (max-width: 700px) {
