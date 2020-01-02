@@ -344,6 +344,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 .c14-bg .graph table .date { border-color: black; }
 
 .moreinfo .panel li svg { width: 100%; }
+.moreinfo .panel li > a > div { line-height: 0; }
 
 
 @media only screen and (max-width: 3000px) {
