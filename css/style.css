@@ -425,7 +425,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	.header { display: none; }
 	.main { padding: 0px; }
 	.dashboard { padding-top: 0px; margin-top: -3px; }
-	.boxholder { width: 33.33333333%; }
+	.boxholder { width: 33.33333333%; height: 208px; }
 	.panel .number, .moreinfo .number { font-size: 4em; }
 	.panel .title, .moreinfo .title { font-size: 1.5em; }
 }
