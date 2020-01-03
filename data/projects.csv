@@ -50,7 +50,8 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors
 2019-01,,Business Rates,https://odileeds.org/projects/business-rates/,"As part of the Open Data Collaboration group we looked at business rates data from local councils. This involved agreeing a common standard to publish and making visualisations of the data across councils.",,1;3;6
 2019-03-07,,Scores on the doors,https://odileeds.org/projects/scoresonthedoors/,A simple webpage that uses your location to tell you the food hygiene ratings for the nearest food premises to you.,,1;3;6
 2019-04-11,,CSVCleaner,https://odileeds.github.io/CSVCleaner/,A simple tool to clean up some common issues with CSV files including date formats and values,,1;3;6
-2019-05-01,2019-05-03,Local elections 2019,https://odileeds.org/projects/local-elections-2019/,"Visualising the 2019 local elections in Leeds and Calderdale using data from Democracy Club",,1;6
+2019-05-01,2019-05-03,Local elections Leeds 2019,https://odileeds.org/projects/local-elections-2019/,"Visualising the 2019 local elections in Leeds using data from Democracy Club",,1
+2019-05-01,2019-05-03,Local elections Calderdale 2019,https://odileeds.org/projects/local-elections-2019/calderdale,"Visualising the 2019 local elections in Calderdale using data from Democracy Club",,6
 2019-05-10,,Postcodes to IMD Deciles,https://odileeds.github.io/Postcodes2IMD/,"Batch convert postcodes to Indices of Multiple Deprivation decile",,11
 2019-06-05,,Postcodes to Latitudes and Longitudes,https://odileeds.github.io/Postcodes2LatLon/,"Add Latitude/Longitude columns to CSV files containing Postcode columns.",,1;3;6
 2019-08-29,,Divisions hex map,http://odileeds.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,
