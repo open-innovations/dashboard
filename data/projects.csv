@@ -61,3 +61,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors
 2019-10-15,,Flight Emissions,https://odileeds.org/projects/flight-emissions/,"Estimating flight emissions for Leeds Bradford Airport",img/project-flights.png,
 2019-11,,Open Tree Logger,https://odileeds.org/projects/osmedit/trees/,"Creating a web app to interface with Open Street Map and help add the world's trees to the map.",,9
 2019-12-12,,General Election 2019,https://odileeds.org/projects/hexmaps/ge2019/,"We worked with New Statesman to create a live hex map of election results. We built a back-end system to record results and combined this with data from a variety of open sources.",,
+2020-02-26,,Cycle Traffic Growth,https://odileeds.github.io/traffic-growth/,"A project visualising cycle traffic growth data from Data Mill North. Select cycle counters and see bar charts by hour of day, day of week, month, and year.",,1;3;6;2
