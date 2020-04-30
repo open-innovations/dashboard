@@ -548,8 +548,8 @@ Date,Title,Status,Attendance,Attendance source
 2017-12-12T09:00Z,"Nhs Digital workshop",CONFIRMED,40,Calendar
 2017-12-13T09:00Z,"University of Leeds mobilising data",CONFIRMED,52,Calendar
 2017-12-14T12:00Z,"Leidos Workshop",CONFIRMED,0,Calendar
-2017-12-15T13:00Z,"ODI Lunchtime Lecture stream - Switching on Xmas lights in automated home",CONFIRMED,0,Calendar
-2017-12-19T10:00Z,"ODI Leeds : Sponsors Christmas Coffee Morning",CONFIRMED,0,Calendar
+2017-12-15T13:00Z,"ODI Lunchtime Lecture stream - Switching on Xmas lights in automated home",CONFIRMED,6,Calendar
+2017-12-19T10:00Z,"ODI Leeds : Sponsors Christmas Coffee Morning",CONFIRMED,24,Calendar
 2018-01-01T09:00Z,"Nhs digital workshop",CONFIRMED,26,Calendar
 2018-01-11T18:30Z,"Code mill Meetup",CONFIRMED,23,Calendar
 2018-01-12T08:00Z,"Fintech Breakfast Event",CONFIRMED,104,Calendar
@@ -558,13 +558,13 @@ Date,Title,Status,Attendance,Attendance source
 2018-01-16T13:00Z,"Leeds Digital Board",CONFIRMED,31,Calendar
 2018-01-18T18:30Z,"CoCo talk Meetup ",CONFIRMED,30,Calendar
 2018-01-19T13:00Z,"ODI Lunchtime Lecture stream - The local authority that went 'guerilla'",CONFIRMED,1,Calendar
-2018-01-23T09:30Z,"Waste Less in Leeds Meet up",CONFIRMED,0,Calendar
+2018-01-23T09:30Z,"Waste Less in Leeds Meet up",CONFIRMED,27,Calendar
 2018-01-24T09:30Z,"Yorkshire Water",CONFIRMED,20,Calendar
 2018-01-24T13:30Z,"Urban commons",CONFIRMED,0,Calendar
 2018-01-25T09:30Z,"WYCA 'Open Workshop'",CONFIRMED,0,Calendar
 2018-01-25T15:00Z,"Open Government Network workshop",CONFIRMED,7,Calendar
 2018-01-26T09:00Z,"Bloom at ODILeeds",CONFIRMED,0,Calendar
-2018-01-26T13:00Z,"ODI Lunchtime Lecture stream - Hidden in plain sight",CONFIRMED,0,Calendar
+2018-01-26T13:00Z,"ODI Lunchtime Lecture stream - Hidden in plain sight",CONFIRMED,1,Calendar
 2018-01-29T09:00Z,"Nhs digital workshop",CONFIRMED,26,Calendar
 2018-02-01T08:00Z,"DWP Service Designers Conference",CONFIRMED,42,Calendar
 2018-02-06T16:30Z,"Ofcom Innovation Open Session - LEEDS",CONFIRMED,12,Calendar
@@ -572,7 +572,7 @@ Date,Title,Status,Attendance,Attendance source
 2018-02-13T09:30Z,"DWP workshop",CONFIRMED,31,Calendar
 2018-02-13T18:30Z,"Ofcom Innovation Open Session - CARDIFF",CONFIRMED,0,Calendar
 2018-02-16T09:30Z,"Mpa group",CONFIRMED,0,Calendar
-2018-02-19T15:00Z,"Cross government workshop",CONFIRMED,0,Calendar
+2018-02-19T15:00Z,"Cross government workshop",CONFIRMED,24,Calendar
 2018-02-20T16:30Z,"Ofcom Innovation Open Session - EDINBURGH",CONFIRMED,0,Calendar
 2018-02-20T17:30Z,"Trinity Mirror Social Media Meetup",CONFIRMED,20,Calendar
 2018-02-23T09:30Z,"Geospatial User Workshop - LEEDS",CONFIRMED,14,Calendar
@@ -591,7 +591,7 @@ Date,Title,Status,Attendance,Attendance source
 2018-03-13T13:30Z,"Collaboration Planning",CONFIRMED,3,Calendar
 2018-03-14T09:00Z,"Local trust legacy north learning cluster",CONFIRMED,0,Calendar
 2018-03-14T14:00Z,"Maximillion site visit",CONFIRMED,0,Calendar
-2018-03-15T09:30Z,"Ofcom Innovation Workshop - LEEDS",CONFIRMED,0,Calendar
+2018-03-15T09:30Z,"Ofcom Innovation Workshop - LEEDS",CONFIRMED,36,Calendar
 2018-03-16T09:00Z,"Socitm away day",CONFIRMED,40,Calendar
 2018-03-19T11:00Z,"Kirkstall Valley meeting",CONFIRMED,0,Calendar
 2018-03-19T13:15Z,"Leeds city council meeting",CONFIRMED,11,Calendar
@@ -605,19 +605,19 @@ Date,Title,Status,Attendance,Attendance source
 2018-03-29T08:00Z,"University of Leeds workshop",CONFIRMED,10,Calendar
 2018-04-10T11:00Z,"Yorkshire Water Meet",CONFIRMED,0,Calendar
 2018-04-13T12:30Z,"Open Data Collaboration",CONFIRMED,0,Calendar
-2018-04-16T09:30Z,"ODILeeds Showcase",CONFIRMED,0,Calendar
+2018-04-16T09:30Z,"ODILeeds Showcase",CONFIRMED,56,Calendar
 2018-04-17T10:30Z,"Bloom/ Jaywing - How will AI change marketing?",CONFIRMED,51,Calendar
 2018-04-17T17:30Z,"Leeds Devops",CONFIRMED,77,Calendar
 2018-04-18T11:00Z,"Hippo Digital",CONFIRMED,30,Calendar
 2018-04-18T12:00Z,"Cross Government Designers meet up",CONFIRMED,4,Calendar
 2018-04-19T08:00Z,"LIDA creative workshop",CONFIRMED,46,Calendar
-2018-04-20T08:30Z,"Open House at ODILeeds",CONFIRMED,0,Calendar
+2018-04-20T08:30Z,"Open House at ODILeeds",CONFIRMED,4,Calendar
 2018-04-20T11:00Z,"Leeds Breda Twinning Session",CONFIRMED,0,Calendar
-2018-04-20T12:00Z,"ODI Fridays Lunchtime Lecture - Tech Nation report: the politics of making it open",CONFIRMED,0,Calendar
+2018-04-20T12:00Z,"ODI Fridays Lunchtime Lecture - Tech Nation report: the politics of making it open",CONFIRMED,25,Calendar
 2018-04-20T18:00Z,"ODILeeds Social",CONFIRMED,35,Calendar
-2018-04-21T10:00Z,"The Art of Tinkering",CONFIRMED,0,Calendar
+2018-04-21T10:00Z,"The Art of Tinkering",CONFIRMED,8,Calendar
 2018-04-23T12:00Z,"MHealth workshop",CONFIRMED,33,Calendar
-2018-04-24T08:30Z,"Internet of Things Showcase",CONFIRMED,0,Calendar
+2018-04-24T08:30Z,"Internet of Things Showcase",CONFIRMED,48,Calendar
 2018-04-25T08:30Z,"ODI HQ Data Science Training",CONFIRMED,14,Calendar
 2018-04-26T08:30Z,"The Future of Transport in the North",CONFIRMED,65,Calendar
 2018-04-27T08:00Z,"Microsoft Flow - Uk Community Event",CONFIRMED,39,Calendar
@@ -1005,5 +1005,5 @@ Date,Title,Status,Attendance,Attendance source
 2020-04-16T00:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,22,Calendar
 2020-04-23T08:30Z,"Microsoft PowerApps Conference",CONFIRMED,0,Calendar
 2020-04-23T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,47,Calendar
-2020-04-29T09:00Z,"Planet Data 2",CONFIRMED,0,Calendar
+2020-04-29T09:00Z,"Planet Data 2",CONFIRMED,54,Calendar
 2020-04-30T11:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,0,Calendar
