@@ -64,5 +64,5 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2020-02-26,,Cycle/foot Traffic Growth,https://odileeds.github.io/traffic-growth/,"A project visualising cycle and foot traffic growth data from Data Mill North. Select cycle counters and see bar charts by hour of day, day of week, month, and year.",,1;3;6;2,slowe;plake
 2020-03,,Binnovation,https://odileeds.org/blog/2020-07-17-six-months-of-binnovation-in-leeds-,"Using open data and open innovation to make waste services in Leeds better and more efficient in 2020.",,1,tforth;slowe;plake
 2020-04-02,,Local Authority COVID-19 dashboard,https://odileeds.github.io/covid-19/LocalAuthorities/,"Visualising COVID-19 cases by Local Authority.",,1;3;6,slowe
-2020-05,,Local Authority COVID-19 hexmaps,https://odileeds.github.io/covid-19/LocalAuthorities/hexmap,"A variety of data - from testing to deaths to furloughed employments - shown on hex maps",,,slowe
+2020-05,,Local Authority COVID-19 hexmaps,https://odileeds.github.io/covid-19/LocalAuthorities/hexmap,"A variety of data - from testing to deaths to furloughed employments - shown on hex maps",,1;3;6,slowe
 2020-06-15,,Coastal Economies,https://odileeds.org/projects/coastal-economies/,"Exploring coastal regions and understanding their specific needs through data.",,,tforth
