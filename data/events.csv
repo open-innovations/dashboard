@@ -1015,7 +1015,7 @@ Date,Title,Status,Attendance,Attendance source
 2020-05-21T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,26,Calendar
 2020-06-04T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,31,Calendar
 2020-06-11T10:00Z,"#OpenDataSavesLives & COVID19 - Session 10",CONFIRMED,31,Calendar
-2020-06-18T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,0,Calendar
+2020-06-18T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,24,Calendar
 2020-06-25T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,60,Calendar
 2020-07-06T09:00Z,"Northernlands 2 - Day 1",CONFIRMED,334,Calendar
 2020-07-07T09:00Z,"Northernlands 2 - Day 2",CONFIRMED,332,Calendar
@@ -1032,5 +1032,7 @@ Date,Title,Status,Attendance,Attendance source
 2020-09-30T00:00Z,"Child Friendly Leeds",CONFIRMED,65,Calendar
 2020-10-01T09:00Z,"#PlanetData3",CONFIRMED,45,Calendar
 2020-10-01T13:00Z,"#AirHack2",CONFIRMED,22,Calendar
+2020-10-08T10:00Z,"#OpenDataSavesLives",CONFIRMED,24,Calendar
 2020-10-22T10:00Z,"ODI Leeds - Economic Recovery working session 1",CONFIRMED,0,Calendar
 2020-10-22T15:00Z,"ODI Members Meetup Online - Data is still the Answer to Every Question",CONFIRMED,0,Calendar
+2020-10-27T10:00Z,"NHS Conference",CONFIRMED,12,Calendar
