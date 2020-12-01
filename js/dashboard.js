@@ -113,7 +113,7 @@
 	function Dashboard(inp){
 		if(!inp) inp = {};
 		this.version = "1.3.0";
-		this.panels = new Array();
+		this.panels = [];
 		this.duration = 1000;
 		this.config = {};
 		this.panellookup = {};
@@ -121,20 +121,21 @@
 		var files = {};
 
 		function parseQueryString(){
-			var r = {};
-			var q = location.search;
+			var r,q,u,qs,i,key,val;
+			r = {};
+			q = location.search;
 			if(q && q != '#'){
 				// remove the leading ? and trailing &
 				q = q.replace(/^\?/,'').replace(/\&$/,'');
-				var qs = q.split('&');
-				for(var i = 0; i < qs.length; i++){
-					var key = qs[i].split('=')[0];
-					var val = qs[i].split('=')[1];
+				qs = q.split('&');
+				for(i = 0; i < qs.length; i++){
+					key = qs[i].split('=')[0];
+					val = qs[i].split('=')[1];
 					if(/^[0-9\.]+$/.test(val)) val = parseFloat(val);	// convert floats
 					r[key] = val;
 				}
 			}
-			this.testmode = (r['debug']) ? true : false;
+			this.testmode = (r.debug) ? true : false;
 			for(u in this.defaults){
 				if(r[u]) this.defaults[u] = r[u];
 			}
@@ -165,19 +166,20 @@
 
 		this.setup = function(inp){
 			this.log('setup');
+			var i,inpanel,elinner,p,el,c;
 			if(!inp) inp = {};
 			if(inp.config) this.config = inp.config;
-			var i = 0;
-			var inpanel = false;
+			i = 0;
+			inpanel = false;
 			if(this.range) document.getElementById('range').value = this.range;
 
-			for(var p in this.config){
-				var el = document.getElementById(p);
+			for(p in this.config){
+				el = document.getElementById(p);
 				if(el){
 					this.panellookup[p] = i;
-					this.panels[i] = {'el':el,'updateable':new Array(),'id':p,'config':this.config[p],'view':document.getElementById('range').value };
+					this.panels[i] = {'el':el,'updateable':[],'id':p,'config':this.config[p],'view':document.getElementById('range').value };
 					// Update panel class
-					for(var c = 1; c <= 14; c++){
+					for(c = 1; c <= 14; c++){
 						elinner = this.panels[i].el.querySelector('.c'+c+'-bg');
 						if(elinner){
 							elinner.classList.remove('c'+c+'-bg');
@@ -197,7 +199,7 @@
 						for(var u = 0; u < this.config[p].data.length; u++){
 							var fn = this.config[p].data[u]+'?'+d.getTime();
 							if(!files[fn]){
-								ODI.ajax(fn,{
+								root.ODI.ajax(fn,{
 									'complete':loadData,
 									'dataType':'text',
 									'key':p,
@@ -229,7 +231,7 @@
 			document.getElementById('range').addEventListener('change',function(e){
 				_obj.setRange(e.currentTarget.value).update();
 			});
-		}
+		};
 		
 		this.setRange = function(v,updateHistory){
 			if(typeof updateHistory!=="boolean") updateHistory = true;
@@ -237,12 +239,12 @@
 			this.range = v;
 			// Update all panels to view
 			for(var i = 0; i < this.panels.length; i++) this.panels[i].view = this.range;
-			var _obj = this;
 			if(this.pushstate && updateHistory) history.pushState({'impact':this.range,'anchor':this.anchor},"Dashboard","?impact="+this.range+(this.anchor ? "#"+this.anchor : ""));
 			return this;
-		}
+		};
 
 		function pad(n, w) {
+			var z,l;
 			z = '0';
 			n = n + '';
 			l = n.length;
@@ -267,7 +269,7 @@
 				if(f < 1){
 					v = formatNumber(Math.round(val*f));
 					el.innerHTML = units+v;
-					requestAnimFrame(frame);
+					window.requestAnimFrame(frame);
 				}else{
 					el.innerHTML = (units||"")+formatNumber(val);
 				}
@@ -277,34 +279,36 @@
 			return;			
 		}
 		function showArray(el,vals,duration,cls){
-			if(duration > 0) animateArray(el,vals,duration)
+			var o,i;
+			if(duration > 0) animateArray(el,vals,duration);
 			else {
-				output = '<ol class="'+cls+'">';
-				for(var i = 0; i < vals.length; i++) output += "<li>"+vals[i]+"</li>";
-				output += "</ol>";
-				el.innerHTML = output;
+				o = '<ol class="'+cls+'">';
+				for(var i = 0; i < vals.length; i++) o += "<li>"+vals[i]+"</li>";
+				o += "</ol>";
+				el.innerHTML = o;
 			}
 		}
 		function updateImages(){
+			var more,img,id,i,im,src;
 			more = document.querySelector('.moreinfo');
-			var img = more.querySelectorAll('img');
+			img = more.querySelectorAll('img');
 			function replaceImage(svg,attr){
 				img = document.getElementById(attr.id);
 				delete _obj.replace[attr.id];
 				svg = svg.replace(/[\n\r]/g,'').replace(/^.*<svg /,"<svg ").replace(/<\/svg>.*$/,"<\/svg>").replace(/fill:#FFFFFF/gi,'fill:'+attr.color).replace(/stroke:#FFFFFF/gi,'stroke:'+attr.color);
 				img.outerHTML = svg;
 			}
-			var id = 0;
-			for(var i = 0; i < img.length; i++){
+			id = 0;
+			for(i = 0; i < img.length; i++){
 				while(_obj.replace[id]){ id++; }
-				var im = img[i];
-				var src = im.getAttribute('svg');
+				im = img[i];
+				src = im.getAttribute('svg');
 				if(src){
 					im.setAttribute('data',id);
 					im.setAttribute('id','replaceWithSVG-'+id);
 					im.classList.add('replaceWithSVG');
 					_obj.replace[id] = true;
-					ODI.ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
+					root.ODI.ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
 				}
 			}
 
@@ -318,13 +322,13 @@
 				// Set the current time in seconds
 				var f = (now - start)/duration;
 				var n = Math.floor(vals.length*f);
-				var arr = new Array();
+				var arr = [];
 				if(n > done){
 					for(var i = 0; i < n; i++) arr.push(vals[i]);
 				}
 				if(f < 1){
 					showArray(el,arr);
-					requestAnimFrame(frame);
+					window.requestAnimFrame(frame);
 				}else{
 					showArray(el,vals);
 				}
@@ -343,20 +347,21 @@
 				left: (rect.left + l),
 				width: (rect.width),
 				height: (rect.height)
-			}
+			};
 		}
 
 		function loadData(data,attr){
 			_obj.log('loadData',data,attr);
+			var i,j,head,header;
 			if(typeof data==="string"){
 				data = data.replace(/\r/,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
 				data = data.split(/[\n]/);
 			}
 			attr.me.panels[attr.i].data = data;
 			// Parse the header
-			var head = attr.header.split(/[\n\r]/);
-			var header = {};
-			for(var i = 0; i < head.length; i++){
+			head = attr.header.split(/[\n\r]/);
+			header = {};
+			for(i = 0; i < head.length; i++){
 				if(head[i]){
 					j = head[i].indexOf(":");
 					header[head[i].substr(0,j)] = head[i].substr(j+1).replace(/^ */,"");
@@ -384,11 +389,12 @@
 			for(var i = 0; i < this.panels.length; i++){
 				if(this.panels[i] && this.panels[i].data) this.updatePanel(i);
 			}
-		}
+		};
+
 		// Update a specific panel
 		this.updatePanel = function(p){
 			this.log('updatePanel',p);
-			var year,add,cols,_obj,data,r,d,n,el,c,i,e;
+			var year,cols,_obj,data,r,d,el,c,i,e,colurl,coldate,colend,mn,mx,col,img,key,sd,ed,elem,monthly,val,prev;
 			if(this.panels[p]){
 
 				_obj = this;
@@ -418,7 +424,7 @@
 					else view = parseInt(this.panels[p].view);
 				}
 
-				for(var e in this.panels[p].config.els){
+				for(e in this.panels[p].config.els){
 					elem = this.panels[p].el.querySelector(e);
 					el = this.panels[p].config.els[e];
 
@@ -436,32 +442,21 @@
 						elem.innerHTML = el.text;
 						continue;
 					}
-					var coldate = this.panels[p].config.start || "";
-					var colend = this.panels[p].config.end || "";
-					var col = el.col || "";
-					var img = el.img || "";
+					coldate = this.panels[p].config.start || "";
+					colend = this.panels[p].config.end || "";
+					col = el.col || "";
+					img = el.img || "";
 					var row = el.row || "";
-					function getColourFromTitle(t){
-						var nn = 0;
-						var c;
-						t = t.toLowerCase();
-						c = t.charCodeAt(0) - 97;
-						if(c > 0) n += c;
-						c = t.charCodeAt(t.length - 1) - 97;
-						if(c > 0) nn += c;
-						nn = 1 + Math.floor(13*nn/(26 * 2));
-						return "c"+nn+"-bg";
-					}
+					var list;
 
 					if(row){
 						if(row == "all"){
-							var sd,ed;
 							if(el.type=="images"){
-								var list = new Array();
-								var colurl = el.url;
-								var mn = data.length - (this.panels[p].config.max || data.length);
+								list = [];
+								colurl = el.url;
+								mn = data.length - (this.panels[p].config.max || data.length);
 								if(mn < 0) mn = 0;
-								for(var r = data.length-1; r >= mn; r--){
+								for(r = data.length-1; r >= mn; r--){
 									sd = data[r][coldate];
 									ed = (new Date()).toISOString();
 									if(colend && data[r][colend]) ed = data[r][colend];
@@ -470,11 +465,11 @@
 								}
 								this.panels[p].updateable.push({'el':e,'n':elem,'list':list,'duration':(el.animate ? this.duration : 0)});
 							}else if(el.type=="list"){
-								var list = new Array();
-								var colurl = el.url;
-								var mn = data.length - (this.panels[p].config.max || data.length);
+								list = [];
+								colurl = el.url;
+								mn = data.length - (this.panels[p].config.max || data.length);
 								if(mn < 0) mn = 0;
-								for(var r = data.length-1; r >= mn; r--){
+								for(r = data.length-1; r >= mn; r--){
 									sd = data[r][coldate];
 									ed = (new Date()).toISOString();
 									if(colend && data[r][colend]) ed = data[r][colend];
@@ -485,17 +480,13 @@
 								}
 								this.panels[p].updateable.push({'el':e,'n':elem,'list':list,'cls':'grid','duration':(el.animate ? this.duration : 0)});
 							}else if(el.type=="graph"){
-								var prev;
-								var mx = 0;
+								prev;
+								mx = 0;
 								var bins = {};
 								var s;
-								function splitDate(d){
-									if(!d) return {};
-									return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
-								}
 
 								// Calculate date range to show for graph
-								for(var r = 0; r < data.length; r++){
+								for(r = 0; r < data.length; r++){
 									s = data[r][coldate];
 									if(this.inDateRange(s,s,view)){
 										// We are in the date range and have no start date set
@@ -524,18 +515,20 @@
 									}else bins[y] = 0;
 								}
 								var nbins = 0;
-								for(var key in bins) nbins++;
+								for(key in bins){
+									if(bins[key]) nbins++;
+								}
 
 								// Set the height of the graph
 								var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
-								for(var r = 0; r < data.length; r++){
+								for(r = 0; r < data.length; r++){
 									sd = splitDate(data[r][coldate]);
 									key = sd.y+(monthly ? '-'+(sd.m < 10 ? "0":"")+sd.m : '');
 									if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col]);
 								}
 
 								// Find the peak value
-								for(var key in bins){
+								for(key in bins){
 									if(bins[key] > mx) mx = bins[key];
 								}
 
@@ -543,9 +536,11 @@
 								var output = '<div class="grid" style="height:'+h+'px;">';
 								var grid = getGrid(0,mx);
 								for(var g = 0; g < grid.max; g+= grid.inc) output += '<div class="line" style="bottom:'+(h*Math.min(g,mx)/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
-								output += '</div>'
+								output += '</div>';
 								output += '<table><tr style="vertical-align:bottom;">';
-								for(var key in bins) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+								for(key in bins){
+									if(bins[key]) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+								}
 								output += '</tr></table>';
 								elem.innerHTML = output;
 							}
@@ -554,7 +549,7 @@
 							row = data.length-1;
 							if(coldate){
 								// Find the last row in the valid date range
-								for(var r = 0; r < data.length; r++){
+								for(r = 0; r < data.length; r++){
 									if(this.inDateRange(data[r][coldate],data[r][coldate],view)) row = r+1;
 								}
 							}
@@ -566,11 +561,10 @@
 						else elem.innerHTML = val;
 					}else{
 						var op = el.op;
-						var year = "";
-						var sd,ed;
+						year = "";
 						if(op && col){
 							var total = 0;
-							for(var r = 0; r < data.length; r++){
+							for(r = 0; r < data.length; r++){
 								// Get the year from the ISO8601 formatted string
 								// if a data-start column has been specified
 								sd = data[r][coldate];
@@ -584,7 +578,7 @@
 
 							if(el.animate) animateNumber(elem,total,this.duration,this.panels[p].config.units);
 							else{
-								for(var i = 0; i < elem.length; i++) elem[i].innerHTML = (this.panels[p].config.units || "")+formatNumber(total);
+								for(i = 0; i < elem.length; i++) elem[i].innerHTML = (this.panels[p].config.units || "")+formatNumber(total);
 							}
 						}
 					}
@@ -593,14 +587,14 @@
 				this.panels[p].el.style.cursor = "pointer";
 				if(!this.panels[p].handler){
 					this.panels[p].handler = function(e){
-						_obj.log('Set hash',p)
+						_obj.log('Set hash',p);
 						location.hash = _obj.panels[p].id;
-					}
+					};
 					this.panels[p].el.addEventListener('click',this.panels[p].handler);
 				}
 			}
 			return this;
-		}
+		};
 		this.inDateRange = function(start,end,year){
 			var s = parseInt(start.substr(0,4));
 			var e = (end ? parseInt(end.substr(0,4)) : s);
@@ -609,18 +603,18 @@
 			if(!year) return true;
 			if(s <= year && e >= year) return true;
 			else return false; 
-		}
+		};
 		this.resize = function(){
 			var i = document.querySelector('.moreinfo');
 			if(i){
-				var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				//var height = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
 			}
 			return this;
-		}
+		};
 		this.navigate = function(e,a){
 			this.log('navigate test',e,a);
 			if(!a) a = location.href.split("#")[1];
-			var i,j,o,p;
+			var i,j,o;
 			i = this.panellookup[a];
 
 			this.dashboard = document.querySelector('.dashboard');
@@ -650,7 +644,7 @@
 				// Add click event to close button
 				if(this.interactive){
 					this.moreinfoclose.addEventListener('click',function(e){
-						location.hash = 'top'
+						location.hash = 'top';
 					});
 				}
 				if(this.moreinfo.querySelectorAll('img').length > 0) updateImages();
@@ -658,7 +652,7 @@
 				this.main.style.display = "";
 			}
 			return this;
-		}
+		};
 
 		// Do we update the address bar?
 		this.pushstate = !!(window.history && history.pushState);
@@ -676,7 +670,6 @@
 		};
 
 		// We'll need to change the sizes when the window changes size
-		var _obj = this;
 		window.addEventListener('resize',function(e){ _obj.resize(); });
 		// Deal with back/forwards navigation. Use popstate or onhashchange (IE) if pushstate doesn't seem to exist
 		if('onhashchange' in window) window.onhashchange = function(e){ _obj.navigate(e); };
@@ -710,7 +703,23 @@
 
 		return this;
 	}
-	
+
+	function getColourFromTitle(t){
+		var nn = 0;
+		var c;
+		t = t.toLowerCase();
+		c = t.charCodeAt(0) - 97;
+		if(c > 0) nn += c;
+		c = t.charCodeAt(t.length - 1) - 97;
+		if(c > 0) nn += c;
+		nn = 1 + Math.floor(13*nn/(26 * 2));
+		return "c"+nn+"-bg";
+	}
+	function splitDate(d){
+		if(!d) return {};
+		return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
+	}
+
 	root.ODI.Dashboard = Dashboard;
 
 })(window || this);
