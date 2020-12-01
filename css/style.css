@@ -74,6 +74,8 @@ a { color: inherit; }
 	overflow-x: hidden;
 	left: 0px;
 	top: 0px;
+	bottom: 0px;
+	right: 0px;
 	display: table;
 	width: 100%;
 	height: 100%;
@@ -89,32 +91,41 @@ a { color: inherit; }
 	cursor: pointer;
 	z-index: 10;
 }
-
 .header {
-	line-height: 2em;
 	position: relative;
-}
-.main {
-	overflow: hidden;
-	position: relative;
-	padding: 6px;
 }
 .dashboard {
 	position: relative;
-	padding-top: 3px;
-	margin-left: -3px;
-	margin-right: -3px;
-	bottom: 0px;
-	vertical-align: top;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
-.boxholder {
-	display: inline-block;
-	width: 12.5%;	/* 8 columns for wide screens */
-	margin: 0px;
-	height: 245px;
-	padding: 3px;
+.dashboard-inner {
+	position: relative;
+	display: grid;
+	grid-template-rows: calc(3em + 32px) 1fr;
+}
+.main {
+	position: relative;
+	min-height: calc(100vh - 3em - 32px);
+	padding: 8px;
+}
+.panels {
+	position: relative;
 	vertical-align: top;
-	/*margin-top: -3px;*/
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 8px;
+}
+.panels li {
+	display: block;
+	width: 100%;	/* 8 columns for wide screens */
+	height: 100%;
+	margin: 0px;
 }
 .box {
 	height: 100%;
@@ -184,44 +195,22 @@ a { color: inherit; }
 	margin: auto;
 	text-align: center;
 }
-.panel .icons a { display: block; width: 100%; padding: 0 0.25em; }
+.panel .icons a { display: block; width: 100%; padding: 0 0.25em; line-height: 0; }
 ol.grid {
 	overflow: hidden;
-	display: block;
-	position: relative;
-	margin-left: -0.5em;
-	margin-bottom: -0.5em;
-	right: -0.5em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 8px;
+	width: 100%;
 	list-style: none;
-	min-width: 100%;
-}
-ol.grid > li { 
-	display: inline-block;
-	float: left;
-	vertical-align: top;
-	width: 25%;
-	padding: 0;
-	min-height: 6em;
-	border-right: 0.5em solid rgba(255,255,255,0);
-	border-bottom: 0.5em solid rgba(255,255,255,0);
-	overflow: hidden;
 }
 ol.grid > li > a { display: table!important; text-decoration: none; }
 .panel .list a { display: block; width: 100%; padding: 0; }
 .panel .icons img { width: 100%; }
 .panel .icons img:hover,.panel .icons svg:hover { background-color: rgba(255,255,255,0.3); }
-.panel li {
-	display: inline-block;
-	width: 25%;
-}
-.partners li {
-	display: inline-block;
-	width: 50%;
-}
-.projects li {
-	width: 25%;
-	height: 3em;
-}
+.sponsors .grid { grid-template-columns: repeat(5, 1fr); }
+.partners .grid { grid-template-columns: repeat(6, 1fr); }
+.blog .grid .panel, .projects .grid .panel { padding: 1em; }
 .graph {
 	width: 90%;
 	display: block;
@@ -343,41 +332,34 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 .c13-bg .graph table .date,
 .c14-bg .graph table .date { border-color: black; }
 
-.moreinfo .panel li svg { width: 100%; }
+.moreinfo .panel li svg { width: 100%; height: auto; }
 .moreinfo .panel .icons li > a > div { line-height: 0; }
 
 
 @media only screen and (max-width: 3000px) {
-	.boxholder { width: 16.66666666%; }
+	.panels { grid-template-columns: repeat(8, 1fr); }
 }
 @media only screen and (max-width: 2600px) {
-	.boxholder { width: 25%; }
-	.moreinfo .panel li { width: 20%; }
-}
-@media only screen and (max-width: 2100px) {
-	.boxholder { width: 25%; }
-	.moreinfo .panel li { width: 20%; }
+	.panels, .grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media only screen and (max-width: 2000px) {
-	body { font-size: 1.5em; }
-	.boxholder { width: 33.333333333%; height: 300px; }
-	.moreinfo .panel li { width: 25%; }
+	body { font-size: 1.25em; }
+	.panels, .grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media only screen and (max-width: 1700px) {
 	body { font-size: 1em; }
-	.boxholder { font-size: 1em; height: 245px; }
+	.panels li { font-size: 1em; }
 }
 @media only screen and (max-width: 1280px) {
-	.boxholder { width: 33.333333333%; }
-	.moreinfo .panel li { width: 25%; }
-	.moreinfo .panel .icons li { width: 20%; }
 	.panel { padding: 24px; }
 }
 @media only screen and (max-width: 1000px) {
-	.boxholder { width: 50%; }
-	.moreinfo .panel li { width: 25%; }
-	.moreinfo .panel .icons li { width: 25%; }
+	.panels, .grid { grid-template-columns: repeat(2, 1fr); }
 	.empty { display: none; }
+
+	.sponsors .grid { grid-template-columns: repeat(3, 1fr); }
+	.partners .grid { grid-template-columns: repeat(3, 1fr); }
+
 }
 @media only screen and (max-width: 700px) {
 	body { font-size: 0.8em; }
@@ -397,35 +379,36 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 		height: 1.5em;
 		margin: auto;
 	}
-	.main {
-		width: 100%;
-		overflow: hidden;
-	}
 	select#range {
 		width: 100%;
 	}
-	.boxholder { width: 100%; height: auto; }
+	.panels { grid-template-columns: 100%; }
+	.dashboard-inner { grid-template-rows: auto 1fr; }
 	.panel { padding: 24px; vertical-align: top; }
 	.panel .number, .panel:hover .number { font-size: 8em; }
 	.panel .updated { opacity: 1; }
 	.panel .title, .moreinfo .title { font-size: 27px; }
 	p.more { font-size: 16px; }
 	.panel .icons, .panel .list { width: 100%; }
-	.moreinfo .panel li { width: 50%; }
-	.moreinfo .panel .icons li { width: 50%; }
 	.moreinfo .panel li svg { width: 100%; }
 }
+@media only screen and (max-height: 800px) {
+	li { font-size: 0.8em; }
+}
+@media only screen and (max-height: 640px) {
+	li { font-size: 0.6em; }
+}
+
 @media only screen and (max-width: 370px) {
 	.panel .number, .panel:hover .number { font-size: 6em; }
 	p.more { display: none; }
-	.moreinfo .panel li { width: 100%; }
 	.moreinfo .panel .icons li { width: 100%; }
 }
 @media only print and (max-width: 21cm) {
 	.header { display: none; }
 	.main { padding: 0px; }
 	.dashboard { padding-top: 0px; margin-top: -3px; }
-	.boxholder { width: 33.33333333%; height: 208px; }
+	.panels { grid-template-rows: repeat(3, 1fr); grid-template-rows: 208px; }
 	.panel .number, .moreinfo .number { font-size: 4em; }
 	.panel .title, .moreinfo .title { font-size: 1.5em; }
 	.updated { display: none; }
