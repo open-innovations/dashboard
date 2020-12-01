@@ -471,7 +471,7 @@
 								this.panels[p].updateable.push({'el':e,'n':elem,'list':list,'duration':(el.animate ? this.duration : 0)});
 							}else if(el.type=="list"){
 								var list = new Array();
-								var colurl = parseInt(el.url);
+								var colurl = el.url;
 								var mn = data.length - (this.panels[p].config.max || data.length);
 								if(mn < 0) mn = 0;
 								for(var r = data.length-1; r >= mn; r--){
@@ -479,7 +479,7 @@
 									ed = (new Date()).toISOString();
 									if(colend && data[r][colend]) ed = data[r][colend];
 									// If the row is within the date range we add the list item
-									var colour = getColourFromTitle(data[r][col]);
+									var colour = (typeof el.colour==="string") ? data[r][el.colour] : getColourFromTitle(data[r][col]);
 									if(colour == this.panels[p].config['class']) colour += " bordered";
 									if(this.inDateRange(sd,ed,view)) list.push((colurl ? '<a href="'+data[r][colurl]+'" class="box">':'<div class="box">')+'<div class="panel '+colour+'">'+(typeof el.val==="function" ? el.val.call(this.panels[p],data[r]) : data[r][col])+'</div>'+(colurl ? '</a>':'</div>'));
 								}

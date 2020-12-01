@@ -99,7 +99,7 @@
 			"data": ["data/blog.csv"],
 			"els": {
 				".number": { "col": "Date", "op": "count", "animate": true },
-				".list": { "col": "Title", "url": "URL", "row": "all", "type": "list", "val": function(v){
+				".list": { "col": "Title", "url": "URL", "row": "all", "type": "list", "colour": "Class", "val": function(v){
 					return v['Title']+'<br />'+v['Date'].substr(0,10);
 				}},
 				".lastupdated": { "col": "Date", "row": "last", "val": function(v){ return v['Date'].substr(0,10); } }
