@@ -379,7 +379,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	select#range {
 		width: 100%;
 	}
-	.panels { grid-template-columns: 100%; }
+	.panels {	padding-top: 8.5em; grid-template-columns: 100%; }
 	.dashboard-inner { grid-template-rows: auto 1fr; }
 	.panel { padding: 24px; vertical-align: top; }
 	.panel .number, .panel:hover .number { font-size: 8em; }
