@@ -504,7 +504,6 @@
 								sd = splitDate(sd);
 								ed = splitDate(ed);
 								monthly = (sd.m > 0);
-
 								for(var y = sd.y;y <= ed.y; y++){
 									if(monthly){
 										for(var m = 1; m <= 12; m++){ 
@@ -516,7 +515,7 @@
 								}
 								var nbins = 0;
 								for(key in bins){
-									if(bins[key]) nbins++;
+									if(typeof bins[key]==="number") nbins++;
 								}
 
 								// Set the height of the graph
@@ -531,7 +530,6 @@
 								for(key in bins){
 									if(bins[key] > mx) mx = bins[key];
 								}
-
 								if(typeof this.panels[p].config.max==="number") mx = Math.min(mx,this.panels[p].config.max);
 								var output = '<div class="grid" style="height:'+h+'px;">';
 								var grid = getGrid(0,mx);
@@ -539,7 +537,7 @@
 								output += '</div>';
 								output += '<table><tr style="vertical-align:bottom;">';
 								for(key in bins){
-									if(bins[key]) output += '<td style="width:'+(100/nbins)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+									if(typeof bins[key]==="number") output += '<td style="width:'+(100/nbins).toFixed(3)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
 								}
 								output += '</tr></table>';
 								elem.innerHTML = output;
@@ -596,11 +594,9 @@
 			return this;
 		};
 		this.inDateRange = function(start,end,year){
-			console.log('inDateRange',start,end,year);
 			var s = parseInt(start.substr(0,4));
 			var e = (end ? parseInt(end.substr(0,4)) : s);
 			var n = (new Date()).getFullYear();
-			console.log('inDateRange',s,e,n);
 			if(s > n) return false;
 			if(!year) return true;
 			if(s <= year && e >= year) return true;
