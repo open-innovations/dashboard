@@ -201,7 +201,7 @@
 							if(!files[fn]){
 								root.ODI.ajax(fn,{
 									'complete':loadData,
-									'dataType':'text',
+									'dataType':'csv',
 									'key':p,
 									'this':this,
 									'i':i,

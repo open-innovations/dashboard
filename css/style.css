@@ -210,7 +210,7 @@ ol.grid > li > a { display: table!important; text-decoration: none; }
 .panel .icons img:hover,.panel .icons svg:hover { background-color: rgba(255,255,255,0.3); }
 .sponsors .grid { grid-template-columns: repeat(5, 1fr); }
 .partners .grid { grid-template-columns: repeat(6, 1fr); }
-.blog .grid .panel, .projects .grid .panel { padding: 1em; }
+.blog .grid .panel, .projects .grid .panel, .themes .grid .panel { padding: 1em; }
 .graph {
 	width: 90%;
 	display: block;
@@ -391,7 +391,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	p.more { font-size: 16px; }
 	.panel .icons, .panel .list { width: 100%; }
 	.moreinfo .panel li svg { width: 100%; }
-	ol.grid {
+	ol.grid, .sponsors .grid {
 		grid-template-columns: 100%;
 	}
 }
