@@ -596,9 +596,11 @@
 			return this;
 		};
 		this.inDateRange = function(start,end,year){
+			console.log('inDateRange',start,end,year);
 			var s = parseInt(start.substr(0,4));
 			var e = (end ? parseInt(end.substr(0,4)) : s);
 			var n = (new Date()).getFullYear();
+			console.log('inDateRange',s,e,n);
 			if(s > n) return false;
 			if(!year) return true;
 			if(s <= year && e >= year) return true;
