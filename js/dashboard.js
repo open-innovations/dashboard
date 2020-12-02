@@ -201,7 +201,7 @@
 							if(!files[fn]){
 								root.ODI.ajax(fn,{
 									'complete':loadData,
-									'dataType':'csv',
+									'dataType':'text',
 									'key':p,
 									'this':this,
 									'i':i,
@@ -308,7 +308,7 @@
 					im.setAttribute('id','replaceWithSVG-'+id);
 					im.classList.add('replaceWithSVG');
 					_obj.replace[id] = true;
-					root.ODI.ajax(src,{'dataType':'xml','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
+					root.ODI.ajax(src,{'dataType':'text/svg','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
 				}
 			}
 
