@@ -616,7 +616,6 @@
 			i = this.panellookup[a];
 
 			this.dashboard = document.querySelector('.dashboard');
-			this.main = document.querySelector('.main');
 			this.moreinfo = document.querySelector('.moreinfo');
 
 			// Remove any existing moreinfo box
@@ -631,7 +630,7 @@
 				o = offset(this.panels[i].el);
 
 				// Add the moreinfo box
-				this.main.style.display = "none";
+				//this.main.style.display = "none";
 				// Make moreinfo container
 				this.moreinfo = document.createElement('div');
 				this.moreinfo.classList.add('moreinfo');
@@ -647,7 +646,7 @@
 				}
 				if(this.moreinfo.querySelectorAll('img').length > 0) updateImages();
 			}else{
-				this.main.style.display = "";
+				//this.main.style.display = "";
 			}
 			return this;
 		};

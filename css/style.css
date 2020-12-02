@@ -66,6 +66,7 @@ a { color: inherit; }
 }
 .moreinfo {
 	position: absolute;
+	z-index: 1000;
 	background-color: black;
 	font-size: 1.5em;
 	line-height: 1.2em;
@@ -91,9 +92,6 @@ a { color: inherit; }
 	cursor: pointer;
 	z-index: 10;
 }
-.header {
-	position: relative;
-}
 .dashboard {
 	position: relative;
 	top: 0px;
@@ -101,15 +99,13 @@ a { color: inherit; }
 	width: 100%;
 	height: 100%;
 }
-.dashboard-inner {
-	position: relative;
-	display: grid;
-	grid-template-rows: calc(3em + 32px) 1fr;
-}
-.main {
-	position: relative;
-	min-height: calc(100vh - 3em - 32px);
-	padding: 8px;
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	overflow: hidden;
 }
 .panels {
 	position: relative;
@@ -117,6 +113,7 @@ a { color: inherit; }
 	display: grid;
 	width: 100%;
 	height: 100%;
+	padding-top: calc(3em + 25px);
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 8px;
@@ -263,8 +260,8 @@ ol.grid > li > a { display: table!important; text-decoration: none; }
 }
 .graph .grid .line span {
 }
-.header { padding: 16px 16px 10px 16px; }
-.header h1 img { position: absolute; top: -45%; left: -1em; height: 2em; }
+header { padding: 16px 16px 10px 16px; }
+header h1 img { position: absolute; top: -45%; left: -1em; height: 2em; }
 select#range {
 	height: 1.5em;
 	line-height: 1.5em;
@@ -365,13 +362,13 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	body { font-size: 0.8em; }
 }
 @media only screen and (max-width: 500px) {
-	.header {
+	header {
 		padding: 0.5em 0.4em 0em 0.4em;
 	}
-	.header h1 {
+	header h1 {
 		padding-left: 0px;
 	}
-	.header h1 img {
+	header h1 img {
 		display: block;
 		position: relative;
 		left: 0px;
@@ -405,7 +402,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	.moreinfo .panel .icons li { width: 100%; }
 }
 @media only print and (max-width: 21cm) {
-	.header { display: none; }
+	header { display: none; }
 	.main { padding: 0px; }
 	.dashboard { padding-top: 0px; margin-top: -3px; }
 	.panels { grid-template-rows: repeat(3, 1fr); grid-template-rows: 208px; }

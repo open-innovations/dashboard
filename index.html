@@ -142,126 +142,120 @@
 
 	<a name="top"></a>
 	<div class="dashboard">
-
 		<div id="cover"></div>
-
-		<div class="dashboard-inner">
-			<div class="header b6-bg">
-				<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds-black.svg" /></a> <select id="range" name="range"><option value="default">Dashboard</option><option value="lifetime">Lifetime impact</option><option value="2020">2020 impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
-			</div>
-			<div class="main">
-				<ul class="panels">
-					<li id="events" tabindex="0">
-						<div class="box c12-bg">
-							<div class="panel">
-								<div class="title">Events</div>
-								<div class="number less"></div>
-								<p class="more">Number of events hosted at ODI Leeds</p>
-								<div class="graph more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data</a></div>
-							</div>
-						</div>
-					</li><li id="reach">
-						<div class="box c5-bg">
-							<div class="panel">
-								<div class="title">Event reach</div>
-								<div class="number less"></div>
-								<p class="more">Number of people at ODI Leeds events</p>
-								<div class="graph more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data by month</a></div>
-							</div>
-						</div>
-					</li><li id="sponsors">
-						<div class="box c8-bg">
-							<div class="panel sponsors">
-								<div class="title">Sponsors</div>
-								<p class="more">Thank you to the people who make it happen. Become a sponsor.</p>
-								<div class="number less"></div>
-								<div class="icons more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/sponsors.csv" class="lastupdated">table of sponsors</a></div>
-							</div>
-						</div>
-					</li><li id="revenue">
-						<div class="box c1-bg">
-							<div class="panel">
-								<div class="title">Revenue</div>
-								<p class="more">ODI Leeds is a non-profit organisation. We receive no direct funding and operate using revenue from sponsorship, events and delivering projects.</p>
-								<div class="number less"></div>
-								<div class="graph more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/revenue.csv" class="lastupdated data">revenue table</a></div>
-							</div>
-						</div>
-					</li><!--<li id="partners">
-						<div class="box c11-bg">
-							<div class="panel partners">
-								<div class="title">Friends and Partners</div>
-								<p class="more">Organisations and individuals we share our workspace with or collaborate with to deliver projects.</p>
-								<div class="number less"></div>
-								<div class="icons more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated data">data about our partners</a></div>
-							</div>
-						</div>
-					</li>--><li class="empty" id="blog">
-						<div class="box c11-bg">
-							<div class="panel blog">
-								<div class="title">Blog posts</div>
-								<p class="more">Some recent blog posts:</p>
-								<div class="number less"></div>
-								<div class="list more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
-							</div>
-						</div>
-					</li><li id="projects">
-						<div class="box c14-bg">
-							<div class="panel projects">
-								<div class="title">Open innovation <br class="less" />&amp; data projects</div>
-								<p class="more">A selection of projects we've worked on using open data</p>
-								<div class="number less"></div>
-								<div class="list more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/projects.csv" class="lastupdated">a list of our projects</a></div>
-							</div>
-						</div>
-					</li><li class="empty" id="themes">
-						<div class="box c13-bg">
-							<div class="panel themes">
-								<div class="title">Themes</div>
-								<p class="more">In response to project requirements, feedback and work with sponsors, friends and clients we have the following themes:</p>
-								<div class="number less"></div>
-								<div class="list more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
-							</div>
-						</div>
-					</li><li id="tweet">
-						<div class="box c3-bg">
-							<div class="panel">
-								<div class="title">Tweet impressions</div>
-								<p class="more">Interaction with the <a href="https://twitter.com/ODILeeds">@ODILeeds</a> Twitter account. Source: Twitter Analytics</p>
-								<div class="number less"></div>
-								<div class="graph more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/socials.csv" class="lastupdated">twitter stats</a></div>
-							</div>
-						</div>
-					</li><li id="web">
-						<div class="box c7-bg">
-							<div class="panel">
-								<div class="title">Website visits</div>
-								<p class="more">Visits to <a href="https://odileeds.org">odileeds.org</a>. Source: ODI Leeds weblogs</p>
-								<div class="number less"></div>
-								<div class="graph more"></div>
-								<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/web-odileeds.org.csv" class="lastupdated">web log stats</a></div>
-							</div>
-						</div>
-					</li
-					><!--<li>
-						<div class="box c7-bg">
-							<div class="panel" style="background: url('http://i2.wp.com/leeds.odinodes.wpengine.com/wp-content/uploads/sites/7/2015/07/Yorkshire-Water-Data-Dive-event-at-Munro-House-Leeds..-001.jpg?resize=420%2C240') center center;background: url('bg.jpg') center center;background-size: cover;">
-								<div class="image"></div>
-							</div>
-						</div>
-					</li>-->
-				</ul>
-			</div>
-		</div>
+		<header class="b6-bg">
+			<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds-black.svg" /></a> <select id="range" name="range"><option value="default">Dashboard</option><option value="lifetime">Lifetime impact</option><option value="2020">2020 impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
+		</header>
+		<ul class="panels">
+			<li id="events" tabindex="0">
+				<div class="box c12-bg">
+					<div class="panel">
+						<div class="title">Events</div>
+						<div class="number less"></div>
+						<p class="more">Number of events hosted at ODI Leeds</p>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data</a></div>
+					</div>
+				</div>
+			</li><li id="reach">
+				<div class="box c5-bg">
+					<div class="panel">
+						<div class="title">Event reach</div>
+						<div class="number less"></div>
+						<p class="more">Number of people at ODI Leeds events</p>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/events_monthly.csv" class="lastupdated">events data by month</a></div>
+					</div>
+				</div>
+			</li><li id="sponsors">
+				<div class="box c8-bg">
+					<div class="panel sponsors">
+						<div class="title">Sponsors</div>
+						<p class="more">Thank you to the people who make it happen. Become a sponsor.</p>
+						<div class="number less"></div>
+						<div class="icons more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/sponsors.csv" class="lastupdated">table of sponsors</a></div>
+					</div>
+				</div>
+			</li><li id="revenue">
+				<div class="box c1-bg">
+					<div class="panel">
+						<div class="title">Revenue</div>
+						<p class="more">ODI Leeds is a non-profit organisation. We receive no direct funding and operate using revenue from sponsorship, events and delivering projects.</p>
+						<div class="number less"></div>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/revenue.csv" class="lastupdated data">revenue table</a></div>
+					</div>
+				</div>
+			</li><!--<li id="partners">
+				<div class="box c11-bg">
+					<div class="panel partners">
+						<div class="title">Friends and Partners</div>
+						<p class="more">Organisations and individuals we share our workspace with or collaborate with to deliver projects.</p>
+						<div class="number less"></div>
+						<div class="icons more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated data">data about our partners</a></div>
+					</div>
+				</div>
+			</li>--><li class="empty" id="blog">
+				<div class="box c11-bg">
+					<div class="panel blog">
+						<div class="title">Blog posts</div>
+						<p class="more">Some recent blog posts:</p>
+						<div class="number less"></div>
+						<div class="list more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
+					</div>
+				</div>
+			</li><li id="projects">
+				<div class="box c14-bg">
+					<div class="panel projects">
+						<div class="title">Open innovation <br class="less" />&amp; data projects</div>
+						<p class="more">A selection of projects we've worked on using open data</p>
+						<div class="number less"></div>
+						<div class="list more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/projects.csv" class="lastupdated">a list of our projects</a></div>
+					</div>
+				</div>
+			</li><li class="empty" id="themes">
+				<div class="box c13-bg">
+					<div class="panel themes">
+						<div class="title">Themes</div>
+						<p class="more">In response to project requirements, feedback and work with sponsors, friends and clients we have the following themes:</p>
+						<div class="number less"></div>
+						<div class="list more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
+					</div>
+				</div>
+			</li><li id="tweet">
+				<div class="box c3-bg">
+					<div class="panel">
+						<div class="title">Tweet impressions</div>
+						<p class="more">Interaction with the <a href="https://twitter.com/ODILeeds">@ODILeeds</a> Twitter account. Source: Twitter Analytics</p>
+						<div class="number less"></div>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/socials.csv" class="lastupdated">twitter stats</a></div>
+					</div>
+				</div>
+			</li><li id="web">
+				<div class="box c7-bg">
+					<div class="panel">
+						<div class="title">Website visits</div>
+						<p class="more">Visits to <a href="https://odileeds.org">odileeds.org</a>. Source: ODI Leeds weblogs</p>
+						<div class="number less"></div>
+						<div class="graph more"></div>
+						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/web-odileeds.org.csv" class="lastupdated">web log stats</a></div>
+					</div>
+				</div>
+			</li
+			><!--<li>
+				<div class="box c7-bg">
+					<div class="panel" style="background: url('http://i2.wp.com/leeds.odinodes.wpengine.com/wp-content/uploads/sites/7/2015/07/Yorkshire-Water-Data-Dive-event-at-Munro-House-Leeds..-001.jpg?resize=420%2C240') center center;background: url('bg.jpg') center center;background-size: cover;">
+						<div class="image"></div>
+					</div>
+				</div>
+			</li>-->
+		</ul>
 	</div>
 </body>
 </html>
