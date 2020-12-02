@@ -630,7 +630,7 @@
 				o = offset(this.panels[i].el);
 
 				// Add the moreinfo box
-				//this.main.style.display = "none";
+				this.dashboard.classList.add('opened');
 				// Make moreinfo container
 				this.moreinfo = document.createElement('div');
 				this.moreinfo.classList.add('moreinfo');
@@ -646,7 +646,7 @@
 				}
 				if(this.moreinfo.querySelectorAll('img').length > 0) updateImages();
 			}else{
-				//this.main.style.display = "";
+				this.dashboard.classList.remove('opened');
 			}
 			return this;
 		};
