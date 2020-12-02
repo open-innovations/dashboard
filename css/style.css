@@ -356,10 +356,11 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 @media only screen and (max-width: 1000px) {
 	.panels, .grid { grid-template-columns: repeat(2, 1fr); }
 	.empty { display: none; }
-
 	.sponsors .grid { grid-template-columns: repeat(3, 1fr); }
 	.partners .grid { grid-template-columns: repeat(3, 1fr); }
-
+	ol.grid, .sponsors .grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 @media only screen and (max-width: 700px) {
 	body { font-size: 0.8em; }
