@@ -355,13 +355,13 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 1000px) {
+	body { font-size: 0.8em; }
 	.empty { display: none; }
+}
+@media only screen and (max-width: 700px) {
 	.panels li { min-height: 208px; }
 	.panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media only screen and (max-width: 700px) {
-	body { font-size: 0.8em; }
 }
 @media only screen and (max-width: 500px) {
 	header {
