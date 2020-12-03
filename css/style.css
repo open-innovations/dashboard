@@ -117,8 +117,8 @@ header {
 	width: 100%;
 	height: 100%;
 	padding-top: calc(3em + 25px);
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-rows: repeat(3, minmax(0, 1fr));
 	grid-gap: 8px;
 }
 .panels li {
@@ -152,7 +152,7 @@ header {
 	margin: auto;
 	text-align: center;
 	display: block;
-	font-size: 6em;
+	font-size: 5em;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
@@ -199,7 +199,7 @@ header {
 ol.grid {
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	grid-gap: 8px;
 	width: 100%;
 	list-style: none;
@@ -208,8 +208,8 @@ ol.grid > li > a { display: table!important; text-decoration: none; }
 .panel .list a { display: block; width: 100%; padding: 0; }
 .panel .icons img { width: 100%; }
 .panel .icons img:hover,.panel .icons svg:hover { background-color: rgba(255,255,255,0.3); }
-.sponsors .grid { grid-template-columns: repeat(5, 1fr); }
-.partners .grid { grid-template-columns: repeat(6, 1fr); }
+.sponsors .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.partners .grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .blog .grid .panel, .projects .grid .panel, .themes .grid .panel { padding: 1em; }
 .graph {
 	width: 90%;
@@ -337,14 +337,14 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 
 
 @media only screen and (max-width: 3000px) {
-	.panels { grid-template-columns: repeat(8, 1fr); }
+	.panels { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 2600px) {
-	.panels, .grid { grid-template-columns: repeat(4, 1fr); }
+	.panels, .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 2000px) {
 	body { font-size: 1.25em; }
-	.panels, .grid { grid-template-columns: repeat(3, 1fr); }
+	.panels, .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 1700px) {
 	body { font-size: 1em; }
@@ -352,12 +352,12 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 }
 @media only screen and (max-width: 1280px) {
 	.panel { padding: 24px; }
-	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(3, 1fr); }
+	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 1000px) {
 	.empty { display: none; }
-	.panels { grid-template-columns: repeat(2, 1fr); }
-	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(2, 1fr); }
+	.panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.grid, .sponsors .grid, .partners .grid, .blog .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media only screen and (max-width: 700px) {
 	body { font-size: 0.8em; }
@@ -409,7 +409,7 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	header { display: none; }
 	.main { padding: 0px; }
 	.dashboard { padding-top: 0px; margin-top: -3px; }
-	.panels { grid-template-rows: repeat(3, 1fr); grid-template-rows: 208px; }
+	.panels { grid-template-rows: repeat(3, minmax(0, 1fr)); grid-template-rows: 208px; }
 	.panel .number, .moreinfo .number { font-size: 4em; }
 	.panel .title, .moreinfo .title { font-size: 1.5em; }
 	.updated { display: none; }
