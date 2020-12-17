@@ -44,7 +44,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2018-03-15,,UK broadband speed explorer,http://odileeds.org/projects/ofcommap/,"Average broadband download speed (Mbit/s) visualised as part of our Ofcom data day",,,tforth
 2018-03-16,,Petitions hex map,http://odileeds.org/projects/petitions/,"Visualising petiton data, from the UK Government and Parliament website, on a UK-wide constituency map.",,,slowe
 2018-03-31,2018-05-03,Local elections 2018,https://odileeds.org/projects/local-elections-2018/,"Visualising the 2018 local elections in Leeds using data from Democracy Club",,1;6,slowe
-2018-04-05,,Leeds gender pay gap,https://odileeds.org/projects/gender-pay-gap/,"Graphing the reported gender pay gap for organisations based in Leeds.",,,slowe
+2018-04-05,2019-12,Leeds gender pay gap,https://odileeds.org/projects/gender-pay-gap/,"Graphing the reported gender pay gap for organisations based in Leeds.",,1;4;9,slowe
 2018-06,,Data mapper,https://mapper.odileeds.org/,"Layering datasets from Data Mill North, Calderdale Data Works, Northern Data Hub, York Open Data, Salford Data Quay, Open Street Map and more.",,*,slowe
 2018-07-25,,CSV to GeoJSON,https://odileeds.github.io/CSV2GeoJSON/,"A web-based tool to easily convert a CSV file (containing geography columns) into a GeoJSON file. It can also create choropleth maps based on LSOA, MSOA, WD19CD, PCON17CD, or LAD19CD",,1;3;6,slowe
 2019-01,,Business Rates,https://odileeds.org/projects/business-rates/,"As part of the Open Data Collaboration group we looked at business rates data from local councils. This involved agreeing a common standard to publish and making visualisations of the data across councils.",,1;3;6,slowe
