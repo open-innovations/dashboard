@@ -161,7 +161,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2019-06-05T15:51+0000,Hack for Impact: Yorkshire - our next hackathon,https://odileeds.org/blog/2019-06-05-hack-for-impact-yorkshire-our-next-hackathon,aevans:Amy Evans,11,c11-bg
 2019-06-06T13:59+0000,Adding geography to your CSV files,https://odileeds.org/blog/2019-06-06-adding-geography-to-your-csv-files,slowe:Stuart Lowe,1;3;6,c6-bg
 2019-06-10T15:05+0000,Open data is an attitude,https://odileeds.org/blog/2019-06-10-open-data-is-an-attitude,:Danielle Knight,,c14-bg
-2019-06-19T13:53+0000,Open data foundations - building a housing tool,https://odileeds.org/blog/2019-06-19-open-data-foundations-building-a-housing-tool,aevans:Amy Evans;gdring:Giles Dring,1,c12-bg
+2019-06-19T13:53+0000,Open data foundations - building a housing tool,https://odileeds.org/blog/2019-06-19-open-data-foundations-building-a-housing-tool,aevans:Amy Evans;gdring:Giles Dring,1,c10-bg
 2019-06-20T10:23+0000,Carbon Dashboard,https://odileeds.org/blog/2019-06-20-carbon-dashboard,plake:Patrick Lake,,c4-bg
 2019-06-24T14:20+0000,"HFI: Yorkshire - geographies, data, value",https://odileeds.org/blog/2019-06-24-hfi-yorkshire-geographies-data-value,aevans:Amy Evans;plake:Patrick Lake,11,c7-bg
 2019-06-25T15:10+0000,Carbon Dashboard - Making it Happen,https://odileeds.org/blog/2019-06-25-carbon-dashboard-making-it-happen,plake:Patrick Lake,,c4-bg
@@ -207,14 +207,14 @@ Date,Title,URL,Authors,Sponsors,Class
 2020-03-17T11:15+0000,Coronavirus - COVID-19 Update,https://odileeds.org/blog/2020-03-17-coronavirus-covid-19-update,pconnell:Paul Connell,1;2;3;4;5;6;7;9;8;10;11;12;13;14;15;16;17;18;19;20,c12-bg
 2020-03-17T14:20+0000,Launching our open data health blog,https://odileeds.org/blog/2020-03-17-launching-our-open-data-health-blog,:Alistair Bullward,18;13,c14-bg
 2020-03-17T10:22+0000,Our commitment to you during the coronavirus outbreak,https://odileeds.org/blog/2020-03-17-our-commitment-to-you-during-the-coronavirus-outbreak,kconnell:Kathryn Connell,,c14-bg
-2020-03-18T09:51+0000,The Hex Election,https://odileeds.org/blog/2020-03-18-the-hex-election,gdring:Giles Dring;slowe:Stuart Lowe,,c9-bg
+2020-03-18T09:51+0000,The Hex Election,https://odileeds.org/blog/2020-03-18-the-hex-election,gdring:Giles Dring;slowe:Stuart Lowe,,c8-bg
 2020-03-24T09:44+0000,Being Radically Open during the COVID-19 outbreak,https://odileeds.org/blog/2020-03-24-being-radically-open-during-the-covid19-outbreak,aevans:Amy Evans,1;2;3;6;13;18,c11-bg
 2020-03-31T13:39+0000,We welcome Network Rail as the newest sponsor at ODI Leeds,https://odileeds.org/blog/2020-03-31-we-welcome-network-rail-as-the-newest-sponsor-at-odi-leeds,aevans:Amy Evans,20,c11-bg
-2020-04-03T13:44+0000,Open Data Day 2020 - Mapping challenges galore,https://odileeds.org/blog/2020-04-03-open-data-day-2020-mapping-challenges-galore,aevans:Amy Evans;slowe:Stuart Lowe;plake:Patrick Lake;gdring:Giles Dring,1;2;3;6,c8-bg
+2020-04-03T13:44+0000,Open Data Day 2020 - Mapping challenges galore,https://odileeds.org/blog/2020-04-03-open-data-day-2020-mapping-challenges-galore,aevans:Amy Evans;slowe:Stuart Lowe;plake:Patrick Lake;gdring:Giles Dring,1;2;3;6,c7-bg
 2020-04-16T14:01+0000,Make it easy for people to get your data,https://odileeds.org/blog/2020-04-16-make-it-easy-for-people-to-get-your-data,aevans:Amy Evans;slowe:Stuart Lowe,1;3;2;6;11;14;16;19;18;13,c8-bg
 2020-04-16T15:40+0000,ODI Leeds joins the EMER2GENT alliance focused on the post-pandemic world,https://odileeds.org/blog/2020-04-16-odi-leeds-joins-the-emer2gent-alliance-focused-on-the-post-pandemic-world,aevans:Amy Evans;pconnell:Paul Connell,1;2;3;5;6;7;8;9;10;11;13;14;16;17;18;19;20,c11-bg
 2020-04-17T12:10+0000,Supporting the 'Breathing City' in Leeds,https://odileeds.org/blog/2020-04-17-supporting-the-breathing-city-in-leeds,aevans:Amy Evans,1,c11-bg
-2020-04-22T13:50+0000,Making URIs Cool again,https://odileeds.org/blog/2020-04-22-making-uris-cool-again,gdring:Giles Dring,,c13-bg
+2020-04-22T13:50+0000,Making URIs Cool again,https://odileeds.org/blog/2020-04-22-making-uris-cool-again,gdring:Giles Dring,,c10-bg
 2020-04-29T16:37+0000,Website carbon emissions,https://odileeds.org/blog/2020-04-29-website-carbon-emissions,slowe:Stuart Lowe,,c6-bg
 2020-05-01T10:00+0000,COVID-19 - Update from ODI Leeds,https://odileeds.org/blog/2020-05-01-covid-19-update-from-odi-leeds,aevans:Amy Evans,1;2;3;5;4;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20,c11-bg
 2020-05-13T14:23+0000,ODI Leeds & The Emergent Alliance,https://odileeds.org/blog/2020-05-13-odi-leeds-the-emergent-alliance,pconnell:Paul Connell,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20,c12-bg
@@ -240,7 +240,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2020-09-15T14:16+0000,Innovating with data to make a difference,https://odileeds.org/blog/2020-09-15-innovating-with-data-to-make-a-difference,pconnell:Paul Connell;kconnell:Kathryn Connell,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20,c13-bg
 2020-09-17T09:14+0000,ODI Leeds and Icebreaker One - Partner on Project Cygnus,https://odileeds.org/blog/2020-09-17-odi-leeds-and-icebreaker-one-partner-on-project-cygnus,oocheche:Ojoyi Ocheche;pconnell:Paul Connell;plake:Patrick Lake,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;17;16;18;19;20,c5-bg
 2020-09-22T05:00+0000,How long is the coast? How many dimensions does it have?,https://odileeds.org/blog/2020-09-22-is-the-coast-poor-,tforth:Thomas Forth,,c13-bg
-2020-10-07T12:55+0000,How has COVID-19 affected education?,https://odileeds.org/blog/2020-10-07-how-has-covid-19-affected-education,gdring:Giles Dring,,c13-bg
+2020-10-07T12:55+0000,How has COVID-19 affected education?,https://odileeds.org/blog/2020-10-07-how-has-covid-19-affected-education,gdring:Giles Dring,,c10-bg
 2020-10-07T09:34+0000,Vacancy - Data and Innovation Consultant,https://odileeds.org/blog/2020-10-07-vacancy-data-and-innovation-consultant,aevans:Amy Evans,,c11-bg
 2020-10-07T12:51+0000,Vacancy - Sponsorship Delivery Manager,https://odileeds.org/blog/2020-10-07-vacancy-sponsorship-delivery-manager,pconnell:Paul Connell,,c12-bg
 2020-10-09T16:30+0000,Project Cygnus - Starting with the Data,https://odileeds.org/blog/2020-10-09-project-cygnus-starting-with-the-data,plake:Patrick Lake,,c4-bg
@@ -254,14 +254,14 @@ Date,Title,URL,Authors,Sponsors,Class
 2020-11-27T14:45+0000,ODI Leeds' response to the National Data Strategy,https://odileeds.org/blog/2020-11-27-odi-leeds-response-to-the-national-data-strategy,tforth:Thomas Forth;pconnell:Paul Connell,1;2;3;6;5;9;11;13;14;16;18;17;19;20,c12-bg
 2020-11-27T13:25+0000,Project Cygnus - Energy (under)Performance Certificates,https://odileeds.org/blog/2020-11-27-project-cygnus-energy-under-performance-certificates,aevans:Amy Evans;sschmidt:Susanne Schmidt;plake:Patrick Lake,1;2;3;6;5;9;11;13;14;16;18;17;19;20,c5-bg
 2020-12-03T18:29+0000,Project Cygnus - I EPC what you did there,https://odileeds.org/blog/2020-12-03-project-cygnus-i-epc-what-you-did-there,plake:Patrick Lake;sschmidt:Susanne Schmidt,1;2;3;6;5;9;11;13;14;16;18;17;19;20,c3-bg
-2020-12-15T14:12+0000,Privacy-first web analytics,https://odileeds.org/blog/2020-12-15-privacy-first-web-analytics,slowe:Stuart Lowe;gdring:Giles Dring,,c9-bg
+2020-12-15T14:12+0000,Privacy-first web analytics,https://odileeds.org/blog/2020-12-15-privacy-first-web-analytics,slowe:Stuart Lowe;gdring:Giles Dring,,c8-bg
 2020-12-15T14:01+0000,Setting the stage for Information Datanomics,https://odileeds.org/blog/2020-12-15-setting-the-stage-for-information-datanomics,:Joss Sessions,,c14-bg
 2020-12-18T10:02+0000,Can a diversity dashboard be made for Leeds?,https://odileeds.org/blog/2020-12-18-can-a-diversity-dashboard-be-made-for-leeds-,aevans:Amy Evans,11;1;2;3;6,c11-bg
 2021-01-05T14:30+0000,EPC you later!,https://odileeds.org/blog/2021-01-05-epc-you-later-,plake:Patrick Lake;sschmidt:Susanne Schmidt,1;3;2;6,c3-bg
 2021-01-08T15:15+0000,The ODI Leeds Dashboard - tracing everything we do,https://odileeds.org/blog/2021-01-08-the-odi-leeds-dashboard-tracing-everything-we-do,aevans:Amy Evans,,c11-bg
 2021-01-13T14:50+0000,Open Data Saves Lives - Thinking out loud,https://odileeds.org/blog/2021-01-13--opendatasaveslives-thinking-out-loud,pconnell:Paul Connell,13;5;26;9;1;2;3;6;11;14;18;17,c12-bg
 2021-01-15T10:20+0000,Announcing Northernlands 3 - Save the date!,https://odileeds.org/blog/2021-01-15-announcing-northernlands-3-save-the-date-,aevans:Amy Evans,1;2;3;5;6;9;11;13;14;16;17;18;19;20,c11-bg
-2021-01-19T14:56+0000,Improving privacy in our web analytics,https://odileeds.org/blog/2021-01-19-improving-privacy-in-our-web-analytics,slowe:Stuart Lowe;gdring:Giles Dring,,c9-bg
+2021-01-19T14:56+0000,Improving privacy in our web analytics,https://odileeds.org/blog/2021-01-19-improving-privacy-in-our-web-analytics,slowe:Stuart Lowe;gdring:Giles Dring,,c8-bg
 2021-01-19T07:00+0000,Quantifying regional inequality.,https://odileeds.org/blog/2021-01-19-regionalinequalityandtheeu,tforth:Thomas Forth,,c13-bg
 2021-01-22T16:02+0000,EPC - lessons learned,https://odileeds.org/blog/2021-01-22-epc-lessons-learned,sschmidt:Susanne Schmidt;plake:Patrick Lake,,c3-bg
 2021-02-02T11:04+0000,Helping the vulnerable in society - a collaborative approach,https://odileeds.org/blog/2021-02-02-helping-the-vulnerable-in-society-a-collaborative-approach,:Steven Dacre,19;1;2;3;6,c14-bg
