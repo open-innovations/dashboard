@@ -4,107 +4,113 @@
 		return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
 	})();
 
-	if(!root.ODI) root.ODI = {};
-
-	// Define a ready function that checks if the document is ready
-	if(!root.ODI.ready) root.ODI.ready = function(f){ if(/in/.test(document.readyState)){ setTimeout('ODI.ready('+f+')',9); }else{ f(); } };
+	var ODI = root.ODI || {};
+	if(!ODI.ready){
+		ODI.ready = function(fn){
+			// Version 1.1
+			if(document.readyState != 'loading') fn();
+			else document.addEventListener('DOMContentLoaded', fn);
+		}
+	}
 
 	// Define an ajax function (in the style of jQuery)
-	root.ODI.ajax = function(url,attrs){
-
-		if(typeof url!=="string") return false;
-		if(!attrs) attrs = {};
-		var cb = "",qs = "";
-		var oReq,urlbits;
-		// If part of the URL is query string we split that first
-		if(url.indexOf("?") > 0){
-			urlbits = url.split("?");
-			if(urlbits.length){
-				url = urlbits[0];
-				qs = urlbits[1];
-			}
-		}
-		if(attrs.dataType=="jsonp"){
-			cb = 'fn_'+(new Date()).getTime();
-			window[cb] = function(rsp){
-				if(typeof attrs.success==="function") attrs.success.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
-			};
-		}
-		if(typeof attrs.cache==="boolean" && !attrs.cache) qs += (qs ? '&':'')+(new Date()).valueOf();
-		if(cb) qs += (qs ? '&':'')+'callback='+cb;
-		if(attrs.data) qs += (qs ? '&':'')+attrs.data;
-
-		// Build the URL to query
-		if(attrs.method=="POST") attrs.url = url;
-		else attrs.url = url+(qs ? '?'+qs:'');
-
-		if(attrs.dataType=="jsonp"){
-			var script = document.createElement('script');
-			script.src = attrs.url;
-			document.body.appendChild(script);
-			return this;
-		}
-
-		// code for IE7+/Firefox/Chrome/Opera/Safari or for IE6/IE5
-		oReq = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-		oReq.addEventListener("load", window[cb] || complete);
-		oReq.addEventListener("error", error);
-		oReq.addEventListener("progress", progress);
-		var responseTypeAware = 'responseType' in oReq;
-		if(attrs.beforeSend) oReq = attrs.beforeSend.call((attrs['this'] ? attrs['this'] : this), oReq, attrs);
-		if(attrs.dataType=="script") oReq.overrideMimeType('text/javascript');
-
-		function complete(evt) {
-			attrs.header = oReq.getAllResponseHeaders();
-			var rsp;
-			if(oReq.status == 200 || oReq.status == 201 || oReq.status == 202) {
-				rsp = oReq.response;
-				if(oReq.responseType=="" || oReq.responseType=="text") rsp = oReq.responseText;
-				if(attrs.dataType=="json"){
-					try {
-						if(typeof rsp==="string") rsp = JSON.parse(rsp.replace(/[\n\r]/g,"\\n").replace(/^([^\(]+)\((.*)\)([^\)]*)$/,function(e,a,b,c){ return (a==cb) ? b:''; }).replace(/\\n/g,"\n"));
-					} catch(e){ error(e); }
+	if(!ODI.ajax){
+		ODI.ajax = function(url,attrs){
+			// Full version because we need headers etc
+			if(typeof url!=="string") return false;
+			if(!attrs) attrs = {};
+			var cb = "",qs = "";
+			var oReq,urlbits;
+			// If part of the URL is query string we split that first
+			if(url.indexOf("?") > 0){
+				urlbits = url.split("?");
+				if(urlbits.length){
+					url = urlbits[0];
+					qs = urlbits[1];
 				}
-
-				// Parse out content in the appropriate callback
-				if(attrs.dataType=="script"){
-					var fileref=document.createElement('script');
-					fileref.setAttribute("type","text/javascript");
-					fileref.innerHTML = rsp;
-					document.head.appendChild(fileref);
-				}
-				attrs.statusText = 'success';
-				if(typeof attrs.success==="function") attrs.success.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
-			}else{
-				attrs.statusText = 'error';
-				error(evt);
 			}
-			if(typeof attrs.complete==="function") attrs.complete.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
-		}
+			if(attrs.dataType=="jsonp"){
+				cb = 'fn_'+(new Date()).getTime();
+				window[cb] = function(rsp){
+					if(typeof attrs.success==="function") attrs.success.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
+				};
+			}
+			if(typeof attrs.cache==="boolean" && !attrs.cache) qs += (qs ? '&':'')+(new Date()).valueOf();
+			if(cb) qs += (qs ? '&':'')+'callback='+cb;
+			if(attrs.data) qs += (qs ? '&':'')+attrs.data;
 
-		function error(evt){
-			if(typeof attrs.error==="function") attrs.error.call((attrs['this'] ? attrs['this'] : this),evt,attrs);
-		}
+			// Build the URL to query
+			if(attrs.method=="POST") attrs.url = url;
+			else attrs.url = url+(qs ? '?'+qs:'');
 
-		function progress(evt){
-			if(typeof attrs.progress==="function") attrs.progress.call((attrs['this'] ? attrs['this'] : this),evt,attrs);
-		}
+			if(attrs.dataType=="jsonp"){
+				var script = document.createElement('script');
+				script.src = attrs.url;
+				document.body.appendChild(script);
+				return this;
+			}
 
-		if(responseTypeAware && attrs.dataType){
-			try { oReq.responseType = attrs.dataType; }
+			// code for IE7+/Firefox/Chrome/Opera/Safari or for IE6/IE5
+			oReq = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			oReq.addEventListener("load", window[cb] || complete);
+			oReq.addEventListener("error", error);
+			oReq.addEventListener("progress", progress);
+			var responseTypeAware = 'responseType' in oReq;
+			if(attrs.beforeSend) oReq = attrs.beforeSend.call((attrs['this'] ? attrs['this'] : this), oReq, attrs);
+			if(attrs.dataType=="script") oReq.overrideMimeType('text/javascript');
+
+			function complete(evt) {
+				attrs.header = oReq.getAllResponseHeaders();
+				var rsp;
+				if(oReq.status == 200 || oReq.status == 201 || oReq.status == 202) {
+					rsp = oReq.response;
+					if(oReq.responseType=="" || oReq.responseType=="text") rsp = oReq.responseText;
+					if(attrs.dataType=="json"){
+						try {
+							if(typeof rsp==="string") rsp = JSON.parse(rsp.replace(/[\n\r]/g,"\\n").replace(/^([^\(]+)\((.*)\)([^\)]*)$/,function(e,a,b,c){ return (a==cb) ? b:''; }).replace(/\\n/g,"\n"));
+						} catch(e){ error(e); }
+					}
+
+					// Parse out content in the appropriate callback
+					if(attrs.dataType=="script"){
+						var fileref=document.createElement('script');
+						fileref.setAttribute("type","text/javascript");
+						fileref.innerHTML = rsp;
+						document.head.appendChild(fileref);
+					}
+					attrs.statusText = 'success';
+					if(typeof attrs.success==="function") attrs.success.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
+				}else{
+					attrs.statusText = 'error';
+					error(evt);
+				}
+				if(typeof attrs.complete==="function") attrs.complete.call((attrs['this'] ? attrs['this'] : this), rsp, attrs);
+			}
+
+			function error(evt){
+				if(typeof attrs.error==="function") attrs.error.call((attrs['this'] ? attrs['this'] : this),evt,attrs);
+			}
+
+			function progress(evt){
+				if(typeof attrs.progress==="function") attrs.progress.call((attrs['this'] ? attrs['this'] : this),evt,attrs);
+			}
+
+			if(responseTypeAware && attrs.dataType){
+				try { oReq.responseType = attrs.dataType; }
+				catch(err){ error(err); }
+			}
+
+			try{ oReq.open((attrs.method||'GET'), attrs.url, true); }
 			catch(err){ error(err); }
-		}
 
-		try{ oReq.open((attrs.method||'GET'), attrs.url, true); }
-		catch(err){ error(err); }
+			if(attrs.method=="POST") oReq.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 
-		if(attrs.method=="POST") oReq.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+			try{ oReq.send((attrs.method=="POST" ? qs : null)); }
+			catch(err){ error(err); }
 
-		try{ oReq.send((attrs.method=="POST" ? qs : null)); }
-		catch(err){ error(err); }
-
-		return this;
-	};
+			return this;
+		};
+	}
 
 
 	/*!
@@ -199,7 +205,7 @@
 						for(var u = 0; u < this.config[p].data.length; u++){
 							var fn = this.config[p].data[u]+'?'+d.getTime();
 							if(!files[fn]){
-								root.ODI.ajax(fn,{
+								ODI.ajax(fn,{
 									'complete':loadData,
 									'dataType':'text',
 									'key':p,
@@ -308,7 +314,7 @@
 					im.setAttribute('id','replaceWithSVG-'+id);
 					im.classList.add('replaceWithSVG');
 					_obj.replace[id] = true;
-					root.ODI.ajax(src,{'dataType':'text/svg','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
+					ODI.ajax(src,{'dataType':'text/svg','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
 				}
 			}
 
@@ -717,6 +723,8 @@
 		return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
 	}
 
-	root.ODI.Dashboard = Dashboard;
+	ODI.Dashboard = Dashboard;
+	
+	root.ODI = ODI;
 
 })(window || this);
