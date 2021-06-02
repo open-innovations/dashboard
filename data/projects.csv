@@ -77,3 +77,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2021-01,,Vaccines in England,https://odileeds.github.io/covid-19/vaccines,"Displaying vaccines by dose, age group, and NHS ICS/STP area for England.",,1;2;3;6;13;18,slowe
 2021-03,,Council website emissions,https://odileeds.github.io/council-website-emissions/,"How are council websites impacting the planet? We measured the effective CO2 emissions from every UK council homepage.",,1;2;3;6,slowe
 2021-05,2021-05,Local elections 2021,https://odileeds.org/projects/local-elections-2021/,"Visualising the 2021 local elections in Leeds and Calderdale using data from Democracy Club",,1;6,slowe
+2021-06,,University website emissions,https://odileeds.github.io/learning-provider-website-emissions/,"How are university websites impacting the planet? We measured the effective CO2 emissions from every UK university.",,9,slowe
