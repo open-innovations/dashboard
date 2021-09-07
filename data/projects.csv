@@ -58,6 +58,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2019-05-01,2019-05-03,Local elections Calderdale 2019,https://odileeds.org/projects/local-elections-2019/calderdale,"Visualising the 2019 local elections in Calderdale using data from Democracy Club",,6,slowe
 2019-05-10,2019,Postcodes to IMD Deciles,https://odileeds.github.io/Postcodes2IMD/,"Following #hackforimpact we created a tool to make a socio-economic equivalent to Gender Pay Gap reporting. It takes postcodes as input and creates a 10-point histogram based on the corresponding Indices of Multiple Deprivation deciles.",,11,slowe
 2019-06-05,2019,Postcodes to Latitudes and Longitudes,https://odileeds.github.io/Postcodes2LatLon/,"Add Latitude/Longitude columns to CSV files containing Postcode columns.",,1;3;6,slowe
+2019-06,2019-12,Carbon Dashboard,https://odileeds.org/projects/carbon-dashboard/,"Carbon Dashboard","Experiments in making a carbon dashboard",,*,plake
 2019-07,,Local Growth Funding Tracker,https://odileeds.org/projects/jrf/,"Collaborative project with Joseph Rowntree Foundation to create a tool that tracks local growth funding.",,,tforth
 2019-08-29,,Divisions hex map,http://odileeds.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,,slowe
 2019-10,,Distribution Future Energy Scenarios,https://odileeds.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES).",,16,slowe;plake
