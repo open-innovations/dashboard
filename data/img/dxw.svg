@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.1" viewBox="0 0 250 91" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<g transform="translate(0,-961.4)" fill="white">
+<g transform="translate(0,-961.4)" fill="#fff">
 	<path d="m36.646 1015.4-9.8014-5.7116v11.353l9.8014 5.6411 9.8719 5.7116v-11.353z" stroke-width=".70514"/>
 	<path d="m36.646 992.73-9.8014 5.6411v11.353l9.8014 5.7116v-11.353l9.8719-5.7116v-11.353zm19.673 22.705-9.8014 5.6411v11.353l9.8014-5.7116 9.8014-5.6411v-11.353z" opacity=".75" stroke-width=".70514"/>
 	<path d="m56.32 981.37v34.058l9.8014-5.7116v-22.705z" stroke-width=".70514"/>
