@@ -121,7 +121,7 @@
 		"web": {
 			"start": "Date",
 			"end": "Date",
-			"data": ["data/web-odileeds.org.csv"],
+			"data": ["data/web-open-innovations.org.csv"],
 			"max":62000,
 			"els": {
 				".number": { "col": "Visits", "op": "sum", "animate": true },
@@ -145,7 +145,7 @@
 	<div class="dashboard">
 		<div id="cover"></div>
 		<header class="b6-bg">
-			<h1><a href="https://odileeds.org/"><img src="https://odileeds.org/resources/images/odileeds-black.svg" /></a> <select id="range" name="range"><option value="default">Dashboard</option><option value="lifetime">Lifetime impact</option><option value="2021">2021 impact</option><option value="2020">2020 impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
+			<h1><a href="https://open-innovations.org/"><img src="https://open-innovations.org/resources/images/logos/oi-square-black.svg" /></a> <select id="range" name="range"><option value="default">Dashboard</option><option value="lifetime">Lifetime impact</option><option value="2021">2021 impact</option><option value="2020">2020 impact</option><option value="2019">2019 impact</option><option value="2018">2018 impact</option><option value="2017">2017 impact</option><option value="2016">2016 impact</option><option value="2015">2015 impact</option><option value="2014">2014 impact</option></select></h1>
 		</header>
 		<ul class="panels">
 			<li id="events" tabindex="0">
@@ -242,7 +242,7 @@
 				<div class="box c7-bg">
 					<div class="panel">
 						<div class="title">Website visits</div>
-						<p class="more">Visits to <a href="https://odileeds.org">odileeds.org</a>. Source: ODI Leeds weblogs</p>
+						<p class="more">Visits to <a href="https://open-innovations.org">open-innovations.org</a>. Source: Open Innovations weblogs</p>
 						<div class="number less"></div>
 						<div class="graph more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/web-odileeds.org.csv" class="lastupdated">web log stats</a></div>
@@ -258,9 +258,9 @@
 			</li>-->
 		</ul>
 	</div>
-	<script src="https://odileeds.org/resources/odi.log.js"></script>
+	<script src="https://open-innovations.org/resources/oi.log.js"></script>
 	<script>
-	ODI.log.setup({'id':'odileeds','target':['odileeds.org','odileeds.github.io']}).add('action=view');
+	OI.log.setup({'id':'open-innovations','target':['open-innovations.org','open-innovations.github.io','odileeds.org']}).add('action=view');
 	</script>
 
 </body>
