@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg version="1.1" viewBox="0 0 250 91" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<defs>
-<style>.cls-1 {
-        fill: #020203;
-      }</style>
-</defs>
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<g transform="translate(0,-961.4)" fill="#fff">
+<g transform="translate(0,-961.4)">
 <g transform="matrix(2.0396 0 0 2.0396 89.092 967.76)" data-name="Layer 2">
-<g fill="#fff" data-name="Layer 1">
-<path class="cls-1" d="m30.37 3.71-7.75 10.29-1.97-14-5.94 0.85 1.8 13-10.51-7.94-3.64 4.83 10.31 7.75-12.67 1.77 0.85 6 14-2-7.85 10.48 4.83 3.64 23.38-31z" fill="#fff" data-name="Path 1"/>
-</g>
+<path d="m30.37 3.71-7.75 10.29-1.97-14-5.94 0.85 1.8 13-10.51-7.94-3.64 4.83 10.31 7.75-12.67 1.77 0.85 6 14-2-7.85 10.48 4.83 3.64 23.38-31z" fill="white" data-name="Path 1"/>
 </g>
 </g>
 </svg>
