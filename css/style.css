@@ -48,7 +48,7 @@ html, body {
 	height: 100%;
 }
 body { background-color: white; font-family: Helvetica, Arial, sans-serif; margin: 0px; padding: 0px; background-color: white; }
-h1 { line-height: 0.8em; font-size: 3em; position:relative; padding-left: 3.8em; color: black; }
+h1 { line-height: 0.8em; font-size: 3em; position:relative; color: black; }
 a { color: inherit; }
 
 #cover {
@@ -264,7 +264,7 @@ ol.grid > li > a { display: table!important; text-decoration: none; }
 .graph .grid .line span {
 }
 header { padding: 16px 16px 10px 16px; }
-header h1 img { position: absolute; top: -45%; left: -1em; height: 2em; }
+header h1 img { float: left; position: relative; height: 1em; margin-right:16px;}
 select#range {
 	height: 1.5em;
 	line-height: 1.5em;
@@ -369,14 +369,6 @@ p.more { font-size: 0.8em; margin-bottom: 1em; }
 	}
 	header h1 {
 		padding-left: 0px;
-	}
-	header h1 img {
-		display: block;
-		position: relative;
-		left: 0px;
-		top: 0px;
-		height: 1.5em;
-		margin: auto;
 	}
 	select#range {
 		width: 100%;
