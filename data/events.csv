@@ -644,6 +644,7 @@ Date,Title,Status,Attendance,Attendance source
 2018-09-27T17:15Z,"Tech Nation on Tour: Leeds ",CONFIRMED,117,Calendar
 2018-10-05T12:00Z,"ODI Fridays Lunchtime Lecture",CONFIRMED,0,Calendar
 2018-10-16T17:00Z,"Tableau User Group Yorkshire",CONFIRMED,52,Calendar
+2018-10-17T09:00Z,"Open Data Collaboration meeting",CONFIRMED,0,Calendar
 2018-10-18T08:30Z,"Leeds Safeguarding Adults Board",CONFIRMED,28,Calendar
 2018-10-25T08:30Z,"Transport and Economy Data Summit",CONFIRMED,30,Calendar
 2018-11-08T12:00Z,"NHS Digital ",CONFIRMED,9,Calendar
@@ -916,7 +917,6 @@ Date,Title,Status,Attendance,Attendance source
 2020-01-22T09:00Z,"First Direct ",CONFIRMED,60,Calendar
 2020-01-23T09:00Z,"University of Leeds meeting",CONFIRMED,50,Calendar
 2020-01-24T09:00Z,"#OpenDataSavesLives Launch - LEEDS",CONFIRMED,0,Calendar
-2020-01-27T08:30Z,"First Direct meeting",CONFIRMED,16,Calendar
 2020-01-28T09:00Z,"Nhs england",CONFIRMED,12,Calendar
 2020-01-28T15:00Z,"Coders Guild Speed Dating",CONFIRMED,45,Calendar
 2020-01-29T09:00Z,"WYCA Meeting",CONFIRMED,12,Calendar
@@ -972,7 +972,9 @@ Date,Title,Status,Attendance,Attendance source
 2020-05-21T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,26,Calendar
 2020-06-04T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,31,Calendar
 2020-06-11T10:00Z,"#OpenDataSavesLives & COVID19 - Session 10",CONFIRMED,31,Calendar
+2020-06-18T10:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,24,Calendar
 2020-06-18T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,24,Calendar
+2020-06-25T10:00Z,"#OpenDataSavesLives & COVID19",CONFIRMED,60,Calendar
 2020-06-25T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,60,Calendar
 2020-07-06T09:00Z,"Northernlands 2 - Day 1",CONFIRMED,334,Calendar
 2020-07-07T09:00Z,"Northernlands 2 - Day 2",CONFIRMED,332,Calendar
