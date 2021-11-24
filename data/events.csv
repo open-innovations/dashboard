@@ -42,6 +42,7 @@ Date,Title,Status,Attendance,Attendance source
 2014-11-12T09:00Z,"ODI Open Data In a Day Training",CONFIRMED,0,Calendar
 2014-11-13T09:00Z,"ODI Training Open Data",CONFIRMED,0,Calendar
 2014-11-21T12:00Z,"Leeds Smart City (Health & Well-being) Working Group",CONFIRMED,0,Calendar
+2014-11-21T12:30Z,"Integrating City Systems SBRI working group",CONFIRMED,0,Calendar
 2014-11-27T15:00Z,"Thompson brand futures client event",CONFIRMED,0,Calendar
 2014-11-28T15:00Z,"Thompson brand futures friends event",CONFIRMED,0,Calendar
 2014-12-01T08:30Z,"Nhs m health discovery day",CONFIRMED,0,Calendar
@@ -80,7 +81,7 @@ Date,Title,Status,Attendance,Attendance source
 2015-02-26T13:30Z,"Co-production kick off",CONFIRMED,0,Calendar
 2015-02-26T18:00Z,"datakind uk and young foundation meet",CONFIRMED,0,Calendar
 2015-02-27T17:30Z,"Global Service Jam",CONFIRMED,0,Calendar
-2015-03-02T09:00Z,"âLeeds Data Cityâ Working Group",CONFIRMED,0,Calendar
+2015-03-02T09:00Z,"Leeds Data City Working Group",CONFIRMED,0,Calendar
 2015-03-04T17:00Z,"HERD networking event",CONFIRMED,0,Calendar
 2015-03-10T18:00Z,"leeds devops meet up",CONFIRMED,0,Calendar
 2015-03-12T09:00Z,"Co-working at the ODILeeds",CONFIRMED,0,Calendar
@@ -112,8 +113,10 @@ Date,Title,Status,Attendance,Attendance source
 2015-04-20T16:30Z,"Leaders 4 Leeds - making digital and open data open to everyone in our city",CONFIRMED,0,Calendar
 2015-04-21T09:00Z,"Virgin Media Assisted Living",CONFIRMED,0,Calendar
 2015-04-22T08:00Z,"SmartKlub Introduction",CONFIRMED,0,Calendar
+2015-04-22T08:30Z,"data city leeds",CONFIRMED,0,Calendar
 2015-04-22T12:00Z,"MHealth meeting Minecraft event",CONFIRMED,0,Calendar
 2015-04-23T08:00Z,"Cycling Open Data Challenge- Show and Tell Session",CONFIRMED,0,Calendar
+2015-04-23T08:30Z,"Route Rater Show and tell",CONFIRMED,0,Calendar
 2015-04-24T11:00Z,"Leeds uni coproduction workshop",CONFIRMED,0,Calendar
 2015-04-28T12:00Z,"WYCA Priority Setting Session",CONFIRMED,0,Calendar
 2015-04-29T13:00Z,"Future City Catapult - Projects Leeds & Bradford",CONFIRMED,0,Calendar
@@ -145,6 +148,7 @@ Date,Title,Status,Attendance,Attendance source
 2015-06-17T08:00Z,"Common Purpose Quest event",CONFIRMED,0,Calendar
 2015-06-17T17:00Z,"leeds data thing",CONFIRMED,0,Calendar
 2015-06-18T08:00Z,"Node Gathering ",CONFIRMED,0,Calendar
+2015-06-18T08:00Z,"Co-working",CONFIRMED,0,Calendar
 2015-06-18T16:00Z,"LCC graduate program",CONFIRMED,0,Calendar
 2015-06-19T00:00Z,"Co-working space",CONFIRMED,0,Calendar
 2015-06-23T18:00Z,"Leeds devops",CONFIRMED,0,Calendar
@@ -289,6 +293,7 @@ Date,Title,Status,Attendance,Attendance source
 2016-05-17T10:00Z,"Leeds Uni Vietnamese delegates introduction",CONFIRMED,0,Calendar
 2016-05-17T17:00Z,"Leeds devops",CONFIRMED,0,Calendar
 2016-05-19T00:00Z,"CONFIRMED: Node Meet-up (London)オンライン参加",CONFIRMED,0,Calendar
+2016-05-19T00:00Z,"Node meet-up - Day 1 - hangout",CONFIRMED,0,Calendar
 2016-05-19T15:00Z,"University of Leeds event",CONFIRMED,0,Calendar
 2016-05-20T00:00Z,"node meet up - Day 2 - hangout",CONFIRMED,0,Calendar
 2016-05-20T12:00Z," ODIHQ@ODILeeds Free Friday Lunchtime Lectures",CONFIRMED,3,Calendar
@@ -316,7 +321,7 @@ Date,Title,Status,Attendance,Attendance source
 2016-06-29T08:00Z,"Cross government hack day",CONFIRMED,0,Calendar
 2016-07-01T09:00Z,"FloodHack Followup",CONFIRMED,0,Calendar
 2016-07-05T07:00Z,"LCC bin app innovation lab",CONFIRMED,35,Calendar
-2016-07-05T15:00Z,"#HighwaysHack innovating with  transport ",CONFIRMED,32,Calendar
+2016-07-05T15:30Z,"#HighwaysHack Innovating with Transport Data - Open Meeting",CONFIRMED,32,Calendar
 2016-07-06T09:00Z,"LCC resourcing team awayday",CONFIRMED,0,Calendar
 2016-07-08T12:00Z,"ODIHQ@ODILeeds Free Friday Lunchtime Lecture: Data - fight against hunger",CONFIRMED,7,Calendar
 2016-07-11T08:00Z,"Floor painting",CONFIRMED,0,Calendar
@@ -340,16 +345,13 @@ Date,Title,Status,Attendance,Attendance source
 2016-08-26T13:00Z,"Data Drop-in",CONFIRMED,15,Calendar
 2016-09-02T08:00Z,"Urban Commons catch-up",CONFIRMED,0,Calendar
 2016-09-02T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Live Coding & Algoraves",CONFIRMED,0,Calendar
-2016-09-06T08:00Z,"Community node call #1",CONFIRMED,46,Calendar
-2016-09-08T09:30Z,"Government Digital Service Accessibility meeting",CONFIRMED,72,Calendar
+2016-09-06T08:00Z,"Community node call #1",CONFIRMED,0,Calendar
+2016-09-06T08:00Z,"#OpenSmartCitiesPlaces16 @ Wuthering Bytes",CONFIRMED,46,Calendar
 2016-09-09T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Sustainable Development Data",CONFIRMED,2,Calendar
 2016-09-12T08:00Z,"LCC Projects, Programmes and Procurement away day",CONFIRMED,11,Calendar
-2016-09-15T08:00Z,"Digital DWP",CONFIRMED,29,Calendar
 2016-09-16T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - What's the future of construction?",CONFIRMED,0,Calendar
 2016-09-19T07:30Z,"WYCA workshop",CONFIRMED,34,Calendar
-2016-09-20T15:45Z,"Blockchain and Internet of Things - Leeds",CONFIRMED,24,Calendar
 2016-09-21T17:00Z,"Leeds Devops",CONFIRMED,63,Calendar
-2016-09-22T08:00Z,"ESRI User group Meeting",CONFIRMED,37,Calendar
 2016-09-23T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Why joined-up data is a political, not technical, challenge",CONFIRMED,8,Calendar
 2016-09-30T12:00Z,"ODIHQ@ODI Leeds Friday Lunchtime Lecture - Accessible data on every politician in the world",CONFIRMED,9,Calendar
 2016-09-30T13:00Z,"Data Drop-in",CONFIRMED,12,Calendar
@@ -371,7 +373,6 @@ Date,Title,Status,Attendance,Attendance source
 2016-10-28T12:00Z,"ODIHQ@DHEZ Friday Lunchtime Lecture - Responsible data tactics for positive social change",CONFIRMED,0,Calendar
 2016-10-28T13:00Z,"Data Drop-in",CONFIRMED,12,Calendar
 2016-11-04T13:00Z,"ODIHQ Lunchtime Lecture - Mapping Greater Manchester",CONFIRMED,0,Calendar
-2016-11-09T09:00Z,"Digital DWP",CONFIRMED,70,Calendar
 2016-11-10T13:00Z,"LCC strategy and improvement workshop",CONFIRMED,28,Calendar
 2016-11-15T09:00Z,"SmartKlub Leeds - Co-production 1st Meeting Hydrogen and Alternative Fuels",CONFIRMED,29,Calendar
 2016-11-15T18:00Z,"Leeds devops",CONFIRMED,89,Calendar
@@ -383,11 +384,9 @@ Date,Title,Status,Attendance,Attendance source
 2016-11-25T14:00Z,"Data drop-in",CONFIRMED,0,Calendar
 2016-11-28T17:15Z,"PD Digital 16",CONFIRMED,46,Calendar
 2016-11-29T09:00Z,"PD Digital 16",CONFIRMED,57,Calendar
-2016-11-30T09:00Z,"GOV.uk training",CONFIRMED,52,Calendar
 2016-12-02T09:00Z,"Leeds city council leadership HR workshop",CONFIRMED,14,Calendar
 2016-12-02T13:00Z,"ODI HQ Lunchtime Lecture - Creating an open register: what it takes and why",CONFIRMED,0,Calendar
 2016-12-09T13:00Z,"ODI HQ Lunchtime Lecture - Stuff our Labs team have built",CONFIRMED,4,Calendar
-2016-12-09T19:00Z,"Busy",CONFIRMED,0,Calendar
 2016-12-12T09:00Z,"Data visualisation training",CONFIRMED,0,Calendar
 2016-12-16T10:00Z,"Urban Commons technical session",CONFIRMED,6,Calendar
 2016-12-16T14:00Z,"Data Drop-in (Dec)",CONFIRMED,6,Calendar
@@ -396,7 +395,6 @@ Date,Title,Status,Attendance,Attendance source
 2017-01-11T12:30Z,"#AirHack - Drop In Session",CONFIRMED,9,Calendar
 2017-01-20T13:00Z,"ODI Lunchtime Lecture",CONFIRMED,10,Calendar
 2017-01-25T17:30Z,"Innovating with Defra data - open meeting",CONFIRMED,30,Calendar
-2017-01-26T13:00Z,"Leeds city council eurodelegation",CONFIRMED,25,Calendar
 2017-01-27T13:00Z,"ODI HQ Lunchtime Lecture - Can beneficial ownership data fight corruption?",CONFIRMED,0,Calendar
 2017-01-27T16:00Z,"Data drop-in",CONFIRMED,0,Calendar
 2017-01-31T18:45Z,"Leeds Devops",CONFIRMED,79,Calendar
@@ -445,7 +443,6 @@ Date,Title,Status,Attendance,Attendance source
 2017-05-18T08:00Z,"GovJam",CONFIRMED,0,Calendar
 2017-05-19T12:00Z,"ODI Lunchtime Lecture - Open your effing data!",CONFIRMED,0,Calendar
 2017-05-23T17:45Z,"Leeds Devops",CONFIRMED,89,Calendar
-2017-05-24T12:00Z,"Busy",CONFIRMED,0,Calendar
 2017-05-24T16:00Z,"#TravelHack - open meeting with ODI Leeds and Transport for the North",CONFIRMED,20,Calendar
 2017-06-01T18:00Z,"Leeds Cycling Question Time 2017",CONFIRMED,0,Calendar
 2017-06-02T12:00Z,"ODI Lunchtime Lecture - Live code as open data ",CONFIRMED,1,Calendar
@@ -464,7 +461,6 @@ Date,Title,Status,Attendance,Attendance source
 2017-07-12T08:00Z,"University of Leeds event",CONFIRMED,10,Calendar
 2017-07-13T08:00Z,"Nhs choices technology away day",CONFIRMED,0,Calendar
 2017-07-17T08:00Z,"WYCA cycling campaign meet",CONFIRMED,8,Calendar
-2017-07-19T17:00Z,"Cloud International ",CONFIRMED,0,Calendar
 2017-07-24T12:00Z,"ODI Lunchtime Lecture SPECIAL - Sir Tim Berners-Lee on Personal Data",CONFIRMED,27,Calendar
 2017-07-26T12:00Z,"SmartKlub  Solar Solutuons for Leeds",CONFIRMED,25,Calendar
 2017-09-05T09:00Z,"Climathon",CONFIRMED,9,Calendar
@@ -525,7 +521,8 @@ Date,Title,Status,Attendance,Attendance source
 2018-01-18T18:30Z,"CoCo talk Meetup ",CONFIRMED,30,Calendar
 2018-01-19T13:00Z,"ODI Lunchtime Lecture stream - The local authority that went 'guerilla'",CONFIRMED,1,Calendar
 2018-01-23T09:30Z,"Waste Less in Leeds Meet up",CONFIRMED,27,Calendar
-2018-01-24T09:30Z,"Yorkshire Water",CONFIRMED,20,Calendar
+2018-01-24T09:30Z,"Yorkshire Water",CONFIRMED,0,Calendar
+2018-01-24T10:00Z,"Yorkshire Water off site",CONFIRMED,20,Calendar
 2018-01-24T13:30Z,"Urban commons",CONFIRMED,0,Calendar
 2018-01-25T09:30Z,"WYCA 'Open Workshop'",CONFIRMED,0,Calendar
 2018-01-25T15:00Z,"Open Government Network workshop",CONFIRMED,7,Calendar
@@ -597,6 +594,7 @@ Date,Title,Status,Attendance,Attendance source
 2018-05-15T08:00Z,"Food Standards Agency Innovation Day",CONFIRMED,21,Calendar
 2018-05-15T17:30Z,"Leeds DeVops",CONFIRMED,0,Calendar
 2018-05-18T08:30Z,"#WaterData18",CONFIRMED,47,Calendar
+2018-05-22T09:00Z,"NHS England",CONFIRMED,0,Calendar
 2018-05-22T09:00Z,"University of Leeds Team Meeting",CONFIRMED,9,Calendar
 2018-05-23T08:30Z,"NHS New Knowledge - hack day",CONFIRMED,31,Calendar
 2018-05-24T07:30Z,"Siemens innovation workshop",CONFIRMED,0,Calendar
@@ -616,7 +614,9 @@ Date,Title,Status,Attendance,Attendance source
 2018-06-27T08:30Z,"Leeds City council and ripple workshop",CONFIRMED,10,Calendar
 2018-06-28T08:30Z,"Leeds City council and ripple",CONFIRMED,10,Calendar
 2018-07-06T12:00Z,"Department of Transport virtual launch",CONFIRMED,0,Calendar
+2018-07-10T08:30Z,"Yorkshire Water Innovation Pathway",CONFIRMED,0,Calendar
 2018-07-10T08:30Z,"Department of Transport Innovation Series",CONFIRMED,55,Calendar
+2018-07-12T08:00Z,"Yorkshire Water workshop",CONFIRMED,9,Calendar
 2018-07-12T08:00Z,"Leeds City council team meeting",CONFIRMED,9,Calendar
 2018-07-13T08:30Z,"ODI Leeds Sponsor Update & Working Group",CONFIRMED,16,Calendar
 2018-07-17T08:00Z,"NHS Digital Graduate Academy",CONFIRMED,31,Calendar
@@ -632,6 +632,7 @@ Date,Title,Status,Attendance,Attendance source
 2018-09-11T13:00Z,"Leeds Cross-Gov Meetup",CONFIRMED,30,Calendar
 2018-09-12T08:30Z,"NHS Digital Academy",CONFIRMED,50,Calendar
 2018-09-14T08:30Z,"NHS Digital Academy",CONFIRMED,50,Calendar
+2018-09-14T09:00Z,"Open Data Collaboration session",CONFIRMED,4,Calendar
 2018-09-17T13:00Z,"Leeds City Council staff engagement",CONFIRMED,31,Calendar
 2018-09-18T08:00Z,"Leeds University of Art",CONFIRMED,7,Calendar
 2018-09-18T17:00Z,"Leeds HR and People Analytics Meet up",CONFIRMED,0,Calendar
@@ -645,27 +646,22 @@ Date,Title,Status,Attendance,Attendance source
 2018-10-05T12:00Z,"ODI Fridays Lunchtime Lecture",CONFIRMED,0,Calendar
 2018-10-16T17:00Z,"Tableau User Group Yorkshire",CONFIRMED,52,Calendar
 2018-10-17T09:00Z,"Open Data Collaboration meeting",CONFIRMED,0,Calendar
-2018-10-18T08:30Z,"Leeds Safeguarding Adults Board",CONFIRMED,28,Calendar
 2018-10-25T08:30Z,"Transport and Economy Data Summit",CONFIRMED,30,Calendar
-2018-11-08T12:00Z,"NHS Digital ",CONFIRMED,9,Calendar
-2018-11-09T12:00Z,"21st Century Mindset",CONFIRMED,20,Calendar
 2018-11-12T10:00Z,"NHS Digital ",CONFIRMED,11,Calendar
 2018-11-13T08:00Z,"Passenger Innovation Day 4",CONFIRMED,0,Calendar
 2018-11-14T10:00Z,"Transport for the North ",CONFIRMED,30,Calendar
 2018-11-14T17:00Z,"The OR Society",CONFIRMED,21,Calendar
-2018-11-15T09:00Z,"Voice 21 Training",CONFIRMED,15,Calendar
 2018-11-16T11:00Z,"Digital DWP Meet",CONFIRMED,54,Calendar
 2018-11-19T08:30Z,"NHS Digital - Data Visualisation Training",CONFIRMED,25,Calendar
 2018-11-20T13:00Z,"Creative England and CDI Gaming Event",CONFIRMED,26,Calendar
 2018-11-21T10:00Z,"Open Data Collaboration meeting",CONFIRMED,12,Calendar
 2018-11-22T09:00Z,"Leeds city council innovation lab",CONFIRMED,26,Calendar
-2018-11-23T09:00Z,"NHS Leeds Clinical Commissioning ",CONFIRMED,6,Calendar
 2018-11-26T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,27,Calendar
 2018-11-27T09:00Z,"Yorkshire Sport",CONFIRMED,70,Calendar
 2018-11-28T08:30Z,"Waste Management Smart Class 2018",CONFIRMED,32,Calendar
 2018-11-29T09:00Z,"Homes England",CONFIRMED,60,Calendar
 2018-12-04T09:00Z,"Leeds city council digital summit",CONFIRMED,71,Calendar
-2018-12-05T09:00Z,"NHS Digital - QA Digital Degree Apprenticeship sign up ",CONFIRMED,20,Calendar
+2018-12-05T09:00Z,"bjss",CONFIRMED,0,Calendar
 2018-12-06T18:30Z,"Devops",CONFIRMED,76,Calendar
 2018-12-10T09:00Z,"NHS Digital Degree Apprentice Hackathon ",CONFIRMED,19,Calendar
 2018-12-11T09:00Z,"NHS Digital - National Integration Workshop",CONFIRMED,6,Calendar
@@ -676,24 +672,28 @@ Date,Title,Status,Attendance,Attendance source
 2018-12-13T12:00Z,"Geolytix",CONFIRMED,23,Calendar
 2018-12-14T15:00Z,"Christmas Jumper Day at ODI Leeds",CONFIRMED,0,Calendar
 2018-12-19T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,0,Calendar
+2019-01-09,"Open Data Collab Meeting ",CONFIRMED,6,Calendar
 2019-01-09T09:00Z,"bjss ",CONFIRMED,5,Calendar
 2019-01-14T09:30Z,"NHS Digital - Developing Leaders of Change Workshop ",CONFIRMED,18,Calendar
+2019-01-15,"Pete - Meeting with Alex",CONFIRMED,0,Calendar
+2019-01-15T09:00Z,"NHS Digital - Data, Insights and Statistics Transformation Board Meeting ",CONFIRMED,11,Calendar
 2019-01-15T09:00Z,"NHS Digital - BC Masterclass - Capgemini",CONFIRMED,12,Calendar
 2019-01-17T09:00Z,"The Bureau of Investigative Journalism",CONFIRMED,6,Calendar
 2019-01-18T09:00Z,"Leeds City Council & NHS Innovation Meeting ",CONFIRMED,30,Calendar
 2019-01-22T09:00Z,"Transport for the North",CONFIRMED,14,Calendar
 2019-01-23T09:00Z,"Yorkshire Building Society ",CONFIRMED,12,Calendar
 2019-01-24T18:45Z,"Leeds Devops ",CONFIRMED,75,Calendar
-2019-01-28T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
-2019-01-29T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
 2019-01-29T14:00Z,"DWP - Leeds Gov Design Meets",CONFIRMED,25,Calendar
-2019-01-30T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
+2019-01-31,"Lisa - Drop in coworking & meeting with Paul",CONFIRMED,0,Calendar
 2019-01-31T09:00Z,"NHS Digital ",CONFIRMED,17,Calendar
+2019-02-04,"Pete - meeting with data city",CONFIRMED,0,Calendar
 2019-02-04T13:00Z,"Leeds City Council Cabinet",CONFIRMED,40,Calendar
 2019-02-05T10:00Z,"NHS Digital ",CONFIRMED,6,Calendar
+2019-02-06T09:00Z,"Voice 21 Oracy Pioneers Programme",CONFIRMED,14,Calendar
 2019-02-06T09:00Z,"Leeds Federated Housing Association",CONFIRMED,100,Calendar
 2019-02-07T09:00Z,"Impact Research ",CONFIRMED,16,Calendar
 2019-02-11T09:00Z,"Magpie",CONFIRMED,28,Calendar
+2019-02-13,"Open Data Collab Meeting ",CONFIRMED,3,Calendar
 2019-02-13T12:30Z,"NHS Digital - DPS Full Team Meeting",CONFIRMED,42,Calendar
 2019-02-13T18:30Z,"Jet2",CONFIRMED,25,Calendar
 2019-02-14T09:00Z,"DfT Cycling Infrastructure & open data workshop",CONFIRMED,16,Calendar
@@ -708,7 +708,9 @@ Date,Title,Status,Attendance,Attendance source
 2019-03-01T09:00Z,"TFN Private Sponsors Working Group",CONFIRMED,14,Calendar
 2019-03-01T10:00Z,"DWP - Northern Product People Meet Up ",CONFIRMED,33,Calendar
 2019-03-04T09:00Z,"NHS Digital ",CONFIRMED,15,Calendar
+2019-03-04T09:00Z,"NHS Employers",CONFIRMED,5,Calendar
 2019-03-05T09:00Z,"NHS SynAE Innovation session",CONFIRMED,24,Calendar
+2019-03-05T09:00Z,"NHS Digital",CONFIRMED,15,Calendar
 2019-03-06T08:00Z,"NHS Digital private sponsors meet",CONFIRMED,14,Calendar
 2019-03-06T09:00Z,"Unilever SC & R&D Off Site Meeting",CONFIRMED,45,Calendar
 2019-03-07T08:00Z,"NHS Digital private sponsors meeting",CONFIRMED,15,Calendar
@@ -724,6 +726,7 @@ Date,Title,Status,Attendance,Attendance source
 2019-03-19T08:00Z,"DELL - Breakfast Meet - Cyber Recovery",CONFIRMED,10,Calendar
 2019-03-19T10:00Z,"Voice 21 ",CONFIRMED,6,Calendar
 2019-03-19T18:30Z,"Leeds Devops",CONFIRMED,88,Calendar
+2019-03-21,"All day event (Cancelled)",CONFIRMED,0,Calendar
 2019-03-21T17:30Z,"Accountancy Extra",CONFIRMED,20,Calendar
 2019-03-22T13:00Z,"ODI Fridays: How ODI Leeds discovered that bad transport is impacting the Birmingham economy",CONFIRMED,20,Calendar
 2019-03-25T09:00Z,"Yorkshire Water",CONFIRMED,6,Calendar
@@ -735,6 +738,7 @@ Date,Title,Status,Attendance,Attendance source
 2019-04-01T08:00Z,"Environment Agency",CONFIRMED,12,Calendar
 2019-04-02T09:00Z,"NIHR",CONFIRMED,12,Calendar
 2019-04-03T09:00Z,"DWP",CONFIRMED,12,Calendar
+2019-04-04,"Open Data Collab Meeting ",CONFIRMED,7,Calendar
 2019-04-04T08:00Z,"DWP",CONFIRMED,12,Calendar
 2019-04-08T08:00Z,"Yorkshire Water - Alyson",CONFIRMED,0,Calendar
 2019-04-15T08:00Z,"Transport for the North",CONFIRMED,15,Calendar
@@ -748,12 +752,15 @@ Date,Title,Status,Attendance,Attendance source
 2019-04-30T08:00Z,"NHS Digital ",CONFIRMED,35,Calendar
 2019-04-30T17:30Z,"Leeds Devops",CONFIRMED,75,Calendar
 2019-05-01T08:00Z,"NHS Digital ",CONFIRMED,40,Calendar
+2019-05-02,"Northernlands - start up cafe",CONFIRMED,0,Calendar
 2019-05-02T08:00Z,"Northernlands Data & Startup Summit",CONFIRMED,120,Calendar
 2019-05-08T11:00Z,"Leeds City Council",CONFIRMED,74,Calendar
+2019-05-08T11:30Z,"Leeds City Council",CONFIRMED,7,Calendar
 2019-05-13T08:00Z,"Leeds City Council",CONFIRMED,35,Calendar
 2019-05-14T08:00Z,"NHS Digital",CONFIRMED,15,Calendar
 2019-05-14T10:00Z,"Hubbub",CONFIRMED,20,Calendar
 2019-05-15T08:00Z,"NHS Digital",CONFIRMED,15,Calendar
+2019-05-15T08:00Z,"NIHR",CONFIRMED,5,Calendar
 2019-05-15T12:00Z,"NHS Digital ",CONFIRMED,40,Calendar
 2019-05-16T08:00Z,"JRF",CONFIRMED,30,Calendar
 2019-05-16T09:00Z,"Where There's Smoke",CONFIRMED,50,Calendar
@@ -769,31 +776,43 @@ Date,Title,Status,Attendance,Attendance source
 2019-06-05T08:00Z,"Blue Anvil",CONFIRMED,5,Calendar
 2019-06-05T11:00Z,"NHS Digital",CONFIRMED,15,Calendar
 2019-06-06T08:00Z,"NHS Digital",CONFIRMED,22,Calendar
+2019-06-06T08:00Z,"Blue Anvil",CONFIRMED,5,Calendar
 2019-06-07T08:00Z,"NHS Digital",CONFIRMED,18,Calendar
+2019-06-07T08:00Z,"Blue Anvil",CONFIRMED,5,Calendar
 2019-06-10T12:00Z,"Hubbub",CONFIRMED,20,Calendar
 2019-06-11T09:00Z,"Data Collab meet",CONFIRMED,20,Calendar
 2019-06-12T08:00Z,"User Crunch",CONFIRMED,6,Calendar
 2019-06-13T08:00Z,"Yorkshire Water conference ",CONFIRMED,25,Calendar
+2019-06-13T08:00Z,"Leeds City Council ",CONFIRMED,22,Calendar
 2019-06-18T08:00Z,"NHS Digital",CONFIRMED,15,Calendar
-2019-06-19T08:00Z,"Sistrix GmbH",CONFIRMED,16,Calendar
+2019-06-19T08:00Z,"NHS Digital",CONFIRMED,16,Calendar
+2019-06-19T08:00Z,"Sistrix GmbH",CONFIRMED,2,Calendar
 2019-06-19T16:30Z,"DWP",CONFIRMED,16,Calendar
 2019-06-20T07:30Z,"SMART Classes ",CONFIRMED,33,Calendar
 2019-06-20T13:00Z,"Cross Gov Meet up",CONFIRMED,47,Calendar
 2019-06-21T11:30Z,"Hack for Impact: Yorkshire - Warm-up Session",CONFIRMED,30,Calendar
 2019-06-25T08:00Z,"University of Leeds",CONFIRMED,15,Calendar
+2019-06-26,"ODI Data Ethics canvas",CONFIRMED,0,Calendar
 2019-06-26T08:00Z,"NHS Digital",CONFIRMED,15,Calendar
+2019-06-26T08:00Z,"The Coders Guild",CONFIRMED,7,Calendar
 2019-06-27T11:30Z,"Introduction to Data Ethics and the Data Ethics Canvas (at ODI Leeds)",CONFIRMED,5,Calendar
 2019-06-27T15:30Z,"ODI Leeds & ODI HQ - Open Meetup - Building Trust in How Organisations Use Data",CONFIRMED,38,Calendar
 2019-07-09T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-07-09T09:30Z,"Connected Places Catapult",CONFIRMED,17,Calendar
-2019-07-10T08:00Z,"The Coders Guild",CONFIRMED,17,Calendar
+2019-07-10T08:00Z,"BPDTS DWP Digital Group",CONFIRMED,17,Calendar
+2019-07-10T08:00Z,"The Coders Guild",CONFIRMED,7,Calendar
 2019-07-10T09:00Z,"Data Collaboration Group",CONFIRMED,9,Calendar
+2019-07-15,"Open data in a day training",CONFIRMED,0,Calendar
+2019-07-16T08:00Z,"Hack for Impact: Yorkshire (External)",CONFIRMED,21,Calendar
 2019-07-16T08:00Z,"Cross Government Meet Up",CONFIRMED,23,Calendar
 2019-07-17T06:30Z,"Leeds City Council",CONFIRMED,15,Calendar
 2019-07-17T09:00Z,"FME",CONFIRMED,11,Calendar
 2019-07-17T12:00Z,"A DfT Data Strategy - what do we need and what do we want? LEEDS",CONFIRMED,33,Calendar
 2019-07-23T08:00Z,"NHS Digital Training Academy",CONFIRMED,50,Calendar
+2019-07-23T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
+2019-07-24,"MIT reap event",CONFIRMED,0,Calendar
 2019-07-24T08:00Z,"DWP",CONFIRMED,24,Calendar
+2019-07-24T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-07-30T09:00Z,"TfN",CONFIRMED,19,Calendar
 2019-07-30T16:30Z,"Leeds Devops",CONFIRMED,65,Calendar
 2019-07-31T17:00Z,"Organising the Organisers",CONFIRMED,5,Calendar
@@ -801,36 +820,47 @@ Date,Title,Status,Attendance,Attendance source
 2019-08-05T08:00Z,"Yorkshire Water",CONFIRMED,10,Calendar
 2019-08-06T08:00Z,"DWP BPDTS",CONFIRMED,15,Calendar
 2019-08-07T08:00Z,"DWP",CONFIRMED,28,Calendar
-2019-08-09T00:00Z,"Yorkshire Water",CONFIRMED,0,Calendar
-2019-08-09T08:00Z,"Yorkshire Water",CONFIRMED,12,Calendar
+2019-08-07T08:00Z,"NHS Digital ",CONFIRMED,5,Calendar
+2019-08-07T08:00Z,"NIHR",CONFIRMED,7,Calendar
 2019-08-13T08:00Z,"NHS Digital",CONFIRMED,10,Calendar
 2019-08-14T08:00Z,"BPDTS DWP Digital Group",CONFIRMED,17,Calendar
-2019-08-15T12:30Z,"TFN",CONFIRMED,13,Calendar
-2019-08-16T08:00Z,"Yorkshire Water",CONFIRMED,33,Calendar
+2019-08-15T12:30Z,"TFN",CONFIRMED,5,Calendar
+2019-08-15T12:30Z,"The Future of Local Growth Funding - Session 1",CONFIRMED,13,Calendar
 2019-08-19T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-08-20T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
+2019-08-20T08:00Z,"Cox Auto",CONFIRMED,6,Calendar
 2019-08-21T07:30Z,"The Agency Collective",CONFIRMED,9,Calendar
 2019-08-21T13:00Z,"NPG - planning session",CONFIRMED,6,Calendar
-2019-08-23T08:00Z,"Yorkshire Water",CONFIRMED,17,Calendar
+2019-08-23T08:00Z,"Landor LINKS",CONFIRMED,4,Calendar
+2019-08-27,"Lizzie McCloy Meeting with Paul ",CONFIRMED,0,Calendar
 2019-08-29T08:00Z,"Yorkshire Water",CONFIRMED,53,Calendar
+2019-08-30,"Paul Connell - presenting to US delegates ",CONFIRMED,30,Calendar
 2019-09-02T16:30Z,"The Agile Trainer",CONFIRMED,23,Calendar
 2019-09-03T08:00Z,"The Data City",CONFIRMED,2,Calendar
+2019-09-04,"Inclusive growth digital city workshop",CONFIRMED,0,Calendar
 2019-09-04T12:00Z,"#OpenGovTech Launch at Wuthering Bytes",CONFIRMED,12,Calendar
 2019-09-05T08:00Z,"Cox Auto",CONFIRMED,5,Calendar
-2019-09-06T08:00Z,"Yorkshire Water",CONFIRMED,23,Calendar
+2019-09-06,"Use of Co-working space",CONFIRMED,0,Calendar
 2019-09-09T08:00Z,"NHS Digital Training Academy",CONFIRMED,59,Calendar
 2019-09-10T08:00Z,"NHS Digital Training Academy",CONFIRMED,59,Calendar
-2019-09-11T08:00Z,"The Coders Guild",CONFIRMED,12,Calendar
+2019-09-10T08:30Z,"Data City",CONFIRMED,4,Calendar
+2019-09-11T08:00Z,"The Coders Guild",CONFIRMED,6,Calendar
+2019-09-11T08:00Z,"NHS Digital Training Academy",CONFIRMED,59,Calendar
+2019-09-11T08:00Z,"BPDTS DWP Digital Group",CONFIRMED,12,Calendar
+2019-09-12,"Places for Growth - Health Innovation in Leeds",CONFIRMED,3,Calendar
 2019-09-12T08:00Z,"NHS Digital Training Academy",CONFIRMED,27,Calendar
 2019-09-13T08:00Z,"Yorkshire Water",CONFIRMED,26,Calendar
 2019-09-16T16:00Z,"Leeds Devops",CONFIRMED,67,Calendar
 2019-09-17T07:30Z,"Yorkshire Water",CONFIRMED,7,Calendar
 2019-09-17T10:00Z,"Given London",CONFIRMED,26,Calendar
 2019-09-18T07:30Z,"Yorkshire Water",CONFIRMED,12,Calendar
+2019-09-18T08:00Z,"Cox Auto",CONFIRMED,13,Calendar
 2019-09-18T09:00Z,"Open Data Collaboration Group",CONFIRMED,7,Calendar
 2019-09-18T12:00Z,"Leeds City Council",CONFIRMED,35,Calendar
 2019-09-19T08:00Z,"Digital Transform Forum",CONFIRMED,48,Calendar
 2019-09-20T08:00Z,"Yorkshire Water",CONFIRMED,13,Calendar
+2019-09-20T08:30Z,"Zero Waste Leeds",CONFIRMED,20,Calendar
+2019-09-24T08:00Z,"The Coders Guild",CONFIRMED,6,Calendar
 2019-09-24T08:00Z,"Yorkshire Water",CONFIRMED,6,Calendar
 2019-09-25T06:00Z,"ESRI",CONFIRMED,95,Calendar
 2019-09-25T08:00Z,"The Coders Guild",CONFIRMED,7,Calendar
@@ -839,153 +869,209 @@ Date,Title,Status,Attendance,Attendance source
 2019-09-27T08:00Z,"Yorkshire Water",CONFIRMED,13,Calendar
 2019-09-27T11:30Z,"Hack For Impact followup",CONFIRMED,9,Calendar
 2019-10-01T08:00Z,"Yorkshire Water",CONFIRMED,10,Calendar
+2019-10-02T08:00Z,"Yorkshire Water",CONFIRMED,11,Calendar
 2019-10-02T08:00Z,"NHS Leeds CCG ",CONFIRMED,78,Calendar
 2019-10-03T08:30Z,"ODI Leeds",CONFIRMED,2,Calendar
-2019-10-08T08:00Z,"The Coders Guild",CONFIRMED,26,Calendar
-2019-10-09T08:00Z,"The Coders Guild",CONFIRMED,30,Calendar
-2019-10-09T09:00Z,"BPDTS DWP Digital Group",CONFIRMED,15,Calendar
+2019-10-04,"Connected Bradford: Building a world-beating data tapestry",CONFIRMED,1,Calendar
+2019-10-08T08:00Z,"University of Leeds",CONFIRMED,20,Calendar
+2019-10-08T08:00Z,"Leeds City Council",CONFIRMED,26,Calendar
+2019-10-08T08:00Z,"The Coders Guild",CONFIRMED,7,Calendar
+2019-10-09,"DFES progression meeting",CONFIRMED,4,Calendar
+2019-10-09T08:00Z,"WYCA",CONFIRMED,30,Calendar
+2019-10-09T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-10-10T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-10-11T08:00Z,"Cox Auto",CONFIRMED,10,Calendar
+2019-10-11T08:00Z,"The Coders Guild",CONFIRMED,0,Calendar
 2019-10-14T08:00Z,"InterOpen",CONFIRMED,123,Calendar
 2019-10-15T08:00Z,"InterOpen",CONFIRMED,95,Calendar
+2019-10-16T08:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-10-16T08:00Z,"Leeds City Council",CONFIRMED,27,Calendar
 2019-10-17T08:00Z,"BPDTS",CONFIRMED,8,Calendar
 2019-10-18T08:00Z,"Yorkshire Water",CONFIRMED,15,Calendar
 2019-10-22T08:00Z,"Leeds Gov Jam",CONFIRMED,54,Calendar
 2019-10-23T08:00Z,"Leeds Gov Jam",CONFIRMED,53,Calendar
+2019-10-24,"Small meeting in co-working area",CONFIRMED,6,Calendar
 2019-10-24T16:30Z,"Leeds Devops",CONFIRMED,50,Calendar
 2019-10-25T08:00Z,"Yorkshire Water",CONFIRMED,9,Calendar
 2019-10-28T09:00Z,"Yorkshire Water",CONFIRMED,4,Calendar
 2019-10-28T10:00Z,"WYCA",CONFIRMED,23,Calendar
 2019-10-29T09:00Z,"TFN",CONFIRMED,20,Calendar
-2019-10-30T09:00Z,"NHS Digital",CONFIRMED,12,Calendar
+2019-10-29T09:00Z,"The Local Trust",CONFIRMED,21,Calendar
+2019-10-30T09:00Z,"Cox Auto",CONFIRMED,12,Calendar
+2019-10-30T09:00Z,"NHS Digital",CONFIRMED,4,Calendar
 2019-11-01T09:00Z,"Yorkshire Water",CONFIRMED,17,Calendar
 2019-11-05T13:30Z,"Yorkshire Water",CONFIRMED,9,Calendar
 2019-11-06T09:30Z,"University of Leeds",CONFIRMED,73,Calendar
 2019-11-07T09:00Z,"Yorkshire Water",CONFIRMED,10,Calendar
+2019-11-07T09:00Z,"DWP",CONFIRMED,20,Calendar
+2019-11-07T09:00Z,"Yorkshire Water",CONFIRMED,23,Calendar
 2019-11-07T10:30Z,"DFES Progression Meeting",CONFIRMED,7,Calendar
 2019-11-11T09:00Z,"Yorkshire Water",CONFIRMED,12,Calendar
 2019-11-12T09:00Z,"The Coders Guild",CONFIRMED,12,Calendar
 2019-11-12T12:00Z,"NHS Digital ",CONFIRMED,32,Calendar
 2019-11-13T09:00Z,"NHS Digital ",CONFIRMED,32,Calendar
-2019-11-13T10:00Z,"BPDTS DWP Digital Group",CONFIRMED,17,Calendar
+2019-11-13T09:00Z,"The Coders Guild",CONFIRMED,6,Calendar
+2019-11-14,"Paul Connell attending workshop ",CONFIRMED,1,Calendar
 2019-11-14T09:00Z,"University of Leeds",CONFIRMED,60,Calendar
 2019-11-15T09:00Z,"University of Leeds",CONFIRMED,60,Calendar
 2019-11-18T09:00Z,"Yorkshire Water ",CONFIRMED,12,Calendar
+2019-11-18T09:00Z,"The Agile Trainer",CONFIRMED,17,Calendar
 2019-11-19T09:00Z,"Yorkshire Water ",CONFIRMED,12,Calendar
+2019-11-19T09:00Z,"The Agile Trainer",CONFIRMED,14,Calendar
 2019-11-20T09:00Z,"Open Data Collab Meet",CONFIRMED,5,Calendar
 2019-11-20T18:00Z,"Leeds Devops",CONFIRMED,90,Calendar
 2019-11-21T09:00Z,"NHS Digital ",CONFIRMED,4,Calendar
+2019-11-22,"Paul Connell meeting with NHS DIgital",CONFIRMED,0,Calendar
+2019-11-22T09:00Z,"BPDTS",CONFIRMED,4,Calendar
 2019-11-22T09:00Z,"Yorkshire Water",CONFIRMED,10,Calendar
 2019-11-22T13:00Z,"University of Leeds",CONFIRMED,16,Calendar
 2019-11-25T09:00Z,"TfN - Customer Information Innovation",CONFIRMED,45,Calendar
+2019-11-25T09:00Z,"The Agile Trainer",CONFIRMED,7,Calendar
 2019-11-26T09:00Z,"The Coders Guild",CONFIRMED,7,Calendar
+2019-11-26T09:00Z,"The Agile Trainer",CONFIRMED,7,Calendar
 2019-11-26T10:00Z,"NHSX",CONFIRMED,32,Calendar
+2019-11-27,"FME Group",CONFIRMED,4,Calendar
 2019-11-27T09:00Z,"The Coders Guild",CONFIRMED,7,Calendar
+2019-11-28T09:00Z,"Yorkshire Water",CONFIRMED,7,Calendar
 2019-11-28T09:00Z,"Leeds City Council",CONFIRMED,30,Calendar
 2019-11-29T10:00Z,"Planet Data 2019 - Radically Open Solutions to Climate Change",CONFIRMED,65,Calendar
 2019-12-02T08:30Z,"Yorkshire Water",CONFIRMED,20,Calendar
 2019-12-03T08:30Z,"Yorkshire Water",CONFIRMED,12,Calendar
+2019-12-03T09:00Z,"NHS Digital",CONFIRMED,32,Calendar
 2019-12-03T10:00Z,"DigiEIA session",CONFIRMED,15,Calendar
 2019-12-04T08:30Z,"Yorkshire Water",CONFIRMED,14,Calendar
+2019-12-04T09:00Z,"TFN",CONFIRMED,20,Calendar
 2019-12-05T08:30Z,"Yorkshire Water",CONFIRMED,11,Calendar
+2019-12-05T09:00Z,"Yorkshire Water",CONFIRMED,11,Calendar
+2019-12-05T09:00Z,"NHS DIGITAL ",CONFIRMED,15,Calendar
 2019-12-06T08:30Z,"Yorkshire Water ",CONFIRMED,12,Calendar
 2019-12-09T09:30Z,"DWP ",CONFIRMED,46,Calendar
 2019-12-09T13:00Z,"Yorkshire Water",CONFIRMED,11,Calendar
+2019-12-10,"KPMG",CONFIRMED,0,Calendar
 2019-12-10T09:00Z,"Cox Auto",CONFIRMED,11,Calendar
-2019-12-11T09:00Z,"The Coders Guild",CONFIRMED,12,Calendar
+2019-12-11T09:00Z,"The Coders Guild",CONFIRMED,8,Calendar
 2019-12-12T09:00Z,"The Coders Guild ",CONFIRMED,6,Calendar
+2019-12-12T12:00Z,"Yorkshire Water",CONFIRMED,12,Calendar
 2019-12-12T12:00Z,"NHS Digital",CONFIRMED,40,Calendar
 2019-12-13T09:00Z,"The Coders Guild",CONFIRMED,6,Calendar
 2019-12-17T09:00Z,"The Coders Guild",CONFIRMED,6,Calendar
 2019-12-17T10:00Z,"WYCA private sponsors event",CONFIRMED,24,Calendar
 2019-12-17T12:00Z,"NHSX Scoping Session",CONFIRMED,10,Calendar
 2019-12-18T09:00Z,"Yorkshire Water",CONFIRMED,8,Calendar
+2019-12-18T09:30Z,"University of Leeds meeting",CONFIRMED,8,Calendar
 2019-12-19T09:30Z,"Yorkshire Water (private sponsors meeting)",CONFIRMED,15,Calendar
+2020-01-07T09:00Z,"Deloitte Meeting",CONFIRMED,14,Calendar
+2020-01-07T09:00Z,"Yorkshire Water meeting",CONFIRMED,8,Calendar
 2020-01-07T09:00Z,"BPDTS - DWP",CONFIRMED,20,Calendar
 2020-01-08T09:00Z,"Yorkshire Water",CONFIRMED,14,Calendar
+2020-01-09T09:00Z,"NHS CCG Leeds",CONFIRMED,6,Calendar
 2020-01-09T09:00Z,"Coders Guild",CONFIRMED,6,Calendar
 2020-01-13T09:00Z,"Yorkshire Water meeting",CONFIRMED,4,Calendar
+2020-01-13T09:00Z,"Leeds City Council Away Day",CONFIRMED,4,Calendar
 2020-01-14T15:45Z,"Homes England set up",CONFIRMED,6,Calendar
 2020-01-15T00:00Z,"HOMES ENGLAND",CONFIRMED,76,Calendar
 2020-01-16T09:00Z,"NHS X",CONFIRMED,34,Calendar
 2020-01-16T14:30Z,"Ministerial Visit - Chris Skidmore Minister for Universities, Science and Innovation",CONFIRMED,7,Calendar
-2020-01-17T12:00Z,"Leeds Road Safety Data - Project Scoping",CONFIRMED,0,Calendar
+2020-01-17T12:00Z,"Leeds Road Safety Data - Project Scoping",CONFIRMED,3,Calendar
 2020-01-20T09:00Z,"Yorkshire water RCA meeting",CONFIRMED,10,Calendar
 2020-01-21T09:00Z,"Yorkshire water",CONFIRMED,45,Calendar
+2020-01-21T09:30Z,"Nhsx meeting",CONFIRMED,27,Calendar
 2020-01-21T13:00Z,"Transport for the North meeting",CONFIRMED,6,Calendar
 2020-01-22T09:00Z,"First Direct ",CONFIRMED,60,Calendar
-2020-01-23T09:00Z,"University of Leeds meeting",CONFIRMED,50,Calendar
-2020-01-24T09:00Z,"#OpenDataSavesLives Launch - LEEDS",CONFIRMED,0,Calendar
+2020-01-23,"Open Data Saves Lives - Bradford",CONFIRMED,12,Calendar
+2020-01-23T09:00Z,"Coders Guild",CONFIRMED,8,Calendar
+2020-01-23T09:00Z,"University of Leeds meeting",CONFIRMED,8,Calendar
+2020-01-23T09:00Z,"University of Leeds",CONFIRMED,50,Calendar
+2020-01-24T09:00Z,"Coders guild",CONFIRMED,0,Calendar
+2020-01-24T09:00Z,"University of Leeds meeting",CONFIRMED,0,Calendar
+2020-01-24T09:00Z,"#OpenDataSavesLives Launch - LEEDS",CONFIRMED,14,Calendar
 2020-01-28T09:00Z,"Nhs england",CONFIRMED,12,Calendar
 2020-01-29T09:00Z,"WYCA Meeting",CONFIRMED,12,Calendar
-2020-02-03T10:00Z,"Northern Gas Networks meeting",CONFIRMED,0,Calendar
+2020-02-03T10:00Z,"Northern Gas Networks meeting",CONFIRMED,2,Calendar
 2020-02-05T09:00Z,"Yorkshire Water workshop",CONFIRMED,35,Calendar
 2020-02-06T09:30Z,"NHS digital",CONFIRMED,12,Calendar
 2020-02-07T11:00Z,"Climate Resilience chat",CONFIRMED,2,Calendar
 2020-02-10T09:30Z,"Yorkshire water",CONFIRMED,11,Calendar
 2020-02-11T09:00Z,"DWP meeting",CONFIRMED,33,Calendar
 2020-02-11T10:00Z,"DigiEIA UX testing workshop",CONFIRMED,10,Calendar
-2020-02-12T09:00Z,"BPDTS DWP Digital Group",CONFIRMED,16,Calendar
+2020-02-12T09:30Z,"Yorkshire Water coworking group",CONFIRMED,6,Calendar
 2020-02-12T10:00Z,"NHS Digital Directors Away Da",CONFIRMED,20,Calendar
+2020-02-13T08:30Z,"Yorkshire Water Online Community",CONFIRMED,13,Calendar
 2020-02-13T13:00Z,"Enervate Interviews",CONFIRMED,3,Calendar
-2020-02-14T11:00Z,"DFES Phase 2 Workshop",CONFIRMED,0,Calendar
+2020-02-14T11:00Z,"DFES Phase 2 Workshop",CONFIRMED,4,Calendar
 2020-02-19T09:30Z,"Northern Gas Networks",CONFIRMED,12,Calendar
 2020-02-19T13:00Z,"Yorkshire Water",CONFIRMED,6,Calendar
 2020-02-25T09:00Z,"Yorkshire Water meeting",CONFIRMED,14,Calendar
+2020-02-25T09:30Z,"Yorkshire Water - meeting KJ",CONFIRMED,13,Calendar
+2020-02-26T09:30Z,"Yorkshire Water",CONFIRMED,10,Calendar
 2020-02-26T10:00Z,"Open Data Collaboration Group - Feb",CONFIRMED,12,Calendar
+2020-02-27T09:00Z,"Yorkshire Water",CONFIRMED,12,Calendar
 2020-02-27T09:00Z,"NHS Digital and NHS Teaching Trust (Blackpool) Identitiy & Authentication",CONFIRMED,25,Calendar
 2020-03-02T08:00Z,"Agile Affinity training event",CONFIRMED,20,Calendar
 2020-03-02T09:00Z,"nhsx meeting - ",CONFIRMED,20,Calendar
 2020-03-03T08:00Z,"Agile Affinity training event",CONFIRMED,20,Calendar
 2020-03-03T12:00Z,"NHS Digital monthly catch up",CONFIRMED,18,Calendar
+2020-03-04,"Nicolas Malleson - coworking",CONFIRMED,1,Calendar
 2020-03-04T16:00Z,"Data sharing for growth, trust and efficiency (Leeds)",CONFIRMED,30,Calendar
 2020-03-05T09:00Z,"NHSX Away Day",CONFIRMED,100,Calendar
+2020-03-06,"Future Gov - coworking",CONFIRMED,1,Calendar
 2020-03-06T09:30Z,"Distribution Future Energy Scenarios  Workshop - Leeds",CONFIRMED,35,Calendar
 2020-03-06T13:00Z,"Yorkshire WAter meeting",CONFIRMED,6,Calendar
 2020-03-07T11:00Z,"There's A Map For That",CONFIRMED,0,Calendar
+2020-03-10,"NHS Digital - coworking",CONFIRMED,1,Calendar
 2020-03-10T09:00Z,"NHS Digital fortnightly team meet",CONFIRMED,10,Calendar
 2020-03-10T10:00Z,"NHSX Architecture and cyber security",CONFIRMED,8,Calendar
 2020-03-10T13:00Z,"NHS digital - EM meet",CONFIRMED,10,Calendar
-2020-03-11T08:30Z,"Yorkshire Water meeting - Alysn",CONFIRMED,10,Calendar
-2020-03-11T09:30Z,"Yorkshire water cx ops alignment",CONFIRMED,10,Calendar
+2020-03-11,"Yorkshire Water - coworking ",CONFIRMED,2,Calendar
+2020-03-11T08:30Z,"Yorkshire Water meeting - Alysn",CONFIRMED,9,Calendar
+2020-03-11T09:30Z,"Yorkshire water cx ops alignment",CONFIRMED,8,Calendar
 2020-03-16T09:30Z,"NHS Digital",CONFIRMED,4,Calendar
 2020-03-16T12:00Z,"Data City",CONFIRMED,0,Calendar
 2020-03-26T11:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,62,Calendar
 2020-04-02T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,22,Calendar
+2020-04-06,"DFES 2020 kick-off meeting with Northern Power Grid ",CONFIRMED,3,Calendar
+2020-04-08,"Grey Miles meeting with LCC",CONFIRMED,7,Calendar
 2020-04-09T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,21,Calendar
 2020-04-16T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,22,Calendar
+2020-04-23,"Grey Miles meeting with LCC",CONFIRMED,8,Calendar
 2020-04-23T08:30Z,"Microsoft PowerApps Conference",CONFIRMED,0,Calendar
 2020-04-23T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,47,Calendar
 2020-04-29T09:00Z,"Planet Data 2",CONFIRMED,54,Calendar
 2020-04-30T10:00Z,"#OpenDataSavesLives COVID-19",CONFIRMED,33,Calendar
 2020-05-06T09:30Z,"Open Data Collaboration Group meeting",CONFIRMED,22,Calendar
-2020-05-13T10:00Z,"Building a Leeds Data Asset",CONFIRMED,0,Calendar
+2020-05-13T10:00Z,"Building a Leeds Data Asset",CONFIRMED,23,Calendar
+2020-05-14,"Grey Miles meeting with LCC",CONFIRMED,8,Calendar
 2020-05-14T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,45,Calendar
 2020-05-21T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,26,Calendar
 2020-06-04T10:00Z,"#OpenDataSavesLives & COVID-19 online session",CONFIRMED,31,Calendar
 2020-06-11T10:00Z,"#OpenDataSavesLives & COVID19 - Session 10",CONFIRMED,31,Calendar
+2020-06-17,"Open Data Collaboration  Group",CONFIRMED,0,Calendar
 2020-06-18T10:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,24,Calendar
-2020-06-18T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,24,Calendar
 2020-06-25T10:00Z,"#OpenDataSavesLives & COVID19",CONFIRMED,60,Calendar
-2020-06-25T11:00Z,"#OpenDataSavesLives & COVID-19 Session",CONFIRMED,60,Calendar
 2020-07-06T09:00Z,"Northernlands 2 - Day 1",CONFIRMED,334,Calendar
 2020-07-07T09:00Z,"Northernlands 2 - Day 2",CONFIRMED,332,Calendar
+2020-07-09,"NHSX team away day",CONFIRMED,3,Calendar
 2020-07-15T15:00Z,"ODI and ODILeeds Member Meet up - Data IS The Answer (Virtual Event)",CONFIRMED,65,Calendar
 2020-07-16T13:00Z,"#AirHack2 - Warm up event",CONFIRMED,23,Calendar
+2020-07-27,"University of Leeds",CONFIRMED,1,Calendar
+2020-08-03,"University of Leeds",CONFIRMED,1,Calendar
 2020-08-06T10:00Z,"#OpenDataSavesLives Meeting",CONFIRMED,53,Calendar
+2020-08-18,"Data Mill North Catch-up",CONFIRMED,2,Calendar
 2020-08-27T10:00Z,"#OpenDataSavesLives Meeting",CONFIRMED,25,Calendar
 2020-09-09T00:00Z,"Team Not Away Day",CONFIRMED,0,Calendar
 2020-09-10T10:00Z,"#OpenDataSavesLives Meeting",CONFIRMED,45,Calendar
 2020-09-16T00:00Z,"NHSX Away day",CONFIRMED,6,Calendar
 2020-09-17T08:30Z,"NHS X - Away Day Meeting",CONFIRMED,7,Calendar
-2020-09-17T12:30Z,"NHSX - group working",CONFIRMED,0,Calendar
+2020-09-17T12:30Z,"NHSX - group working",CONFIRMED,5,Calendar
 2020-09-18T09:00Z,"Leeds Anchors - Diversity round-table",CONFIRMED,270,Calendar
+2020-09-23,"Leeds City Council - coworking",CONFIRMED,1,Calendar
 2020-09-24T10:00Z,"#OpenDataSavesLives",CONFIRMED,53,Calendar
 2020-09-30T00:00Z,"Child Friendly Leeds",CONFIRMED,65,Calendar
 2020-10-01T09:00Z,"#PlanetData3",CONFIRMED,45,Calendar
 2020-10-01T13:00Z,"#AirHack2",CONFIRMED,22,Calendar
 2020-10-08T10:00Z,"#OpenDataSavesLives",CONFIRMED,27,Calendar
+2020-10-10,"ODI Summit",CONFIRMED,17,Calendar
+2020-10-20,"Leeds City Council - coworking",CONFIRMED,1,Calendar
 2020-10-22T10:00Z,"ODI Leeds - Economic Recovery working session 1",CONFIRMED,21,Calendar
 2020-10-22T15:00Z,"ODI Members Meetup Online - Data is still the Answer to Every Question",CONFIRMED,75,Calendar
 2020-10-27T10:00Z,"NHS Conference",CONFIRMED,12,Calendar
@@ -994,13 +1080,16 @@ Date,Title,Status,Attendance,Attendance source
 2020-11-10T00:00Z,"ODI Summit",CONFIRMED,0,Calendar
 2020-11-19T11:00Z,"#OpenDataSavesLives ",CONFIRMED,33,Calendar
 2020-11-25T11:00Z,"ODI Leeds - Radically Open Recovery working session (series)",CONFIRMED,18,Calendar
-2020-12-02T11:00Z,"Open Data Collab Group",CONFIRMED,0,Calendar
+2020-12-02T11:00Z,"Open Data Collab Group",CONFIRMED,10,Calendar
 2020-12-03T11:00Z,"#OpenDataSavesLives & COVID-19",CONFIRMED,40,Calendar
 2020-12-08T17:00Z,"Shoring Up - Prosperity, Opportunity, and Wellbeing in Coastal Communities ",CONFIRMED,101,Calendar
 2020-12-16T11:00Z,"Radically Open Recovery working session (series)",CONFIRMED,19,Calendar
 2021-01-13T11:00Z,"Radically Open Recovery working session (series)",CONFIRMED,16,Calendar
+2021-01-20,"LAF Exhibitor rehearsal",CONFIRMED,2,Calendar
 2021-01-21T11:00Z,"#OpenDataSavesLives & COVID-19",CONFIRMED,46,Calendar
-2021-01-27T11:00Z,"Open Data Collaboration Group",CONFIRMED,0,Calendar
+2021-01-26,"LAF Exhibitor rehearsal",CONFIRMED,2,Calendar
+2021-01-27,"LAF Exhibitor rehearsal",CONFIRMED,5,Calendar
+2021-01-27T11:00Z,"Open Data Collaboration Group",CONFIRMED,4,Calendar
 2021-01-28T11:00Z,"#OpenDataSavesLives & COVID-19",CONFIRMED,61,Calendar
 2021-02-08T15:45Z,"Leeds Apprenticeship Festival 2021 - Live Meet & Greet Sessions",CONFIRMED,6364,Calendar
 2021-02-09T15:45Z,"Leeds Apprenticeship Festival 2021 - Live Meet & Greet Sessions",CONFIRMED,4647,Calendar
@@ -1009,8 +1098,8 @@ Date,Title,Status,Attendance,Attendance source
 2021-02-11T15:45Z,"Leeds Apprenticeship Festival 2021 - Live Meet & Greet Sessions",CONFIRMED,2933,Calendar
 2021-03-04T11:00Z,"OpenDataSavesLives",CONFIRMED,40,Calendar
 2021-03-05T13:00Z,"ODIHQ Friday Lunchtime Lecture Series",CONFIRMED,0,Calendar
-2021-03-15T09:30Z,"Northernlands 3",CONFIRMED,0,Calendar
-2021-03-18T11:00Z,"#OpenDataSavesLives - Goldacre Review Special",CONFIRMED,0,Calendar
+2021-03-15T09:30Z,"Northernlands 3",CONFIRMED,15,Calendar
+2021-03-18T11:00Z,"#OpenDataSavesLives - Goldacre Review Special",CONFIRMED,1,Calendar
 2021-03-23T10:00Z,"TfN Github Training with ODI Leeds",CONFIRMED,15,Calendar
 2021-03-24T11:00Z,"Open Data Collaboration Group",CONFIRMED,14,Calendar
 2021-04-22T10:00Z,"#OpenDataSavesLives ",CONFIRMED,30,Calendar
@@ -1021,14 +1110,17 @@ Date,Title,Status,Attendance,Attendance source
 2021-05-18T08:00Z,"Yorkshire Water Meeting",CONFIRMED,9,Calendar
 2021-05-18T10:45Z,"Data City Workshop",CONFIRMED,8,Calendar
 2021-05-19T08:00Z,"Yorkshire Water Meeting",CONFIRMED,6,Calendar
+2021-05-27,"Powered Up - virtual",CONFIRMED,5,Calendar
 2021-05-28T08:00Z,"FutureGov coworking",CONFIRMED,5,Calendar
 2021-06-14T08:00Z,"Paisely Films LTD",CONFIRMED,6,Calendar
 2021-06-16T08:00Z,"Yorkshire Water ",CONFIRMED,6,Calendar
 2021-06-16T10:00Z,"Open Data Collaboration Group",CONFIRMED,16,Calendar
 2021-06-17T09:00Z,"TfN Github Training",CONFIRMED,20,Calendar
-2021-06-29T11:00Z,"UK Data Landscape Open Session",CONFIRMED,0,Calendar
-2021-07-07T11:00Z,"River Data - The Wharfe",CONFIRMED,0,Calendar
+2021-06-29T11:00Z,"UK Data Landscape Open Session",CONFIRMED,1,Calendar
+2021-07-07T11:00Z,"River Data - The Wharfe",CONFIRMED,32,Calendar
 2021-07-08T11:00Z,"#OpenDataSavesLives Session 28",CONFIRMED,60,Calendar
+2021-07-15,"Yorkshire Water River data rehearsal ",CONFIRMED,8,Calendar
+2021-07-19,"Yorkshire Water River Data rehearsal ",CONFIRMED,0,Calendar
 2021-07-20T09:00Z,"River Data - The Wharfe",CONFIRMED,0,Calendar
 2021-08-03T12:00Z,"Yorkshire Water team meet",CONFIRMED,7,Calendar
 2021-08-24T08:00Z,"Yorkshire Water team meeting",CONFIRMED,4,Calendar
@@ -1037,6 +1129,7 @@ Date,Title,Status,Attendance,Attendance source
 2021-09-01T08:30Z,"Yorkshire Water cowork",CONFIRMED,4,Calendar
 2021-09-02T08:30Z,"Yorkshire Water cowork",CONFIRMED,6,Calendar
 2021-09-07T11:00Z,"Powered Up session 2",CONFIRMED,34,Calendar
+2021-09-08,"Yorkshire Water small meeting",CONFIRMED,6,Calendar
 2021-09-16T08:00Z,"NHS Digital Graduate Academy",CONFIRMED,30,Calendar
 2021-09-20T08:30Z,"#PlanetData4 Launch ",CONFIRMED,0,Calendar
 2021-09-20T16:30Z,"Coders Guild - Hackathon",CONFIRMED,50,Calendar
@@ -1048,7 +1141,8 @@ Date,Title,Status,Attendance,Attendance source
 2021-10-13T08:00Z,"Card Factory Team Meeting",CONFIRMED,10,Calendar
 2021-10-13T10:30Z,"Diversity Data Open Surgery",CONFIRMED,10,Calendar
 2021-10-21T08:00Z,"Dell Meeting",CONFIRMED,15,Calendar
-2021-11-03T12:00Z,"Open Data Collaboration Group",CONFIRMED,0,Calendar
+2021-10-21T08:30Z,"#PlanetData4",CONFIRMED,79,Calendar
+2021-11-03T12:00Z,"Open Data Collaboration Group",CONFIRMED,2,Calendar
 2021-11-04T09:00Z,"Yorkshire Water team meet",CONFIRMED,5,Calendar
 2021-11-04T15:00Z,"Channel 4 filming",CONFIRMED,15,Calendar
 2021-11-08T11:00Z,"Content Catalyst workshop",CONFIRMED,10,Calendar
