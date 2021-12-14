@@ -1097,7 +1097,7 @@ Date,Title,Status,Attendance,Attendance source
 2021-02-11T11:00Z,"OpenDataSavesLives",CONFIRMED,66,Calendar
 2021-02-11T15:45Z,"Leeds Apprenticeship Festival 2021 - Live Meet & Greet Sessions",CONFIRMED,2933,Calendar
 2021-03-04T11:00Z,"OpenDataSavesLives",CONFIRMED,40,Calendar
-2021-03-05T13:00Z,"ODIHQ Friday Lunchtime Lecture Series",CONFIRMED,0,Calendar
+2021-03-05T13:00Z,"ODIHQ Friday Lunchtime Lecture Series",CONFIRMED,25,Calendar
 2021-03-15T09:30Z,"Northernlands 3",CONFIRMED,15,Calendar
 2021-03-18T11:00Z,"#OpenDataSavesLives - Goldacre Review Special",CONFIRMED,78,Calendar
 2021-03-23T10:00Z,"TfN Github Training with ODI Leeds",CONFIRMED,15,Calendar
@@ -1131,18 +1131,17 @@ Date,Title,Status,Attendance,Attendance source
 2021-09-07T11:00Z,"Powered Up session 2",CONFIRMED,34,Calendar
 2021-09-08,"Yorkshire Water small meeting",CONFIRMED,6,Calendar
 2021-09-16T08:00Z,"NHS Digital Graduate Academy",CONFIRMED,30,Calendar
-2021-09-20T08:30Z,"#PlanetData4 Launch ",CONFIRMED,0,Calendar
+2021-09-20T08:30Z,"#PlanetData4 Launch ",CONFIRMED,5,Calendar
 2021-09-20T16:30Z,"Coders Guild - Hackathon",CONFIRMED,50,Calendar
-2021-09-22T07:30Z,"Pro-Fit Training - Private Meeting",CONFIRMED,0,Calendar
 2021-09-23T10:30Z,"Diversity Data Briefing session",CONFIRMED,9,Calendar
 2021-09-28T10:00Z,"Data Connect 21",CONFIRMED,6,Calendar
 2021-09-29T09:00Z,"#OpenDataSavesLives: The Unconference",CONFIRMED,175,Calendar
-2021-10-01T11:00Z,"Powered Up session 3",CONFIRMED,0,Calendar
 2021-10-13T08:00Z,"Card Factory Team Meeting",CONFIRMED,10,Calendar
 2021-10-13T10:30Z,"Diversity Data Open Surgery",CONFIRMED,10,Calendar
 2021-10-21T08:00Z,"Dell Meeting",CONFIRMED,15,Calendar
 2021-10-21T08:30Z,"#PlanetData4",CONFIRMED,79,Calendar
 2021-11-03T12:00Z,"Open Data Collaboration Group",CONFIRMED,2,Calendar
+2021-11-04,"Future Gov coworking",CONFIRMED,4,Calendar
 2021-11-04T09:00Z,"Yorkshire Water team meet",CONFIRMED,5,Calendar
 2021-11-04T15:00Z,"Channel 4 filming",CONFIRMED,15,Calendar
 2021-11-08T11:00Z,"Content Catalyst workshop",CONFIRMED,10,Calendar
@@ -1157,7 +1156,6 @@ Date,Title,Status,Attendance,Attendance source
 2021-11-24T14:00Z,"Channel 4 filming",CONFIRMED,20,Calendar
 2021-11-29T09:00Z,"Leeds Community Health Care Trust",CONFIRMED,13,Calendar
 2021-12-01T09:00Z,"Cox Auto",CONFIRMED,15,Calendar
-2021-12-01T09:00Z,"Culture 2023",CONFIRMED,0,Calendar
 2021-12-01T15:17Z,"Channel 4 ITN News Filming",CONFIRMED,20,Calendar
 2021-12-08T09:00Z,"Levelling Up with Open Data",CONFIRMED,361,Calendar
 2021-12-09T12:00Z,"#OpenDataSavesLives",CONFIRMED,40,Calendar
