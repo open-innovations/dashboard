@@ -93,4 +93,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2021-09,,Diversity Data Builder,https://open-innovations.github.io/diversity-data/builder,"A tool to help people create or update a CSV file following the Diversity Data Standard for Diversity Dashboards.",,1;2;9;11,slowe
 2021-09,2021-12,Leeds Digital Festival Data,https://open-innovations.github.io/leeds-digital-festival-data/,"Measuring the impact of the Leeds Digital Festival",,,slowe;gdring;sschmidt
 2021-12,,Northern Powergrid DFES 2021,,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2021",,16,slowe
-2021-12,,UKPN DFES 2021,,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2021",,,slowe
+2021-12,,UK Power Networks DFES 2021,,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2021",,,slowe
