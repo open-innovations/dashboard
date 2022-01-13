@@ -72,10 +72,10 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2020-04-02,,Local Authority COVID-19 dashboard,https://odileeds.github.io/covid-19/LocalAuthorities/dashboard/,"Visualising COVID-19 cases by Local Authority. The initial dashboard has been archived and a replacement version was made in autumn 2020.",,*,slowe
 2020-05,,Local Authority COVID-19 hexmaps,https://odileeds.github.io/covid-19/LocalAuthorities/hexmap,"A variety of data - from testing to deaths to furloughed employments - shown on hex maps",,*,slowe
 2020-06-15,,Coastal Economies,https://open-innovations.org/projects/coastal-economies/,"Exploring coastal regions and understanding their specific needs through data.",,,tforth
-2020-09-17,,Project Cygnus,https://open-innovations.org/projects/cygnus/,"Partnering with Icebreaker One on their Project Cygnus initiative",,*,gdring;plake;tforth;aevans
+2020-09-17,2020-12-04,Project Cygnus,https://open-innovations.org/projects/cygnus/,"Partnering with Icebreaker One on their Project Cygnus initiative",,*,gdring;plake;tforth;aevans
 2020-10,2020-12,Half-term support for Free School Meals,https://odileeds.github.io/FSM-support/map,"Visualising real-time crowd-sourced offers of support, from multiple Google Sheets, on a web map. By the end of the week there were over 2300 offers on the map.",,*,slowe
 2020-10,,Radically Open Recovery,https://open-innovations.org/projects/radically-open-recovery/,"What data do we need to look ahead to a post-pandemic world?",,*,tforth;plake;gdring;slowe
-2020-11,,EPC Data,https://open-innovations.org/projects/epc/,"Exploring and analysing Energy Performance Certificate data for domestic properties",,*,plake;sschmidt
+2020-11,2020-12,EPC Data,https://open-innovations.org/projects/epc/,"Exploring and analysing Energy Performance Certificate data for domestic properties",,*,plake;sschmidt
 2020-12,2021-12,Northern Powergrid DFES 2020,https://odileeds.github.io/northern-powergrid/2020-DFES/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2020",,16,slowe
 2021-01,,Privacy-first analytics,https://open-innovations.org/blog/2021-01-19-improving-privacy-in-our-web-analytics,"Improving privacy in our web analytics",,,slowe;dring
 2021-01,,Vaccines in England,https://odileeds.github.io/covid-19/vaccines,"Displaying vaccines by dose, age group, and NHS ICS/STP area for England.",,1;2;3;6;13;18,slowe;plake
