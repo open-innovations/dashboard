@@ -118,7 +118,7 @@
 	 */
 	function Dashboard(inp){
 		if(!inp) inp = {};
-		this.version = "1.3.0";
+		this.version = "1.3.1";
 		this.panels = [];
 		this.duration = 1000;
 		this.config = {};
@@ -505,10 +505,13 @@
 										if(sd && !ed) ed = data[r-1][coldate];
 									}
 								}
+
 								// If no end date is set, do that now
 								if(!ed) ed = data[data.length-1][coldate];
 								sd = splitDate(sd);
-								ed = splitDate(ed);
+								if(view) ed = {'y':sd.y,'m':12};
+								else ed = splitDate(ed);
+
 								monthly = (sd.m > 0);
 								for(var y = sd.y;y <= ed.y; y++){
 									if(monthly){
