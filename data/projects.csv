@@ -64,7 +64,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2019-09,2021-12,OTP4GB,https://github.com/odileeds/OTP4GB,"Journey planning and accessibility mapping for all of GB, or any part of it, by Walking, Bicycle, Driving, Bus, and Public Transport of all forms except flying.",,,tforth;dillingsley
 2019-10,,Distribution Future Energy Scenarios,https://open-innovations.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES).",,16,slowe;plake
 2019-10-15,2020-10-01,Flight Emissions,https://open-innovations.org/projects/flight-emissions/,"Estimating flight emissions for Leeds Bradford Airport",img/project-flights.png,,plake;slowe
-2019-11,,Open Tree Logger,https://open-innovations.org/projects/osmedit/trees/,"Creating a web app to interface with Open Street Map and help add the world's trees to the map.",,9,slowe
+2019-11,2020-12,Open Tree Logger,https://open-innovations.org/projects/osmedit/trees/,"Creating a web app to interface with Open Street Map and help add the world's trees to the map.",,9,slowe
 2019-12-12,2020-12,General Election 2019,https://open-innovations.org/projects/hexmaps/ge2019/,"We worked with New Statesman to create a live hex map of election results. We built a back-end system to record results and combined this with data from a variety of open sources.",,,gdring;slowe
 2020-02-26,,Cycle/foot Traffic Growth,https://odileeds.github.io/traffic-growth/,"A project visualising cycle and foot traffic growth data from Data Mill North. Select cycle counters and see bar charts by hour of day, day of week, month, and year.",,1;3;6;2,slowe;plake
 2020-03,,Binnovation,https://open-innovations.org/blog/2020-07-17-six-months-of-binnovation-in-leeds-,"Using open data and open innovation to make waste services in Leeds better and more efficient in 2020.",,1,tforth;slowe;plake
@@ -77,8 +77,8 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2020-10,,Radically Open Recovery,https://open-innovations.org/projects/radically-open-recovery/,"What data do we need to look ahead to a post-pandemic world?",,*,tforth;plake;gdring;slowe
 2020-11,2020-12,EPC Data,https://open-innovations.org/projects/epc/,"Exploring and analysing Energy Performance Certificate data for domestic properties",,*,plake;sschmidt
 2020-12,2021-12,Northern Powergrid DFES 2020,https://odileeds.github.io/northern-powergrid/2020-DFES/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2020",,16,slowe
-2021-01,,Privacy-first analytics,https://open-innovations.org/blog/2021-01-19-improving-privacy-in-our-web-analytics,"Improving privacy in our web analytics",,,slowe;dring
-2021-01,,Vaccines in England,https://odileeds.github.io/covid-19/vaccines,"Displaying vaccines by dose, age group, and NHS ICS/STP area for England.",,1;2;3;6;13;18,slowe;plake
+2021-01,2021-12,Privacy-first analytics,https://open-innovations.org/blog/2021-01-19-improving-privacy-in-our-web-analytics,"Improving privacy in our web analytics",,,slowe;dring
+2021-01,2021-12,Vaccines in England,https://odileeds.github.io/covid-19/vaccines,"Displaying vaccines by dose, age group, and NHS ICS/STP area for England.",,1;2;3;6;13;18,slowe;plake
 2021-03,,Council website emissions,https://open-innovations.github.io/council-website-emissions/,"How are council websites impacting the planet? We measured the effective CO2 emissions from every UK council homepage.",,1;2;3;6,slowe
 2021-03,,OpenJourneyTime,https://github.com/odileeds/OpenJourneyTime,"MSOA to MSOA journey time pairs and MSOA-centred isochrones for North England",,1;2;3;6;14;20,tforth;dbillingsley
 2021-05,2021-05,Local elections 2021,https://open-innovations.org/projects/local-elections-2021/,"Visualising the 2021 local elections in Leeds and Calderdale using data from Democracy Club",,1;6,slowe
