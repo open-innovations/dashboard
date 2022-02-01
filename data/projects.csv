@@ -61,7 +61,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2019-06,2019-12,Carbon Dashboard,https://open-innovations.org/projects/carbon-dashboard/,"Experiments in making a carbon dashboard",,*,plake
 2019-07,,Local Growth Funding Tracker,https://open-innovations.org/projects/jrf/,"Collaborative project with Joseph Rowntree Foundation to create a tool that tracks local growth funding.",,,tforth
 2019-08-29,,Divisions hex map,http://open-innovations.org/projects/divisions/,"Visualising House of Commons Divisions on a UK-wide constituency hex map.",,,slowe
-2019-09,2021-12,OTP4GB,https://github.com/odileeds/OTP4GB,"",,,tforth;dillingsley
+2019-09,2021-12,OTP4GB,https://github.com/odileeds/OTP4GB,"Journey planning and accessibility mapping for all of GB, or any part of it, by Walking, Bicycle, Driving, Bus, and Public Transport of all forms except flying.",,,tforth;dillingsley
 2019-10,,Distribution Future Energy Scenarios,https://open-innovations.org/projects/northernpowergrid/dfes/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES).",,16,slowe;plake
 2019-10-15,2020-10-01,Flight Emissions,https://open-innovations.org/projects/flight-emissions/,"Estimating flight emissions for Leeds Bradford Airport",img/project-flights.png,,plake;slowe
 2019-11,,Open Tree Logger,https://open-innovations.org/projects/osmedit/trees/,"Creating a web app to interface with Open Street Map and help add the world's trees to the map.",,9,slowe
