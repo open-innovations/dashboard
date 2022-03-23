@@ -122,6 +122,7 @@
 			"start": "Date",
 			"end": "Date",
 			"data": ["data/web-open-innovations.org.csv"],
+			"sort": true,
 			"max":62000,
 			"els": {
 				".number": { "col": "Visits", "op": "sum", "animate": true },
@@ -132,8 +133,8 @@
 		}
 	}
 	var db;
-	ODI.ready(function(){
-		db = new ODI.Dashboard();
+	OI.ready(function(){
+		db = new OI.Dashboard();
 		db.setup({'year':'#range','config':panels});
 	});
 	</script>

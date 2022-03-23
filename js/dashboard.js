@@ -4,9 +4,9 @@
 		return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
 	})();
 
-	var ODI = root.ODI || {};
-	if(!ODI.ready){
-		ODI.ready = function(fn){
+	var OI = root.OI || {};
+	if(!OI.ready){
+		OI.ready = function(fn){
 			// Version 1.1
 			if(document.readyState != 'loading') fn();
 			else document.addEventListener('DOMContentLoaded', fn);
@@ -14,8 +14,8 @@
 	}
 
 	// Define an ajax function (in the style of jQuery)
-	if(!ODI.ajax){
-		ODI.ajax = function(url,attrs){
+	if(!OI.ajax){
+		OI.ajax = function(url,attrs){
 			// Full version because we need headers etc
 			if(typeof url!=="string") return false;
 			if(!attrs) attrs = {};
@@ -114,11 +114,11 @@
 
 
 	/*!
-	 * ODI Leeds Dashboard
+	 * Open Innovations Dashboard
 	 */
 	function Dashboard(inp){
 		if(!inp) inp = {};
-		this.version = "1.3.1";
+		this.version = "1.3.2";
 		this.panels = [];
 		this.duration = 1000;
 		this.config = {};
@@ -205,19 +205,20 @@
 						for(var u = 0; u < this.config[p].data.length; u++){
 							var fn = this.config[p].data[u]+'?'+d.getTime();
 							if(!files[fn]){
-								ODI.ajax(fn,{
+								OI.ajax(fn,{
 									'complete':loadData,
 									'dataType':'text',
 									'key':p,
 									'this':this,
 									'i':i,
 									'me':this,
+									'sort': this.config[p].sort||false,
 									'cache':false,
 									'error':function(data,attr){
 										_obj.log('ERROR','Unable to load',attr.url,data);
 									}
 								});
-							}else loadData(this.panels[files[fn]].data,{'i':i,'me':this,'key':p});
+							}else loadData(this.panels[files[fn]].data,{'i':i,'me':this,'key':p,'sort':this.config[p].sort||false});
 						}
 					}
 					i++;
@@ -314,7 +315,7 @@
 					im.setAttribute('id','replaceWithSVG-'+id);
 					im.classList.add('replaceWithSVG');
 					_obj.replace[id] = true;
-					ODI.ajax(src,{'dataType':'text/svg','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
+					OI.ajax(src,{'dataType':'text/svg','id':'replaceWithSVG-'+id,'color':getComputedStyle(more)['color'],'cache':'true','complete': replaceImage, 'this':this, 'error': function(a){ this.log('ERROR','Failed to load file',a); } });
 				}
 			}
 
@@ -360,8 +361,14 @@
 			_obj.log('loadData',data,attr);
 			var i,j,head,header;
 			if(typeof data==="string"){
-				data = data.replace(/\r/,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
+				data = data.replace(/\r/g,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
 				data = data.split(/[\n]/);
+				if(attr.sort){
+					// We will sort the rows
+					var headline = data.shift();
+					data = data.sort();
+					data.unshift(headline);
+				}
 			}
 			attr.me.panels[attr.i].data = data;
 			// Parse the header
@@ -457,6 +464,8 @@
 
 					if(row){
 						if(row == "all"){
+							// Reset the start date for this panel
+							sd = "";
 							if(el.type=="images"){
 								list = [];
 								colurl = el.url;
@@ -506,49 +515,58 @@
 									}
 								}
 
+
 								// If no end date is set, do that now
 								if(!ed) ed = data[data.length-1][coldate];
 								sd = splitDate(sd);
 								if(view) ed = {'y':sd.y,'m':12};
 								else ed = splitDate(ed);
 
-								monthly = (sd.m > 0);
-								for(var y = sd.y;y <= ed.y; y++){
-									if(monthly){
-										for(var m = 1; m <= 12; m++){ 
-											if(y < ed.y || (y == ed.y && m <= ed.m+1)){
-												bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+								var output = "";
+								if(typeof sd.y==="number"){
+									monthly = (sd.m > 0);
+									for(var y = sd.y;y <= ed.y; y++){
+										if(monthly){
+											for(var m = 1; m <= 12; m++){ 
+												if(y < ed.y || (y == ed.y && m <= ed.m+1)){
+													bins[y+'-'+(m < 10 ? "0":"")+m] = 0;
+												}
 											}
-										}
-									}else bins[y] = 0;
-								}
-								var nbins = 0;
-								for(key in bins){
-									if(typeof bins[key]==="number") nbins++;
-								}
+										}else bins[y] = 0;
+									}
+									var nbins = 0;
+									for(key in bins){
+										if(typeof bins[key]==="number") nbins++;
+									}
 
-								// Set the height of the graph
-								var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
-								for(r = 0; r < data.length; r++){
-									sd = splitDate(data[r][coldate]);
-									key = sd.y+(monthly ? '-'+(sd.m < 10 ? "0":"")+sd.m : '');
-									if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col]);
-								}
+									// Set the height of the graph
+									var h = 0.5*("innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight);
+									for(r = 0; r < data.length; r++){
+										sd = splitDate(data[r][coldate]);
+										key = sd.y+(monthly ? '-'+(sd.m < 10 ? "0":"")+sd.m : '');
+										if(typeof bins[key]==="number") bins[key]+= parseFloat(data[r][col]);
+									}
 
-								// Find the peak value
-								for(key in bins){
-									if(bins[key] > mx) mx = bins[key];
+									// Find the peak value
+									for(key in bins){
+										if(bins[key] > mx) mx = bins[key];
+									}
+									if(typeof this.panels[p].config.max==="number") mx = Math.min(mx,this.panels[p].config.max);
+
+
+									output = '<div class="grid" style="height:'+h+'px;">';
+									var grid = getGrid(0,mx);
+									for(var g = 0; g < grid.max; g+= grid.inc) output += '<div class="line" style="bottom:'+(h*Math.min(g,mx)/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
+									output += '</div>';
+									output += '<table><tr style="vertical-align:bottom;">';
+									for(key in bins){
+										if(typeof bins[key]==="number") output += '<td style="width:'+(100/nbins).toFixed(3)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
+									}
+									output += '</tr></table>';
+									
+								}else{
+									output = 'No data to show';
 								}
-								if(typeof this.panels[p].config.max==="number") mx = Math.min(mx,this.panels[p].config.max);
-								var output = '<div class="grid" style="height:'+h+'px;">';
-								var grid = getGrid(0,mx);
-								for(var g = 0; g < grid.max; g+= grid.inc) output += '<div class="line" style="bottom:'+(h*Math.min(g,mx)/mx)+'px;"><span>'+(this.panels[p].config.units || "")+formatNumber(g)+'</span></div>';
-								output += '</div>';
-								output += '<table><tr style="vertical-align:bottom;">';
-								for(key in bins){
-									if(typeof bins[key]==="number") output += '<td style="width:'+(100/nbins).toFixed(3)+'%;"><div class="bar" title="'+key+': '+(this.panels[p].config.units || "")+formatNumber(bins[key])+'" style="height:'+(bins[key] == 0 ? 0.1 : h*Math.min(bins[key],mx)/mx)+'px;">'+(bins[key] > mx ? '<div class="fade"></div>' : '')+'</div>'+((key.indexOf('-01') > 0 || key.indexOf('-')==-1) ? '<span class="date">'+key.substr(0,4)+'</span>' : '')+'</td>';
-								}
-								output += '</tr></table>';
 								elem.innerHTML = output;
 							}
 							continue;
@@ -726,8 +744,8 @@
 		return (d.length == 4) ? {'y':parseInt(d)} : {'y':parseInt(d.substr(0,4)),'m':parseInt(d.substr(5,2))};
 	}
 
-	ODI.Dashboard = Dashboard;
+	OI.Dashboard = Dashboard;
 	
-	root.ODI = ODI;
+	root.OI = OI;
 
 })(window || this);
