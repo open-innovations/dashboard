@@ -1,6 +1,6 @@
-# ODI Leeds dashboard
+# Open Innovations dashboard
 
-A simple dashboard created for ODI Leeds. The dashboard has no external dependencies and reads data from CSV files located on the same server. It uses HTML, CSS and Javascript.
+A simple dashboard created for Open Innovations. The dashboard has no external dependencies and reads data from CSV files located on the same server. It uses HTML, CSS and Javascript.
 
 ## Aims
 
@@ -146,7 +146,7 @@ With the following HTML:
 					<div class="panel">
 						<div class="title">Events</div>
 						<div class="number less"></div>
-						<p class="more">Number of events hosted at ODI Leeds</p>
+						<p class="more">Number of events hosted at Open Innovations</p>
 						<div class="graph more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/events_monthly.csv" class="lastupdated">events data</a></div>
 					</div>
@@ -157,7 +157,7 @@ With the following HTML:
 					<div class="panel">
 						<div class="title">Event reach</div>
 						<div class="number less"></div>
-						<p class="more">Number of people at ODI Leeds events</p>
+						<p class="more">Number of people at Open Innovations events</p>
 						<div class="graph more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/events_monthly.csv" class="lastupdated">events data by month</a></div>
 					</div>
@@ -177,7 +177,7 @@ With the following HTML:
 				<div class="box c1-bg">
 					<div class="panel">
 						<div class="title">Revenue</div>
-						<div class="more">ODI Leeds Node revenue</div>
+						<div class="more">Open Innovations Node revenue</div>
 						<div class="number less"></div>
 						<div class="graph more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/revenue.csv" class="lastupdated data">revenue table</a></div>
@@ -218,7 +218,7 @@ With the following HTML:
 				<div class="box c3-bg">
 					<div class="panel">
 						<div class="title">Tweet impressions</div>
-						<p class="more">Interaction with the <a href="https://twitter.com/ODILeeds">@ODILeeds</a> Twitter account. Source: Twitter Analytics</p>
+						<p class="more">Interaction with the <a href="https://twitter.com/OpenInnovates">@OpenInnovates</a> Twitter account. Source: Twitter Analytics</p>
 						<div class="number less"></div>
 						<div class="graph more"></div>
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/master/data/socialmedia.csv" class="lastupdated">twitter stats</a></div>
