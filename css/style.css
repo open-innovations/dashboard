@@ -162,7 +162,7 @@ header {
 	margin: auto;
 	text-align: center;
 	display: block;
-	font-size: 5em;
+	font-size: 4.5em;
 	font-family: Poppins;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -191,7 +191,7 @@ header {
 .panel:hover .updated,.panel:hover .title { opacity: 1; }
 .panel .updated a { text-decoration: none; color: inherit; }
 .panel:hover .updated a { text-decoration: underline; }
-.panel:hover .number { font-size: 6em; font-weight: bold; }
+.panel:hover .number { font-weight: bold; }
 .panel .icons, .panel .list {
 	width: 90%;
 	margin: auto;
