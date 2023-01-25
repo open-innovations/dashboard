@@ -129,7 +129,7 @@ header {
 	padding-top: calc(3em + 25px);
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	grid-template-rows: repeat(3, 1fr);
-	grid-gap: 8px;
+	grid-gap: 4px;
 }
 .panels li {
 	display: block;
@@ -163,6 +163,7 @@ header {
 	text-align: center;
 	display: block;
 	font-size: 5em;
+	font-family: Poppins;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
@@ -187,19 +188,10 @@ header {
 	line-height: 1.5em;
 	opacity: 0.2;
 }
-.panel:hover .updated,.panel:hover .title {
-	opacity: 1;
-}
-.panel .updated a {
-	text-decoration: none;
-	color: inherit;
-}
-.panel:hover .updated a {
-	text-decoration: underline;
-}
-.panel:hover .number {
-	font-size: 7.2em;
-}
+.panel:hover .updated,.panel:hover .title { opacity: 1; }
+.panel .updated a { text-decoration: none; color: inherit; }
+.panel:hover .updated a { text-decoration: underline; }
+.panel:hover .number { font-size: 6em; font-weight: bold; }
 .panel .icons, .panel .list {
 	width: 90%;
 	margin: auto;
