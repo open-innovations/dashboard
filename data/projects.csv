@@ -37,6 +37,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2017,2017,A Clearer Plan,https://open-innovations.org/projects/aclearerplan/,A tool to help town planners explain their decisions and reasoning using open data.,,,tforth;dbillingsley
 2017-07-31,2017-12-14,Housing in Leeds Wards - Capacity for Improvement,https://open-innovations.org/projects/energyusage/EPC/,"Using data from EPC certificates to establish the capacity for improvement of domestic properties by ward.",img/project_epc.png,1,dphillips;slowe
 2017-08-01,2018-08-01,UK Tech Innovation Index,https://open-innovations.org/projects/uk-tech-innovation-index/,"The UK Tech Innovation Index measures both current activity and potential for innovation in seven technology sectors, for 36 UK cities.",,,
+2017-09,,Fenland Bins,https://imactivate.com/fenlandbins/,Our app on iOS and Android gives reminders of bin collections to residents in Fenland.,,,tforth;dbillingsley
 2017-11-23,2017-11-23,ENCTS: concessionary travel usage,https://open-innovations.org/projects/ENCTS/,"After helping WYCA to publish concessionary travel data, we visualised the data set for each bus.",img/project_encts.jpg,2,slowe
 2017-11-28,2019-05-13,Common Ground,https://open-innovations.org/projects/commonground/,"Participatory mapping and citizen engagement to promote neighbourhood social action",,9,slowe
 2017-12-14,2019,Supermarket CO2 emissions,https://open-innovations.org/projects/stores/,"Estimated CO2 emissions from major supermarket brands across the UK. Calculated from known store locations and average annual CO2 emissions.",img/project_stores.png,,dphillips;slowe
@@ -47,6 +48,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2018-03-16,,Petitions hex map,http://open-innovations.org/projects/petitions/,"Visualising petiton data, from the UK Government and Parliament website, on a UK-wide constituency map.",,,slowe
 2018-03-31,2018-05-03,Local elections 2018,https://open-innovations.org/projects/local-elections-2018/,"Visualising the 2018 local elections in Leeds using data from Democracy Club",,1;6,slowe
 2018-04-05,2019-12,Leeds gender pay gap,https://open-innovations.org/projects/gender-pay-gap/,"Graphing the reported gender pay gap for organisations based in Leeds.",,1;4;9,slowe
+2018-05,,Luton Bins,https://imactivate.com/lutonbins/,Our app on iOS and Android gives reminders of bin collections to residents in Luton.,,,tforth;dbillingsley
 2018-06,,Data mapper,https://mapper.odileeds.org/,"Layering datasets from Data Mill North, Calderdale Data Works, Northern Data Hub, York Open Data, Salford Data Quay, Open Street Map and more.",,*,slowe
 2018-07-25,,CSV to GeoJSON,https://odileeds.github.io/CSV2GeoJSON/,"A web-based tool to easily convert a CSV file (containing geography columns) into a GeoJSON file. It can also create choropleth maps based on LSOA, MSOA, WD19CD, PCON17CD, or LAD19CD",,1;3;6,slowe
 2019-01,,Business Rates,https://open-innovations.org/projects/business-rates/,"As part of the Open Data Collaboration group we looked at business rates data from local councils. This involved agreeing a common standard to publish and making visualisations of the data across councils.",,1;3;6,slowe
@@ -111,9 +113,8 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2022-12,,Northern Powergrid DFES 2022,https://odileeds.github.io/northern-powergrid/2022-DFES/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2022",,16,slowe
 2022-12,,UK Power Networks DFES 2022,,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2022",,23,slowe
 2022-08,2022-12,Leeds Digital Festival data microsite,http://data.leedsdigitalfestival.org/,A dashboard showing the key metrics and festival reports for the Leeds Digital Festival,,1,tchiles;gdring
-2018-05,,Luton Bins,https://imactivate.com/lutonbins/,Our app on iOS and Android gives reminders of bin collections to residents in Luton.,,,tforth;dbillingsley
-2017-09,,Fenland Bins,https://imactivate.com/fenlandbins/,Our app on iOS and Android gives reminders of bin collections to residents in Fenland.,,,tforth;dbillingsley
-2022-11,,Rotherham Bins,https://imactivate.com/rotherhambins/,Our app on iOS and Android gives reminders of bin collections to residents in Rotherham.,,,tforth;dbillingsley
-2023-01,,West & North Yorkshire Chamber of Commerce LSIPs,,,,,
-2023-01,,Northern Powerhouse Partnership Tax Devolution,,,,,
 2022-10,,Leeds City Council Economic Data Science Discovery,,,,,
+2022-11,,Rotherham Bins,https://imactivate.com/rotherhambins/,Our app on iOS and Android gives reminders of bin collections to residents in Rotherham.,,,tforth;dbillingsley
+2023-01,,West & North Yorkshire Chamber of Commerce LSIPs,,,,,cspence
+2023-01,,Northern Powerhouse Partnership Tax Devolution,,,,,cspence
+2023-02,,Placename heatmap,,"Create a heat map of UK place names based on patterns you want to match.",,,slowe
