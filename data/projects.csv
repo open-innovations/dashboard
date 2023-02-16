@@ -117,4 +117,5 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2022-12,,UK Power Networks DFES 2022,https://uk-power-networks.github.io/DFES-visualisation/2022-DFES/,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2022",,23,slowe
 2023-01,,West & North Yorkshire Chamber of Commerce LSIPs,https://open-innovations.github.io/WNYCC-LSIP/,,,,cspence
 2023-01,,Northern Powerhouse Partnership Tax Devolution,,,,,cspence
+2023-01,,OI Lume Viz,"To support some of the more complex visualisations in Lume, we've encapsulated a number of our charting libraries",,,,,gdring;slowe
 2023-02,,Placename heatmap,https://open-innovations.org/projects/placename-heatmap/,"Create a heat map of UK place names based on patterns you want to match.",,,slowe
