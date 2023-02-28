@@ -96,7 +96,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2021-09,,Diversity Data Builder,https://open-innovations.github.io/diversity-data/builder,"A tool to help people create or update a CSV file following the Diversity Data Standard for Diversity Dashboards.",,1;2;9;11,slowe
 2021-09,2021-12,Leeds Digital Festival Data,https://open-innovations.github.io/leeds-digital-festival-data/,"Measuring the impact of the Leeds Digital Festival",,,slowe;gdring;sschmidt
 2021-12,,Northern Powergrid DFES 2021,https://odileeds.github.io/northern-powergrid/2021-DFES/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2021",,16,slowe
-2021-12,,UK Power Networks DFES 2021,,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2021",,23,slowe
+2021-12,,UK Power Networks DFES 2021,https://uk-power-networks.github.io/DFES-visualisation/2021-DFES/,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2021",,23,slowe
 2022-01,2022-06,Pool Data,https://www.pooldata.io/blog/creating-data-unions-faster,"Support to create a catalyst programme for data unions",,,mbrook
 2022-02,,Leeds 2023,https://open-innovations.org/projects/leeds2023/,Helping Leeds 2023 with all things data…,,,dpboam
 2022-03,,EValuator,https://evaluator.open-innovations.org/,"A prototype which demonstrates an approach to integrated planning across several disciplines (land use, sustainability, energy, transport).",,,gdring;tchiles;slowe
