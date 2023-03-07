@@ -1275,11 +1275,11 @@ Date,Title,Status,Attendance,Attendance source
 2022-10-03T09:00Z,"SBU – SLT Away Day",CONFIRMED,10,Calendar
 2022-10-04T07:36Z,"Leeds City Council - Suppliers Conference",CONFIRMED,75,Calendar
 2022-10-05T08:00Z,"Parliamentary Data Analytics Group- Internal workshop",CONFIRMED,5,Calendar
-2022-10-05T11:00Z,"#OpenDataSavesLives session 35 ",CONFIRMED,0,Calendar
-2022-10-06T08:00Z,"Christians Against Poverty - meet",CONFIRMED,0,Calendar
+2022-10-05T11:00Z,"#OpenDataSavesLives session 35 ",CONFIRMED,54,Calendar
+2022-10-06T08:00Z,"Christians Against Poverty - meet",CONFIRMED,42,Calendar
 2022-10-06T08:00Z,"Parliamentary Data Analytics Group- Internal workshop",CONFIRMED,5,Calendar
 2022-10-11T08:00Z,"Leeds 2023 meet",CONFIRMED,10,Calendar
-2022-10-11T08:01Z,"NDL Software meeting",CONFIRMED,0,Calendar
+2022-10-11T08:01Z,"NDL Software meeting",CONFIRMED,20,Calendar
 2022-10-13T07:30Z,"ESRI Conference",CONFIRMED,100,Calendar
 2022-10-20T11:00Z,"The Data City meet",CONFIRMED,8,Calendar
 2022-10-24T08:00Z,"Gekko Training Day",CONFIRMED,13,Calendar
@@ -1317,3 +1317,4 @@ Date,Title,Status,Attendance,Attendance source
 2023-02-23T16:00Z,"Northern Economic User Group  ",CONFIRMED,16,Calendar
 2023-03-01T12:00Z,"Open Data Saves Lives - Session 37",CONFIRMED,64,Calendar
 2023-03-02T09:00Z,"University of Kent Undergraduate Apprentices",CONFIRMED,65,Calendar
+2023-03-06T09:00Z,"NHS CCG",CONFIRMED,15,Calendar
