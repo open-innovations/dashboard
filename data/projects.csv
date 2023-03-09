@@ -108,7 +108,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2022-06,2022-08,Open Transport Planner 4 GB,https://github.com/open-innovations/otp4gb-py,"A transport planning tool pipeline that generates travel time isochrones",,14,gdring;tforth
 2022-08,2022-12,Leeds Digital Festival data microsite,http://data.leedsdigitalfestival.org/,A dashboard showing the key metrics and festival reports for the Leeds Digital Festival,,1,tchiles;gdring
 2022-10,,Parkulator 2022,https://open-innovations.github.io/parkulator/,"A reworking of the original Parkulator to calculate the amount of land used for parking, golf courses, or brownfield land within a user-selected map area and how many homes or parks could be built in the space instead.",,,slowe;tforth
-2022-10,,Leeds City Council Economic Data Science Discovery,,,,,
+2022-10,,Leeds City Council Economic Data Science Discovery,https://github.com/economic-analytics/Leeds-EDD,,,,
 2022-11,,Rotherham Bins,https://imactivate.com/rotherhambins/,Our app on iOS and Android gives reminders of bin collections to residents in Rotherham.,,,tforth;dbillingsley
 2022-11,,Northern Economic Data User Group,https://open-innovations.org/projects/northern-economic-data-user-group/,"We’re seeking to build a network of willing collaborators who will share their experiences, their research, their code, their data and their expertise to advance economic research and understanding across North England.",,1;6,cspence
 2022-11,,Warm spaces directories,https://open-innovations.github.io/warm-spaces/,"With a cost-of-living crisis and an energy-price crisis, lots of people will be cold this winter and looking for warm places to go. We've created a directory of directories of warm spaces and made a simple search tool to look through some of them.",,1;2;3;6,slowe
@@ -116,6 +116,6 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2022-12,,Northern Powergrid DFES 2022,https://odileeds.github.io/northern-powergrid/2022-DFES/,"An interactive visualisation of Northern Powergrid's potential future scenarios (DFES) updated to 2022",,16,slowe
 2022-12,,UK Power Networks DFES 2022,https://uk-power-networks.github.io/DFES-visualisation/2022-DFES/,"An interactive visualisation of UK Power Network's potential future scenarios (DFES) for 2022",,23,slowe
 2023-01,,West & North Yorkshire Chamber of Commerce LSIPs,https://open-innovations.github.io/WNYCC-LSIP/,,,,cspence
-2023-01,,Northern Powerhouse Partnership Tax Devolution,,,,,cspence
+2023-01,,Northern Powerhouse Partnership Tax Devolution,https://github.com/ChristianSpence/Tax-Devolution,,,,cspence
 2023-01,,OI Lume Viz,https://open-innovations.github.io/oi-lume-charts/,"To support some of the more complex visualisations in Lume, we've encapsulated a number of our charting libraries",,,gdring;slowe
 2023-02,,Placename heatmap,https://open-innovations.org/projects/placename-heatmap/,"Create a heat map of UK place names based on patterns you want to match.",,,slowe
