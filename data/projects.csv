@@ -32,7 +32,7 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2017-02-24,2017-02-25,#AirHack,http://open-innovations.org/airhack/,"On 24th/25th Feb 2017 we hosted a two day hackathon around air quality with Defra, Leeds Council, Bradford Council, and Highways England.",img/project_airhack.jpg,1;3;10,pconnell;aevans
 2017-03-27,2019,IoTUK Nation Database (Beta),https://open-innovations.org/projects/iot/,"A project with Bloom Agency and IoTUK/Digital Catapult to map the Internet of Things (IoT) sector across the UK.",img/project_iotnation.png,,slowe;pconnell
 2017-04-12,2017-04-12,Roads named Garth,https://open-innovations.org/projects/partyon/,"We looked at the geographic spread of streets containing 'garth' in the UK and Ireland. The Viking origins of the word can be seen.",img/project_garth.jpg,,slowe
-2017-05-06,2021,UK hex maps,https://open-innovations.org/projects/hexmaps/constituencies,"For the 2017 General Election we created an interactive hex map of UK parliamentary constituencies.",img/project_hexmap.jpg,,slowe
+2017-05-06,2021,UK constituency hex maps 2017,https://open-innovations.org/projects/hexmaps/constituencies,"For the 2017 General Election we created an interactive hex map of UK parliamentary constituencies.",img/project_hexmap.jpg,,slowe
 2017-06-20,2017-06-20,TravelHack,https://open-innovations.org/events/travelhack,"A collaboration with Transport for the North to create a data strategy for their ambitious plan to make a multi-modal transport system for the North.",img/travelhack_logo.png,14,nmcclure;aevans
 2017,2017,A Clearer Plan,https://open-innovations.org/projects/aclearerplan/,A tool to help town planners explain their decisions and reasoning using open data.,,,tforth;dbillingsley
 2017-07-31,2017-12-14,Housing in Leeds Wards - Capacity for Improvement,https://open-innovations.org/projects/energyusage/EPC/,"Using data from EPC certificates to establish the capacity for improvement of domestic properties by ward.",img/project_epc.png,1,dphillips;slowe
@@ -123,3 +123,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2023-04,,JRF Northern Insight Finder,https://open-innovations.org/projects/jrf/north-insight-finder/,"A live data hub focused on poverty statistics for the North",,,cspence;lstrange
 2023-04,,Leeds City Council Economics,https://github.com/open-innovations/lcc-economics/ ,,,,cspence
 2023-07,,Emission Factors Catalogue,https://open-innovations.org/projects/emission-factors-catalogue/,"Putting up-to-date CO2 emissions factors in one place",,,lstrange
+2023-08,,UK Constituency Data,https://constituencies.open-innovations.org/,"A collection of data about UK constituencies mapped on hex cartograms.",,,slowe;lstrange
