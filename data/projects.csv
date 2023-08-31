@@ -119,9 +119,10 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2023-01,,Northern Powerhouse Partnership Tax Devolution,https://github.com/open-innovations/tax-devolution,"A web app to see how much you can raise through different local taxes.",,,cspence
 2023-01,,OI Lume Viz,https://open-innovations.github.io/oi-lume-charts/,"To support some of the more complex visualisations in Lume, we've encapsulated a number of our charting libraries",,,gdring;slowe
 2023-02,,Placename heatmap,https://open-innovations.org/projects/placename-heatmap/,"Create a heat map of UK place names based on patterns you want to match.",,,slowe
-2023-02,,Leeds Schools Cultural Engagement,https://open-innovations.github.io/leeds-schools-cultural-engagement/,"Creating a prototype resource to map cultural engagement in schools across the city to support evidence-based policy making.",,,mbrook
+2023-02,,Leeds Schools Cultural Engagement,https://open-innovations.github.io/leeds-schools-cultural-engagement/,"Creating a prototype resource to map cultural engagement in schools across the city to support evidence-based policy making.",,,mbrook;slowe;tchiles
 2023-04,,JRF Northern Insight Finder,https://open-innovations.org/projects/jrf/north-insight-finder/,"A live data hub focused on poverty statistics for the North",,,cspence;lstrange
 2023-04,,Leeds City Council Economics,https://github.com/open-innovations/lcc-economics/ ,,,,cspence
 2023-06,,National Grid Regional FES 2023,https://www.futureenergyscenarios.com/2023-FES/,"We helped National Grid update their future energy scenario visualisation for 2023.",,,slowe
 2023-07,,Emission Factors Catalogue,https://open-innovations.org/projects/emission-factors-catalogue/,"Putting up-to-date CO2 emissions factors in one place",,,lstrange
 2023-08,,UK Constituency Data,https://constituencies.open-innovations.org/,"A collection of data about UK constituencies mapped on hex cartograms.",,,slowe;lstrange
+2023-08,,Geography Lookup Builder,https://open-innovations.github.io/geography-lookup-builder/,"Sometimes you need a lookup between two different geographies and the ONS don't know about one (or both). This tool helps you create your own lookup table.",,,slowe
