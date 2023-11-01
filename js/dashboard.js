@@ -212,6 +212,7 @@
 									'this':this,
 									'i':i,
 									'me':this,
+									'columns':this.config[p].columns||[],
 									'sort': this.config[p].sort||false,
 									'cache':false,
 									'error':function(data,attr){
@@ -359,7 +360,7 @@
 
 		function loadData(data,attr){
 			_obj.log('loadData',data,attr);
-			var i,j,head,header;
+			var i,j,head,header,cname;
 			if(typeof data==="string"){
 				data = data.replace(/\r/g,'').replace(/[\n\r]*$/,'');	// Remove blank lines at end of file
 				data = data.split(/[\n]/);
@@ -430,6 +431,20 @@
 					}
 				}
 				this.panels[p].el = document.getElementById(this.panels[p].id);
+
+
+				if(this.panels[p].config.columns){
+					for(cname in this.panels[p].config.columns){
+						for(r = 0; r < data.length; r++){
+							data[r][cname] = 0;
+							for(c = 0; c < this.panels[p].config.columns[cname].length; c++){
+								val = data[r][this.panels[p].config.columns[cname][c]];
+								if(typeof val==="string") val = parseFloat(val);
+								data[r][cname] += val||0;
+							}
+						}
+					}
+				}
 
 				var view = null;
 				if(this.panels[p].view){

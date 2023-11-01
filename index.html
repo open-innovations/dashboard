@@ -107,13 +107,14 @@
 			},
 			'class':'c11-bg'
 		},
-		"tweet": {
+		"social": {
 			"start": "Date",
 			"end": "Date",
 			"data": ["data/socials.csv"],
+			"columns":{'Socials':['Tweet Impressions','Facebook Impressions','LinkedIn Impressions','Youtube Views']},
 			"els": {
-				".number": { "col": "Tweet Impressions", "op": "sum", "animate": true },
-				".graph": { "col": "Tweet Impressions", "row": "all", "type": "graph" },
+				".number": { "col": "Socials", "op": "sum", "animate": true },
+				".graph": { "col": "Socials", "row": "all", "type": "graph" },
 				".lastupdated": { "col": "Date", "row": "last" }
 			},
 			"class":"c3-bg"
@@ -229,10 +230,10 @@
 						<div class="updated"><span class="updatelabel">Last updated: </span><a href="https://github.com/odileeds/dashboard/tree/gh-pages/data/partners.csv" class="lastupdated">data abour our clients</a></div>
 					</div>
 				</div>
-			</li><li id="tweet">
+			</li><li id="social">
 				<div class="box c3-bg">
 					<div class="panel">
-						<div class="title">Tweet impressions</div>
+						<div class="title">Social media impressions</div>
 						<p class="more">Interaction with the <a href="https://twitter.com/OpenInnovates">@OpenInnovates</a> (previously @ODILeeds) Twitter account. Source: Twitter Analytics</p>
 						<div class="number less"></div>
 						<div class="graph more"></div>
