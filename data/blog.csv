@@ -29,7 +29,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2016-08-11T12:30+0000,Open allotments,https://open-innovations.org/blog/2016-08-11-allotments,slowe:Stuart Lowe,,c6-bg
 2016-08-22T10:30+0000,TravelSpirit and ODI Leeds team up for smart cities and mobility as a service,https://open-innovations.org/blog/2016-08-22-travel-spirit,aevans:Amy Evans,,c11-bg
 2016-08-26T10:00+0000,Open Smart Cities and Places - Hebden Bridge,https://open-innovations.org/blog/2016-08-26-open-smart-cities-tom,tforth:Thomas Forth,,c13-bg
-2016-09-13T12:55+0000,Inspired Spaces North 2016,https://open-innovations.org/blog/2016-09-13-inspired-spaces,kconnell:Kathryn Connell,,c14-bg
+2016-09-13T12:55+0000,Inspired Spaces North 2016,https://open-innovations.org/blog/2016-09-13-inspired-spaces,:Kathryn Connell,,c14-bg
 2016-09-15T12:00+0000,#HighwaysHack - Challenges revealed,https://open-innovations.org/blog/2016-09-15-highwayshack-challenges,aevans:Amy Evans,,c11-bg
 2016-09-27T16:00+0000,#OpenSmartCities - roundup,https://open-innovations.org/blog/2016-09-27-open-smart-cities-roundup,aevans:Amy Evans,,c11-bg
 2016-10-07T16:00+0000,#HighwaysHack - Data sets,https://open-innovations.org/blog/2016-10-07-highwayshack-datasets,slowe:Stuart Lowe,,c6-bg
@@ -90,7 +90,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2017-11-29T13:10+0000,Bus usage in West Yorkshire,https://open-innovations.org/blog/2017-11-29-encts,slowe:Stuart Lowe,,c6-bg
 2017-12-15T17:45+0000,Energy Data - let Leeds light the way,https://open-innovations.org/blog/2017-12-15-let-leeds-light-the-way,dphillips:Dougie Phillips,,c10-bg
 2018-01-05T15:30+0000,Brownfield land registers,https://open-innovations.org/blog/2018-01-05-brownfield-land-registers,slowe:Stuart Lowe,,c6-bg
-2018-01-05T13:00+0000,New and improved ODI Leeds is open!,https://open-innovations.org/blog/2018-01-05-new-and-improved-open,kconnell:Kathryn Connell,,c14-bg
+2018-01-05T13:00+0000,New and improved ODI Leeds is open!,https://open-innovations.org/blog/2018-01-05-new-and-improved-open,:Kathryn Connell,,c14-bg
 2018-01-22T10:15+0000,Open innovation with Ofcom data,https://open-innovations.org/blog/2018-01-22-ofcom-innovation-with-data,aevans:Amy Evans,,c11-bg
 2018-01-26T16:18+0000,West Yorkshire GeoJSON,https://open-innovations.org/blog/2018-01-26-west-yorkshire-geojson,slowe:Stuart Lowe,,c6-bg
 2018-02-02T12:00+0000,The launch of ODI Leeds: Transport,https://open-innovations.org/blog/2018-02-02-launching-odileeds-transport,nmcclure:Neil McClure,,c1-bg
@@ -129,7 +129,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2018-06-15T09:17+0000,Announcing All Aboard 2,https://open-innovations.org/blog/2018-06-15-announcing-all-aboard-2,nmcclure:Neil McClure,,c1-bg
 2018-06-18T14:56+0000,Building digital tools for prospective students,https://open-innovations.org/blog/2018-06-18-building-digital-tools-for-prospective-students,aevans:Amy Evans,,c11-bg
 2018-06-18T12:52+0000,New sponsor - OpenDataSoft,https://open-innovations.org/blog/2018-06-18-new-sponsor-opendatasoft,aevans:Amy Evans,,c11-bg
-2018-06-27T11:16+0000,Vacancy - Events and Community Assistant,https://open-innovations.org/blog/2018-06-27-vacancy-events-and-community-organiser,kconnell:Kathryn Connell,,c14-bg
+2018-06-27T11:16+0000,Vacancy - Events and Community Assistant,https://open-innovations.org/blog/2018-06-27-vacancy-events-and-community-organiser,:Kathryn Connell,,c14-bg
 2018-07-26T11:15+0000,The next IoT Showcase will be in September,https://open-innovations.org/blog/2018-07-20-the-next-iot-showcase-will-be-in-september,aevans:Amy Evans,,c11-bg
 2018-07-26T13:37+0000,CSV to GeoJSON,https://open-innovations.org/blog/2018-07-26-csv-to-geojson,slowe:Stuart Lowe,,c6-bg
 2018-08-06T12:58+0000,Painting a more complete picture for students,https://open-innovations.org/blog/2018-08-06-painting-a-more-complete-picture-for-students,aevans:Amy Evans,,c11-bg
@@ -206,7 +206,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2020-03-11T09:31+0000,Three new tools launched to track spending in the UK,https://open-innovations.org/blog/2020-03-11-three-new-tools-launched-to-track-spending-in-the-uk,tforth:Thomas Forth,1;2;3;6;10;14;17,c13-bg
 2020-03-17T11:15+0000,Coronavirus - COVID-19 Update,https://open-innovations.org/blog/2020-03-17-coronavirus-covid-19-update,pconnell:Paul Connell,1;2;3;4;5;6;7;9;8;10;11;12;13;14;15;16;17;18;19;20,c12-bg
 2020-03-17T14:20+0000,Launching our open data health blog,https://open-innovations.org/blog/2020-03-17-launching-our-open-data-health-blog,:Alistair Bullward,18;13,c14-bg
-2020-03-17T10:22+0000,Our commitment to you during the coronavirus outbreak,https://open-innovations.org/blog/2020-03-17-our-commitment-to-you-during-the-coronavirus-outbreak,kconnell:Kathryn Connell,,c14-bg
+2020-03-17T10:22+0000,Our commitment to you during the coronavirus outbreak,https://open-innovations.org/blog/2020-03-17-our-commitment-to-you-during-the-coronavirus-outbreak,:Kathryn Connell,,c14-bg
 2020-03-18T09:51+0000,The Hex Election,https://open-innovations.org/blog/2020-03-18-the-hex-election,gdring:Giles Dring;slowe:Stuart Lowe,,c8-bg
 2020-03-24T09:44+0000,Being Radically Open during the COVID-19 outbreak,https://open-innovations.org/blog/2020-03-24-being-radically-open-during-the-covid19-outbreak,aevans:Amy Evans,1;2;3;6;13;18,c11-bg
 2020-03-31T13:39+0000,We welcome Network Rail as the newest sponsor at ODI Leeds,https://open-innovations.org/blog/2020-03-31-we-welcome-network-rail-as-the-newest-sponsor-at-odi-leeds,aevans:Amy Evans,20,c11-bg
@@ -237,7 +237,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2020-08-18T13:09+0000,Is the UK coast poor?,https://open-innovations.org/blog/2020-08-18-is-the-uk-coast-poor-,tforth:Thomas Forth,,c13-bg
 2020-08-28T06:00+0000,Best Bin Placement: using open data to optimise public bin placement in Leeds.,https://open-innovations.org/blog/2020-08-28-best-bin-placement-,tforth:Thomas Forth,,c13-bg
 2020-09-11T18:00+0000,Diversity Explorer 2.0,https://open-innovations.org/blog/2020-09-11-Diversity2point0-,tforth:Thomas Forth,,c13-bg
-2020-09-15T14:16+0000,Innovating with data to make a difference,https://open-innovations.org/blog/2020-09-15-innovating-with-data-to-make-a-difference,pconnell:Paul Connell;kconnell:Kathryn Connell,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20,c13-bg
+2020-09-15T14:16+0000,Innovating with data to make a difference,https://open-innovations.org/blog/2020-09-15-innovating-with-data-to-make-a-difference,pconnell:Paul Connell:Kathryn Connell,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20,c26-bg
 2020-09-17T09:14+0000,ODI Leeds and Icebreaker One - Partner on Project Cygnus,https://open-innovations.org/blog/2020-09-17-odi-leeds-and-icebreaker-one-partner-on-project-cygnus,oocheche:Ojoyi Ocheche;pconnell:Paul Connell;plake:Patrick Lake,1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;17;16;18;19;20,c5-bg
 2020-09-22T05:00+0000,How long is the coast? How many dimensions does it have?,https://open-innovations.org/blog/2020-09-22-is-the-coast-poor-,tforth:Thomas Forth,,c13-bg
 2020-10-07T12:55+0000,How has COVID-19 affected education?,https://open-innovations.org/blog/2020-10-07-how-has-covid-19-affected-education,gdring:Giles Dring,,c10-bg
@@ -267,11 +267,11 @@ Date,Title,URL,Authors,Sponsors,Class
 2021-02-02T11:04+0000,Helping the vulnerable in society - a collaborative approach,https://open-innovations.org/blog/2021-02-02-helping-the-vulnerable-in-society-a-collaborative-approach,:Steven Dacre,19;1;2;3;6,c14-bg
 2021-02-05T16:24+0000,Northernlands 3 - Registration is open,https://open-innovations.org/blog/2021-02-05-northernlands-3-registration-is-open,aevans:Amy Evans,1;2;3;5;6;9;11;13;14;16;17;18;19;20,c11-bg
 2021-02-23T14:41+0000,Covid-19 Visualisations,https://open-innovations.org/blog/2021-02-23-covid-visualisations,slowe:Stuart Lowe,,c6-bg
-2021-02-23T16:00+0000,Introducing Live@ODILeeds,https://open-innovations.org/blog/2021-02-23-introducing-live-odileeds,kconnell:Kathryn Connell,,c14-bg
+2021-02-23T16:00+0000,Introducing Live@ODILeeds,https://open-innovations.org/blog/2021-02-23-introducing-live-odileeds,:Kathryn Connell,,c14-bg
 2021-03-04T13:49+0000,Innovate UK funding data,https://open-innovations.org/blog/2021-03-04-innovate-uk-funding,dbillingsley:Daniel Billingsley,,c13-bg
 2021-03-30T14:21+0000,Northernlands3 - Showcasing Live@ODILeeds,https://open-innovations.org/blog/2021-03-30-northernlands3-showcasing-live-odileeds,gdurkan:Grace Durkan,,c13-bg
 2021-03-30T14:53+0000,Northernlands3 - A recap,https://open-innovations.org/blog/2021-03-30-northernlands3,sschmidt:Susanne Schmidt,2,c2-bg
-2021-04-01T09:17+0000,Reviewing the ODSL Goldacre Review Special,https://open-innovations.org/blog/2021-04-01-reviewing-the-odsl-goldacre-review-special,sschmidt:Susanne Schmidt;kconnell:Kathryn Connell,,c8-bg
+2021-04-01T09:17+0000,Reviewing the ODSL Goldacre Review Special,https://open-innovations.org/blog/2021-04-01-reviewing-the-odsl-goldacre-review-special,sschmidt:Susanne Schmidt:Kathryn Connell,,c16-bg
 2021-04-21T12:28+0000,Let's chat about open data publishing,https://open-innovations.org/blog/2021-04-21-let-s-chat-about-open-data-publishing,sschmidt:Susanne Schmidt;slowe:Stuart Lowe,,c4-bg
 2021-04-26T23:00+0000,Open transport planning and booze.,https://open-innovations.org/blog/2021-04-26-opentransportplanningandbooze,tforth:Thomas Forth,,c13-bg
 2021-05-07T15:53+0000,A look inside our toolbox,https://open-innovations.org/blog/2021-05-07-a-look-inside-our-toolbox,sschmidt:Susanne Schmidt,,c2-bg
@@ -285,7 +285,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2021-06-23T12:32+0000,#PlanetData4 - Save the date!,https://open-innovations.org/blog/2021-06-23-planetdata4-save-the-date-,mbrook:Michelle Brook,,c1-bg
 2021-06-30T10:05+0000,Introducing PoweredUp,https://open-innovations.org/blog/2021-06-30-introducing-poweredup,mbrook:Michelle Brook,,c1-bg
 2021-06-30T13:37+0000,Summer Update from ODI Leeds,https://open-innovations.org/blog/2021-06-30-summer-update-from-odi-leeds,gdurkan:Grace Durkan,1;2;3;5;6;9;10;11;13;14;16;17;18;19;20,c13-bg
-2021-07-01T13:46+0000,Mapping the UK Data Landscape - Working Out Loud,https://open-innovations.org/blog/2021-07-01-mapping-the-uk-data-landscape-working-out-loud,kconnell:Kathryn Connell,,c14-bg
+2021-07-01T13:46+0000,Mapping the UK Data Landscape - Working Out Loud,https://open-innovations.org/blog/2021-07-01-mapping-the-uk-data-landscape-working-out-loud,:Kathryn Connell,,c14-bg
 2021-07-02T11:40+0000,The Coders Guild join us as a new sponsor,https://open-innovations.org/blog/2021-07-02-the-coders-guild-join-us-as-a-new-sponsor,aevans:Amy Evans,,c11-bg
 2021-07-06T16:28+0000,What is Storm Overflow EDM Data?,https://open-innovations.org/blog/2021-07-06-what-is-storm-overflow-edm-data-,:Claire Green,11,c2-bg
 2021-07-08T12:01+0000,Mental health data sharing in post-pandemic health systems,https://open-innovations.org/blog/2021-07-08-mental-health-data-sharing,amorpeth:Ali Morpeth,13,c3-bg
@@ -300,21 +300,21 @@ Date,Title,URL,Authors,Sponsors,Class
 2021-09-01T10:00+0000,September Newsletter,https://open-innovations.org/blog/2021-09-01-september-newsletter,gdurkan:Grace Durkan,,c13-bg
 2021-09-02T09:02+0000,Data Ethics: A starting point,https://open-innovations.org/blog/2021-09-02-data-ethics-a-starting-point,jcheung:Jennifer Cheung,,c11-bg
 2021-09-07T09:11+0000,Data Ethics: Project Check In,https://open-innovations.org/blog/2021-09-07-data-ethics-project-kick-off,lconnell:Louis Connell,,c4-bg
-2021-09-07T11:25+0000,Evolution of ODI Leeds,https://open-innovations.org/blog/2021-09-07-evolution-of-odi-leeds,kconnell:Kathryn Connell;pconnell:Paul Connell;tforth:Thomas Forth,1;2;3;5;6;9;11;13;14;16;17;18;19;20;21,c13-bg
+2021-09-07T11:25+0000,Evolution of ODI Leeds,https://open-innovations.org/blog/2021-09-07-evolution-of-odi-leeds,:Kathryn Connell;pconnell:Paul Connell;tforth:Thomas Forth,1;2;3;5;6;9;11;13;14;16;17;18;19;20;21,c19-bg
 2021-09-08T16:39+0000,COVID & Demographics in Yorkshire,https://open-innovations.org/blog/2021-09-08-covid-demographics,slowe:Stuart Lowe;sschmidt:Susanne Schmidt;gdring:Giles Dring,,c6-bg
 2021-09-10T09:15+0000,Announcing our data partnership with Leeds Digital Festival,https://open-innovations.org/blog/2021-09-10-leeds-digital-festival-data-partners,gdring:Giles Dring,,c10-bg
 2021-09-17T15:10+0000,A good talk about good data - An interview about data ethics with Sam Gilbert,https://open-innovations.org/blog/2021-09-17-a-good-talk-about-good-data-an-interview-about-data-ethics-with-sam-gilbert,lconnell:Louis Connell;jcheung:Jennifer Cheung;sschmidt:Susanne Schmidt,,c5-bg
 2021-10-05T15:49+0000,In conversation with Olivier Thereaux: Exploring the field of data ethics,https://open-innovations.org/blog/2021-10-05-in-conversation-with-olivier-thereaux-exploring-the-field-of-data-ethics,jcheung:Jennifer Cheung;sschmidt:Susanne Schmidt,,c6-bg
 2021-10-06T12:46+0000,PoweredUp - local authorities and net zero,https://open-innovations.org/blog/2021-10-06-poweredup-local-authorities-and-net-zero,mbrook:Michelle Brook,19;16;3;2;1;6,c1-bg
 2021-10-08T10:17+0000,#OpenDataSavesLives: The Unconference - Ways paved and lives saved,https://open-innovations.org/blog/2021-10-08-opendatasaveslives-the-unconference-ways-paved-and-lives-saved,sschmidt:Susanne Schmidt,,c2-bg
-2021-10-12T11:27+0000,Open Innovations awarded Leeds City Council funding by Innovation@Leeds,https://open-innovations.org/blog/2021-10-12-open-innovations-awarded-leeds-city-council-funding-by-innovation-leeds,kconnell:Kathryn Connell,1,c14-bg
+2021-10-12T11:27+0000,Open Innovations awarded Leeds City Council funding by Innovation@Leeds,https://open-innovations.org/blog/2021-10-12-open-innovations-awarded-leeds-city-council-funding-by-innovation-leeds,:Kathryn Connell,1,c14-bg
 2021-11-01T14:11+0000,Building Trust in Data Trusts - A talk with Jessica Montgomery,https://open-innovations.org/blog/2021-11-01-building-trust-in-data-trusts-a-talk-with-jessica-montgomery,sschmidt:Susanne Schmidt;lconnell:Louis Connell;jcheung:Jennifer Cheung,,c5-bg
 2021-11-03T11:31+0000,PlanetData4 - What happened and what you can do next,https://open-innovations.org/blog/2021-11-03-planetdata4-what-happened-and-what-you-can-do-next,aevans:Amy Evans,,c11-bg
 2021-11-04T13:52+0000,Vacancy - Data & Innovation Consultant / Delivery Manager,https://open-innovations.org/blog/2021-11-04-vacancy-data-innovation-consultant-delivery-manager,pconnell:Paul Connell,,c12-bg
 2021-11-05T13:46+0000,Doughnut Economics with data sprinkled on top,https://open-innovations.org/blog/2021-11-05-doughnut-economics-with-data-sprinkled-on-top,sschmidt:Susanne Schmidt,,c2-bg
 2021-11-05T17:30+0000,Levelling up with data.,https://open-innovations.org/blog/2021-11-05-levellingupwithdata,tforth:Thomas Forth,,c13-bg
 2021-11-26T15:00+0000,Announcing the Diversity Dashboard,https://open-innovations.org/blog/2021-11-26-announcing-the-diversity-dashboard,gdring:Giles Dring,1;9;11;13,c10-bg
-2021-12-17T10:40+0000,"Vacancy - Workspace, Events, Meetings and Conference Assistant CLOSED",https://open-innovations.org/blog/2021-12-17-vacancy-workspace-events-meetings-conference-assistant,kconnell:Kathryn Connell,,c14-bg
+2021-12-17T10:40+0000,"Vacancy - Workspace, Events, Meetings and Conference Assistant CLOSED",https://open-innovations.org/blog/2021-12-17-vacancy-workspace-events-meetings-conference-assistant,:Kathryn Connell,,c14-bg
 2022-01-05T11:20+0000,Our 2021 at Open Innovations,https://open-innovations.org/blog/2022-01-05-our-2021-at-open-innovations,aevans:Amy Evans,,c11-bg
 2022-01-10T11:32+0000,New Year Newsletter,https://open-innovations.org/blog/2022-01-10-new-year-newsletter,gdurkan:Grace Durkan,,c13-bg
 2022-01-11T10:46+0000,Job vacancy: Apprentice Data Scientist,https://open-innovations.org/blog/2022-01-11-job-vacancy-apprentice-data-scientist,pconnell:Paul Connell,,c12-bg
@@ -322,7 +322,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2022-02-01T11:50+0000,Powered Up January 2022 Session - Summary and useful resources,https://open-innovations.org/blog/2022-02-01-powered-up-january-2022-session-summary-and-useful-resources,mbrook:Michelle Brook,,c1-bg
 2022-03-01T15:45+0000,VACANCY - Economy Data: Product Manager and R&D Analyst,https://open-innovations.org/blog/2022-03-01-vacancy-economy-data-product-manager-r-d-analyst,pconnell:Paul Connell,,c12-bg
 2022-03-30T11:51+0000,Leeds 2023 Year of Culture Data Partners,https://open-innovations.org/blog/2022-03-30-leeds-2023-year-of-culture-data-partners,gdring:Giles Dring,,c10-bg
-2022-04-01T14:40+0000,Newsletter,https://open-innovations.org/blog/2022-04-01-newsletter,gdurkan:Grace Durkan;kconnell:Kathryn Connell,,c13-bg
+2022-04-01T14:40+0000,Newsletter,https://open-innovations.org/blog/2022-04-01-newsletter,gdurkan:Grace Durkan:Kathryn Connell,,c27-bg
 2022-04-01T11:16+0000,Northernlands 4 coming in April!,https://open-innovations.org/blog/2022-04-01-northernlands-4-coming-in-april,aevans:Amy Evans,,c11-bg
 2022-04-01T14:13+0000,UK Power Networks joins us as our latest sponsor,https://open-innovations.org/blog/2022-04-01-ukpn-become-a-sponsor,gdurkan:Grace Durkan;mbrook:Michelle Brook,,c7-bg
 2022-04-07T11:41+0000,Website carbon audit,https://open-innovations.org/blog/2022-04-07-website-carbon-audit,slowe:Stuart Lowe,,c6-bg
@@ -336,7 +336,7 @@ Date,Title,URL,Authors,Sponsors,Class
 2022-06-23T12:50+0000,Leeds City Centre Footfall Data - A Quick Update ,https://open-innovations.org/blog/2022-06-23-leeds-city-centre-footfall-data-update,dboam:Daniel Boam,,c5-bg
 2022-06-28T16:41+0000,The Census 2021 hex game,https://open-innovations.org/blog/2022-06-28-the-census-2021-hex-game,slowe:Stuart Lowe,,c6-bg
 2022-07-01T11:40+0000,"Meet Gareth Dennis, our new Transport Data Lead",https://open-innovations.org/blog/2022-07-01-meet-gareth-dennis-our-new-transport-data-lead,gdennis:Gareth Dennis,,c13-bg
-2022-07-06T13:20+0000,"Job vacancy: Workspace, Events and Conferencing Assistant",https://open-innovations.org/blog/2022-07-06-job-vacancy-workspace-events-assistant,kconnell:Kathryn Connell,,c14-bg
+2022-07-06T13:20+0000,"Job vacancy: Workspace, Events and Conferencing Assistant",https://open-innovations.org/blog/2022-07-06-job-vacancy-workspace-events-assistant,:Kathryn Connell,,c14-bg
 2022-07-07T12:16+0000,What are the current digital skills needs in Leeds?,https://open-innovations.org/blog/2022-07-07-what-are-the-current-digital-skills-needs-in-leeds,aevans:Amy Evans,,c11-bg
 2022-07-08T14:07+0000,A new collaboration with Youth Futures Foundation to improve the lives of young people,https://open-innovations.org/blog/2022-07-08-a-new-collaboration-with-youth-futures-foundation-to-improve-the-lives-of-young-people,mbrook:Michelle Brook;tchiles:Tazmin Chiles,,c7-bg
 2022-07-18T15:32+0000,Powered Up Session 5 summary,https://open-innovations.org/blog/2022-07-18-powered-up-session-5-summary,mbrook:Michelle Brook,,c1-bg
@@ -371,13 +371,13 @@ Date,Title,URL,Authors,Sponsors,Class
 2023-07-25T09:07+0000,Tips for optimising large GeoJSON files,https://open-innovations.org/blog/2023-07-25-tips-for-optimising-geojson-files,slowe:Stuart Lowe,,c6-bg
 2023-08-03T11:13+0000,Hexes for the next General Election,https://open-innovations.org/blog/2023-08-03-hexes-for-the-next-general-election,slowe:Stuart Lowe,,c6-bg
 2023-08-09T13:30+0000,The Housing Debate,https://open-innovations.org/blog/2023-08-09-the-housing-debate,lconnell:Louis Connell,,c4-bg
-2023-08-10T13:21+0000,Open Data Showcase - 10 Years of being Radically Open by Open innovations & Partners,https://open-innovations.org/blog/2023-08-10-open-data-showcase-by-open-innovations,kconnell:Kathryn Connell,,c14-bg
+2023-08-10T13:21+0000,Open Data Showcase - 10 Years of being Radically Open by Open innovations & Partners,https://open-innovations.org/blog/2023-08-10-open-data-showcase-by-open-innovations,:Kathryn Connell,,c14-bg
 2023-08-14T11:49+0000,Open Travel Emissions Data,https://open-innovations.org/blog/2023-08-14-open-travel-emissions-data,lstrange:Luke Strange,,c2-bg
 2023-08-22T10:07+0000,Summer Update 2023,https://open-innovations.org/blog/2023-08-22-summer-update,lconnell:Louis Connell,,c4-bg
 2023-09-15T16:04+0000,Using Data to Map Creative Education ,https://open-innovations.org/blog/2023-09-15-mapping-creative-education,tchiles:Tazmin Chiles,,c14-bg
 2023-09-20T15:24+0000,Introducing OI Lume Viz,https://open-innovations.org/blog/2023-09-20-oi-lume-viz,slowe:Stuart Lowe;gdring:Giles Dring,,c8-bg
 2023-09-22T16:30+0000,6 months at Open Innovations,https://open-innovations.org/blog/2023-09-22-my-first-6-months-at-open-innovations,lstrange:Luke Strange,,c2-bg
-2023-10-05T15:44+0000,Open Data Showcase: Highlights,https://open-innovations.org/blog/2023-10-05-open-data-showcase-highlights,tchiles:Tazmin Chiles;kconnell:Kathryn Connell;lstrange:Luke Strange,,c10-bg
+2023-10-05T15:44+0000,Open Data Showcase: Highlights,https://open-innovations.org/blog/2023-10-05-open-data-showcase-highlights,tchiles:Tazmin Chiles:Kathryn Connell;lstrange:Luke Strange,,c15-bg
 2023-10-10T08:59+0000,Introducing our Inclusive Growth Dashboard,https://open-innovations.org/blog/2023-10-10-introducing-our-inclusive-growth-dashboard,cspence:Christian Spence;tchiles:Tazmin Chiles,,c11-bg
 2023-10-12T12:28+0000,A simple tool to build a geography lookup table,https://open-innovations.org/blog/2023-10-12-simple-tool-to-build-a-geography-lookup-table,slowe:Stuart Lowe,,c6-bg
 2023-11-01T13:49+0000,Net Zero: Hack for Impact with Northern Powergrid,https://open-innovations.org/blog/2023-11-01-net-zero-hack-for-impact-with-northern-powergrid,tchiles:Tazmin Chiles,,c14-bg
@@ -385,5 +385,5 @@ Date,Title,URL,Authors,Sponsors,Class
 2023-11-14T13:09+0000,Warm spaces during winter 2023,https://open-innovations.org/blog/2023-11-14-warm-spaces-during-winter-2023,slowe:Stuart Lowe,,c6-bg
 2023-12-14T15:25+0000,How Does the North Win?,https://open-innovations.org/blog/2023-12-14-how-does-the-north-win,pconnell:Paul Connell,,c12-bg
 2024-01-08T11:10+0000,Passenger Journeys: Pictures at a (Rail Transport) Exhibition,https://open-innovations.org/blog/2024-01-08-passenger-journeys-pictures-at-a-rail-transport-exhibition,:Will Deakin,,c4-bg
-2024-01-10T14:36+0000,Farewell to Munro House,https://open-innovations.org/blog/2024-01-10-goodbye-to-munro-house,kconnell:Kathryn Connell,,c14-bg
+2024-01-10T14:36+0000,Farewell to Munro House,https://open-innovations.org/blog/2024-01-10-goodbye-to-munro-house,:Kathryn Connell,,c14-bg
 2024-01-10T14:55+0000,Northern Powergrid: Net Zero Hack for Impact,https://open-innovations.org/blog/2024-01-10-northern-powergrid-net-zero-hack-for-impact,:Gillian Williamson,,c3-bg
