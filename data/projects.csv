@@ -132,3 +132,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2024-04,,Hexviz,https://open-innovations.org/projects/hexmaps/viewer,"Show a CSV file or Google Sheet on a hex map (cartogram)",,1;6,slowe
 2024-05,,Workplace Parking Levy,https://open-innovations.org/projects/workplace-parking-levy/borsetshire/,"We created a tool to help local authorities explore workplace parking levys. The demo uses the fictional county of Borsetshire (from The Archers).",,1;6,cspence;slowe
 2024-05,,True North Data Explorer,https://open-innovations.github.io/true-north/,"A data hub for the True North network exploring economic data and owner-managed businesses in the North of England",,,lstrange;cspence;slowe
+2024-07,,Housing Data,https://open-innovations.github.io/housing/,"Tools, visualisations and analysis for open housing data" ,,,lstrange;jconnell
