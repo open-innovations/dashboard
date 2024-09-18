@@ -137,3 +137,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors
 2024-07,,UK Hex Maps,https://hexmap.uk/,"Making it easy to download UK hex map layouts as HexJSON, GeoJSON, and SVG.",,,slowe
 2024-07,,Housing Data,https://open-innovations.github.io/housing/,"Tools, visualisations and analysis for open housing data",,,lstrange
 2024-08,,Add UK geography codes,https://open-innovations.github.io/geography-code-adder/,"Take a CSV file that only has, say ward names, and add a column of GSS codes. It can also convert some dates for you.",,,slowe
+2024-09,,techUK Local Digital Index,https://thedatacity.github.io/techUK-ldi-website/,"A tool to aid policy makers and a way to see the impact and value of the tech sector for the national and regional economies.",,,lstrange
