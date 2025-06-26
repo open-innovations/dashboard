@@ -143,4 +143,4 @@ Date start,Date end,Projects,url,Short description,Image,Sponsors,Authors,Tags
 2024-09,,Edit hex layouts,https://open-innovations.org/projects/hexmaps/editor/,"A tool to help design and edit hex layouts stored as HexJSON.",,,slowe,MissionLed
 2025-01,,Bus journey times,https://open-innovations.github.io/bus-tracking/,"A prototype using the UK's Bus Open Data Service (BODS).",,,lstrange;pconnell;tforth;slowe,MissionLed
 2025-01,,The Power of Local,https://open-innovations.org/projects/lga/power-of-local/,"Working with the Local Government Association in a #radicallyopen way to demonstrate the power of local government.",,,lstrange;pconnell;tforth;slowe,
-2025-06,,Bus Open Data archive,https://open-innovations.github.io/bods-archive/,"Our prototype to create an archive of BODS data.",,,lstrange;slowe;tforth,MissionLed;Tool
+2025-06,,Bus Open Data archive,https://data.datalibrary.uk/transport/BODS-ARCHIVE/,"Our prototype to create an archive of BODS data.",,,lstrange;slowe;tforth,MissionLed;Tool
