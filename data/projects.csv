@@ -120,7 +120,7 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2023-01,,Northern Powerhouse Partnership Tax Devolution,,,https://github.com/open-innovations/tax-devolution,A web app to see how much you can raise through different local taxes.,,,cspence,
 2023-01,,OI Lume Viz,https://open-innovations.github.io/oi-lume-viz/,https://open-innovations.github.io/oi-lume-charts/,https://github.com/open-innovations/oi-lume-viz,"With an increasing number of partner projects microsites, we've encapsulated a number of our charting libraries into a Lume library to make it easy to deploy our common types of visualisations.",,,gdring;slowe,Tool
 2023-02,,Placename heatmap,https://open-innovations.org/projects/placename-heatmap/,,,Create a heat map of UK place names based on patterns you want to match.,,,slowe,MissionLed
-2023-02,,Leeds Schools Cultural Engagement,https://culturallearningleeds.com/,https://open-innovations.github.io/leeds-schools-cultural-engagement/,https://github.com/open-innovations/leeds-schools-cultural-engagement,Creating a prototype resource to map cultural engagement in schools across the city to support evidence-based policy making.,,,mbrook;slowe;tchiles,
+2023-02,,Leeds Schools Cultural Engagement,https://culturallearningleeds.com/,https://open-innovations.github.io/leeds-schools-cultural-engagement/,https://github.com/open-innovations/leeds-schools-cultural-engagement,Creating a prototype resource to map cultural engagement in schools across the city to support evidence-based policy making.,,,mbrook;slowe;tchiles,culture
 2023-04,2023-09,JRF Northern Insight Finder,https://open-innovations.org/projects/jrf/north-insight-finder/,,https://github.com/open-innovations/jrf-insight,"A data and insight hub that, by linking up existing open-source datasets, aims to provide ease of access to data for the North of England that would be, otherwise, scattered across different websites, and that would require time, skills and resources to be joined up, analysed and visualised.",,,cspence;lstrange;gdring,
 2023-04,,Leeds City Council Economics,,,https://github.com/open-innovations/lcc-economics/,,,1,cspence,
 2023-06,2024-06,National Grid Regional FES 2023,https://www.futureenergyscenarios.com/2023-FES/,,,We helped National Grid update their future energy scenario visualisation for 2023.,,,slowe,NetZero
@@ -154,6 +154,7 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2025-01,,The Power of Local,https://open-innovations.org/projects/lga/power-of-local/,,,Working with the Local Government Association in a #radicallyopen way to demonstrate the power of local government.,,,lstrange;pconnell;tforth;slowe,
 2025-03,,Constituency dashboards,https://open-innovations.github.io/constituency-dashboards/,https://open-innovations.github.io/constituency-api-test/,https://github.com/open-innovations/constituency-dashboards,"We use the API from our hex maps site to create dashboards for each UK parliamentary constituency covering topics such as energy, environment, health, society, and transport.",,,lstrange;slowe,MissionLed
 2025-06,,Bus Open Data archive,https://data.datalibrary.uk/transport/BODS-ARCHIVE/,,https://github.com/open-innovations/bods-archive,Our prototype to create an archive of BODS data.,,,lstrange;slowe;tforth,MissionLed;Tool
+
 
 
 
