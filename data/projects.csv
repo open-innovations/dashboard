@@ -97,7 +97,7 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2021-12,2023-01,Northern Powergrid DFES 2021,https://odileeds.github.io/northern-powergrid/2021-DFES/,,,An interactive visualisation of Northern Powergrid's potential future energy scenarios (DFES) updated to 2021,,16,slowe,NetZero
 2021-12,2023-01,UK Power Networks DFES 2021,https://uk-power-networks.github.io/DFES-visualisation/2021-DFES/,,https://github.com/open-innovations/ukpn-dfes,An interactive visualisation of UK Power Network's potential future energy scenarios (DFES) for 2021,,23,slowe,NetZero
 2022-01,2022-06,Pool Data,https://www.pooldata.io/blog/creating-data-unions-faster,,,Support to create a catalyst programme for data unions,,,mbrook,
-2022-02,2024-04,Leeds 2023,https://open-innovations.org/projects/leeds2023/,,https://github.com/open-innovations/leeds-2023,Helping Leeds 2023 with all things data…,,,dpboam;tchiles;gdring,culture
+2022-02,2024-04,Leeds 2023,https://open-innovations.org/projects/leeds2023/,,https://github.com/open-innovations/leeds-2023,Helping Leeds 2023 with all things data…,,,dboam;tchiles;gdring,culture
 2022-03,2024-04,EValuator,https://evaluator.open-innovations.org/,,https://github.com/open-innovations/EValuator,"A prototype which demonstrates an approach to integrated planning across several disciplines (land use, sustainability, energy, transport).",,,gdring;tchiles;slowe,
 2022-03,,Housing England,https://open-innovations.org/projects/housingengland/,,,Explore housing in England and see what percentage are vacant.,,,tforth;dbillingsley,
 2022-04,,Register of Members' Financial Interests Explorer,https://open-innovations.org/projects/RMFI/,,,Parsing and exploring the House of Commons Register of Members' Financial Interests,,,slowe,MissionLed
@@ -157,4 +157,5 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2025-03,,Constituency dashboards,https://open-innovations.github.io/constituency-dashboards/,https://open-innovations.github.io/constituency-api-test/,https://github.com/open-innovations/constituency-dashboards,"We use the API from our hex maps site to create dashboards for each UK parliamentary constituency covering topics such as energy, environment, health, society, and transport.",,1;2;6,lstrange;slowe,MissionLed
 2025-06,,Bus Open Data archive,https://data.datalibrary.uk/transport/BODS-ARCHIVE/,,https://github.com/open-innovations/bods-archive,Our prototype to create an archive of BODS data.,,2,lstrange;slowe;tforth,MissionLed;Tool
 2025-07,,DFES comparison tool,https://open-innovations.org/projects/northernpowergrid/comparison/,,,"A tool to compare future energy scenario data (FES/DFES). Provide CSV files (they can be the same), select a scenario from each, and get a dashboard showing how they compare.",,16,slowe,MissionLed;Tool
+
 
