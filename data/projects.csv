@@ -103,7 +103,7 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2022-03,2024-04,EValuator,https://evaluator.open-innovations.org/,,https://github.com/open-innovations/EValuator,"A prototype which demonstrates an approach to integrated planning across several disciplines (land use, sustainability, energy, transport).",,,gdring;tchiles;slowe,
 2022-03,,Housing England,https://open-innovations.org/projects/housingengland/,,,Explore housing in England and see what percentage are vacant.,,,tforth;dbillingsley,
 2022-04,,Register of Members' Financial Interests Explorer,https://open-innovations.org/projects/RMFI/,,,Parsing and exploring the House of Commons Register of Members' Financial Interests,,,slowe,MissionLed
-2022-04,,EDD: Economic Data Dashboard,https://edd.economic-analytics.co.uk/,,https://github.com/economic-analytics/edd,,*,cspence;lstrange;tforth,
+2022-04,,EDD: Economic Data Dashboard,https://edd.economic-analytics.co.uk/,,https://github.com/economic-analytics/edd,"The Economic Data Dashboard (EDD) houses thousands of variables from hundreds of data sets of secondary and administrative data for multiple geographies within the United Kingdom. It seeks to simplify the access, interrogation, visualisation and communication of complex data sources to accelerate research for policy design and evaluation.",,*,cspence;lstrange;tforth,
 2022-05,2023-05,Local elections 2022,https://open-innovations.org/projects/local-elections/2022/,,,Visualising the 2022 local elections in Leeds and Calderdale using data from Democracy Club,,1;6,slowe,MissionLed
 2022-05,2023-06,Regional FES,https://www.futureenergyscenarios.com/2022-FES/,,,Working with National Grid ESO to show their regional Future Energy Scenarios.,,24,slowe;gdring,NetZero
 2022-06,2025-01,Youth Futures Foundation,https://open-innovations.org/projects/youth-futures-foundation/,https://data.youthfuturesfoundation.org/,https://github.com/open-innovations/yff-data,Creating a microsite to help the Youth Futures Foundation showcase some of their data and work to improve employment outcomes for young people from marginalised backgrounds in England.,,,mbrook;gdring;tchiles;slowe;lstrange,
@@ -161,6 +161,7 @@ Date start,Date end,Projects,url,previous url,repository,Short description,Image
 2025-03,,National Data Library,https://datalibrary.uk/,,,"We've had a go at starting to build a National Data Library.",,,tforth;lstrange,
 2025-06,,Bus Open Data archive,https://data.datalibrary.uk/transport/BODS-ARCHIVE/,,https://github.com/open-innovations/bods-archive,Our prototype to create an archive of BODS data.,,2,lstrange;slowe;tforth,MissionLed;Tool
 2025-07,,DFES comparison tool,https://open-innovations.org/projects/northernpowergrid/comparison/,,,"A tool to compare future energy scenario data (FES/DFES). Provide CSV files (they can be the same), select a scenario from each, and get a dashboard showing how they compare.",,16,slowe,MissionLed;Tool
+
 
 
 
